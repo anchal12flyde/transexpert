@@ -7,20 +7,20 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
- useEffect(() => {
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
+//  useEffect(() => {
+//   const handleScroll = () => {
+//     if (window.scrollY > 50) {
+//       setScrolled(true);
+//     } else {
+//       setScrolled(false);
+//     }
+//   };
 
-  console.log(window.scrollY)
+//   console.log(window.scrollY)
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, [window.scrollY]);
+//   window.addEventListener("scroll", handleScroll);
+//   return () => window.removeEventListener("scroll", handleScroll);
+// }, [window.scrollY]);
 
 
   return (

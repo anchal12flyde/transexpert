@@ -4,51 +4,46 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
+  const [scroll, setScroll] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-//  useEffect(() => {
-//   const handleScroll = () => {
-//     if (window.scrollY > 50) {
-//       setScrolled(true);
-//     } else {
-//       setScrolled(false);
-//     }
-//   };
+const handleScroll = () => {
+  const scrolled = window.scrollY;
+  setScroll(scrolled > 20);
 
-//   console.log(window.scrollY)
+};
 
-//   window.addEventListener("scroll", handleScroll);
-//   return () => window.removeEventListener("scroll", handleScroll);
-// }, [window.scrollY]);
-
+useEffect(()=>{
+  handleScroll();
+window.addEventListener("scroll",handleScroll);
+return () => window.removeEventListener("scroll",handleScroll)
+}, [])
 
   return (
     <header
-       className={`fixed top-0 w-full z-50 transition-colors duration-300 util-flex-mx ${
-    scrolled ? "header-scrolled" : "header-transparent"
+       className={`fixed top-0 w-full z-50 transition-all ease-linear duration-300 util-flex-mx ${
+    scroll ? "header-scroll" : "header-transparent"
   }`}
     >
       <div className="flex justify-between items-center py-3">
-        {/* LOGO */}
+     
         <div className="relative h-12 w-34 logo-container">
           <Image
             src="/images/assets/logo2.png"
             alt="Logo White"
              fill
             sizes="(max-width: 768px) 100vw, 200px"
-            className={`object-contain logo-white ${scrolled ? "hidden-logo" : ""}`}
+            className={`object-contain logo-white ${scroll ? "hidden-logo" : ""}`}
           />
           <Image
             src="/images/assets/logo1.png"
             alt="Logo Colored"
             fill
             sizes="(max-width: 768px) 100vw, 200px"
-            className={`object-contain logo-colored ${scrolled ? "" : "hidden-logo"}`}
+            className={`object-contain logo-colored ${scroll ? "" : "hidden-logo"}`}
           />
         </div>
 
-        {/* DESKTOP NAV */}
         <div className="hidden md:flex items-center gap-10">
           <nav className="flex  items-center gap-8 nav-links">
             <Link href="#" className="nav-link">About Us</Link>

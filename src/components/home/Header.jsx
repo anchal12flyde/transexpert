@@ -59,7 +59,7 @@ return () => window.removeEventListener("scroll",handleScroll)
           </select>
           <Link
             href="#"
-            className="bg-[#E22A26] text-white rounded-lg py-2 px-3 text-sm hover:bg-red-700 transition"
+            className="hero-button"
           >
             Contact Us
           </Link>

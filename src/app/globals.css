@@ -102,7 +102,7 @@ header {
   background-color: #E22A26;
   color: white;
   border-radius: 0.5rem;
-  padding: 0.5rem 0.45rem;
+   padding: 0.55rem 0.5rem;
   font-size: 0.875rem;
   transition: background-color 0.3s ease;
 }
@@ -161,9 +161,8 @@ header {
 }
 
 .hero-button {
-  margin-top: 1.5rem;
   background-color: #dc2626; 
-  padding: 0.45rem 1.5rem;
+  padding: 0.40rem 1.5rem;
   border-radius: 0.45rem;
   color: white;
   text-decoration: none;
@@ -268,11 +267,9 @@ header {
 }
 .card:hover .arrow-img {
   transform: rotate(-47deg);
-   bottom: 90px;
+   bottom: 100px;
   transition: bottom 0.5s ease;
 }
-
-
 .card {
   position: relative;
    border-radius: 14px; 
@@ -301,7 +298,7 @@ header {
 }
 .card-overlay .card-content {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 16px;
   transform: translateY(-50%);
   color: #000;
@@ -373,17 +370,19 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 40px auto;
+  margin: 50px auto;
 }
 .certification-container h1{
   font-size: 32px;
   font-weight: 600;
-  margin-bottom: 1%;
+
 }
 .certification-container p{
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.2;
+   margin-top: 15px;
+   width: 100%;
 
 }
 .certification-logos {
@@ -391,9 +390,31 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;              
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .certification-logos img {
-  width: 100px;          
+  width: 90px;   
+  margin-top: 10px;      
+}
+@media (max-width: 600px) {
+  .certification-logos img {
+    width: 70px;
+  }
 }
 
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+    padding-top: 30px;
+  }
+}

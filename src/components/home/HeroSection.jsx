@@ -13,7 +13,7 @@ export default function HeroSection() {
         From mission-critical deliveries to cross-border precision — Trans
         Expert is the logistics backbone trusted by industry leaders
       </p>
-      <a href="#about" className="hero-button">
+      <a href="#about" className="hero-button mt-8">
         About Us
       </a>
     </div>
@@ -61,8 +61,8 @@ export default function HeroSection() {
   </div>
   <div className="card-overlay">
     <div className="card-content">
-      <h3>Express Delivery</h3>
-      <p>Build for urgent freight that can not afford to wait </p>
+      <h3>Temperature Controlled</h3>
+      <p>Temperature-sensitive logistics just refrigeration.</p>
     </div>
     {/* <img src="/images/assets/x-icon.png" alt="X" className="x-icon" /> */}
   </div>
@@ -88,7 +88,7 @@ export default function HeroSection() {
   </div>
   <div className="card-overlay">
     <div className="card-content">
-      <h3>Express Delivery</h3>
+      <h3>Cross Docking</h3>
       <p>Build for urgent freight that can not afford to wait</p>
     </div>
     {/* <img src="/images/assets/x-icon.png" alt="X" className="x-icon" /> */}
@@ -161,5 +161,5 @@ export default function HeroSection() {
 
 
 
-  
+
 }

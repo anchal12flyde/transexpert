@@ -2,19 +2,25 @@
 export default function Certification() {
   return (
     <>
-       <div className="hero-content">
-      <h1 className="hero-heading">
-        We Don’t Just Move Freight. <br />
-        We Power North American Enterprise.
-      </h1>
-      <p className="hero-description">
-        From mission-critical deliveries to cross-border precision — Trans
-        Expert is the logistics backbone trusted by industry leaders
-      </p>
-      <a href="#about" className="hero-button">
-        About Us
-      </a>
-    </div>
+      <div className="certification-container util-flex-mx">
+  <h1> Our Certification</h1>
+  <p>
+    We work according to the latest technologies and working methods. Our company has extensive
+    experience in providing services.
+  </p>
+  <div className="certification-logos ">
+  
+    <img src="/images/assets/image1.png" alt="Company 1" />
+    <img src="/images/assets/image2.png" alt="Company 2" />
+    <img src="/images/assets/image3.png" alt="Company 3" />
+    <img src="/images/assets/image4.png" alt="Company 4" />
+    <img src="/images/assets/image5.png" alt="Company 5" />
+    <img src="/images/assets/image6.png" alt="Company 6" />
+    <img src="/images/assets/image7.png" alt="Company 7" />
+    <img src="/images/assets/image8.png" alt="Company 8" />
+  </div>
+</div>
+
     
       
     </>

@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-   --font-primary: 'Inter', sans-serif;
+   --font-family: "Onest", sans-serif;
   --text-color-dark: #313131;
   --text-color-light: #ffffff;
   --space-1-5: 0.375rem; 
@@ -21,7 +21,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   overflow-x: hidden;
-   font-family: 'Inter';
+   font-family: 'Onest';
    scrollbar-width: none; 
   -ms-overflow-style: none; 
 }
@@ -41,7 +41,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 .util-flex-mx {
-    font-family: "Inter", sans-serif;
+   font-family: "Onest", sans-serif;
   display: var(--flex-default);
   flex-direction: column;
   padding-left: 13vh;  
@@ -368,4 +368,32 @@ header {
   height: 20px;
 }
 
+.certification-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 40px auto;
+}
+.certification-container h1{
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 1%;
+}
+.certification-container p{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+
+}
+.certification-logos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;              
+  margin-top: 20px;
+}
+.certification-logos img {
+  width: 100px;          
+}
 

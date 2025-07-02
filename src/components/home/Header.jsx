@@ -71,9 +71,10 @@ return () => window.removeEventListener("scroll",handleScroll)
             <option >French</option>
         </select>
 
-        <button onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+       <button onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <X size={28} color="white" /> : <Menu size={28} color="white" />}
+      </button>
+
         </div>
 
       </div>

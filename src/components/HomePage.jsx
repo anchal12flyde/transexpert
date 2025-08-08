@@ -8,6 +8,7 @@ import SustainabilityBanner from "./home/SustainabilityBanner";
 import Blog from "./home/Blog";
 import CareersBanner from "./home/CarrerBanner";
 import Industries from "./home/Industries";
+import MapReach from "./home/MapReach";
 
 export default function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default function HomePage() {
 <Blog/>
 <CareersBanner/>
 <Industries/>
+<MapReach/>
 {/* <Footer/> */}
        
      

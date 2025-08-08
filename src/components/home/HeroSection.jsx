@@ -1,8 +1,8 @@
-
+"use client"
 export default function HeroSection() {
   return (
     <>
-      <section className="hero-section util-flex-mx">
+      <section className="hero-section global-container">
           <div className="hero-diagonal-overlay"></div>
     <div className="hero-content">
       <h1 className="hero-heading">

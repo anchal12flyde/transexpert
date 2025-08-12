@@ -36,7 +36,7 @@ export default function Header() {
             <Link href="/about">About Us</Link>
             <Link href="/blogs/single-blog">Services</Link>
             <Link href="#">Sustainability</Link>
-            <Link href="#">Careers</Link>
+            <Link href="/fleet-and-infrastructure">Careers</Link>
             <Link href="#">Get a quote</Link>
             <Link href="#">
               <button className="hero-button ">flag</button>

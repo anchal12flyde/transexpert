@@ -1334,3 +1334,53 @@ text-align: center;
   font-weight: 400;
   margin-top: 72px;
 }
+ 
+
+
+.fleet-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat {
+  flex: 1;
+  text-align: left;
+  padding: 0;
+}
+
+.stat h2 {
+  font-size: 96px;
+  font-weight: 700;
+  border-bottom: 0.5px solid #E22A26CC; 
+  display: inline-block;
+  width: 100%; 
+}
+
+@media (max-width: 468px) {
+  .fleet-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat {
+    width: 100%;
+   text-align: center;
+  }
+}
+.stat p {
+
+  margin-top: 14px;
+}
+.fleet-stats-text{
+  width: 300px;
+}
+
+.fleet-info {
+  display: flex;
+  gap: 40px;
+  margin-top: 100px;
+  margin-bottom: 78px;
+}
+
+
+

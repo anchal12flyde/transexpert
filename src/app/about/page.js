@@ -8,11 +8,11 @@ import CardsSection from "@/components/about/OurValues";
 export default function page() {
   return (
     <div>
-      <Header/>
-     <AboutHero/> 
-     <CardsSection/>
-{/* <LeadershipSection/> */}
-<Relaibility/>
+      <Header />
+      <AboutHero />
+      <CardsSection />
+      <LeadershipSection />
+      <Relaibility />
     </div>
-  )
+  );
 }

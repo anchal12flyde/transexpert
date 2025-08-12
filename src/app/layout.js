@@ -3,16 +3,14 @@ import "./globals.css";
 
 export default function RootLayout({ children }) {
   return (
-    <html >
-      
-     <head>
-<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&display=swap" rel="stylesheet" />
-
+    <html>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body
-        >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

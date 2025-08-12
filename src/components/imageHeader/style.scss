@@ -1,0 +1,15 @@
+.imageHeader{
+    position: relative;
+    // border: 1px solid black;
+
+    &::before{
+        position: absolute;
+        content: "";
+        inset: 0;
+        background-image: url("../../../public/himg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% auto;
+        z-index: -1;
+    }
+}

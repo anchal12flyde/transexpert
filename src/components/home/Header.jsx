@@ -24,19 +24,17 @@ export default function Header() {
       <div className="global-container">
         <div className="container">
           <Link href="/">
-           
-              <Image
-                src="/images/assets/logo1.png"
-                alt="TransExpert Logo"
-                width={176}
-                height={37}
-              />
-            
+            <Image
+              src="/images/assets/logo1.png"
+              alt="TransExpert Logo"
+              width={176}
+              height={37}
+            />
           </Link>
 
           <nav className="nav-links">
             <Link href="/about">About Us</Link>
-            <Link href="#">Services</Link>
+            <Link href="/blogs/single-blog">Services</Link>
             <Link href="#">Sustainability</Link>
             <Link href="#">Careers</Link>
             <Link href="#">Get a quote</Link>

@@ -229,14 +229,15 @@ body::-webkit-scrollbar {
 /* White-bordered square */
 .square-video {
   position: absolute;
-
-  right: 8%;
-  top: 5%;
-  width: 13cm;
+  top: -20%;
+  right: -12%;
+  width: 30cm;
   aspect-ratio: 1;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 
-  z-index: 1000;
+  z-index: 100;
+  /* mix-blend-mode: multiply;  */
+  /* background-color: transparent; */
 }
 
 /* Blue diagonal overlay */
@@ -247,7 +248,7 @@ body::-webkit-scrollbar {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: var(--company-blue, #27397a);
+  background-color: var(--company-blue, #27397acb);
   opacity: 0.96;
   mix-blend-mode: multiply;
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
@@ -797,6 +798,13 @@ body::-webkit-scrollbar {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+    gap: 03.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .industries-container {
+    gap: 6rem;
   }
 }
 
@@ -1166,7 +1174,7 @@ body::-webkit-scrollbar {
 }
 
 .background-video {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;

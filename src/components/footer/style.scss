@@ -1,0 +1,99 @@
+.footer {
+  position: relative;
+  background-color: #263879; /* Dark blue */
+  color: #fff;
+  padding: 13vh;
+  overflow: hidden;
+}
+
+.footer::after {
+  position: absolute;
+  content: "";
+  width: 10cm;
+  height: 10cm;
+  // border: 1px solid white;
+  right: 0;
+  bottom: -25; 
+  background-image: url("../../../public//images/assets/x.png");
+  background-repeat: no-repeat;
+  background-position: -3cm center;
+  background-size: 200% auto;
+
+}
+
+.footer-main {
+  display: flex;
+}
+
+.footer-content {
+  position: relative;
+  display: flex;
+
+  flex-direction: column;
+  z-index: 1;
+  // max-width: 1200px;
+  margin: auto;
+}
+
+.footer-left {
+  margin-right: 120px;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  max-width: 225px;
+  margin-bottom: 15px;
+}
+
+.footer-desc {
+  max-width: 250px;
+  line-height: 1.6;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.footer-copy {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.footer-links {
+  display: flex;
+  gap: 50px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-links li:hover {
+  color: #e5202b;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4;
+  align-items: flex-start;
+}
+
+.contact-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #e5202b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background-color: #c01723;
+}

@@ -12,6 +12,7 @@ import Industries from "@/components/home/Industries";
 import MapReach from "@/components/home/MapReach";
 import Strip from "@/components/home/Strip";
 import SustainabilityBanner from "@/components/home/SustainabilityBanner";
+import Footer from "@/components/footer/page";
 
 export default function HomePage() {
   const pathname = usePathname();
@@ -51,6 +52,7 @@ export default function HomePage() {
       <CareersBanner />
       <Industries />
       <MapReach />
+      <Footer />
     </div>
   );
 }

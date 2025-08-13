@@ -1554,7 +1554,7 @@ Certifications */
 
 .stat-item {
   display: inline-block;
-  text-align: left; /* ya center if needed */
+  text-align: left;
   color: #fff;
 }
 

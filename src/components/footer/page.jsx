@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "./style.scss";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -25,10 +26,19 @@ export default function Footer() {
             <div className="flex items-start gap-[50px] ">
               <div className="footer-links">
                 <ul>
-                  <li>About Us</li>
-                  <li>Services</li>
-                  <li>Sustainability</li>
-                  <li>Get a quote</li>
+                  <li>
+                    {" "}
+                    <Link href="/about">About Us</Link>
+                  </li>
+                  <li>
+                    <Link href="/services">Services</Link>
+                  </li>
+                  <li>
+                    <Link href="/sustainability">Sustainability</Link>
+                  </li>
+                  <li>
+                    <Link href="/get-a-quote">Get a quote</Link>
+                  </li>
                   <li>Industries</li>
                   <li>Privacy Policy</li>
                 </ul>
@@ -36,7 +46,11 @@ export default function Footer() {
                   <li>Locations</li>
                   <li>Blog Posts</li>
                   <li>Careers</li>
-                  <li>Fleet & Infrastructure</li>
+                  <li>
+                    <Link href="/fleet-and-infrastructure">
+                      Fleet & Infrastructure
+                    </Link>
+                  </li>
                   <li>Raise a Query</li>
                   <li>Terms and conditions</li>
                   <li>Refund and cancellation policy</li>
@@ -90,9 +104,9 @@ export default function Footer() {
           </p>
         </div>
       </footer>
+
       <footer className="footer-mobile md:hidden">
         {" "}
-      
         <div className="global-container">
           {/* Logo */}
           <div className="footer-logo">
@@ -138,14 +152,24 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="footer-icons">
-            <Image src="/icons/phone.svg" alt="Phone" width={30} height={30} />
             <Image
-              src="/icons/location.svg"
-              alt="Location"
-              width={30}
-              height={30}
+              src="/images/assets/location3.png"
+              alt="Phone"
+              width={20}
+              height={20}
             />
-            <Image src="/icons/email.svg" alt="Email" width={30} height={30} />
+            <Image
+              src="/images/assets/call1.png"
+              alt="Location"
+              width={20}
+              height={10}
+            />
+            <Image
+              src="/images/assets/email2.png"
+              alt="Email"
+              width={20}
+              height={20}
+            />
           </div>
 
           {/* Copyright */}

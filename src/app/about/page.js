@@ -37,7 +37,7 @@ export default function page() {
       <CardsSection />
       {/* <LeadershipSection /> */}
       <Relaibility />
-      <Footer />
+      <Footer/>
     </div>
   );
 }

@@ -2,7 +2,7 @@
 
 export default function DowntimeSection() {
   return (
-    <section className="global-container">
+    <section className="global-container mb-[78px]">
       <div className="downtime-container">
         {/* Left side */}
         <div className="downtime-left">

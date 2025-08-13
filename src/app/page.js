@@ -17,7 +17,7 @@ import Footer from "@/components/footer/page";
 export default function HomePage() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
-  const containerRef = useRef(null);
+  const containerRef = useRef(null); 
 
   useEffect(() => {
     const container = containerRef.current;

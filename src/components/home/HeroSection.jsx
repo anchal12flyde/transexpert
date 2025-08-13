@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Header from "./Header";
-import Image from "next/image";
+import Image from "next/image"; 
 
 export default function HeroSection({ isScrolled }) {
   // console.log(isScrolled);

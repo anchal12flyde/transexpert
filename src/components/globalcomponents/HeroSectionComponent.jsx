@@ -1,8 +1,23 @@
 "use client";
 
-export default function HeroSectionComponent({ imageSrc, title, subtitle, description }) {
+import Header from "../home/Header";
+
+export default function HeroSectionComponent({
+  imageSrc,
+  title,
+  subtitle,
+  description,
+  isScrolled,
+}) {
   return (
     <section className="fleet-hero">
+      {!isScrolled && (
+        <div
+          className={`fixed top-0 left-0 w-full z-50 transition-all duration-300`}
+        >
+          <Header />
+        </div>
+      )}
       <div className="fleet-hero__image-wrap">
         <img
           src={imageSrc}

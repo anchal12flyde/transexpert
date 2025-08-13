@@ -1,8 +1,17 @@
 "use client";
 
-export default function SingleBlogHero() {
+import Header from "../home/Header";
+
+export default function SingleBlogHero({ isScrolled }) {
   return (
     <section className="single-blog-hero mb-200  ">
+      {!isScrolled && (
+        <div
+          className={`fixed top-0 left-0 w-full z-50 transition-all duration-300`}
+        >
+          <Header />
+        </div>
+      )}
       <div className="global-container ">
         <div className="single-blog-overlay ">
           <div className="blog-card">

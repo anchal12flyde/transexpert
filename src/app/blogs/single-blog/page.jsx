@@ -3,14 +3,38 @@ import Header from "@/components/home/Header";
 import SingleBlogHero from "@/components/singelBlog/HeroSection";
 import RelatedPost from "@/components/singelBlog/RelatedPost";
 import Footer from "@/components/footer/page";
+import { useEffect, useRef, useState } from "react";
 
 export default function page() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const handleScroll = () => {
+      setIsScrolled(container.scrollTop > 50);
+    };
+
+    // Attach listener to the container
+    container.addEventListener("scroll", handleScroll, { passive: true });
+
+    // Call once for initial state
+    handleScroll();
+
+    // Cleanup
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div>
-      <Header />
-    <SingleBlogHero/>
-    <RelatedPost/>
-    <Footer/>
+    <div className="mainCon" ref={containerRef}>
+      {isScrolled && <Header isScrolled={isScrolled} />}
+      <SingleBlogHero isScrolled={isScrolled} />
+      <RelatedPost />
+      <Footer />
     </div>
   );
 }

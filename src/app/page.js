@@ -42,7 +42,7 @@ export default function HomePage() {
   console.log(isScrolled);
 
   return (
-    <div className="" ref={containerRef}>
+    <div className="mainCon" ref={containerRef}>
       {isScrolled && <Header isScrolled={isScrolled} />}
       <HeroSection isScrolled={isScrolled} />
       <Certification />

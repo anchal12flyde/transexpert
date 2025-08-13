@@ -2,8 +2,8 @@
 
 const Blog = () => {
   return (
-    <section className="blog-section">
-      <div className="global-container blog-grid">
+    <section className="blog-section global-container">
+      <div className=" blog-grid">
         <div className="blog-box">
           <img src="/images/Image1.png" alt="Truck" className="blog-image" />
           <div className="blog-content">

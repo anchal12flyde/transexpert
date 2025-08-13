@@ -10,10 +10,7 @@ export default function RootLayout({ children }) {
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet"/>
 
       </head>
-      <body
-        >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

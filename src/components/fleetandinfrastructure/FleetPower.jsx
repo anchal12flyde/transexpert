@@ -3,9 +3,8 @@
 export default function FleetPower() {
   return (
     <>
-      <div className="global-container">
+      <div className="global-container mt-[42px] lg:mt-[100px]  ">
         <section className="fleet-section">
-      
           <div className="fleet-stats">
             <div className="stat">
               <h2>50</h2>
@@ -18,28 +17,30 @@ export default function FleetPower() {
             <div className="stat">
               <h2>500+</h2>
               <div className="fleet-stats-text">
-              <p className="subheading">
-                Refrigerated Reefers – Temperature controlled delivery for food,
-                pharma, and perishables
-              </p>
+                <p className="subheading">
+                  Refrigerated Reefers – Temperature controlled delivery for
+                  food, pharma, and perishables
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="stat">
-            <h2>20</h2>
-            <div className="fleet-stats-text">
-              <p className="subheading">
-                Flatbeds – For industrial, oversized, and non-containerized
-                cargo
-              </p>
+            <div className="stat">
+              <h2>20</h2>
+              <div className="fleet-stats-text">
+                <p className="subheading">
+                  Flatbeds – For industrial, oversized, and non-containerized
+                  cargo
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Heading + Paragraph */}
           <div className="fleet-info">
-            <h3 className="hero-heading">
-              Smart, sustainable, and <br /> fleet-first logistics.
-            </h3>
+            <div className="fleet-one">
+              <h3 className="hero-heading">
+                Smart, sustainable, and fleet-first logistics.
+              </h3>
+            </div>
+   <div className="fleet-two">
             <p className="subheading">
               Our fleet is built for reliability, efficiency, and
               sustainability. With an average vehicle age of less than five
@@ -59,6 +60,7 @@ export default function FleetPower() {
               enterprise-grade logistics solutions across Canada, the U.S., and
               Mexico.
             </p>
+     </div>       
           </div>
         </section>
       </div>

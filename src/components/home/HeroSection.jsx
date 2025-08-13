@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Header from "./Header";
 
 export default function HeroSection({ isScrolled }) {
-  console.log(isScrolled);
+  // console.log(isScrolled);
   return (
     <>
       {!isScrolled && (
@@ -16,9 +16,11 @@ export default function HeroSection({ isScrolled }) {
       )}
       <section className="hero-section global-container">
         <div className="hero-diagonal-overlay">
-          <video className="square-video" autoPlay muted loop playsInline>
-            <source src="/images/x-gif.mp4" type="video/mp4" />
-          </video>
+          <img
+            className="square-video"
+            src="/images/x-gif.gif"
+            alt="Animation"
+          />
         </div>
 
         <div className="hero-content">

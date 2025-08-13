@@ -4,7 +4,7 @@ export default function Industries() {
   return (
     <>
       <section className="industries-section ">
-        <div className="industries-container">
+        <div className="industries-container"> 
           {/* Left Side */}
           <div className="industries-text ">
             <h2 className="heading">Industries we work with</h2>

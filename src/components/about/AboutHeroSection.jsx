@@ -1,8 +1,17 @@
 "use client";
 
-export default function AboutHero() {
+import Header from "../home/Header";
+
+export default function AboutHero({ isScrolled }) {
   return (
     <section className="about-hero-section">
+      {!isScrolled && (
+        <div
+          className={`fixed top-0 left-0 w-full z-50 transition-all duration-300`}
+        >
+          <Header />
+        </div>
+      )}
       {/* Background Image */}
       <div className="about-hero-bg">
         <div className="about-hero-overlay"></div>

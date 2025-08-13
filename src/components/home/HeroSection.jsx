@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Header from "./Header";
+import Image from "next/image";
 
 export default function HeroSection({ isScrolled }) {
   // console.log(isScrolled);
@@ -23,8 +24,10 @@ export default function HeroSection({ isScrolled }) {
           />
         </div>
 
+        <div className="overlay-X-Mob sm:hidden "></div>
+
         <div className="hero-content">
-          <h1 className="hero-heading">
+          <h1 className=" hero-heading">
             We Don’t Just Move Freight. <br />
             We Power North American Enterprise.
           </h1>
@@ -57,9 +60,9 @@ export default function HeroSection({ isScrolled }) {
         </div>
 
         <div className="testimonial-cards">
-          <div className=" flex justify-end   ">
+          <div className=" flex justify-end ">
             <p
-              className="  text-[46px] font-bold mr-[-.8cm]  "
+              className="   text-[46px] font-bold mr-[-.8cm]  "
               style={{ writingMode: "sideways-lr" }}
             >
               SERVICES
@@ -136,60 +139,125 @@ export default function HeroSection({ isScrolled }) {
             </div>
           </div>
         </div>
-
-        {/* <div className="bg-blue-900   block md:hidden">
-  <h2 className="text-white text-center text-xl font-semibold mb-4">Services</h2>
-  <div className="grid grid-cols-2 gap-4">
-   
-    <div className="relative rounded-lg overflow-hidden">
-      <img src="/images/img2.png" alt="Full Truck Load" className="w-full h-32 object-cover" />
-      <div className="absolute bottom-2 left-2 text-black text-xs font-bold bg-white bg-opacity-70 py-0.5 rounded">
-        Full Truck Load
-      </div>
-      <div className="absolute bottom-2 right-2 bg-red-500 text-white rounded-full p-1">
-        ➡️
-      </div>
-      <div className="absolute bottom-0 right-0 w-6 h-6 bg-red-600 rotate-45 translate-x-1/2 translate-y-1/2"></div>
-    </div>
-
-    
-    <div className="relative rounded-lg overflow-hidden">
-      <img src="/images/img1.png" alt="Express Delivery" className="w-full h-32 object-cover" />
-      <div className="absolute bottom-2 left-2 text-black text-xs font-bold bg-white bg-opacity-70 py-0.5 rounded">
-        Express Delivery
-      </div>
-      <div className="absolute bottom-2 right-2 bg-red-500 text-white rounded-full p-1">
-        ➡️
-      </div>
-      <div className="absolute bottom-0 right-0 w-6 h-6 bg-red-600 rotate-45 translate-x-1/2 translate-y-1/2"></div>
-    </div>
-
-   
-    <div className="relative rounded-lg overflow-hidden">
-      <img src="/images/img2.png" alt="Express Delivery" className="w-full h-32 object-cover" />
-      <div className="absolute bottom-2 left-2 text-black text-xs font-bold bg-white bg-opacity-70 py-0.5 rounded">
-        Express Delivery
-      </div>
-      <div className="absolute bottom-2 right-2 bg-red-500 text-white rounded-full p-1">
-        ➡️
-      </div>
-      <div className="absolute bottom-0 right-0 w-6 h-6 bg-red-600 rotate-45 translate-x-1/2 translate-y-1/2"></div>
-    </div>
-
-   
-    <div className="relative rounded-lg overflow-hidden">
-      <img src="/images/img1.png" alt="Full Truck Load" className="w-full h-32 object-cover" />
-      <div className="absolute bottom-2 left-2 text-black text-xs font-bold bg-white bg-opacity-70 py-0.5 rounded">
-        Full Truck Load
-      </div>
-      <div className="absolute bottom-2 right-2 bg-red-500 text-white rounded-full p-1">
-        ➡️
-      </div>
-      <div className="absolute bottom-0 right-0 w-6 h-6 bg-red-600 rotate-45 translate-x-1/2 translate-y-1/2"></div>
-    </div>
-  </div>
-</div> */}
       </section>
+      <div className=" sm:hidden flex gap-[37px] flex-col mb-[0px] mt-[0px] global-container bgMob pb-[110px] pt-[42px] ">
+        <p className="sm:hidden text-center text-[24px] text-white font-bold  ">
+          Services
+        </p>
+        <div className=" sm:hidden grid grid-cols-2 gap-[33px] ">
+          <div className="card1 ">
+            <div className="img-wrapper1">
+              <img src="/images/img2.png" alt="Full Truck Load" />
+              <img
+                src="/images/assets/redarrow.png"
+                alt="Arrow"
+                className="arrow-img1"
+              />
+            </div>
+            <div className="card-overlay1 ">
+              <div className="card-content flex flex-col justify-between  ">
+                <h3>Full Truck Load</h3>
+                <div className=" flex items-center justify-between    ">
+                  <div className="!w-[40px]  pb-[10px] ">
+                    <img
+                      src="/images/assets/redarrow.png"
+                      alt="Arrow"
+                      className=" !w-[30px] aspect-square rotate-[-47deg] "
+                    />
+                  </div>
+                  <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
+                    <img
+                      src="/images/assets/x.png"
+                      alt="Arrow"
+                      className="w-full aspect-square scale-120 !ml-[.5cm] "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card1">
+            <div className="img-wrapper1">
+              <img src="/images/img1.png" alt="Full Truck Load" />
+            </div>
+            <div className="card-overlay1 ">
+              <div className="card-content flex flex-col justify-between  ">
+                <h3>Temperature Controlled</h3>
+                <div className=" flex items-center justify-between    ">
+                  <div className="!w-[40px]  pb-[10px] ">
+                    <img
+                      src="/images/assets/redarrow.png"
+                      alt="Arrow"
+                      className=" !w-[30px] aspect-square rotate-[-47deg] "
+                    />
+                  </div>
+                  <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
+                    <img
+                      src="/images/assets/x.png"
+                      alt="Arrow"
+                      className="w-full aspect-square scale-120 !ml-[.5cm] "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="card1">
+            <div className="img-wrapper1">
+              <img src="/images/img2.png" alt="Full Truck Load" />
+            </div>
+            <div className="card-overlay1 ">
+              <div className="card-content flex flex-col justify-between  ">
+                <h3>Full Truck Load</h3>
+                <div className=" flex items-center justify-between    ">
+                  <div className="!w-[40px]  pb-[10px] ">
+                    <img
+                      src="/images/assets/redarrow.png"
+                      alt="Arrow"
+                      className=" !w-[30px] aspect-square rotate-[-47deg] "
+                    />
+                  </div>
+                  <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
+                    <img
+                      src="/images/assets/x.png"
+                      alt="Arrow"
+                      className="w-full aspect-square scale-120 !ml-[.5cm] "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card1">
+            <div className="img-wrapper1">
+              <img src="/images/img1.png" alt="Full Truck Load" />
+            </div>
+            <div className="card-overlay1 ">
+              <div className="card-content flex flex-col justify-between  ">
+                <h3>Temperature Controlled</h3>
+                <div className=" flex items-center justify-between    ">
+                  <div className="!w-[40px]  pb-[10px] ">
+                    <img
+                      src="/images/assets/redarrow.png"
+                      alt="Arrow"
+                      className=" !w-[30px] aspect-square rotate-[-47deg] "
+                    />
+                  </div>
+                  <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
+                    <img
+                      src="/images/assets/x.png"
+                      alt="Arrow"
+                      className="w-full aspect-square scale-120 !ml-[.5cm] "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

@@ -32,13 +32,23 @@ export default function Header({ isScrolled = false }) {
               isScrolled ? "!text-primary-color " : "text-white"
             }`}
           >
-            <Link href="/about">About Us</Link>
-            <Link href="/blogs/single-blog">Services</Link>
-            <Link href="/sustainbility">Sustainability</Link>
-            <Link href="/fleet-and-infrastructure">Careers</Link>
-            <Link href="#">Get a quote</Link>
+            <Link href="/about" className="sm:block hidden">
+              About Us
+            </Link>
+            <Link href="#" className="sm:block hidden">
+              Services
+            </Link>
+            <Link href="#" className="sm:block hidden">
+              Sustainability
+            </Link>
+            <Link href="#" className="sm:block hidden">
+              Careers
+            </Link>
+            <Link href="#" className="sm:block hidden">
+              Get a quote
+            </Link>
 
-            <div className="flex gap-10 " >
+            <div className="sm:flex sm:gap-10 hidden  ">
               <div className="hero-button flex items-center gap-2 ">
                 <Image
                   src="/images/assets/Frame.svg"
@@ -58,6 +68,22 @@ export default function Header({ isScrolled = false }) {
                   Contact us
                 </button>
               </Link>
+            </div>
+
+            <div className="flex items-center gap-5 sm:hidden ">
+              <Image
+                src="/images/assets/Frame.svg"
+                width={25}
+                height={52}
+                alt="flag"
+              />
+
+              <Image
+                src="/images/hamburger.png"
+                width={15}
+                height={52}
+                alt="hamburger"
+              />
             </div>
           </nav>
         </div>

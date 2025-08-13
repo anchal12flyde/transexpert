@@ -2,7 +2,14 @@
 
 export default function MapReach() {
   return (
-    <div className="flex items-end">
+    <div className="flex flex-col sm:flex-row items-end p-[3.5vh]  ">
+      <h2 className="heading sm:hidden ">
+        Geographical Coverage & Infrastructure
+      </h2>
+      <p className="card_subheading sm:hidden ">
+        We move freight across Canada, the USA, and Mexico with speed and
+        reliability.
+      </p>
       <div>
         <video
           src="/images/videos/map.mp4"
@@ -14,8 +21,10 @@ export default function MapReach() {
         />
       </div>
       <div className="text-box mb-20">
-        <h2 className="heading">Geographical Coverage & Infrastructure</h2>
-        <p className="card_subheading">
+        <h2 className="hidden sm:block heading">
+          Geographical Coverage & Infrastructure
+        </h2>
+        <p className=" hidden sm:block card_subheading">
           We move freight across Canada, the USA, and Mexico with speed and
           reliability.
         </p>

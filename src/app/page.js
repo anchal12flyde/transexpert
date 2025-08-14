@@ -39,7 +39,7 @@ export default function HomePage() {
     };
   }, []);
 
-  console.log(isScrolled);
+  // console.log(isScrolled);
 
   return (
     <div className="mainCon" ref={containerRef}>

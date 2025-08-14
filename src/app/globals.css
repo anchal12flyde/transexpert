@@ -1503,7 +1503,7 @@ body::-webkit-scrollbar {
 
 .mainCon {
   /* border: 5px solid red; */
-  max-height: 100svh;
+  max-height: 100vh;
   overflow-y: auto;
 
   &::-webkit-scrollbar {

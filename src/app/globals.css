@@ -1871,17 +1871,12 @@ Certifications */
     text-align: center;
   }
 }
-/* Ethics Section */
+
 .ethics-section {
   background-color: #fff;
   padding: 60px 0;
 }
 
-.global-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
 .ethics-headings {
   display: flex;

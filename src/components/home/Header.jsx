@@ -38,7 +38,7 @@ export default function Header({ isScrolled = false }) {
             <Link href="#" className="sm:block hidden">
               Services
             </Link>
-            <Link href="/sustainability" className="sm:block hidden">
+            <Link href="/sustainbility" className="sm:block hidden">
               Sustainability
             </Link>
             <Link href="#" className="sm:block hidden">

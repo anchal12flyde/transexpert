@@ -84,7 +84,7 @@ body::-webkit-scrollbar {
 
 .heading {
   font-size: 32px;
-  font-family: "Onest", sans-serif;
+  
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -97,9 +97,9 @@ body::-webkit-scrollbar {
 }
 
 .subheading {
-  font-family: "Onest", sans-serif;
+  
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.4;
   letter-spacing: 0.2;
 }
@@ -1870,4 +1870,51 @@ Certifications */
     align-items: center;
     text-align: center;
   }
+}
+/* Ethics Section */
+.ethics-section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.global-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ethics-headings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ethics-title {
+  font-family: "Onest", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #000;
+}
+
+.ethics-title.red {
+  color: #e30613;
+  text-decoration: underline;
+}
+
+.ethics-text {
+  font-family: "Onest", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ethics-text .link {
+  color: #000;
+  text-decoration: underline;
 }

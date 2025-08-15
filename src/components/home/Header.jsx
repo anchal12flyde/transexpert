@@ -44,7 +44,7 @@ export default function Header({ isScrolled = false }) {
             <Link href="#" className="sm:block hidden">
               Careers
             </Link>
-            <Link href="#" className="sm:block hidden">
+            <Link href="/contact-us" className="sm:block hidden">
               Get a quote
             </Link>
 

@@ -1,10 +1,12 @@
 "use client"
+import { useRouter } from "next/navigation";
 
 export default function Industries() {
+  const router = useRouter();
   return (
     <>
       <section className="industries-section ">
-        <div className="industries-container">  
+        <div className="industries-container">
           {/* Left Side */}
           <div className="industries-text ">
             <h2 className="heading">Industries we work with</h2>
@@ -22,14 +24,21 @@ export default function Industries() {
               production lines, TransExpert ensures fast, secure, and seamless
               transportation across Canada, the U.S., and Mexico.
             </p>
-            <button className="hero-button">Know more</button>
+            <button
+              className="hero-button"
+              onClick={() => router.push("/industries")}
+            >
+              Know more
+            </button>
           </div>
 
           {/* Right Side */}
           <div className="industries-cards">
             <div
               className="industry-card"
-              style={{ backgroundImage: `url('/images/assets/wholesaleImg.jpg')` }}
+              style={{
+                backgroundImage: `url('/images/assets/wholesaleImg.jpg')`,
+              }}
             >
               <span>Wholesale</span>
             </div>
@@ -41,7 +50,9 @@ export default function Industries() {
             </div>
             <div
               className="industry-card"
-              style={{ backgroundImage: `url('/images/assets/manufacturersImg.jpg')` }}
+              style={{
+                backgroundImage: `url('/images/assets/manufacturersImg.jpg')`,
+              }}
             >
               <span>Manufacturers</span>
             </div>

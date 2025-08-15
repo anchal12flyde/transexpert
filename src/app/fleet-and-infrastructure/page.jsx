@@ -30,7 +30,6 @@ export default function page() {
       container.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   return (
     <div className="mainCon" ref={containerRef}>
       {/* <Header /> */}

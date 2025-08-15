@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Environmental() {
   return (
     <>
-      <section className="careers-banner global-container mb-[78px]">
+      <section className="careers-banner global-container mb-[42px] sm:mb-[78px]">
         <div className="careers-content-wrapper">
           {/* Left Image */}
           <div className="careers-image-container">
@@ -23,7 +23,8 @@ export default function Environmental() {
             <p className="subheading">
               From our trucks to our terminals, sustainability drives
               everything:
-            </p><br/>
+            </p>
+            <br />
             <ul
               className="subheading"
               style={{ listStyleType: "disc", paddingLeft: "20px" }}

@@ -2,7 +2,7 @@
 import HeroSectionComponent from "../globalcomponents/HeroSectionComponent"
 
 
-export default function HeroSection() {
+export default function HeroSection({ isScrolled }) {
   return (
     <>
       <HeroSectionComponent
@@ -12,7 +12,8 @@ export default function HeroSection() {
         subtitle="Our Commitment to Corporate 
         Social Responsibility
         "
-        description="We operate with a deep sense of purpose — for our employees, our communities, our clients, and the planet. Our CSR framework focuses on eight core pillars."
+        description="We operate with a deep sense of purpose for our employees, our communities, our clients, and the planet. Our CSR framework focuses on eight core pillars."
+        isScrolled={isScrolled}
       />
     </>
   );

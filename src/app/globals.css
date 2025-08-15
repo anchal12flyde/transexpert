@@ -228,6 +228,35 @@ body::-webkit-scrollbar {
   line-height: normal;
   /* height: auto; */
 }
+
+
+.bgRed{
+  position: relative;
+}
+
+.bgRed::before{
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: #E22A26CC;
+  z-index: 10;
+  /* border: 4px solid red; */
+}
+
+.bgBlue{
+  position: relative;
+}
+
+.bgBlue::before{
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: #27397ABF;
+  z-index: 10;
+  /* border: 4px solid red; */
+}
+
+
 .hero-diagonal-overlay {
   position: absolute;
   top: 0;
@@ -235,21 +264,43 @@ body::-webkit-scrollbar {
   bottom: 0;
   left: 0;
   z-index: 0;
+  background-color: var(--company-blue, #27397acb);
+
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+
 }
 
-/* White-bordered square */
-.square-video {
+
+.hero-diagonal-overla::after {
+  content: "";
   position: absolute;
-  top: -20%;
-  right: -12%;
-  width: 30cm;
-  aspect-ratio: 1;
-  /* border: 1px solid white; */
-
-  z-index: 100;
-  /* mix-blend-mode: multiply;  */
-  /* background-color: transparent; */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--company-blue, #27397acb);
+  opacity: 0.96;
+  mix-blend-mode: multiply;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  z-index: 0;
+  border: 5px solid blueviolet;
 }
+/* White-bordered square */
+.square-videon {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  /* width: 854.9861732381049px;       */
+  /* aspect-ratio: 1; */
+  height: 100vh;
+  /* border: 2px solid white; */
+  z-index: 1000;
+  /* display: none; */
+  /* transform: rotate(-2.5deg); */
+}
+
+
 
 @media screen and (max-width: 1500px) {
   .square-video {
@@ -405,19 +456,7 @@ body::-webkit-scrollbar {
 }
 
 /* Blue diagonal overlay */
-.hero-diagonal-overlay::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: var(--company-blue, #27397acb);
-  opacity: 0.96;
-  mix-blend-mode: multiply;
-  clip-path: polygon(100% 0, 100% 100%, 0 100%);
-  z-index: 0;
-}
+
 
 .hero-testimonial {
   position: absolute;

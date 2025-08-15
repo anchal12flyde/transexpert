@@ -2,31 +2,74 @@
 
 import { useEffect, useRef, useState } from "react";
 import Header from "./Header";
-import Image from "next/image"; 
+import Image from "next/image";
 
 export default function HeroSection({ isScrolled }) {
+  const overlayRef = useRef(null);
+  const squareRef = useRef(null);
+
+  useEffect(() => {
+    const calcValues = () => {
+      if (!overlayRef.current) return;
+
+      const rect = overlayRef.current.getBoundingClientRect();
+      const fullWidth = rect.width;
+      const fullHeight = rect.height;
+
+      // Full hypotenuse (Pythagoras theorem)
+      const fullHypotenuse = Math.sqrt(fullWidth ** 2 + fullHeight ** 2);
+
+      // 100vh ki height
+      const vhHeight = window.innerHeight;
+
+      // 45° slope ke liye base = height
+      const baseAt100vh = vhHeight * (fullWidth / fullHeight);
+
+      // Hypotenuse for 100vh height
+      const hypotenuseAt100vh = Math.sqrt(baseAt100vh ** 2 + vhHeight ** 2);
+
+      squareRef.current.style.width = `${baseAt100vh}px`;
+
+      console.clear();
+      console.log("=== Overlay Measurements ===");
+      console.log("Full Width (px):", fullWidth);
+      console.log("Full Height (px):", fullHeight);
+      console.log("Full Hypotenuse (px):", fullHypotenuse);
+      console.log("100vh Height (px):", vhHeight);
+      console.log("Base at 100vh (px):", baseAt100vh);
+      console.log("Hypotenuse at 100vh (px):", hypotenuseAt100vh);
+    };
+
+    calcValues();
+    window.addEventListener("resize", calcValues);
+    return () => window.removeEventListener("resize", calcValues);
+  }, []);
+
   // console.log(isScrolled);
   return (
     <>
-      {!isScrolled && ( 
+      {!isScrolled && (
         <div
           className={`fixed top-0 left-0 w-full z-50 transition-all duration-300`}
         >
           <Header />
         </div>
       )}
-      <section className="hero-section global-container">
-        <div className="hero-diagonal-overlay">
-          <img
-            className="square-video"
-            src="/images/x-gif.gif"
-            alt="Animation"
-          />
-        </div>
+      <section className="hero-section global-container border-5 border-red-500">
+        <div
+          ref={overlayRef}
+          className="hero-diagonal-overlay border-5 border-green-500"
+        ></div>
+        <img
+          ref={squareRef}
+          className="square-videon"
+          src="/images/x-gif.gif"
+          alt="Animation"
+        />
 
         <div className="overlay-X-Mob sm:hidden "></div>
 
-        <div className="hero-content">
+        <div className="hero-content  ">
           <h1 className=" hero-heading">
             We Don’t Just Move Freight. <br />
             We Power North American Enterprise.

@@ -45,10 +45,8 @@ export default function Strip() {
       <div className="global-container">
         <h2 className="text">
           A Fleet of{" "}
-          <span className="number inline-block leading-none">
-            {count}
-          </span>
-          + Vehicles Ready to Move Your Business Forward
+          <span className="number inline-block leading-none">{count}</span>+
+          Vehicles Ready to Move Your Business Forward
         </h2>
       </div>
     </section>

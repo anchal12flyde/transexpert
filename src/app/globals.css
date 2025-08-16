@@ -103,7 +103,7 @@ body::-webkit-scrollbar {
 
 .subheading {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.4;
   letter-spacing: 0.2;
 }
@@ -2196,17 +2196,21 @@ Certifications */
   flex-direction: row;
   gap: 78px;
   margin-top: 78px;
+  margin-bottom: 78px;
+  align-items: flex-start;
 }
 
 .contact-info {
+  position: relative; 
   flex: 1;
-  background-color: #1d2a5f;
+  background-color: var(--primary-color);
   color: white;
   padding: 42px 60px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 
@@ -2219,7 +2223,7 @@ Certifications */
 }
 
 .contact-info .section {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .contact-form {
@@ -2231,7 +2235,7 @@ Certifications */
 .contact-form-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px 40px; /* row gap, column gap */
+  gap: 78px 114px; /* row gap, column gap */
 }
 
 .form-group {
@@ -2240,9 +2244,8 @@ Certifications */
 }
 
 .form-group label {
-  font-size: 14px;
-  color: #e53935; /* matches red from design */
-  margin-bottom: 5px;
+  color: var(--secondary-color); 
+ 
 }
 
 .form-group input {
@@ -2258,10 +2261,9 @@ Certifications */
   flex-direction: column;
 }
 
-.full-width label {
-  font-size: 14px;
-  color: #e53935;
-  margin-bottom: 8px;
+.full-width .contact-para {
+  margin-bottom: 10px;
+  color: var(--secondary-color);
 }
 
 .radio-group {
@@ -2280,7 +2282,7 @@ textarea {
 }
 
 .send-btn {
-  background-color: #e53935;
+  background-color: var(--secondary-color);
   color: white;
   padding: 12px 25px;
   border: none;
@@ -2289,6 +2291,36 @@ textarea {
   font-weight: 500;
 }
 
+.decor-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 221px;
+  width: 200px;
+}
 
+.contact-para{
+  font-size: 18px;
+  font-weight: 300;
+}
 
-
+@media (max-width: 768px) {
+  .contact-info {
+    padding: 42px 25px;
+  }
+  .contact-section {
+    flex-direction: column;
+  }
+  .contact-form {
+    padding: 42px 25px;
+  }
+  .contact-form-layout {
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+  }
+  .contact-para{
+    font-size: 16px;
+    
+  
+  }
+}

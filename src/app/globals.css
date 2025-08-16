@@ -69,6 +69,10 @@ body::-webkit-scrollbar {
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
+.mainImagDivTruck {
+  position: relative;
+}
+
 @media (max-width: 768px) {
   .global-container {
     padding-left: 3.5vh;
@@ -85,7 +89,7 @@ body::-webkit-scrollbar {
 
 .heading {
   font-size: 28px;
-  
+
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -98,7 +102,6 @@ body::-webkit-scrollbar {
 }
 
 .subheading {
-  
   font-size: 18px;
   font-weight: 400;
   line-height: 1.4;
@@ -229,6 +232,33 @@ body::-webkit-scrollbar {
   line-height: normal;
   /* height: auto; */
 }
+
+.bgRed {
+  position: relative;
+}
+
+.bgRed::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: #e22a26cc;
+  z-index: 10;
+  /* border: 4px solid red; */
+}
+
+.bgBlue {
+  position: relative;
+}
+
+.bgBlue::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: #27397abf;
+  z-index: 10;
+  /* border: 4px solid red; */
+}
+
 .hero-diagonal-overlay {
   position: absolute;
   top: 0;
@@ -236,20 +266,54 @@ body::-webkit-scrollbar {
   bottom: 0;
   left: 0;
   z-index: 0;
+  background-color: var(--company-blue, #27397acb);
+
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
 
-/* White-bordered square */
-.square-video {
+.hero-diagonal-overla::after {
+  content: "";
   position: absolute;
-  top: -20%;
-  right: -12%;
-  width: 30cm;
-  aspect-ratio: 1;
-  /* border: 1px solid white; */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--company-blue, #27397acb);
+  opacity: 0.96;
+  mix-blend-mode: multiply;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  z-index: 0;
+  border: 5px solid blueviolet;
+}
+/* White-bordered square */
+.square-videon {
+  position: absolute;
+  top: 0;
+  right: 0;
 
-  z-index: 100;
-  /* mix-blend-mode: multiply;  */
-  /* background-color: transparent; */
+  /* width: 854.9861732381049px;       */
+  /* aspect-ratio: 1; */
+  height: 100vh;
+  /* border: 2px solid white; */
+  z-index: 1000;
+  /* display: none; */
+  transform: rotate(-2.5deg);
+}
+
+.overlay-blue {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  background-color: var(--primary-color);
+  width: 730px;
+  border-radius: 20px;
+  z-index: 10;
+  padding: 78px;
+}
+
+/* Next.js Image wrapper span ke liye */
+span:has(img) {
+  overflow: visible !important;
 }
 
 @media screen and (max-width: 1500px) {
@@ -406,19 +470,6 @@ body::-webkit-scrollbar {
 }
 
 /* Blue diagonal overlay */
-.hero-diagonal-overlay::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: var(--company-blue, #27397acb);
-  opacity: 0.96;
-  mix-blend-mode: multiply;
-  clip-path: polygon(100% 0, 100% 100%, 0 100%);
-  z-index: 0;
-}
 
 .hero-testimonial {
   position: absolute;
@@ -1504,7 +1555,7 @@ body::-webkit-scrollbar {
 
 .mainCon {
   /* border: 5px solid red; */
-  max-height: 100svh;
+  max-height: 100vh;
   overflow-y: auto;
 
   &::-webkit-scrollbar {
@@ -1875,7 +1926,6 @@ Certifications */
 
 /* Ethics Section */
 
-
 /* ===== Desktop Tabs ===== */
 .tab-desktop {
   display: block;
@@ -1884,7 +1934,7 @@ Certifications */
 .tab-header {
   display: flex;
   justify-content: space-between;
-    font-size: 28px;
+  font-size: 28px;
   font-weight: 600;
 }
 
@@ -1914,8 +1964,6 @@ Certifications */
 }
 
 .tab-content {
-  
- 
   color: var(--thm-black);
   text-align: center;
   max-width: 1000px;
@@ -1941,13 +1989,12 @@ Certifications */
   font-size: 18px;
 }
 .accordion-header.active {
-  color: var(--thm-strip-red); 
+  color: var(--thm-strip-red);
 }
 
 .accordion-header.active .accordion-icon {
   color: var(--thm-strip-red);
 }
-
 
 .accordion-title {
   flex: 1;
@@ -1965,7 +2012,7 @@ Certifications */
 }
 
 .accordion-content.open {
-  max-height: 500px; 
+  max-height: 500px;
 }
 
 .accordion-content p {
@@ -1986,7 +2033,6 @@ Certifications */
 
 /* Industries Page */
 
-
 .industries {
   margin: 0 70px;
 }
@@ -2004,31 +2050,28 @@ Certifications */
   margin-bottom: 78px;
 }
 
-
 .industries__card {
   background: #1f2a64;
   padding: 42px 86px;
-  border-radius: 0  0  0 120px;
+  border-radius: 0 0 0 120px;
   color: #fff;
 }
 
 .industries__card1 {
   background: #1f2a64;
   padding: 42px 86px;
-  border-radius: 0  0 120px 0 ;
+  border-radius: 0 0 120px 0;
   color: #fff;
 }
 .industries__card--text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 .industries__card--text1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 .industries__title {
   font-size: 32px;
@@ -2040,7 +2083,6 @@ Certifications */
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 15px;
-  
 }
 
 .industries__list {
@@ -2060,23 +2102,22 @@ Certifications */
 }
 
 .industries__img {
-  height: 100% ; 
-  width: 100% ; 
-  object-fit: cover; 
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   border-radius: 8px;
 }
 
 .industries__label {
   position: absolute;
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-weight: 600;
   font-size: 32px;
   color: #fff;
   text-align: center;
 }
-
 
 .industries__banner {
   position: relative;
@@ -2096,7 +2137,6 @@ Certifications */
 }
 
 .industries__banner-desc {
-
   text-align: center;
 }
 
@@ -2112,35 +2152,33 @@ Certifications */
 
   .industries__card--text {
     padding: 30px 19px;
-    border-radius: 0  0  0 56px;
+    border-radius: 0 0 0 56px;
   }
-  .industries__card--text1{
+  .industries__card--text1 {
     padding: 30px 19px;
-    border-radius: 0  0 56px 0 ;
+    border-radius: 0 0 56px 0;
   }
   .industries__label {
     font-size: 24px;
   }
-  
-.industries__banner {
-  margin-top: 42px;
-  padding: 30px 16px;
-}
-.industries__title ,
-.industries__banner-title{
-  font-size: 24px;
-}
-.industries__desc ,
-.industries__list
-{
-  font-size: 16px;
-}
 
+  .industries__banner {
+    margin-top: 42px;
+    padding: 30px 16px;
+  }
+  .industries__title,
+  .industries__banner-title {
+    font-size: 24px;
+  }
+  .industries__desc,
+  .industries__list {
+    font-size: 16px;
+  }
 }
 .industries__banner-icon {
   position: absolute;
-  
-  bottom: 0; 
+
+  bottom: 0;
   right: 0;
   margin: 0 0;
   width: 250px;
@@ -2152,17 +2190,16 @@ Certifications */
   }
 }
 
-
 /* Contact Page */
 .contact-section {
   display: flex;
   flex-direction: row;
   gap: 78px;
- margin-top: 78px;
+  margin-top: 78px;
 }
 
 .contact-info {
-  flex: 1; 
+  flex: 1;
   background-color: #1d2a5f;
   color: white;
   padding: 42px 60px;
@@ -2190,8 +2227,6 @@ Certifications */
   background-color: white;
   padding: 78px 106px;
   border-radius: 15px;
-  
-  
 }
 .contact-form-layout {
   display: grid;

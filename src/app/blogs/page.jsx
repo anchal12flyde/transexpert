@@ -1,13 +1,11 @@
-"use client"
+"use client";
 
-import WeAreDifferent from "@/components/ftl/differentComp";
-import HeroSectionFTL from "@/components/ftl/HeroFtl";
-import StripFtl from "@/components/ftl/stripComp";
-import TruckImageSection from "@/components/ftl/TruckImageSection";
+import HomeGrid from "@/components/blogs/homeGrid";
+import TopStories from "@/components/blogs/topStories";
 import Header from "@/components/home/Header";
 import { useEffect, useRef, useState } from "react";
 
-export default function FTL() {
+export default function AllBlogs() {
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef(null);
 
@@ -30,17 +28,11 @@ export default function FTL() {
       container.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-
   return (
-    
-      <div className="mainCon" ref={containerRef}>
-        {isScrolled && <Header isScrolled={isScrolled} />}
-        <HeroSectionFTL isScrolled={isScrolled} />
-        <TruckImageSection />
-        <StripFtl />
-        <WeAreDifferent />
-      </div>
-    
+    <div>
+      <Header isScrolled={true} />
+      <HomeGrid />
+      <TopStories />
+    </div>
   );
 }

@@ -297,7 +297,7 @@ body::-webkit-scrollbar {
   /* border: 2px solid white; */
   z-index: 1000;
   /* display: none; */
-  transform: rotate(-2.5deg);
+  /* transform: rotate(-2.5deg); */
 }
 
 .overlay-blue {

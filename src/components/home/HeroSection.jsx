@@ -59,7 +59,7 @@ export default function HeroSection({ isScrolled }) {
         <div
           ref={overlayRef}
           className="hero-diagonal-overlay "
-        ></div>
+        ></div> 
         <img
           ref={squareRef}
           className="square-videon  "

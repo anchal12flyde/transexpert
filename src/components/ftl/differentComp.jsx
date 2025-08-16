@@ -7,14 +7,14 @@ export default function WeAreDifferent() {
         WE ARE <span className="text-primary-color ">DIFFERENT</span> IN EVERY
         WAY
       </h2>
-      <div className="downtime-container">
+      <div className="downtime-container !mt-0 !gap-[62px] border ">
         {/* Left side */}
-        <div className="downtime-left !h-full border flex-1 ">
-          <img src="/images/assets/f&i.png" alt="Fleet" className="w-full h-full object-cover"  />
+        <div className="downtime-left !h-full border !flex-1  ">
+          <img src="/images/assets/f&i.png" alt="Fleet" className="!w-full !h-full object-cover"  />
         </div>
 
         {/* Right side */}
-        <div className="downtime-right subheading">
+        <div className="downtime-right subheading border ">
           {[
             "Preventive maintenance schedules and telematics-driven alerts",
             "Backup vehicle dispatch system for urgent contingencies",

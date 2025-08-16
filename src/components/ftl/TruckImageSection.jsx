@@ -17,7 +17,7 @@ export default function TruckImageSection() {
 
           {/* Blue overlay */}
           <div className="overlay-blue p-6 rounded-2xl">
-            <p className="heading text-white text-2xl font-semibold mb-4">
+            <p className="heading text-white text-2xl font-semibold mb-4 text-center ">
               Why you need FTL?
             </p>
             <p className="text-white text-[20px] mb-6">

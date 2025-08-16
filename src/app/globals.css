@@ -241,9 +241,8 @@ body::-webkit-scrollbar {
   position: absolute;
   content: "";
   inset: 0;
-  background-color: #e22a26cc;
+  background-color: rgba(226, 42, 38, 0.8);
   z-index: 10;
-  /* border: 4px solid red; */
 }
 
 .bgBlue {
@@ -2256,10 +2255,11 @@ Certifications */
   border-bottom: 1px solid #ccc;
   padding: 8px 0;
   font-size: 14px;
+  outline: none;
 }
 
 .full-width {
-  grid-column: 1 / -1; /* spans across both columns */
+  grid-column: 1 / -1; 
   display: flex;
   flex-direction: column;
 }
@@ -2272,16 +2272,20 @@ Certifications */
 .radio-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 30px;
+}
+.radio-group label{
+  font-size: 16px;
+  font-weight: 300;
 }
 
 textarea {
   border: none;
   border-bottom: 1px solid #ccc;
-  padding: 8px 0;
   font-size: 14px;
+  font-weight: 400;
   resize: none;
-  height: 100px;
+  outline: none;
 }
 
 .send-btn {
@@ -2309,21 +2313,105 @@ textarea {
 
 @media (max-width: 768px) {
   .contact-info {
+    order: 2;
     padding: 42px 25px;
   }
   .contact-section {
+    gap: 42px;
     flex-direction: column;
+    margin-top: 42px;
   }
   .contact-form {
+    order: 1;
     padding: 42px 25px;
+    
   }
   .contact-form-layout {
     grid-template-columns: 1fr; 
     gap: 20px; 
   }
+ 
   .contact-para{
     font-size: 16px;
     
   
   }
+}
+.social-icon {
+  width: 27px;
+  height: 19px;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .social-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .radio-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px 0; 
+  }
+  .radio-group label{
+    font-size: 12px;
+  }
+}
+
+
+/* All Blogs */
+.text_on_image {
+  position: absolute;
+  bottom: 81px;
+  left: 81px;
+  right: 181px;
+  color: #fff;         
+  z-index: 9999;
+}
+.content_head{
+  font-size: 25px;
+  font-weight: 300;
+
+}
+.content_subhead{
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+@media (max-width: 768px) {
+  .content_head{
+    font-size: 16px;
+  
+  }
+  .content_subhead{
+    font-size: 24px;
+  }
+  .text_on_image {
+    bottom: 25px;
+    left: 25px;
+    right: 43px;
+  }
+  .text_on_image1 {
+    bottom: 16px;
+    left: 16px;
+    right: 43px;
+  }
+  .content_subhead1{
+    font-size: 16px;
+  }
+}
+.text_on_image1 {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  right: 60px;
+  color: #fff;         
+  z-index: 9999;
+}
+.content_subhead1{
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.2;
 }

@@ -4,37 +4,37 @@ import Image from "next/image";
 export default function TopStories() {
   const stories = [
     {
-      img: "/images/blogs/one.jpg",
+      img: "/images/blogs/three.jpg",
       title: "Agile Development: The Key to Flexibility",
       desc: "Dive into the principles of agile development and how it enhances project management, collaboration.",
       author: "Alex Turner",
     },
     {
-      img: "/images/blogs/one.jpg",
+      img: "/images/blogs/three.jpg",
       title: "Agile Development: The Key to Flexibility",
       desc: "Dive into the principles of agile development and how it enhances project management, collaboration.",
       author: "Alex Turner",
     },
     {
-      img: "/images/blogs/one.jpg",
+      img: "/images/blogs/blog1.png",
       title: "Sustainable Tech: Harnessing Renewable Energy",
       desc: "Tech giants are making a significant shift towards sustainable practices by adopting renewable energy.",
       author: "Alex Turner",
     },
     {
-      img: "/images/blogs/one.jpg",
+      img: "/images/blogs/blog2.png",
       title: "5G's Arrival: Transforming Connectivity",
       desc: "The rollout of 5G networks is poised to revolutionize the way we connect and communicate.",
       author: "Alex Turner",
     },
     {
-      img: "/images/blogs/one.jpg",
+      img: "/images/blogs/blog3.png",
       title: "AI-Powered Healthcare: Enhancing Diagnostics",
       desc: "Artificial intelligence is reshaping the medical landscape. From advanced diagnostics to personalized treatment plans.",
       author: "Alex Turner",
     },
     {
-      img: "/images/blogs/one.jpg",
+      img: "/images/blogs/blog4.png",
       title: "The Quantum Computing Race",
       desc: "Quantum computing is on the brink of changing the computing landscape.",
       author: "Alex Turner",

@@ -19,11 +19,11 @@ export default function ContactDetails() {
                 }}
               />
               Trans Expert Inc.
-              <p style={{ paddingLeft: "23px" }}>100 Market Drive,</p>
-              <p style={{ paddingLeft: "23px" }}>
+              <span style={{ paddingLeft: "23px" }}>100 Market Drive,</span>
+              <span style={{ paddingLeft: "23px" }}>
                 {" "}
                 Milton, Ontario, L9T 3H5, Canada
-              </p>
+              </span>
             </p>
             <p className="contact-para mb-[16px]">
               {" "}
@@ -166,35 +166,17 @@ export default function ContactDetails() {
             <img
               src="/images/assets/facebook.png"
               alt="Location Icon"
-              width={27}
-              height={19}
-              style={{
-                display: "inline-block",
-                marginRight: "8px",
-                verticalAlign: "middle",
-              }}
+              className="social-icon"
             />
             <img
               src="/images/assets/insta.png"
               alt="Location Icon"
-              width={27}
-              height={19}
-              style={{
-                display: "inline-block",
-                marginRight: "8px",
-                verticalAlign: "middle",
-              }}
+              className="social-icon"
             />
             <img
               src="/images/assets/twiitter.png"
               alt="Location Icon"
-              width={27}
-              height={19}
-              style={{
-                display: "inline-block",
-                marginRight: "8px",
-                verticalAlign: "middle",
-              }}
+              className="social-icon"
             />
           </div>
 
@@ -246,13 +228,10 @@ export default function ContactDetails() {
               <label className="contact-para">Message</label>
               <textarea placeholder="Write your message.." />
             </div>
-
-            <div className="full-width">
-              <button type="submit" className="send-btn">
-                Send Message
-              </button>
-            </div>
           </form>
+          <div className="flex justify-center mt-[78px]">
+            <button className="hero-button">Apply Now</button>
+          </div>
         </div>
       </section>
     </>

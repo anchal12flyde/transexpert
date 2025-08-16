@@ -3,6 +3,7 @@
 import WeAreDifferent from "@/components/ftl/differentComp";
 import HeroSectionFTL from "@/components/ftl/HeroFtl";
 import StripFtl from "@/components/ftl/stripComp";
+import TruckImageSection from "@/components/ftl/TruckImageSection";
 import Header from "@/components/home/Header";
 import { useEffect, useRef, useState } from "react";
 
@@ -36,6 +37,7 @@ export default function FTL() {
       <div className="mainCon" ref={containerRef}>
         {isScrolled && <Header isScrolled={isScrolled} />}
         <HeroSectionFTL isScrolled={isScrolled} />
+        <TruckImageSection />
         <StripFtl />
         <WeAreDifferent />
       </div>

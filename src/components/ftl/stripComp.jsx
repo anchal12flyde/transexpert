@@ -2,7 +2,7 @@ import { MoveRightIcon } from "lucide-react";
 
 export default function StripFtl() {
   return (
-    <div className="counterSection">
+    <div className="counterSection mt-[300px]">
       <div className="global-container flex items-center gap-[26px] ">
         <h2 className="text">
           Full truckload isn't just a mode, it's a commitment. <br /> Our

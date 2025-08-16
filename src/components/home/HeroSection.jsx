@@ -55,14 +55,14 @@ export default function HeroSection({ isScrolled }) {
           <Header />
         </div>
       )}
-      <section className="hero-section global-container border-5 border-red-500">
+      <section className="hero-section global-container ">
         <div
           ref={overlayRef}
-          className="hero-diagonal-overlay border-5 border-green-500"
+          className="hero-diagonal-overlay "
         ></div>
         <img
           ref={squareRef}
-          className="square-videon"
+          className="square-videon  "
           src="/images/x-gif.gif"
           alt="Animation"
         />

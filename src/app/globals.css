@@ -268,7 +268,7 @@ body::-webkit-scrollbar {
   z-index: 0;
   background-color: var(--company-blue, #27397acb);
 
-  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(100% 0, 100% 100%, 3.5% 100%);
 }
 
 .hero-diagonal-overla::after {
@@ -291,14 +291,17 @@ body::-webkit-scrollbar {
   top: 0;
   right: 0;
 
-  /* width: 854.9861732381049px;       */
+  width: 820.9861732381049px !important;      
   /* aspect-ratio: 1; */
   height: 100vh;
-  /* border: 2px solid white; */
+  /* border: 2px solid red; */
   z-index: 1000;
   /* display: none; */
   /* transform: rotate(-2.5deg); */
+  overflow: hidden;
 }
+
+
 
 .overlay-blue {
   position: absolute;
@@ -498,7 +501,7 @@ span:has(img) {
   letter-spacing: 0.64px;
 }
 .hero-testimonial .testimonial-source {
-  margin-top: 1.8rem;
+  /* margin-top: 1.8rem; */
   font-size: 16.5px;
   font-style: normal;
   line-height: 28.023px;

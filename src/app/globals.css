@@ -271,27 +271,14 @@ body::-webkit-scrollbar {
   clip-path: polygon(100% 0, 100% 100%, 3.5% 100%);
 }
 
-.hero-diagonal-overla::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: var(--company-blue, #27397acb);
-  opacity: 0.96;
-  mix-blend-mode: multiply;
-  clip-path: polygon(100% 0, 100% 100%, 0 100%);
-  z-index: 0;
-  border: 5px solid blueviolet;
-}
+
 /* White-bordered square */
 .square-videon {
   position: absolute;
   top: 0;
   right: 0;
 
-  width: 820.9861732381049px !important;      
+  /* width: 820.9861732381049px !important;       */
   /* aspect-ratio: 1; */
   height: 100vh;
   /* border: 2px solid red; */
@@ -300,8 +287,6 @@ body::-webkit-scrollbar {
   /* transform: rotate(-2.5deg); */
   overflow: hidden;
 }
-
-
 
 .overlay-blue {
   position: absolute;
@@ -312,6 +297,9 @@ body::-webkit-scrollbar {
   border-radius: 20px;
   z-index: 10;
   padding: 78px;
+}
+
+.squareimg {
 }
 
 /* Next.js Image wrapper span ke liye */

@@ -7,21 +7,88 @@ export default function ContactDetails() {
           <div className="section">
             <h3 className="heading">Head Office</h3>
             <p className="subheading">
+              <img
+                src="/images/assets/call.png"
+                alt="Location Icon"
+                width={15}
+                height={15}
+                style={{
+                  display: "inline-block",
+                  marginRight: "8px",
+                  verticalAlign: "middle",
+                }}
+              />
               Trans Expert Inc.
               <br />
-              100 Market Drive,
+              <p>100 Market Drive,</p>
               <br />
               Milton, Ontario, L9T 3H5, Canada
             </p>
-            <p className="subheading"> Phone: 905-864-6443</p>
-            <p className="subheading">Fax: 1-888-378-8298</p>
+            <p className="subheading">
+              {" "}
+              <img
+                src="/images/assets/call.png"
+                alt="Location Icon"
+                width={15}
+                height={15}
+                style={{
+                  display: "inline-block",
+                  marginRight: "8px",
+                  verticalAlign: "middle",
+                }}
+              />{" "}
+              Phone: 905-864-6443
+            </p>
+            <p className="subheading">
+              {" "}
+              <img
+                src="/images/assets/mdi_fax.png"
+                alt="Location Icon"
+                width={15}
+                height={15}
+                style={{
+                  display: "inline-block",
+                  marginRight: "8px",
+                  verticalAlign: "middle",
+                }}
+              />
+              Fax: 1-888-378-8298
+            </p>
           </div>
 
           <div className="section">
             <h3 className="heading">General Inquiries</h3>
-            <p className="subheading">info@transexpert.ca</p>
-            <p className="subheading">+1-905-864-6443</p>
             <p className="subheading">
+              {" "}
+              <img
+                src="/images/assets/mail.png"
+                alt="Location Icon"
+                width={15}
+                height={15}
+                style={{
+                  display: "inline-block",
+                  marginRight: "8px",
+                  verticalAlign: "middle",
+                }}
+              />
+              info@transexpert.ca
+            </p>
+            <p className="subheading">
+              {" "}
+              <img
+                src="/images/assets/call.png"
+                alt="Location Icon"
+                width={15}
+                height={15}
+                style={{
+                  display: "inline-block",
+                  marginRight: "8px",
+                  verticalAlign: "middle",
+                }}
+              />
+              +1-905-864-6443
+            </p>
+            <p className="subheading" style={{ paddingLeft: "23px" }}>
               We typically respond within 1 business day
             </p>
           </div>

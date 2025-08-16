@@ -16,14 +16,14 @@ export default function HeroSection({ isScrolled }) {
       const fullWidth = rect.width;
       const fullHeight = rect.height;
 
-     
+      // Full hypotenuse (Pythagoras theorem)
       const fullHypotenuse = Math.sqrt(fullWidth ** 2 + fullHeight ** 2);
 
-     
+      // 100vh ki height
       const vhHeight = window.innerHeight;
 
       // 45° slope ke liye base = height
-      const baseAt100vh = vhHeight * ((fullWidth) / fullHeight);
+      const baseAt100vh = vhHeight * (fullWidth / fullHeight);
 
       // Hypotenuse for 100vh height
       const hypotenuseAt100vh = Math.sqrt(baseAt100vh ** 2 + vhHeight ** 2);
@@ -56,15 +56,14 @@ export default function HeroSection({ isScrolled }) {
         </div>
       )}
       <section className="hero-section global-container ">
-        <div
-          ref={overlayRef}
-          className="hero-diagonal-overlay  "
-        ></div>
-        <div
-          ref={squareRef}
-          className="square-videon flex items-start justify-center squareimg   "
-        >
-          <img src="/images/assets/x1.png" alt="Animation" />
+        <div ref={overlayRef} className="hero-diagonal-overlay"></div>
+        <div className="square-videon   ">
+          <img
+            ref={squareRef}
+            src="/images/assets/x.png"
+            alt="Animation"
+            className=" squareimg h-full  "
+          />
         </div>
 
         <div className="overlay-X-Mob sm:hidden "></div>
@@ -83,7 +82,7 @@ export default function HeroSection({ isScrolled }) {
           </a>
         </div>
 
-        <div className="hero-testimonial">
+        <div className="hero-testimonial ">
           <div className="star-rating">
             <img src="/images/assets/star.png" alt="star" />
             <img src="/images/assets/star.png" alt="star" />
@@ -102,7 +101,7 @@ export default function HeroSection({ isScrolled }) {
           <p className="testimonial-source">— Paper Manufacturing Industry</p>
         </div>
 
-        <div className="testimonial-cards ">
+        <div className="testimonial-cards">
           <div className=" flex justify-end ">
             <p
               className="   text-[46px] font-bold mr-[-.8cm]  "

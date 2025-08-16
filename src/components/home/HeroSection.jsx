@@ -58,7 +58,7 @@ export default function HeroSection({ isScrolled }) {
       <section className="hero-section global-container ">
         <div
           ref={overlayRef}
-          className="hero-diagonal-overlay border-4 border-green-500 "
+          className="hero-diagonal-overlay  "
         ></div>
         <div
           ref={squareRef}
@@ -69,7 +69,7 @@ export default function HeroSection({ isScrolled }) {
 
         <div className="overlay-X-Mob sm:hidden "></div>
 
-        <div className="hero-content border border-red-500  ">
+        <div className="hero-content  ">
           <h1 className=" hero-heading">
             We Don’t Just Move Freight. <br />
             We Power North American Enterprise.
@@ -83,7 +83,7 @@ export default function HeroSection({ isScrolled }) {
           </a>
         </div>
 
-        <div className="hero-testimonial border-4 border-red-500 ">
+        <div className="hero-testimonial">
           <div className="star-rating">
             <img src="/images/assets/star.png" alt="star" />
             <img src="/images/assets/star.png" alt="star" />
@@ -102,7 +102,7 @@ export default function HeroSection({ isScrolled }) {
           <p className="testimonial-source">— Paper Manufacturing Industry</p>
         </div>
 
-        <div className="testimonial-cards border border-red-500">
+        <div className="testimonial-cards ">
           <div className=" flex justify-end ">
             <p
               className="   text-[46px] font-bold mr-[-.8cm]  "

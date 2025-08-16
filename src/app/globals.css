@@ -294,7 +294,7 @@ body::-webkit-scrollbar {
   width: 820.9861732381049px !important;      
   /* aspect-ratio: 1; */
   height: 100vh;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   z-index: 1000;
   /* display: none; */
   /* transform: rotate(-2.5deg); */

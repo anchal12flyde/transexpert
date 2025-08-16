@@ -16,14 +16,14 @@ export default function HeroSection({ isScrolled }) {
       const fullWidth = rect.width;
       const fullHeight = rect.height;
 
-      // Full hypotenuse (Pythagoras theorem)
+     
       const fullHypotenuse = Math.sqrt(fullWidth ** 2 + fullHeight ** 2);
 
-      // 100vh ki height
+     
       const vhHeight = window.innerHeight;
 
       // 45° slope ke liye base = height
-      const baseAt100vh = vhHeight * (fullWidth / fullHeight);
+      const baseAt100vh = vhHeight * ((fullWidth) / fullHeight);
 
       // Hypotenuse for 100vh height
       const hypotenuseAt100vh = Math.sqrt(baseAt100vh ** 2 + vhHeight ** 2);
@@ -58,18 +58,18 @@ export default function HeroSection({ isScrolled }) {
       <section className="hero-section global-container ">
         <div
           ref={overlayRef}
-          className="hero-diagonal-overlay "
-        ></div> 
-        <img
+          className="hero-diagonal-overlay border-4 border-green-500 "
+        ></div>
+        <div
           ref={squareRef}
-          className="square-videon  "
-          src="/images/x-gif.gif"
-          alt="Animation"
-        />
+          className="square-videon flex items-start justify-center squareimg   "
+        >
+          <img src="/images/assets/x1.png" alt="Animation" />
+        </div>
 
         <div className="overlay-X-Mob sm:hidden "></div>
 
-        <div className="hero-content  ">
+        <div className="hero-content border border-red-500  ">
           <h1 className=" hero-heading">
             We Don’t Just Move Freight. <br />
             We Power North American Enterprise.
@@ -83,7 +83,7 @@ export default function HeroSection({ isScrolled }) {
           </a>
         </div>
 
-        <div className="hero-testimonial ">
+        <div className="hero-testimonial border-4 border-red-500 ">
           <div className="star-rating">
             <img src="/images/assets/star.png" alt="star" />
             <img src="/images/assets/star.png" alt="star" />
@@ -102,7 +102,7 @@ export default function HeroSection({ isScrolled }) {
           <p className="testimonial-source">— Paper Manufacturing Industry</p>
         </div>
 
-        <div className="testimonial-cards">
+        <div className="testimonial-cards border border-red-500">
           <div className=" flex justify-end ">
             <p
               className="   text-[46px] font-bold mr-[-.8cm]  "

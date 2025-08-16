@@ -5,23 +5,61 @@ export default function ContactDetails() {
       <section className="contact-section global-container">
         <div className="contact-info">
           <div className="section">
-            <h3>Head Office</h3>
-            <p>
+            <h3 className="heading">Head Office</h3>
+            <p className="subheading">
               Trans Expert Inc.
               <br />
               100 Market Drive,
               <br />
               Milton, Ontario, L9T 3H5, Canada
             </p>
-            <p> Phone: 905-864-6443</p>
-            <p>Fax: 1-888-378-8298</p>
+            <p className="subheading"> Phone: 905-864-6443</p>
+            <p className="subheading">Fax: 1-888-378-8298</p>
           </div>
 
           <div className="section">
-            <h3>General Inquiries</h3>
-            <p>info@transexpert.ca</p>
-            <p>+1-905-864-6443</p>
-            <p>We typically respond within 1 business day</p>
+            <h3 className="heading">General Inquiries</h3>
+            <p className="subheading">info@transexpert.ca</p>
+            <p className="subheading">+1-905-864-6443</p>
+            <p className="subheading">
+              We typically respond within 1 business day
+            </p>
+          </div>
+          <div className="section">
+            <h3 className="heading">Head Office</h3>
+            <p className="subheading">
+              Trans Expert Inc.
+              <br />
+              100 Market Drive,
+              <br />
+              Milton, Ontario, L9T 3H5, Canada
+            </p>
+            <p className="subheading"> Phone: 905-864-6443</p>
+            <p className="subheading">Fax: 1-888-378-8298</p>
+          </div>
+          <div className="section">
+            <h3 className="heading">Head Office</h3>
+            <p className="subheading">
+              Trans Expert Inc.
+              <br />
+              100 Market Drive,
+              <br />
+              Milton, Ontario, L9T 3H5, Canada
+            </p>
+            <p className="subheading"> Phone: 905-864-6443</p>
+            <p className="subheading">Fax: 1-888-378-8298</p>
+          </div>
+          <div className="section">
+            <h3 className="heading">Head Office</h3>
+            <p className="subheading">
+              Trans Expert Inc.
+              <br />
+              100 Market Drive,
+              <br />
+              Milton, Ontario, L9T 3H5, Canada
+            </p>
+            <p className="subheading"> Phone: 905-864-6443</p>
+            <p className="subheading">Fax: 1-888-378-8298</p>
           </div>
 
           {/* Add Enterprise Sales, Carrier Partnerships, Careers here */}
@@ -34,7 +72,7 @@ export default function ContactDetails() {
               justifyContent: "flex-end",
             }}
           >
-            <img src="/images/ribbon.svg" alt="Decoration" />
+            <img src="/images/assets/vector2.png" alt="Decoration" />
           </div>
         </div>
 

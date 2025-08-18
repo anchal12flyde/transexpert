@@ -3,6 +3,7 @@
 import HomeGrid from "@/components/blogs/homeGrid";
 import TopStories from "@/components/blogs/topStories";
 import Header from "@/components/home/Header";
+import Footer from "@/components/footer/page";
 import { useEffect, useRef, useState } from "react";
 
 export default function AllBlogs() {
@@ -33,6 +34,7 @@ export default function AllBlogs() {
       <Header isScrolled={true} />
       <HomeGrid />
       <TopStories />
+      <Footer/>
     </div>
   );
 }

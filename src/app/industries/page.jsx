@@ -30,11 +30,11 @@ export default function page() {
   }, []);
   return (
     <>
-     <div className="mainCon" ref={containerRef}>
-           {/* <Header /> */}
-           {isScrolled && <Header isScrolled={isScrolled} />}
-        <Header isScrolled={isScrolled} />
-        <HeroSection />
+      <div className="mainCon" ref={containerRef}>
+        {/* <Header /> */}
+        {isScrolled && <Header isScrolled={isScrolled} />}
+      
+        <HeroSection isScrolled={isScrolled} />
         <Industries />
         <Footer />
       </div>

@@ -31,7 +31,7 @@ export default function page() {
   return (
     <div className="mainCon" ref={containerRef}>
       {/* <Header /> */}
-      {isScrolled && <Header isScrolled={isScrolled} />}
+       <Header isScrolled={true} />
 
       <HeroSection isScrolled={isScrolled} />
       <ContactDetails/>

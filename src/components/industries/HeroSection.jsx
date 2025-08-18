@@ -1,14 +1,30 @@
 "use client";
-import HeroSectionComponent from "../globalcomponents/HeroSectionComponent";
 
-export default function HeroSection({ isScrolled }) {
+import Header from "../home/Header";
+
+export default function HeroSectionComponent({ isScrolled }) {
   return (
     <>
-      <HeroSectionComponent
-        imageSrc="/images/industries.png"
-        title={`Industries We serve`}
-        isScrolled={isScrolled}
-      />
+      {!isScrolled && (
+        <div
+          className={`fixed top-0 left-0 w-full z-50 transition-all duration-300`}
+        >
+          <Header />
+        </div>
+      )}
+      <section className="fleet-hero">
+        <div className="fleet-hero__image-wrap">
+          <img
+            src="/images/industries.png"
+            alt="Fleet background"
+            className="fleet-hero__image"
+          />
+
+          <div className="fleet-hero__overlay">
+            <h1>Industries We serve</h1>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

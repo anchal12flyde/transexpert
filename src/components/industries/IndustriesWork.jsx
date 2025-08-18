@@ -31,7 +31,7 @@ export default function IndustriesWork() {
       </div>
       {/* Retail */}
       <div className="industries__grid1">
-        <div className="industries__card1 industries__card--text1">
+        <div className="industries__card1 industries__card--text1 order-2 lg:order-1">
           <h3 className="industries__title">Retail</h3>
           <p className="industries__desc">
             From big-box distribution centers to boutique store restocks, we
@@ -43,7 +43,7 @@ export default function IndustriesWork() {
             <li>Store-level direct drops</li>
           </ul>
         </div>
-        <div className="industries__card industries__card--image">
+        <div className="industries__card industries__card--image order-1 lg:order-2">
           <Image
             src="/images/assets/retailImg.jpg"
             alt="Retail"
@@ -90,11 +90,11 @@ export default function IndustriesWork() {
           Special handling for enterprise clients with dedicated dispatch,
           SLA-aligned delivery, and scalable capacity for peak seasons.
         </p>
-        <img
+        {/* <img
           src="/images/assets/Group 2.png"
           alt="Close Icon"
           className="industries__banner-icon"
-        />
+        /> */}
       </div>
     </section>
   );

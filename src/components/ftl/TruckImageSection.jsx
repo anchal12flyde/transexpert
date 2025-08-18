@@ -4,19 +4,19 @@ import "@/app/globals.css";
 export default function TruckImageSection() {
   return (
     <div className="global-container">
-      <div className="w-[900px] relative overflow-visible">
-        {/* Wrapper ko relative + overflow-visible */}
-        <div className="mainImagDivTruck relative w-[900px] bg-red-500 !overflow-visible rounded-2xl">
+      <div className=" relative overflow-visible">
+        {/* Wrapper */}
+        <div className="mainImagDivTruck relative w-[900px] !overflow-visible rounded-2xl">
+          {/* Truck Image */}
           <img
             src="/images/truck.png"
-            width={200}
-            height={200}
+           
             alt="truckImage"
             className="w-full h-full object-cover rounded-2xl"
           />
 
           {/* Blue overlay */}
-          <div className="overlay-blue p-6 rounded-2xl">
+          <div className="overlay-blue  rounded-2xl relative z-10">
             <p className="heading text-white text-2xl font-semibold mb-4 text-center ">
               Why you need FTL?
             </p>
@@ -68,6 +68,13 @@ export default function TruckImageSection() {
               Get a quote
             </button>
           </div>
+
+          {/* Corner Icon (Always on Top) */}
+          <img
+            src="/images/assets/X-icon-ftl.png"
+            alt="corner-icon"
+            className="absolute bottom-0 right-0 w-[500px] h-[335px] z-[11]"
+          />
         </div>
       </div>
     </div>

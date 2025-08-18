@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Header({ isScrolled = false }) {
   return (
     <header
-      className={`main-header !sticky !top-0 !z-50 transition-all duration-300 ${
+      className={`main-header !sticky !top-0 !z-50 ${
         isScrolled ? "headerScrolled" : ""
       }`}
     >
@@ -17,8 +17,8 @@ export default function Header({ isScrolled = false }) {
             <Image
               src={
                 isScrolled
-                  ? "/images/assets/logo1.png" // scroll hone par dark logo
-                  : "/images/assets/logo2.png" // default white logo
+                  ? "/images/assets/logo1.png" 
+                  : "/images/assets/logo2.png" 
               }
               alt="TransExpert Logo"
               width={176}

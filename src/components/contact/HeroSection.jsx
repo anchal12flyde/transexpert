@@ -12,7 +12,8 @@ export default function HeroSection({ isScrolled }) {
           </h2>
           <p className="subheading">
             Whether you're looking to optimize your freight operations, explore
-            a strategic partnership, or simply ask a question, our team is ready
+            a strategic partne
+            rship, or simply ask a question, our team is ready
             to support you.
           </p>
         </div>

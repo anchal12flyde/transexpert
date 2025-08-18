@@ -6,7 +6,9 @@ export default function DowntimeSection() {
       <div className="downtime-container">
         {/* Left side */}
         <div className="downtime-left">
-          <h2 className="hero-heading mb-[16px]">Downtime is not an option</h2>
+          <h2 className="hero-section-heading mb-[16px]">
+            Downtime is not an option
+          </h2>
           <p className="subheading mb-[30px]">
             Our in-house licensed mechanics and proactive diagnostics ensure
             top-tier fleet availability.

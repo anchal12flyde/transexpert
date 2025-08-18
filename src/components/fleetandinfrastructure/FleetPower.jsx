@@ -36,7 +36,7 @@ export default function FleetPower() {
 
           <div className="fleet-info">
             <div className="fleet-one">
-              <h3 className="hero-heading">
+              <h3 className="hero-section-heading">
                 Smart, sustainable, and fleet-first logistics.
               </h3>
             </div>

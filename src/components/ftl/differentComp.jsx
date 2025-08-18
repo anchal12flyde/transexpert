@@ -1,20 +1,25 @@
 "use client";
 
-export default function WeAreDifferent() {
+export default function differentComp() {
   return (
     <section className="global-container mb-[78px]">
-      <h2 className="hero-heading mb-[16px]">
-        WE ARE <span className="text-primary-color ">DIFFERENT</span> IN EVERY
-        WAY
-      </h2>
-      <div className="downtime-container !mt-0 !gap-[62px] border ">
+      <div className="downtime-container">
         {/* Left side */}
-        <div className="downtime-left !h-full border !flex-1  ">
-          <img src="/images/assets/f&i.png" alt="Fleet" className="!w-full !h-full object-cover"  />
+        <div className="downtime-left1">
+          <h2 className="hero-section-heading mb-[16px]  ">
+            WE ARE <span className="text-thm-heading-text ">DIFFERENT</span> IN
+            EVERY WAY
+          </h2>
+
+          <img
+            src="/images/assets/f&i.png"
+            alt="Fleet"
+            className="downtime-image"
+          />
         </div>
 
         {/* Right side */}
-        <div className="downtime-right subheading border ">
+        <div className="downtime-right subheading">
           {[
             "Preventive maintenance schedules and telematics-driven alerts",
             "Backup vehicle dispatch system for urgent contingencies",

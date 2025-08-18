@@ -5,6 +5,7 @@ import HeroSectionFTL from "@/components/ftl/HeroFtl";
 import StripFtl from "@/components/ftl/stripComp";
 import TruckImageSection from "@/components/ftl/TruckImageSection";
 import Header from "@/components/home/Header";
+import Footer from "@/components/footer/page";
 import { useEffect, useRef, useState } from "react";
 
 export default function FTL() {
@@ -40,6 +41,7 @@ export default function FTL() {
         <TruckImageSection />
         <StripFtl />
         <WeAreDifferent />
+        <Footer/>
       </div>
     
   );

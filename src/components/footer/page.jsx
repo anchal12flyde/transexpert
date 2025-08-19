@@ -37,14 +37,18 @@ export default function Footer() {
                     <Link href="/sustainability">Sustainability</Link>
                   </li>
                   <li>
-                    <Link href="/get-a-quote">Get a quote</Link>
+                    <Link href="/contact-us">Get a quote</Link>
                   </li>
                   <li>Industries</li>
                   <li>Privacy Policy</li>
                 </ul>
                 <ul>
-                  <li>Locations</li>
-                  <li>Blog Posts</li>
+                  <li>
+                    <Link href="#">Locations</Link>
+                  </li>
+                  <li>
+                    <Link href="/blogs">Blog Posts</Link>
+                  </li>
                   <li>Careers</li>
                   <li>
                     <Link href="/fleet-and-infrastructure">
@@ -102,6 +106,9 @@ export default function Footer() {
           <p className="footer-copy">
             Copyright 2017, Trans Expert Inc – All Rights Reserved
           </p>
+        </div>
+        <div className="decor-image-footer">
+          <img src="/images/assets/vector2.png" alt="Decoration" />
         </div>
       </footer>
 

@@ -35,10 +35,10 @@ export default function Header({ isScrolled = false }) {
             <Link href="/about" className="sm:block hidden">
               About Us
             </Link>
-            <Link href="#" className="sm:block hidden">
+            <Link href="/ftl" className="sm:block hidden">
               Services
             </Link>
-            <Link href="/sustainbility" className="sm:block hidden">
+            <Link href="/sustainability" className="sm:block hidden">
               Sustainability
             </Link>
             <Link href="#" className="sm:block hidden">

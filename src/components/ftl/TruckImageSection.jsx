@@ -3,7 +3,7 @@ import "@/app/globals.css";
 
 export default function TruckImageSection() {
   return (
-    <div className="global-container">
+    <div className="global-container sm:mt-[78px] mt-[42px]">
       <div className=" relative overflow-visible">
         {/* Wrapper */}
         <div className="mainImagDivTruck relative w-[900px] !overflow-visible rounded-2xl">

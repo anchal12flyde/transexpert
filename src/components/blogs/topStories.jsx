@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function TopStories() {
   const allStories = [
@@ -218,18 +219,25 @@ export default function TopStories() {
         {/* Left - Stories Grid */}
         <div className="lg:col-span-2 grid sm:grid-cols-2 gap-[42px] sm:gap-[78px]">
           {filteredStories.slice(0, visibleCount).map((story, idx) => (
-            <div key={idx} className="flex flex-col ">
-              <Image
-                src={story.img}
-                alt={story.title}
-                width={400}
-                height={250}
-                className="rounded-md object-cover w-full "
-              />
-              <h3 className="blog-heading text-thm-heading-text ">{story.title}</h3>
-              <p className="blog-subheading ">{story.desc}</p>
-              <span className="blog-author ">Author: {story.author}</span>
-            </div>
+              <Link
+              key={idx}
+              href="/blogs/single-blog"
+              className="flex flex-col"
+            >
+                <Image
+                  src={story.img}
+                  alt={story.title}
+                  width={400}
+                  height={250}
+                  className="rounded-md object-cover w-full "
+                />
+                <h3 className="blog-heading text-thm-heading-text ">
+                  {story.title}
+                </h3>
+                <p className="blog-subheading ">{story.desc}</p>
+                <span className="blog-author ">Author: {story.author}</span>
+            
+            </Link>
           ))}
 
           {/* See more button */}

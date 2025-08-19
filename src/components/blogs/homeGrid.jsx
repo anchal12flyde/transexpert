@@ -3,7 +3,7 @@ import "@/app/globals.css"
 
 export default function HomeGrid() {
   return (
-    <div className="global-container">
+    <div className="global-container mt-[42px] sm:mt-[78px]">
       <div className="grid grid-cols-1 md:grid-cols-2  gap-[14px] md:gap-[19px]">
         <div className=" bgRed rounded-2xl overflow-hidden ">
           <Image

@@ -7,7 +7,7 @@ export default function RecognizedCertifications() {
 
   const scroll = (direction) => {
     if (scrollRef.current) {
-      const scrollAmount = scrollRef.current.offsetWidth; // ek viewport width ke barabar slide hoga
+      const scrollAmount = scrollRef.current.offsetWidth; 
       if (direction === "left") {
         scrollRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
       } else {

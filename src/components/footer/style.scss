@@ -7,19 +7,26 @@
   font-family: "Onest", sans-serif;
 }
 
-.footer::after {
-  position: absolute;
-  content: "";
-  width: 10cm;
-  height: 10cm;
-  // border: 1px solid white;
-  right: 0;
-  bottom: -25; 
-  background-image: url("../../../public//images/assets/x.png");
-  background-repeat: no-repeat;
-  background-position: -3cm center;
-  background-size: 200% auto;
+// .footer::after {
+//   position: absolute;
+//   content: "";
+//   width: 10cm;
+//   height: 10cm;
+//   // border: 1px solid white;
+//   right: 0;
+//   bottom: 0; 
+//   background-image: url("../../../public//images/assets/vector2.png");
+//   background-repeat: no-repeat;
+//   background-position: -3cm center;
+//   background-size: 200% auto;
 
+// }
+.decor-image-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 521px;
+  width: 460px;
 }
 
 .footer-main {

@@ -60,6 +60,14 @@ body::-webkit-scrollbar {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE aur Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
 
 .global-container {
   display: var(--flex-default);
@@ -808,9 +816,8 @@ span:has(img) {
 .certification-logos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-
+  justify-content: space-between;
+  width: 100%;
   margin-top: 33px;
 }
 @media (max-width: 768px) {
@@ -820,7 +827,7 @@ span:has(img) {
 }
 .certification-logos img {
   height: 54px;
-  width: 137px;
+  width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
@@ -1904,7 +1911,7 @@ Certifications */
   font-size: clamp(18px, 2vw, 32px);
   font-weight: 500;
   line-height: 1.2;
-  white-space: nowrap;
+  white-space: wrap;
 }
 
 .stat-label {
@@ -1927,7 +1934,7 @@ Certifications */
     font-size: 32px;
   }
   .stat-unit {
-    font-size: 14px;
+    font-size: 12px;
   }
   .stat-row {
     flex-direction: column;

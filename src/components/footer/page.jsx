@@ -62,8 +62,8 @@ export default function Footer() {
               </div>
 
               {/* Right Section */}
-              <div className="footer-contact">
-                <div className="flex items-start gap-2 ">
+              <div className="footer-contact ">
+                <div className="flex items-start gap-2 pb-[25px]">
                   <Image
                     src="/images/assets/call.png"
                     width={16}
@@ -78,7 +78,7 @@ export default function Footer() {
                   </p>
                 </div>
 
-                <div className="flex items-start gap-2 ">
+                <div className="flex items-start gap-2 pb-[25px]">
                   <Image
                     src="/images/assets/location.png"
                     width={16}
@@ -88,7 +88,7 @@ export default function Footer() {
                   />
                   <p>100 Market Drive, Milton ON L9T 3H5 CANADA</p>
                 </div>
-                <div className="flex items-start gap-2 ">
+                <div className="flex items-start gap-2 pb-[25px]">
                   <Image
                     src="/images/assets/mail.png"
                     width={16}

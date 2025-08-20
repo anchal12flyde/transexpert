@@ -29,25 +29,25 @@ export default function GeographicalCoverage() {
         {/* Right side - Text */}
         <div className="hidden md:flex md:col-span-5 map-text flex-col justify-end ">
           <h2 className=" heading">Geographical Coverage & Infrastructure</h2>
-          <p className=" card_subheading">
+          <p className=" map_subheading">
             We move freight across Canada, the USA, and Mexico with speed and
             reliability.
           </p>
-          <p className="subheading mt-5">Operational Reach</p>
+          <p className="map_subheading mt-5">Operational Reach</p>
 
-          <p className="card_subheading para">
+          <p className="map_subheading para">
             <span>Canada: </span>Ontario, Quebec, Nova Scotia, New Brunswick,
             Newfoundland and Labrador.
           </p>
-          <p className="card_subheading para">
+          <p className="map_subheading para">
             <span>USA: </span> Extensive coverage across the continental United
             States.
           </p>
-          <p className="card_subheading para">
+          <p className="map_subheading para">
             <span>Mexico: </span>Supported through trusted cross-border
             partnerships.
           </p>
-          <p className="card_subheading para">
+          <p className="map_subheading para">
             Terminal Locations
             <br />
             Taylor (MI), Toledo (OH), Laredo (TX), Milton (ON), Cambridge (ON),
@@ -59,19 +59,19 @@ export default function GeographicalCoverage() {
           <div className="block md:hidden text-gray-800 mobile-map-text">
             <p className="subheading mt-5">Operational Reach</p>
 
-            <p className="card_subheading para">
+            <p className="map_subheading para">
               <span>Canada: </span>Ontario, Quebec, Nova Scotia, New Brunswick,
               Newfoundland and Labrador.
             </p>
-            <p className="card_subheading para">
+            <p className="map_subheading para">
               <span>USA: </span> Extensive coverage across the continental
               United States.
             </p>
-            <p className="card_subheading para">
+            <p className="map_subheading para">
               <span>Mexico: </span> Supported through trusted cross-border
               partnerships.
             </p>
-            <p className="card_subheading para">
+            <p className="map_subheading para">
               Terminal Locations
               <br />
               Taylor (MI), Toledo (OH), Laredo (TX), Milton (ON), Cambridge

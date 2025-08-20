@@ -98,8 +98,7 @@ body::-webkit-scrollbar {
 }
 
 .heading {
-  font-size: 28px;
-
+  font-size: 32px;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -112,9 +111,9 @@ body::-webkit-scrollbar {
 }
 
 .subheading {
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.4;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
   letter-spacing: 0.2;
 }
 
@@ -210,7 +209,7 @@ body::-webkit-scrollbar {
 .hero-heading {
   font-size: 48px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: normal;
   letter-spacing: 0.84px;
 }
@@ -235,6 +234,8 @@ body::-webkit-scrollbar {
   }
 }
 .hero-description {
+  font-weight: 400;
+  font-size:24px;
   margin-top: 26px;
   max-width: 700px;
   letter-spacing: 0.84px;
@@ -249,7 +250,7 @@ body::-webkit-scrollbar {
   text-decoration: none;
   letter-spacing: 0.64px;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: normal;
   /* height: auto; */
 }
@@ -511,7 +512,7 @@ span:has(img) {
 }
 .hero-testimonial p {
   color: #fff;
-  font-size: 16.5px;
+  font-size: 21.56px;
   font-style: normal;
   font-weight: 100;
   line-height: 28.023px;
@@ -1114,7 +1115,7 @@ span:has(img) {
 }
 
 .card_heading {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 400;
   line-height: normal;
 
@@ -1133,6 +1134,16 @@ span:has(img) {
 }
 @media (max-width: 767px) {
   .card_subheading {
+    font-size: 14px;
+  }
+}
+.map_subheading {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 767px) {
+  .map_subheading {
     font-size: 14px;
   }
 }
@@ -1237,7 +1248,7 @@ span:has(img) {
 .industry-card span {
   position: relative;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   z-index: 1;
 }
 .industries-text button {
@@ -1312,7 +1323,7 @@ span:has(img) {
   position: relative;
   background-color: var(--primary-color);
   color: white;
-  padding: 78px;
+  padding: 78px 72px 78px 72px;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
 }
@@ -2042,7 +2053,6 @@ Certifications */
 .tab-content {
   color: var(--thm-black);
   text-align: center;
-  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -2116,12 +2126,12 @@ Certifications */
 .industries__grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 30px;
+  gap: 78px;
 }
 .industries__grid1 {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 30px;
+  gap: 78px;
   margin-top: 78px;
   margin-bottom: 78px;
 }
@@ -2218,9 +2228,11 @@ Certifications */
 /* Responsive */
 @media (max-width: 768px) {
   .industries__grid {
+    gap: 42px;
     grid-template-columns: 1fr;
   }
   .industries__grid1 {
+    gap: 42px;
     grid-template-columns: 1fr;
     margin-top: 42px;
     margin-bottom: 42px;

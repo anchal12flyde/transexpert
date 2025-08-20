@@ -74,8 +74,7 @@ export default function HeroSection({ isScrolled }) {
             We Power North American Enterprise.
           </h1>
           <p className="hero-description">
-            From mission-critical deliveries to cross-border precision — Trans
-            Expert is the logistics backbone trusted by industry leaders
+            From mission-critical deliveries to cross-border precision, Trans Expert is the logistics backbone trusted by industry leaders
           </p>
           <a href="#about" className="hero-button mt-8">
             About Us

@@ -1,11 +1,42 @@
 "use client";
-import { ChevronRight } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/ui/dropdown-menu";
+import {
+  ChevronDown,
+  ChevronRight,
+  Settings,
+  Thermometer,
+  Truck,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function Header({ isScrolled = false }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const services = [
+    { name: "Full Truckload (FTL)", path: "/ftl", icon: Truck },
+
+    {
+      name: "Temperature-Controlled",
+      path: "/temperature-controlled",
+      icon: Thermometer,
+    },
+    {
+      name: "Cross Border",
+      path: "/cross-border",
+      icon: Settings,
+    },
+    {
+      name: "Cross Docking",
+      path: "/cross-docking",
+      icon: Settings,
+    },
+  ];
 
   return (
     <header
@@ -16,7 +47,7 @@ export default function Header({ isScrolled = false }) {
       <div className="global-container">
         <div className="container flex items-center justify-between">
           {/* Logo */}
-          <Link href="/"> 
+          <Link href="/">
             <Image
               src={
                 isScrolled
@@ -39,9 +70,37 @@ export default function Header({ isScrolled = false }) {
             <Link href="/about" className="sm:block hidden">
               About Us
             </Link>
-            <Link href="/ftl" className="sm:block hidden">
+            {/* <Link href="/ftl" className="sm:block hidden">
               Services
-            </Link>
+            </Link> */}
+
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center space-x-1 font-[400] text-foreground hover:text-accent transition-colors cursor-pointer">
+                <span>Services</span>
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-64 bg-white ">
+                {services.map((service) => {
+                  const Icon = service.icon;
+                  return (
+                    <DropdownMenuItem
+                      key={service.path}
+                      className="hover:bg-blue-100 cursor-pointer "
+                      asChild
+                    >
+                      <Link
+                        href={service.path}
+                        className="flex items-center space-x-3 px-4 py-2"
+                      >
+                        <Icon className="h-4 w-4 text-accent" />
+                        <span>{service.name}</span>
+                      </Link>
+                    </DropdownMenuItem>
+                  );
+                })}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Link href="/sustainability" className="sm:block hidden">
               Sustainability
             </Link>

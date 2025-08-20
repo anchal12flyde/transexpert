@@ -1,0 +1,173 @@
+{
+  "ftl": {
+    "hero": {
+      "imageSrc": "/images/certificate.png",
+      "title": "Full Truckload",
+      "subtitle": "Dedicated Capacity.<br/>Consistent Performance.",
+      "description": "At Trans Expert Inc., compliance isn’t an afterthought, it’s the foundation of how we operate. Our certifications are more than checkboxes; they are a daily commitment to safety, security, and performance."
+    },
+    "strip": {
+      "text": "Full truckload isn't just a mode, it's a commitment. <br /> Our clients don’t just get a trailer, they get a team.",
+      "button": {
+        "label": "Explore Our Fleet",
+        "icon": "MoveRightIcon",
+        "color": "red"
+      }
+    },
+    "truckImageSection": {
+      "imageSrc": "/images/truck.png",
+      "overlay": {
+        "title": "Why you need FTL?",
+        "description": "Whether it’s recurring production shipments, large-scale retail fulfillment, or high-value cargo requiring minimal touchpoints, our FTL model is engineered for:",
+        "points": [
+          "Direct-to-destination delivery with no intermediate handling",
+          "Reduced risk of damage or delay through load ownership",
+          "Dedicated equipment tailored to freight type and compliance needs"
+        ],
+        "button": {
+          "label": "Get a quote"
+        }
+      },
+      "cornerIcon": "/images/assets/X-icon-ftl.png"
+    },
+    "weAreDifferent": {
+      "title": "WE ARE <span class='text-thm-heading-text'>DIFFERENT</span> IN EVERY WAY",
+      "imageSrc": "/images/assets/f&i.png",
+      "points": [
+        "Preventive maintenance schedules and telematics-driven alerts",
+        "Backup vehicle dispatch system for urgent contingencies",
+        "On-site fleet service bays in key hubs",
+        "On-site fleet service bays in key hubs"
+      ]
+    }
+  },
+  "temperatureControlled": {
+    "hero": {
+      "imageSrc": "/images/certificate.png",
+      "title": "Temperature-Controlled Transport",
+      "subtitle": "Precision Cooling.<br/> Reliable Delivery.",
+      "description": "At Trans Expert Inc., we understand that temperature-sensitive cargo requires more than just refrigeration — it requires consistency, vigilance, and compliance at every mile. Our temperature-controlled transport services are purpose-built to protect your products from origin to destination."
+    },
+    "strip": {
+      "text": "Your cargo’s integrity is our reputation. <br /> We don’t just deliver cold — we deliver confidence.",
+      "button": {
+        "label": "Explore Our Cold Chain Fleet",
+        "icon": "MoveRightIcon",
+        "color": "red"
+      }
+    },
+    "truckImageSection": {
+      "imageSrc": "/images/truck.png",
+      "overlay": {
+        "title": "Why you need Temperature-Controlled Transport?",
+        "description": "Whether you're shipping pharmaceuticals, perishable foods, or other climate-sensitive materials, our solutions offer:",
+        "points": [
+          "Real-time temperature monitoring and reporting",
+          "Insulated trailers equipped with multi-zone temperature control",
+          "24/7 proactive response team for in-transit temperature deviations",
+          "Compliant with FDA, FSMA, and international cold chain standards"
+        ],
+        "button": {
+          "label": "Get a quote"
+        }
+      },
+      "cornerIcon": "/images/assets/X-icon-ftl.png"
+    },
+    "weAreDifferent": {
+      "title": "WE ARE <span class='text-thm-heading-text'>DIFFERENT</span> IN EVERY WAY",
+      "imageSrc": "/images/assets/f&i.png",
+      "points": [
+        "Preventive maintenance schedules and telematics-driven alerts",
+        "Backup vehicle dispatch system for urgent contingencies",
+        "On-site fleet service bays in key hubs",
+        "On-site fleet service bays in key hubs"
+      ]
+    }
+  },
+  "crossBorder": {
+    "hero": {
+      "imageSrc": "/images/certificate.png",
+      "title": "Cross-border Logistics",
+      "subtitle": "Seamless Borders.<br/> Limitless Reach.",
+      "description": "Navigating customs and compliance is complex. That’s why Trans Expert Inc. makes cross-border logistics feel local — with dedicated expertise, bilingual dispatchers, and end-to-end visibility across North America."
+    },
+    "strip": {
+      "text": "Your freight doesn’t stop at the border. Neither do we.",
+      "button": {
+        "label": "Explore Our Cross-border Network",
+        "icon": "MoveRightIcon",
+        "color": "red"
+      }
+    },
+    "truckImageSection": {
+      "imageSrc": "/images/truck.png",
+      "overlay": {
+        "title": "Why you need Cross-border Logistics?",
+        "description": "Whether it's regular import/export, specialized permits, or bonded shipments, our cross-border services ensure:",
+        "points": [
+          "Expedited customs clearance with pre-approved programs (C-TPAT, FAST)",
+          "Dual-licensed drivers and bilingual communication",
+          "Real-time freight tracking across country lines",
+          "Compliance expertise with U.S., Canadian, and Mexican regulations"
+        ],
+        "button": {
+          "label": "Get a quote"
+        }
+      },
+      "cornerIcon": "/images/assets/X-icon-ftl.png"
+    },
+    "weAreDifferent": {
+      "title": "WE ARE <span class='text-thm-heading-text'>DIFFERENT</span> IN EVERY WAY",
+      "imageSrc": "/images/assets/f&i.png",
+      "points": [
+        "Preventive maintenance schedules and telematics-driven alerts",
+        "Backup vehicle dispatch system for urgent contingencies",
+        "On-site fleet service bays in key hubs",
+        "On-site fleet service bays in key hubs"
+      ]
+    }
+  },
+  "crossDocking": {
+    "hero": {
+      "imageSrc": "/images/certificate.png",
+      "title": "Cross-docking Solutions",
+      "subtitle": "Faster Turnaround.<br/> Leaner Supply Chains.",
+      "description": "In today’s fast-moving supply chain, minimizing warehouse dwell time is key. Our cross-docking solutions reduce handling, cut costs, and accelerate delivery — keeping your freight moving and your margins intact."
+    },
+    "strip": {
+      "text": "We don’t just store freight. We keep it moving.",
+      "button": {
+        "label": "Explore Our Cross-dock Facilities",
+        "icon": "MoveRightIcon",
+        "color": "red"
+      }
+    },
+    "truckImageSection": {
+      "imageSrc": "/images/truck.png",
+      "overlay": {
+        "title": "Why you need Cross-docking Solutions?",
+        "description": "From retail replenishment to just-in-time manufacturing, our facilities and process are optimized for:",
+        "points": [
+          "Immediate transfer from inbound to outbound shipments",
+          "Reduced warehousing costs and storage times",
+          "Strategically located cross-dock terminals",
+          "Integrated WMS and real-time inventory visibility"
+        ],
+        "button": {
+          "label": "Get a quote"
+        }
+      },
+      "cornerIcon": "/images/assets/X-icon-ftl.png"
+    },
+    "weAreDifferent": {
+      "title": "WE ARE <span class='text-thm-heading-text'>DIFFERENT</span> IN EVERY WAY",
+      "imageSrc": "/images/assets/f&i.png",
+      "points": [
+        "Preventive maintenance schedules and telematics-driven alerts",
+        "Backup vehicle dispatch system for urgent contingencies",
+        "On-site fleet service bays in key hubs",
+        "On-site fleet service bays in key hubs"
+      ]
+    }
+  }
+}

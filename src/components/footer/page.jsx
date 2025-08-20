@@ -39,7 +39,9 @@ export default function Footer() {
                   <li>
                     <Link href="/contact-us">Get a quote</Link>
                   </li>
-                  <li>Industries</li>
+                  <li>
+                    <Link href="/industries">Industries</Link>
+                  </li>
                   <li>Privacy Policy</li>
                 </ul>
                 <ul>

@@ -19,22 +19,19 @@ import { useState } from "react";
 export default function Header({ isScrolled = false }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const services = [
-    { name: "Full Truckload (FTL)", path: "/ftl", icon: Truck },
+    { name: "Full Truckload (FTL)", path: "/ftl" },
 
     {
       name: "Temperature-Controlled",
-      path: "/temperature-controlled",
-      icon: Thermometer,
+      path: "/temperature-controlled"
     },
     {
       name: "Cross Border",
-      path: "/cross-border",
-      icon: Settings,
+      path: "/cross-border"
     },
     {
       name: "Cross Docking",
-      path: "/cross-docking",
-      icon: Settings,
+      path: "/cross-docking"
     },
   ];
 
@@ -92,7 +89,7 @@ export default function Header({ isScrolled = false }) {
                         href={service.path}
                         className="flex items-center space-x-3 px-4 py-2"
                       >
-                        <Icon className="h-4 w-4 text-accent" />
+                        {/* <Icon className="h-4 w-4 text-accent" /> */}
                         <span>{service.name}</span>
                       </Link>
                     </DropdownMenuItem>

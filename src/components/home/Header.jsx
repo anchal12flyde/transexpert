@@ -13,7 +13,7 @@ export default function Header({ isScrolled = false }) {
       <div className="global-container">
         <div className="container flex items-center justify-between">
           {/* Logo */}
-          <Link href="/">
+          <Link href="/"> 
             <Image
               src={
                 isScrolled

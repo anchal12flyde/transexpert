@@ -10,17 +10,17 @@ export default function ContactDetails() {
               <img
                 src="/images/assets/location.png"
                 alt="Location Icon"
-                width={15}
-                height={15}
+                width={19}
+                height={19}
                 style={{
                   display: "inline-block",
                   marginRight: "8px",
                   verticalAlign: "middle",
                 }}
               />
-              Trans Expert Inc.
-              <span style={{ paddingLeft: "23px" }}>100 Market Drive,</span>
-              <span style={{ paddingLeft: "23px" }}>
+              Trans Expert Inc.<br/>
+              <span style={{ paddingLeft: "27px" }}>100 Market Drive,</span><br/>
+              <span style={{ paddingLeft: "27px" }}>
                 {" "}
                 Milton, Ontario, L9T 3H5, Canada
               </span>
@@ -30,8 +30,8 @@ export default function ContactDetails() {
               <img
                 src="/images/assets/phone-call.png"
                 alt="Location Icon"
-                width={19}
-                height={19}
+                width={16}
+                height={16}
                 style={{
                   display: "inline-block",
                   marginRight: "8px",
@@ -64,8 +64,8 @@ export default function ContactDetails() {
               <img
                 src="/images/assets/mail.png"
                 alt="Location Icon"
-                width={15}
-                height={15}
+                width={19}
+                height={19}
                 style={{
                   display: "inline-block",
                   marginRight: "8px",
@@ -79,8 +79,8 @@ export default function ContactDetails() {
               <img
                 src="/images/assets/phone-call.png"
                 alt="Location Icon"
-                width={19}
-                height={19}
+                width={16}
+                height={16}
                 style={{
                   display: "inline-block",
                   marginRight: "8px",
@@ -104,8 +104,8 @@ export default function ContactDetails() {
               <img
                 src="/images/assets/mail.png"
                 alt="Location Icon"
-                width={15}
-                height={15}
+                width={19}
+                height={19}
                 style={{
                   display: "inline-block",
                   marginRight: "8px",

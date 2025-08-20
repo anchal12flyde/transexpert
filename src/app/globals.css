@@ -897,12 +897,14 @@ span:has(img) {
   line-height: 1.2;
   display: inline-flex;    
   white-space: nowrap;  
+  transform: translateY(14px);
 }
 
 @media (max-width: 768px) {
   .number {
     margin: 0 0.25rem;
     font-size: 25px;
+    transform: translateY(2px);
   }
 }
 
@@ -1720,7 +1722,7 @@ span:has(img) {
   font-weight: 400;
   margin-top: 72px;
 }
-/* Default: Mobile → stacked (block-wise) */
+
 .fleet-stats {
   display: flex;
   flex-direction: column;

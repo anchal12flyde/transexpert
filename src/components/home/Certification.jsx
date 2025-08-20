@@ -5,9 +5,9 @@ export default function Certification() {
   return (
     <>
       <div className="certification-container global-container">
-        <h1 className="heading">Credentialed for Seamless Movement</h1>
+        <h2 className="heading">Credentialed for Seamless Movement</h2>
 
-        <p className="subheading desktop-only">
+        <p className="subheading desktop-only w-300">
           We work according to the latest technologies and working methods. Our
           company has extensive experience in providing services.
         </p>
@@ -38,7 +38,7 @@ export default function Certification() {
           </Link>
         </div>
 
-        <p className="cert-desc mobile-only">
+        <p className="cert-desc mobile-only ">
           We work according to the latest technologies and working methods. Our
           company has extensive experience in providing services.
         </p>

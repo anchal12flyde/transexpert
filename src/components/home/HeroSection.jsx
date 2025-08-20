@@ -69,15 +69,15 @@ export default function HeroSection({ isScrolled }) {
         <div className="overlay-X-Mob sm:hidden "></div>
 
         <div className="hero-content  ">
-          <h1 className=" hero-heading">
+          <h1 className=" hero-heading mb-[36px]">
             We Don’t Just Move Freight. <br />
             We Power North American Enterprise.
           </h1>
-          <p className="hero-description w-[250px] sm:w-[500px]">
+          <p className="hero-description w-[250px] sm:w-[550px]">
             From mission-critical deliveries to cross-border precision, Trans
             Expert is the logistics backbone trusted by industry leaders
           </p>
-          <a href="#about" className="hero-button mt-8">
+          <a href="#about" className="hero-button mt-[36px]">
             About Us
           </a>
         </div>

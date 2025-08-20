@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @theme {
-  --font-primary: "Onest", sans-serif;
+  --font-primary: "Onest";
   --color-primary-color: #263879;
   --color-secondary-color: #e22a26;
   --color-thm-white: #ffffff;
@@ -13,7 +13,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-family: "Onest", sans-serif;
+  --font-family: "Onest";
   --primary-color: #263879;
   --secondary-color: #e22a26;
   --thm-white: #ffffff;
@@ -39,7 +39,6 @@ body {
   background: var(--background);
   color: var(--foreground);
   overflow-x: hidden;
-
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -47,7 +46,6 @@ body {
 html,
 body {
   overflow-x: hidden;
-
   height: 100%;
 }
 body::-webkit-scrollbar {
@@ -85,22 +83,22 @@ body::-webkit-scrollbar {
 
 @media (max-width: 768px) {
   .global-container {
-    padding-left: 3.5vh;
-    padding-right: 3.5vh;
+    padding-left: 31px;
+    padding-right: 31px;
   }
 }
 
 @media (min-width: 1600px) {
   .global-container {
-    padding-left: 28vh;
-    padding-right: 28vh;
+    padding-left: 252px;
+    padding-right: 252px;
   }
 }
 
 .heading {
   font-size: 32px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: normal;
   margin-bottom: 20px;
 }
 
@@ -207,11 +205,11 @@ body::-webkit-scrollbar {
 }
 
 .hero-heading {
+  color: var(--thm-white);
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: 0.84px;
 }
 
 @media screen and (max-width: 700px) {
@@ -234,10 +232,8 @@ body::-webkit-scrollbar {
   }
 }
 .hero-description {
-  font-family: "Onest", sans-serif;
   font-weight: 400;
-  font-size:22px;
-  margin-top: 26px;
+  font-size:24px;
   line-height:28px;
   letter-spacing: 0%;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -245,12 +241,12 @@ body::-webkit-scrollbar {
 
 .hero-button {
   background-color: var(--thm-button-color);
-  padding: 10px 20px;
-  border-radius: 0.45rem;
-  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: var(--thm-white);
   text-decoration: none;
-  letter-spacing: 0.64px;
-  font-size: 16px;
+  letter-spacing: 0;
+  font-size: 18px;
   font-weight: 400;
   line-height: normal;
   cursor: pointer;
@@ -258,8 +254,8 @@ body::-webkit-scrollbar {
 }
 @media (max-width: 768px) {
 .hero-button {
-  padding: 9.5px 9.5px;
-  font-size: 12px;
+  padding: 8px 19px;
+  font-size: 14px;
 }
 }
 .bgRed {
@@ -501,7 +497,7 @@ span:has(img) {
   width: 600px;
   transform: translate(-22.5%, -40%);
   color: white;
-  max-width: 550px;
+  max-width: 500px;
   text-align: right;
   z-index: 2;
   justify-content: flex-end;
@@ -513,16 +509,16 @@ span:has(img) {
   }
 }
 .hero-testimonial p {
-  color: #fff;
-  font-size: 21.56px;
+  color: var(--thm-white);
+  font-size: 20px;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 400;
   line-height: 28.023px;
-  letter-spacing: 0.64px;
 }
 .hero-testimonial .testimonial-source {
-  /* margin-top: 1.8rem; */
-  font-size: 16.5px;
+  color: var(--thm-white);
+  font-size: 20px;
+  font-weight: 500;
   font-style: normal;
   line-height: 28.023px;
 }
@@ -874,7 +870,7 @@ span:has(img) {
 }
 
 .text {
-  font-size: 35px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -885,7 +881,7 @@ span:has(img) {
 
 @media (max-width: 768px) {
   .text {
-    font-size: 18px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -1116,8 +1112,9 @@ span:has(img) {
 }
 
 .card_heading {
+  color: var(--thm-black);
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: normal;
   flex: 1;
 }
@@ -1299,7 +1296,7 @@ span:has(img) {
 }
 
 .about-hero-content button {
-  margin-top: 36px;
+  margin-top: 26px;
 }
 
 /* Desktop Floating Box */
@@ -1917,11 +1914,8 @@ span:has(img) {
   color: var(--thm-white);
   font-family: Onest;
   font-weight: 700;
-  font-style: Bold;
   font-size: 48px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  
+  line-height: 1.2;
 }
 
 .fleet-hero__content {

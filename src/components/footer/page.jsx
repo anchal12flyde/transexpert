@@ -25,7 +25,7 @@ export default function Footer() {
             {/* Middle Section */}
             <div className="flex items-start gap-[50px] ">
               <div className="footer-links">
-                <ul>
+                <ul >
                   <li>
                     {" "}
                     <Link href="/about">About Us</Link>

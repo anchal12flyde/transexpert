@@ -57,7 +57,7 @@ export default function HeroSection({ isScrolled }) {
       )}
       <section className="hero-section global-container ">
         <div ref={overlayRef} className="hero-diagonal-overlay"></div>
-        <div className="square-videon  hidden md:block  ">
+        <div className="square-videon  hidden lg:block  ">
           <img
             ref={squareRef}
             src="/images/assets/x.png"
@@ -73,7 +73,7 @@ export default function HeroSection({ isScrolled }) {
             We Don’t Just Move Freight. <br />
             We Power North American Enterprise.
           </h1>
-          <p className="hero-description">
+          <p className="hero-description w-[250px] sm:w-[500px]">
             From mission-critical deliveries to cross-border precision, Trans
             Expert is the logistics backbone trusted by industry leaders
           </p>

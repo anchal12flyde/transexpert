@@ -72,8 +72,8 @@ body::-webkit-scrollbar {
 .global-container {
   display: var(--flex-default);
   flex-direction: column;
-  padding-left: 13vh;
-  padding-right: 13vh;
+  padding-left: 126px;
+  padding-right: 126px;
 }
 .bshadow {
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
@@ -210,7 +210,7 @@ body::-webkit-scrollbar {
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1.2;
   letter-spacing: 0.84px;
 }
 
@@ -234,16 +234,17 @@ body::-webkit-scrollbar {
   }
 }
 .hero-description {
+  font-family: "Onest", sans-serif;
   font-weight: 400;
-  font-size:24px;
+  font-size:22px;
   margin-top: 26px;
-  max-width: 700px;
-  letter-spacing: 0.84px;
+  line-height:28px;
+  letter-spacing: 0%;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .hero-button {
-  background-color: #dc2626;
+  background-color: var(--thm-button-color);
   padding: 10px 20px;
   border-radius: 0.45rem;
   color: white;
@@ -252,6 +253,7 @@ body::-webkit-scrollbar {
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
+  cursor: pointer;
   /* height: auto; */
 }
 @media (max-width: 768px) {
@@ -497,7 +499,7 @@ span:has(img) {
   top: 55%;
   right: 0;
   width: 600px;
-  transform: translate(-19%, -40%);
+  transform: translate(-22.5%, -40%);
   color: white;
   max-width: 550px;
   text-align: right;
@@ -530,7 +532,7 @@ span:has(img) {
   gap: 3rem;
   position: absolute;
   bottom: 6%;
-  right: 6.5%;
+  right:126px;
   left: auto;
   width: auto;
   z-index: 2;
@@ -1012,12 +1014,12 @@ span:has(img) {
 /* Carrer Banner */
 
 .careers-banner {
-  position: relative;
-  background-image: url("/images/assets/joinUs.png");
-  background-size: cover;
-  background-position: center;
-  margin-top: 48px;
-  overflow: hidden;
+    position: relative;
+    background-color:#27397A;
+    margin-top: 48px;
+    overflow: hidden;
+  
+  
 }
 
 .careers-content-wrapper {
@@ -1027,7 +1029,7 @@ span:has(img) {
   margin: 78px 0;
   display: flex;
   flex-direction: row;
-  gap: 6rem;
+  gap: 70px;
 }
 
 @media (max-width: 768px) {
@@ -1050,7 +1052,6 @@ span:has(img) {
 
 .careers-image {
   border-radius: 1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .careers-text-content {
@@ -1116,9 +1117,8 @@ span:has(img) {
 
 .card_heading {
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
-
   flex: 1;
 }
 @media (max-width: 767px) {
@@ -1475,7 +1475,8 @@ span:has(img) {
   width: 100%;
   max-width: 380px;
   height: 100%;
-  box-shadow: 0 4px 4px rgba(27, 31, 38, 0.72);
+  box-shadow: 6px -1px 4px rgba(27, 31, 38, 0.72);
+
   transition: transform 0.3s ease;
 }
 
@@ -1914,8 +1915,13 @@ span:has(img) {
 
 .fleet-hero__overlay h1 {
   color: var(--thm-white);
-  font-size: 46px;
-  font-weight: 600;
+  font-family: Onest;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  
 }
 
 .fleet-hero__content {

@@ -2,7 +2,7 @@
   position: relative;
   background-color: #263879; /* Dark blue */
   color: #fff;
-  padding: 13vh;
+  padding:78px 136px ;
   overflow: hidden;
   font-family: "Onest", sans-serif;
 }
@@ -98,10 +98,15 @@
 
 .contact-btn {
   margin-top: 15px;
-  padding: 8px 16px;
-  background-color: #e5202b;
+  background-color: #dc2626;
+  padding: 10px 20px;
+  border-radius: 0.45rem;
   color: white;
-  border: none;
+  text-decoration: none;
+  letter-spacing: 0.64px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
   cursor: pointer;
 }
 

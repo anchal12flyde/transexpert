@@ -39,14 +39,14 @@ export default function Header({ isScrolled = false }) {
             <Link href="/about" className="sm:block hidden">
               About Us
             </Link>
-            <Link href="/ftl" className="sm:block hidden">
+            <Link href="/services" className="sm:block hidden">
               Services
             </Link>
             <Link href="/sustainability" className="sm:block hidden">
               Sustainability
             </Link>
-            <Link href="#" className="sm:block hidden">
-              Careers
+            <Link href="/industries" className="sm:block hidden">
+              Industries
             </Link>
             <Link href="/contact-us" className="sm:block hidden">
               Get a quote
@@ -118,14 +118,14 @@ export default function Header({ isScrolled = false }) {
           <Link href="/about" onClick={() => setMenuOpen(false)}>
             About Us
           </Link>
-          <Link href="/ftl" onClick={() => setMenuOpen(false)}>
+          <Link href="/services" onClick={() => setMenuOpen(false)}>
             Services
           </Link>
           <Link href="/sustainability" onClick={() => setMenuOpen(false)}>
             Sustainability
           </Link>
-          <Link href="#" onClick={() => setMenuOpen(false)}>
-            Careers
+          <Link href="/industries" onClick={() => setMenuOpen(false)}>
+            Industries
           </Link>
           <Link href="/contact-us" onClick={() => setMenuOpen(false)}>
             Get a quote

@@ -1,43 +1,128 @@
-// components/TopStories.js
+"use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function TopStories() {
-  const stories = [
+  const allStories = [
     {
-      img: "/images/blogs/one.jpg",
+      img: "/images/blogs/three.jpg",
       title: "Agile Development: The Key to Flexibility",
-      desc: "Dive into the principles of agile development and how it enhances project management, collaboration.",
+      desc: "Dive into agile principles and how it enhances project management, collaboration.",
       author: "Alex Turner",
+      category: "Fleet & Operations",
     },
     {
-      img: "/images/blogs/one.jpg",
-      title: "Agile Development: The Key to Flexibility",
+      img: "/images/blogs/three.jpg",
+      title: "Agile Development: The Key to Flexibility ",
       desc: "Dive into the principles of agile development and how it enhances project management, collaboration.",
       author: "Alex Turner",
+      category: "Cross-Border Insights",
     },
     {
-      img: "/images/blogs/one.jpg",
+      img: "/images/blogs/blog1.png",
       title: "Sustainable Tech: Harnessing Renewable Energy",
-      desc: "Tech giants are making a significant shift towards sustainable practices by adopting renewable energy.",
+      desc: "Tech giants are making a significant shift towards sustainable practices.",
       author: "Alex Turner",
+      category: "Industry Trends",
     },
     {
-      img: "/images/blogs/one.jpg",
+      img: "/images/blogs/blog2.png",
       title: "5G's Arrival: Transforming Connectivity",
-      desc: "The rollout of 5G networks is poised to revolutionize the way we connect and communicate.",
+      desc: "The rollout of 5G networks is poised to revolutionize connectivity.",
       author: "Alex Turner",
+      category: "Industry Trends",
     },
     {
-      img: "/images/blogs/one.jpg",
+      img: "/images/blogs/blog3.png",
       title: "AI-Powered Healthcare: Enhancing Diagnostics",
       desc: "Artificial intelligence is reshaping the medical landscape. From advanced diagnostics to personalized treatment plans.",
       author: "Alex Turner",
+      category: "Driver Life & Careers",
     },
     {
-      img: "/images/blogs/one.jpg",
+      img: "/images/blogs/blog4.png",
       title: "The Quantum Computing Race",
       desc: "Quantum computing is on the brink of changing the computing landscape.",
       author: "Alex Turner",
+      category: "Fleet & Operations",
+    },
+    {
+      img: "/images/blogs/blog2.png",
+      title: "5G's Arrival: Transforming Connectivity",
+      desc: "The rollout of 5G networks is poised to revolutionize connectivity.",
+      author: "Alex Turner",
+      category: "Industry Trends",
+    },
+    {
+      img: "/images/blogs/three.jpg",
+      title: "Agile Development: The Key to Flexibility",
+      desc: "Dive into agile principles and how it enhances project management, collaboration.",
+      author: "Alex Turner",
+      category: "Fleet & Operations",
+    },
+    {
+      img: "/images/blogs/three.jpg",
+      title: "Agile Development: The Key to Flexibility ",
+      desc: "Dive into the principles of agile development and how it enhances project management, collaboration.",
+      author: "Alex Turner",
+      category: "Cross-Border Insights",
+    },
+    {
+      img: "/images/blogs/blog1.png",
+      title: "Sustainable Tech: Harnessing Renewable Energy",
+      desc: "Tech giants are making a significant shift towards sustainable practices.",
+      author: "Alex Turner",
+      category: "Industry Trends",
+    },
+    {
+      img: "/images/blogs/blog2.png",
+      title: "5G's Arrival: Transforming Connectivity",
+      desc: "The rollout of 5G networks is poised to revolutionize connectivity.",
+      author: "Alex Turner",
+      category: "Industry Trends",
+    },
+    {
+      img: "/images/blogs/blog3.png",
+      title: "AI-Powered Healthcare: Enhancing Diagnostics",
+      desc: "Artificial intelligence is reshaping the medical landscape. From advanced diagnostics to personalized treatment plans.",
+      author: "Alex Turner",
+      category: "Driver Life & Careers",
+    },
+    {
+      img: "/images/blogs/blog4.png",
+      title: "The Quantum Computing Race",
+      desc: "Quantum computing is on the brink of changing the computing landscape.",
+      author: "Alex Turner",
+      category: "Fleet & Operations",
+    },
+    {
+      img: "/images/blogs/blog2.png",
+      title: "5G's Arrival: Transforming Connectivity",
+      desc: "The rollout of 5G networks is poised to revolutionize connectivity.",
+      author: "Alex Turner",
+      category: "Industry Trends",
+    },
+    {
+      img: "/images/blogs/blog3.png",
+      title: "AI-Powered Healthcare: Enhancing Diagnostics",
+      desc: "Artificial intelligence is reshaping the medical landscape. From advanced diagnostics to personalized treatment plans.",
+      author: "Alex Turner",
+      category: "Driver Life & Careers",
+    },
+    {
+      img: "/images/blogs/blog4.png",
+      title: "The Quantum Computing Race",
+      desc: "Quantum computing is on the brink of changing the computing landscape.",
+      author: "Alex Turner",
+      category: "Fleet & Operations",
+    },
+    {
+      img: "/images/blogs/blog2.png",
+      title: "5G's Arrival: Transforming Connectivity",
+      desc: "The rollout of 5G networks is poised to revolutionize connectivity.",
+      author: "Alex Turner",
+      category: "Industry Trends",
     },
   ];
 
@@ -64,60 +149,112 @@ export default function TopStories() {
     },
   ];
 
+  const categories = [
+    "Fleet & Operations",
+    "Cross-Border Insights",
+    "Driver Life & Careers",
+    "Industry Trends",
+  ];
+
+  const [activeCategory, setActiveCategory] = useState(categories[0]); 
+  const [visibleCount, setVisibleCount] = useState(3);
+  const [isMobile, setIsMobile] = useState(true);
+
+  // screen size check
+  useEffect(() => {
+    const checkScreen = () => {
+      if (window.innerWidth < 768) {
+        setIsMobile(true);
+        setVisibleCount(3);
+      } else {
+        setIsMobile(false);
+        setVisibleCount(4);
+      }
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  const filteredStories = allStories.filter(
+    (story) => story.category === activeCategory
+  );
+
+  const handleSeeMore = () => {
+    if (isMobile) {
+      setVisibleCount(filteredStories.length);
+    } else {
+      setVisibleCount((prev) => Math.min(prev + 2, filteredStories.length));
+    }
+  };
+
   return (
-    <section className="global-container my-8">
+    <section className="global-container sm:mt-[78px] mt-[42px] sm:mb-[78px] mb-[42px]">
       {/* Heading */}
-      <h2 className="text-xl font-semibold mb-4">Top Stories</h2>
+      <h2 className="heading">Top Stories</h2>
 
       {/* Filter Buttons */}
-      <div className="flex gap-2 mb-6">
-        <button className="bg-red-500 text-white px-3 py-1 rounded">
-          Fleet & Operations
-        </button>
-        <button className="bg-gray-100 px-3 py-1 rounded">
-          Cross-Border Insights
-        </button>
-        <button className="bg-gray-100 px-3 py-1 rounded">
-          Driver Life & Careers
-        </button>
-        <button className="bg-gray-100 px-3 py-1 rounded">
-          Industry Trends
-        </button>
+      <div className="flex gap-2 mb-6 flex-wrap">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => {
+              setActiveCategory(cat);
+              setVisibleCount(isMobile ? 3 : 4);
+            }}
+            className={`blog-button ${
+              activeCategory === cat
+                ? "bg-thm-button-color text-white"
+                : "text-[#27397A] border border-[#27397A] bg-transparent"
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
       </div>
 
       {/* Main layout */}
-      <div className="grid grid-cols-3 gap-[71px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[71px]">
         {/* Left - Stories Grid */}
-        <div className="lg:col-span-2 grid sm:grid-cols-2 gap-[78px]">
-          {stories.map((story, idx) => (
-            <div key={idx} className="flex flex-col gap-[16px]">
-              <Image
-                src={story.img}
-                alt={story.title}
-                width={400}
-                height={250}
-                className="rounded-md object-cover w-full "
-              />
-              <h3 className=" text-[22px] text-primary-color ">
-                {story.title}
-              </h3>
-              <p className="text-[18px] ">{story.desc}</p>
-              <span className="text-sm text-[#3D3D3D] ">
-                Author: {story.author}
-              </span>
-            </div>
+        <div className="lg:col-span-2 grid sm:grid-cols-2 gap-[42px] sm:gap-[78px]">
+          {filteredStories.slice(0, visibleCount).map((story, idx) => (
+              <Link
+              key={idx}
+              href="/blogs/single-blog"
+              className="flex flex-col"
+            >
+                <Image
+                  src={story.img}
+                  alt={story.title}
+                  width={400}
+                  height={250}
+                  className="rounded-md object-cover w-full "
+                />
+                <h3 className="blog-heading text-thm-heading-text ">
+                  {story.title}
+                </h3>
+                <p className="blog-subheading ">{story.desc}</p>
+                <span className="blog-author ">Author: {story.author}</span>
+            
+            </Link>
           ))}
+
           {/* See more button */}
-          <button className="col-span-full bg-red-500 text-white px-4 py-2 rounded mx-auto">
-            See more
-          </button>
+          {visibleCount < filteredStories.length && (
+            <div className="col-span-full flex justify-center">
+              <button onClick={handleSeeMore} className="hero-button ">
+                See more
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Right - Related */}
-        <aside className="flex flex-col gap-4 w-full ">
-          <h3 className="font-semibold mb-2">Related</h3>
+        <aside className="flex flex-col gap-[4] w-full">
+          <h3 className="heading">Related</h3>
           {related.map((item, idx) => (
-            <div key={idx} className="flex gap-3 items-start">
+            <div key={idx} className="flex gap-3 items-start mb-[20px]">
               <Image
                 src={item.img}
                 alt={item.title}
@@ -126,10 +263,8 @@ export default function TopStories() {
                 className="rounded-md object-cover"
               />
               <div>
-                <h4 className={`text-secondary-color text-[24px] `}>
-                  {item.title}
-                </h4>
-                <p className="text-sm text-gray-500">{item.subtitle}</p>
+                <h4 className="side-heading text-[#E22A26] ">{item.title}</h4>
+                <p className="side-subheading">{item.subtitle}</p>
               </div>
             </div>
           ))}

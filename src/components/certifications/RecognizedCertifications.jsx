@@ -1,7 +1,20 @@
+import { useRef } from "react";
 import Image from "next/image";
-
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function RecognizedCertifications() {
+  const scrollRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = scrollRef.current.offsetWidth; 
+      if (direction === "left") {
+        scrollRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      } else {
+        scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
+    }
+  };
   const certificationsData = [
     {
       title: "SmartWay Partner",
@@ -63,10 +76,9 @@ export default function RecognizedCertifications() {
 
   return (
     <div className="mt-16">
-   
-
-      <div className="global-container mt-[78px]">
-        <div className="grid grid-cols-2 gap-[81px]">
+      <div className="global-container mt-[42px] sm:mt-[78px] relative">
+        {/* Desktop Grid */}
+        <div className="hidden sm:grid grid-cols-2 gap-[81px]">
           {certificationsData.map((c, index) => (
             <div
               key={index}
@@ -82,6 +94,48 @@ export default function RecognizedCertifications() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Mobile Carousel */}
+        <div className="sm:hidden relative">
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar"
+          >
+            {certificationsData.map((c, index) => (
+              <div
+                key={index}
+                className="w-full flex-shrink-0 snap-center flex flex-col items-center justify-center text-center rounded-[16px] p-6 bshadow bg-white"
+              >
+                <Image
+                  alt={c.title}
+                  src={c.logo}
+                  width={120}
+                  height={120}
+                  className="mx-auto"
+                />
+                <div className="flex flex-col gap-3 mt-4">
+                  <p className="heading">{c.title}</p>
+                  <p className="subheading">{c.subtitle}</p>
+                  <p className="subheading">{c.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Arrows */}
+          <button
+            onClick={() => scroll("left")}
+            className="absolute top-1/2 left-2 -translate-y-1/2 bg-white rounded-full p-2 shadow"
+          >
+            <ChevronLeft size={20} />
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            className="absolute top-1/2 right-2 -translate-y-1/2 bg-white rounded-full p-2 shadow"
+          >
+            <ChevronRight size={20} />
+          </button>
         </div>
       </div>
     </div>

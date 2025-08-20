@@ -5,7 +5,7 @@ export default function Certification() {
   return (
     <>
       <div className="certification-container global-container">
-        <h1 className="heading">Our Certification</h1>
+        <h1 className="heading">Credentialed for Seamless Movement</h1>
 
         <p className="subheading desktop-only">
           We work according to the latest technologies and working methods. Our

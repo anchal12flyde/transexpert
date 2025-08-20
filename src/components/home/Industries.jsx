@@ -16,7 +16,7 @@ export default function Industries() {
               Whether you're stocking shelves, supplying storefronts, or fueling
               production lines, TransExpert ensures fast, secure, and seamless
               transportation across Canada, the U.S., and Mexico.
-            </p>
+            </p><br/>
             <p className="subheading">
               From raw materials to finished goods, we deliver reliable,
               cross-border logistics solutions tailored to your industry.

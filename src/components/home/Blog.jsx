@@ -15,7 +15,7 @@ const Blog = () => {
                 <img src="/images/assets/arrowUp.png" alt="Arrow" />
               </div>
             </div>
-            <p>
+            <p className="card_subheading text-[#1B1F26B8]">
               Your guide to smoother, faster shipments between Canada, the U.S.,
               and Mexico.
             </p>
@@ -33,7 +33,9 @@ const Blog = () => {
                 <img src="/images/assets/arrowUp.png" alt="Arrow" />
               </div>
             </div>
-            <p>Our commitment to sustainable, efficient freight</p>
+            <p className="card_subheading text-[#1B1F26B8]">
+              Our commitment to sustainable, efficient freight
+            </p>
           </div>
         </div>
 
@@ -48,7 +50,9 @@ const Blog = () => {
                 <img src="/images/assets/arrowUp.png" alt="Arrow" />
               </div>
             </div>
-            <p>Meeting the expectations of today’s instant delivery economy.</p>
+            <p className="card_subheading text-[#1B1F26B8]">
+              Meeting the expectations of today’s instant delivery economy.
+            </p>
           </div>
         </div>
       </div>

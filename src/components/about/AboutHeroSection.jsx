@@ -48,7 +48,7 @@ export default function AboutHero({ isScrolled }) {
               <p className="subheading">
                 We envision a logistics infrastructure that is fast, secure,
                 sustainable, and human-led — built to serve businesses that
-                expect more than just delivery.
+                expect more than <br/>just delivery.
               </p>
             </div>
           </div>

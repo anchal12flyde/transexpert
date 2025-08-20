@@ -76,7 +76,7 @@ export default function Header({ isScrolled = false }) {
                 <span>Services</span>
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-64 bg-white ">
+              <DropdownMenuContent className="w-64 bg-white !border-none ">
                 {services.map((service) => {
                   const Icon = service.icon;
                   return (

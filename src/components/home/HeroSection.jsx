@@ -57,7 +57,7 @@ export default function HeroSection({ isScrolled }) {
       )}
       <section className="hero-section global-container ">
         <div ref={overlayRef} className="hero-diagonal-overlay"></div>
-        <div className="square-videon  hidden ">
+        <div className="square-videon   ">
           <img
             ref={squareRef}
             src="/images/assets/x.png"

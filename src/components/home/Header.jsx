@@ -67,11 +67,7 @@ export default function Header({ isScrolled = false }) {
             <Link href="/about" className="sm:block hidden">
               About Us
             </Link>
-<<<<<<< HEAD
-            <Link href="/services" className="sm:block hidden">
-=======
             {/* <Link href="/ftl" className="sm:block hidden">
->>>>>>> 1094ab59c15997bda84d0849e820e00623f9801c
               Services
             </Link> */}
 

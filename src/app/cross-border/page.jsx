@@ -1,15 +1,15 @@
 "use client";
 
-import WeAreDifferent from "@/components/ftl/differentComp";
-import HeroSectionFTL from "@/components/ftl/HeroFtl";
-import StripFtl from "@/components/ftl/stripComp";
-import TruckImageSection from "@/components/ftl/TruckImageSection";
 import Header from "@/components/home/Header";
 import Footer from "@/components/footer/page";
 import { useEffect, useRef, useState } from "react";
 import services from "@/components/services/services.json";
+import HeroSectionFTL from "@/components/tempControlled/HeroFtl";
+import TruckImageSection from "@/components/tempControlled/TruckImageSection";
+import StripFtl from "@/components/tempControlled/stripComp";
+import DifferentComp from "@/components/tempControlled/differentComp";
 
-export default function FTL() {
+export default function TempControlled() {
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef(null);
 
@@ -33,7 +33,7 @@ export default function FTL() {
     };
   }, []);
 
-  const data = services.ftl;
+  const data = services.crossBorder;
 
   return (
     <div className="mainCon" ref={containerRef}>
@@ -41,7 +41,7 @@ export default function FTL() {
       <HeroSectionFTL isScrolled={isScrolled} {...data.hero} />
       <TruckImageSection {...data.truckImageSection} />
       <StripFtl {...data.strip} />
-      <WeAreDifferent {...data.weAreDifferent} />
+      <DifferentComp {...data.weAreDifferent} />
       <Footer />
     </div>
   );

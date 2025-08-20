@@ -25,7 +25,7 @@ export default function Footer() {
       <h3>Support</h3>
       <ul>
         <li><a href="#">Contact</a></li>
-        <li><a href="#">Raise a Query</a></li>
+        {/* <li><a href="#">Raise a Query</a></li> */}
         <li><a href="#">Privacy Policy</a></li>
       </ul>
     </div>

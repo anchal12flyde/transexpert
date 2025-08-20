@@ -57,9 +57,9 @@ export default function Footer() {
                       Fleet & Infrastructure
                     </Link>
                   </li>
-                  <li>Raise a Query</li>
+                  {/* <li>Raise a Query</li> */}
                   <li>Terms and conditions</li>
-                  <li>Refund and cancellation policy</li>
+                  {/* <li>Refund and cancellation policy</li> */}
                 </ul>
               </div>
 

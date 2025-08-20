@@ -1759,7 +1759,7 @@ span:has(img) {
 .stat-text {
   font-size: 16px;
   line-height: 1.5;
-  max-width: 320px;
+  
   margin: 0 auto;
 }
 
@@ -1775,7 +1775,10 @@ span:has(img) {
   .stat-number {
     font-size: 96px;
   }
-
+  
+  .stat {
+    text-align: left;
+  }
   .divider {
     width: 100%;   /* full column width */
   }
@@ -1784,6 +1787,7 @@ span:has(img) {
     font-size: 20px;
     font-weight: 400;
     margin: 0 auto;
+   
   }
 }
 

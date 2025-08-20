@@ -10,7 +10,9 @@ export default function FleetPower() {
               <h2 className="stat-number">50</h2>
               <div className="divider"></div>
               <p className="stat-text">
-                Dry Vans – For general freight and high-volume distribution
+                Dry Vans – For general
+                <br /> freight and high-volume <br />
+                distribution
               </p>
             </div>
 
@@ -18,16 +20,17 @@ export default function FleetPower() {
               <h2 className="stat-number">500+</h2>
               <div className="divider"></div>
               <p className="stat-text">
-                Refrigerated Reefers – Temperature controlled delivery for food,
-                pharma, and perishables
+                Refrigerated Reefers – Temperature <br />
+                controlled delivery for food, pharma,
+                <br /> and perishables
               </p>
             </div>
 
             <div className="stat">
-              <h2 className="stat-number">20</h2>
+              <h2 className="stat-number ">20</h2>
               <div className="divider"></div>
               <p className="stat-text">
-                Flatbeds – For industrial, oversized, and non-containerized
+                Flatbeds – For industrial,<br/> oversized, and non <br/>containerized
                 cargo
               </p>
             </div>

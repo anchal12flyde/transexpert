@@ -9,13 +9,15 @@ export default function davidfox() {
       title: "A quick brown fox jumped over the lazy dog ",
       class: "hero-heading text-center",
       branding_name: " H1 Hero Heading",
+      css: " font-size: 48px; font-style: normal;font-weight: 700;line-height: normal;",
     },
     {
-      name: "Class: hero-heading",
+      name: "Class: heading",
       img: "/images/david.png",
       title: "A quick brown fox jumped over the lazy dog",
       class: "heading",
       branding_name: "H2 Heading",
+      css: "font-size: 32px;font-weight: 600;line-height: normal;",
     },
     {
       name: "Class: card_heading",
@@ -23,6 +25,7 @@ export default function davidfox() {
       title: "A quick brown fox jumped over the lazy dog",
       class: "card_heading text-center",
       branding_name: "H3 Card Heading",
+      css: "font-size: 24px;font-weight: 400;line-height: normal;",
     },
     {
       name: "Class: card_subheading",
@@ -30,6 +33,7 @@ export default function davidfox() {
       title: "A quick brown fox jumped over the lazy dog",
       class: "card_subheading",
       branding_name: "H4 Card Sub-Heading",
+      css: "   font-size: 16px;font-weight: 400;line-height: normal;",
     },
     {
       name: "Class: subheading",
@@ -37,6 +41,7 @@ export default function davidfox() {
       title: "A quick brown fox jumped over the lazy dog",
       class: "subheading",
       branding_name: "Sub-Heading",
+      css: "  font-size: 20px; font-style: normal;font-weight: 400; line-height: 26px;letter-spacing: 0;",
     },
     {
       name: "Class: hero-button",
@@ -44,6 +49,7 @@ export default function davidfox() {
       title: "A quick brown fox jumped over the lazy dog",
       class: "hero-button",
       branding_name: "Buttons",
+      css: "",
     },
     {
       name: "Class: nav-link",
@@ -51,6 +57,7 @@ export default function davidfox() {
       title: "A quick brown fox jumped over the lazy dog",
       class: "nav-link",
       branding_name: "Nav Links",
+      css: "",
     },
     {
       name: "Class: footer-links li ",
@@ -58,6 +65,7 @@ export default function davidfox() {
       title: "A quick brown fox jumped over the lazy dog",
       class: "footer-links li ",
       branding_name: "Footer Links",
+      css: "",
     },
     {
       name: "Class: footer-links li ",
@@ -65,6 +73,7 @@ export default function davidfox() {
       title: "A quick brown fox jumped over the lazy dog",
       class: "footer-links li ",
       branding_name: "Footer Links",
+      css: "",
     },
   ];
 
@@ -77,8 +86,8 @@ export default function davidfox() {
         >
           {/* Left side */}
           <div className="flex flex-col flex-1 sm:basis-1/2">
-            <p>Class: {profile.class} | </p>
             <p className="mb-20">Branding Name: {profile.branding_name}</p>
+
             <Image
               src={profile.img}
               alt={profile.name}
@@ -91,8 +100,11 @@ export default function davidfox() {
           {/* Right side */}
 
           <div className="flex-1 sm:basis-1/2 justify-center">
-            <p>Class: {profile.class} | </p>
-            <p className="mb-20">Branding Name: {profile.branding_name}</p>
+            <p>Class: {profile.class}</p>
+            <p className="mb-20">
+              {profile.css}
+            </p>
+
             <p className={profile.class}>{profile.title}</p>
           </div>
         </div>

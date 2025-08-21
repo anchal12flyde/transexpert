@@ -89,7 +89,7 @@ export default function davidfox() {
       title: "A quick brown fox jumped over the lazy dog",
       class: "fleet-hero__subtitle  text-center",
       branding_name: "Hero subtitle",
-      css: " font-size: 32px;font-weight: 600;",
+      css: " font-size: 36px;font-weight: 600;",
     },
     {
       name: "Class: tab-header ",

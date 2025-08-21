@@ -896,8 +896,12 @@ span:has(img) {
 .number {
   font-weight: 700;
   font-size: 60px;
-  margin: 0 0.75rem;
   line-height: 1.2;
+  
+}
+.number-anim{
+  
+  margin: 0 0.75rem;
   display: inline-flex;    
   white-space: nowrap;  
   transform: translateY(14px);
@@ -905,9 +909,13 @@ span:has(img) {
 
 @media (max-width: 768px) {
   .number {
-    margin: 0 0.25rem;
+   
     font-size: 25px;
+   
+  }
+  .number-anim{
     transform: translateY(2px);
+    margin: 0 0.25rem;
   }
 }
 
@@ -1916,20 +1924,40 @@ span:has(img) {
 
 .fleet-hero__overlay h1 {
   color: var(--thm-white);
-  font-family: Onest;
   font-weight: 700;
   font-size: 48px;
-  line-height: 1.2;
+  line-height: normal;
+}
+.red-strip-text{
+  color: var(--thm-white);
+text-align: center;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
 }
 
+.counterSection1 {
+  display: flex;
+  background-color: var(--thm-strip-red);
+  color: var(--thm-white);
+  justify-content: center;
+  padding: 25px 0;
+}
+
+@media (max-width: 768px) {
+  .counterSection1 {
+    padding: 1.5rem 0;
+  }
+}
 .fleet-hero__content {
   text-align: center;
   margin-top: 78px;
 }
 
 .fleet-hero__subtitle {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
@@ -1978,14 +2006,14 @@ Certifications */
 }
 
 .stat-number {
-  font-size: clamp(48px, 6vw, 86px);
-  font-weight: 600;
-  line-height: 1;
+  font-size: clamp(48px, 6vw, 96px);
+  font-weight: 700;
+  line-height: normal;
 }
 
 .stat-unit {
   font-size: clamp(18px, 2vw, 32px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
   white-space: wrap;
 }
@@ -2377,6 +2405,7 @@ Certifications */
   font-weight: 300;
 }
 
+
 textarea {
   border: none;
   border-bottom: 1px solid #ccc;
@@ -2405,8 +2434,11 @@ textarea {
 }
 
 .contact-para{
-  font-size: 18px;
-  font-weight: 300;
+font-family: Onest;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px; 
 }
 
 @media (max-width: 768px) {
@@ -2469,13 +2501,13 @@ textarea {
   z-index: 9999;
 }
 .content_head{
-  font-size: 25px;
-  font-weight: 300;
+  font-size: 24px;
+  font-weight: 400;
 
 }
 .content_subhead{
-  font-size: 35px;
-  font-weight: 500;
+  font-size: 32px;
+  font-weight: 600;
   line-height: 1.2;
 }
 @media (max-width: 768px) {
@@ -2502,8 +2534,8 @@ textarea {
   z-index: 9999;
 }
 .content_subhead1{
-  font-size: 21px;
-  font-weight: 300;
+  font-size: 24px;
+  font-weight: 400;
   line-height: 1.2;
 }
 @media (max-width: 768px){
@@ -2517,11 +2549,11 @@ textarea {
   }
 }
 .blog-button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 0.45rem;
   text-decoration: none;
-  letter-spacing: 0.64px;
-  font-size: 16px;
+  letter-spacing: 0;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

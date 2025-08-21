@@ -25,7 +25,7 @@ export default function davidfox() {
       {profiles.map((profile, index) => (
         <div
           key={index}
-          className="flex items-center flex-col  sm:flex-row border-b-[1px] border-black py-6 gap-[50px]"
+          className="flex items-center flex-col  sm:flex-row border-b-[2px] border-black py-6 gap-[50px]"
         >
           {/* Left side */}
           <div className="flex flex-col">
@@ -33,8 +33,8 @@ export default function davidfox() {
             <Image
               src={profile.img}
               alt={profile.name}
-              width={350}
-              height={100}
+              width={600}
+              height={50}
               className="mt-2 object-cover"
             />
           </div>

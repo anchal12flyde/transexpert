@@ -110,14 +110,16 @@ body::-webkit-scrollbar {
 
 .subheading {
   font-size: 20px;
+  font-style: normal;
   font-weight: 400;
   line-height: 26px;
-  letter-spacing: 0.2;
+  letter-spacing: 0;
 }
 
 @media (max-width: 768px) {
   .subheading {
     font-size: 16px;
+    font-weight: 300;
   }
 }
 .main-header {
@@ -146,26 +148,29 @@ body::-webkit-scrollbar {
 .nav-links {
   display: flex;
   gap: 36px;
-  font-size: 14px;
-  font-weight: 400;
   color: #fff;
   align-items: center;
 }
-
+.nav-link{
+  
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.64px;
+}
 .nav-links a {
   text-decoration: none;
   color: inherit;
 }
 
-.contact-btn {
+/* .contact-btn {
   background-color: #e60000;
   color: white;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 12px 24px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   font-weight: 500;
-}
+} */
 
 .hero-section {
   position: relative;
@@ -2615,4 +2620,26 @@ textarea {
   .downtime-left1 h2{
     text-align: center;
   }
+}
+
+
+
+
+
+/* DAVID FOX */
+.david-heading{
+  color: #000;
+font-family: Inter;
+font-size: 15.384px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.david-text{
+  color: #000;
+font-family: Inter;
+font-size: 24.664px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }

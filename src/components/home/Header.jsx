@@ -64,7 +64,7 @@ export default function Header({ isScrolled = false }) {
             }`}
           >
             {/* Desktop links */}
-            <Link href="/about" className="sm:block hidden">
+            <Link href="/about" className="sm:block hidden nav-link">
               About Us
             </Link>
             {/* <Link href="/ftl" className="sm:block hidden">
@@ -87,7 +87,7 @@ export default function Header({ isScrolled = false }) {
                     >
                       <Link
                         href={service.path}
-                        className="flex items-center space-x-3 px-4 py-2"
+                        className="flex items-center space-x-3 px-4 py-2 nav-link"
                       >
                         {/* <Icon className="h-4 w-4 text-accent" /> */}
                         <span>{service.name}</span>
@@ -98,13 +98,13 @@ export default function Header({ isScrolled = false }) {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link href="/sustainability" className="sm:block hidden">
+            <Link href="/sustainability" className="sm:block hidden nav-link">
               Sustainability
             </Link>
-            <Link href="/industries" className="sm:block hidden">
+            <Link href="/industries" className="sm:block hidden nav-link">
               Industries
             </Link>
-            <Link href="/contact-us" className="sm:block hidden">
+            <Link href="/contact-us" className="sm:block hidden nav-link">
               Get a quote
             </Link>
 

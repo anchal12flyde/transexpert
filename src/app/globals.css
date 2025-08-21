@@ -1928,8 +1928,7 @@ span:has(img) {
   font-size: 48px;
   line-height: normal;
 }
-.red-strip-text{
-  color: var(--thm-white);
+.red-strip-text{  
 text-align: center;
 font-size: 48px;
 font-style: normal;

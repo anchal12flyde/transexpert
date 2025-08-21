@@ -35,19 +35,19 @@ export default function GeographicalCoverage() {
           </p>
           <p className="map_subheading mt-5">Operational Reach</p>
 
-          <p className="map_subheading para">
+          <p className="subheading para">
             <span>Canada: </span>Ontario, Quebec, Nova Scotia, New Brunswick,
             Newfoundland and Labrador.
           </p>
-          <p className="map_subheading para">
+          <p className="subheading para">
             <span>USA: </span> Extensive coverage across the continental United
             States.
           </p>
-          <p className="map_subheading para">
+          <p className="subheading para">
             <span>Mexico: </span>Supported through trusted cross-border
             partnerships.
           </p>
-          <p className="map_subheading para">
+          <p className="subheading para">
             Terminal Locations
             <br />
             Taylor (MI), Toledo (OH), Laredo (TX), Milton (ON), Cambridge (ON),
@@ -57,21 +57,21 @@ export default function GeographicalCoverage() {
 
         <div className="global-container mb-[42px]">
           <div className="block md:hidden text-gray-800 mobile-map-text">
-            <p className="subheading mt-5">Operational Reach</p>
+            <p className="map_subheading mt-5">Operational Reach</p>
 
-            <p className="map_subheading para">
+            <p className="subheading para">
               <span>Canada: </span>Ontario, Quebec, Nova Scotia, New Brunswick,
               Newfoundland and Labrador.
             </p>
-            <p className="map_subheading para">
+            <p className="subheading para">
               <span>USA: </span> Extensive coverage across the continental
               United States.
             </p>
-            <p className="map_subheading para">
+            <p className="subheading para">
               <span>Mexico: </span> Supported through trusted cross-border
               partnerships.
             </p>
-            <p className="map_subheading para">
+            <p className="subheading para">
               Terminal Locations
               <br />
               Taylor (MI), Toledo (OH), Laredo (TX), Milton (ON), Cambridge

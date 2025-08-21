@@ -17,7 +17,7 @@ export default function DowntimeSection() {
         </div>
 
         {/* Right side */}
-        <div className="downtime-right subheading">
+        <div className="downtime-right card_heading ">
           {[
             "Preventive maintenance schedules and telematics-driven alerts",
             "Backup vehicle dispatch system for urgent contingencies",

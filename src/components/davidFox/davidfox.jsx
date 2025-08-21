@@ -145,7 +145,7 @@ export default function davidfox() {
       title: "A quick brown fox jumped over the lazy dog",
       class: "blog-meta text-center",
       branding_name: "Author Name/Quote",
-      css: "  font-size: 16px;font-weight: 600;",
+      css: "  font-size: 20px;font-weight: 400;",
     },
     {
       name: "Class: contact-para  ",
@@ -162,6 +162,30 @@ export default function davidfox() {
       class: "radio-group label text-center",
       branding_name: "Radio button",
       css: "font-size: 16px;font-weight: 300;",
+    },
+    {
+      name: "Class: footer-desc  ",
+      img: "/images/H1.png",
+      title: "A quick brown fox jumped over the lazy dog",
+      class: "footer-desc text-center",
+      branding_name: "Footer Text-Trans Expert Inc. is a premier ",
+      css: "font-size: 12px;font-weight: 300;line-height: normal;letter-spacing: 0.64px;",
+    },
+    {
+      name: "Class: footer-contact p",
+      img: "/images/H1.png",
+      title: "A quick brown fox jumped over the lazy dog",
+      class: "footer-contact p text-center",
+      branding_name: "F+1 905-864-6443 Mon-Fri, 8 AM - 6 PM ",
+      css: "font-size: 16px; font-style: normal;font-weight: 400;line-height: normal;",
+    },
+    {
+      name: "Class: red-strip-text",
+      img: "/images/H1.png",
+      title: "A quick brown fox jumped over the lazy dog",
+      class: "red-strip-text text-center",
+      branding_name: "Fleet strength is more (Fleet &infrastructure and ftl) ",
+      css: "font-size: 48px;font-style: normal; font-weight: 700; line-height: normal;",
     },
   ];
 

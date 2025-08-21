@@ -101,7 +101,13 @@ letter-spacing: 0.64px;
   gap: 4;
   align-items: flex-start;
 }
-
+.footer-contact p{
+  color: var(--color-thm-white);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
 .contact-btn {
   margin-top: 15px;
   background-color: #dc2626;
@@ -142,7 +148,8 @@ letter-spacing: 0.64px;
   .footer-desc {
     font-size: 12px;
     font-weight: 300;
-    line-height: 1.2;
+    line-height: normal;
+letter-spacing: 0.64px;
     margin-bottom: 24px;
   
   }
@@ -182,7 +189,8 @@ letter-spacing: 0.64px;
   }
 
   .footer-copy {
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: 500;
     opacity: 0.8;
   }
 }

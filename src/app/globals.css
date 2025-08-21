@@ -1712,8 +1712,8 @@ span:has(img) {
   justify-content: center;
   align-items: center;
   gap: 28px;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
   color: #1c1c1c80;
   margin-top: 16px;
   margin-bottom: 70px;
@@ -2204,7 +2204,6 @@ Certifications */
 .industries__desc {
   font-size: 20px;
   font-weight: 400;
-  margin-bottom: 15px;
   line-height: 26px;
 }
 
@@ -2213,6 +2212,7 @@ Certifications */
   font-size: 20px;
   font-weight: 400;
   margin-left: 20px;
+  line-height: 26px;
 }
 
 .industries__card--image {

@@ -16,7 +16,8 @@ export default function Industries() {
               Whether you're stocking shelves, supplying storefronts, or fueling
               production lines, TransExpert ensures fast, secure, and seamless
               transportation across Canada, the U.S., and Mexico.
-            </p><br/>
+            </p>
+            <br />
             <p className="subheading">
               From raw materials to finished goods, we deliver reliable,
               cross-border logistics solutions tailored to your industry.
@@ -40,13 +41,13 @@ export default function Industries() {
                 backgroundImage: `url('/images/assets/wholesaleImg.jpg')`,
               }}
             >
-              <span>Wholesale</span>
+              <span className="industry-span">Wholesale</span>
             </div>
             <div
               className="industry-card"
               style={{ backgroundImage: `url('/images/assets/retailImg.jpg')` }}
             >
-              <span>Retail</span>
+              <span className="industry-span">Retail</span>
             </div>
             <div
               className="industry-card"
@@ -54,7 +55,7 @@ export default function Industries() {
                 backgroundImage: `url('/images/assets/manufacturersImg.jpg')`,
               }}
             >
-              <span>Manufacturers</span>
+              <span className="industry-span">Manufacturers</span>
             </div>
           </div>
         </div>

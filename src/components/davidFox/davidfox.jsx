@@ -76,10 +76,10 @@ export default function davidfox() {
       css: "  font-size: 24px;font-weight: 400;line-height: normal;",
     },
     {
-      name: "Class: industry-card span ",
+      name: "Class: industry-span ",
       img: "/images/david/Big Buttons.png",
       title: "A quick brown fox jumped \nover the lazy dog",
-      class: "industry-card span  text-center",
+      class: "industry-span  text-center",
       branding_name: "Industry image text",
       css: "font-size: 18px;font-weight: 400;",
     },

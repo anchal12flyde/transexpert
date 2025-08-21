@@ -1254,16 +1254,17 @@ span:has(img) {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.industry-card span {
+
+.industries-text button {
+  margin-top: 26px;
+}
+
+.industry-span{
   position: relative;
   font-size: 18px;
   font-weight: 400;
   z-index: 1;
 }
-.industries-text button {
-  margin-top: 26px;
-}
-
 /* About Hero Section */
 /* About Hero Section */
 .about-hero-section {

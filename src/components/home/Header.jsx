@@ -23,15 +23,15 @@ export default function Header({ isScrolled = false }) {
 
     {
       name: "Temperature-Controlled",
-      path: "/temperature-controlled"
+      path: "/temperature-controlled",
     },
     {
       name: "Cross Border",
-      path: "/cross-border"
+      path: "/cross-border",
     },
     {
       name: "Cross Docking",
-      path: "/cross-docking"
+      path: "/cross-docking",
     },
   ];
 

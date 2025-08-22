@@ -2517,7 +2517,7 @@ line-height: 26px;
   left: 81px;
   right: 181px;
   color: #fff;         
-  z-index: 9999;
+  z-index: 12;
 }
 .content_head{
   font-size: 24px;
@@ -2550,7 +2550,7 @@ line-height: 26px;
   left: 25px;
   right: 60px;
   color: #fff;         
-  z-index: 9999;
+  z-index: 12;
 }
 .content_subhead1{
   font-size: 24px;

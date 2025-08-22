@@ -16,5 +16,6 @@ export default function RootLayout({ children }) {
         <GlobalLoaderProvider minMs={2500}>{children}</GlobalLoaderProvider>
       </body>
     </html>
+    
   );
 }

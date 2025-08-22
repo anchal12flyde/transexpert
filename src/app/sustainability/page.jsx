@@ -11,12 +11,8 @@ import { useEffect, useRef, useState } from "react";
 export default function page() {
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef(null);
-
-  
   const { PageContentReady, skip } = useLoader();
-  useEffect(() => {
-    skip("hero");
-  }, [skip]);
+  useEffect(() => { skip("hero"); }, [skip]);
 
   useEffect(() => {
     const container = containerRef.current;

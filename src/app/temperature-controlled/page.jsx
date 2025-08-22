@@ -1,5 +1,8 @@
 "use client";
 
+
+import { useLoader } from "@/components/GlobalLoader";
+
 import Header from "@/components/home/Header";
 import Footer from "@/components/footer/page";
 import { useEffect, useRef, useState } from "react";
@@ -12,6 +15,11 @@ import DifferentComp from "@/components/tempControlled/differentComp";
 export default function TempControlled() {
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef(null);
+
+  const { PageContentReady, skip } = useLoader();
+  useEffect(() => {
+    skip("hero");
+  }, [skip]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -36,6 +44,8 @@ export default function TempControlled() {
   const data = services.temperatureControlled;
 
   return (
+    <>
+    <PageContentReady />
     <div className="mainCon" ref={containerRef}>
       {isScrolled && <Header isScrolled={isScrolled} />}
       <HeroSectionFTL isScrolled={isScrolled} {...data.hero} />
@@ -44,5 +54,6 @@ export default function TempControlled() {
       <DifferentComp {...data.weAreDifferent} />
       <Footer />
     </div>
+    </>
   );
 }

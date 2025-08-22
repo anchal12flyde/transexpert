@@ -1,4 +1,5 @@
 "use client";
+import { useLoader } from "@/components/GlobalLoader";
 
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -18,6 +19,11 @@ export default function HomePage() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef(null); 
+
+  const { PageContentReady, skip } = useLoader();
+  useEffect(() => {
+    skip("hero");
+  }, [skip]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -42,6 +48,8 @@ export default function HomePage() {
   // console.log(isScrolled);
 
   return (
+    <>
+    <PageContentReady />
     <div className="mainCon" ref={containerRef}>
       {isScrolled && <Header isScrolled={isScrolled} />}
       <HeroSection isScrolled={isScrolled} />
@@ -54,5 +62,6 @@ export default function HomePage() {
       <MapReach />
       <Footer />
     </div>
+    </>
   );
 }

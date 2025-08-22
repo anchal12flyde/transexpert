@@ -1,5 +1,6 @@
 "use client";
 
+import { useLoader } from "@/components/GlobalLoader";
 import HomeGrid from "@/components/blogs/homeGrid";
 import TopStories from "@/components/blogs/topStories";
 import Header from "@/components/home/Header";
@@ -9,6 +10,11 @@ import { useEffect, useRef, useState } from "react";
 export default function AllBlogs() {
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef(null);
+
+  const { PageContentReady, skip } = useLoader();
+  useEffect(() => {
+    skip("hero");
+  }, [skip]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -30,11 +36,14 @@ export default function AllBlogs() {
     };
   }, []);
   return (
-    <div>
-      <Header isScrolled={true} />
-      <HomeGrid />
-      <TopStories />
-      <Footer/>
-    </div>
+    <>
+      <PageContentReady />
+      <div>
+        <Header isScrolled={true} />
+        <HomeGrid />
+        <TopStories />
+        <Footer />
+      </div>
+    </>
   );
 }

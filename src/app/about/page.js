@@ -1,4 +1,5 @@
 "use client";
+import { useLoader } from "@/components/GlobalLoader";
 import Header from "@/components/home/Header";
 import AboutHero from "@/components/about/AboutHeroSection";
 import LeadershipSection from "@/components/about/Leadership";
@@ -10,6 +11,12 @@ import Footer from "@/components/footer/page";
 export default function page() {
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef(null);
+
+  const { PageContentReady, skip } = useLoader();
+  useEffect(() => {
+    skip("hero");
+  }, [skip]);
+
 
   useEffect(() => {
     const container = containerRef.current;
@@ -31,6 +38,8 @@ export default function page() {
     };
   }, []);
   return (
+    <>
+      <PageContentReady />
     <div className="mainCon" ref={containerRef}>
       {isScrolled && <Header isScrolled={isScrolled} />}
       <AboutHero isScrolled={isScrolled} />
@@ -39,5 +48,6 @@ export default function page() {
       <Relaibility />
       <Footer/>
     </div>
+    </>
   );
 }

@@ -1126,7 +1126,7 @@ span:has(img) {
 }
 
 .card_heading {
-  color: var(--thm-black);
+  /* color: var(--thm-black); */
   font-size: 24px;
   font-weight: 400;
   line-height: normal;
@@ -1495,7 +1495,7 @@ span:has(img) {
   width: 100%;
   max-width: 380px;
   height: 100%;
-  box-shadow: 1px -1px 4px 0 rgba(27, 31, 38, 0.72);
+  box-shadow: 2px -1px 4px 0 rgba(27, 31, 38, 0.72);
 
   transition: transform 0.3s ease;
 }
@@ -1951,7 +1951,11 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 }
-
+@media (max-width:768px){
+  .red-strip-text{
+font-size: 16px;
+  }
+}
 .counterSection1 {
   display: flex;
   background-color: var(--thm-strip-red);

@@ -129,7 +129,7 @@ export default function TopStories() {
   const related = [
     {
       title: "Vehicle Tech",
-      subtitle: "The Best Accessories for your load",
+      subtitle: "The Best Accessories for your Ipad",
       img: "/images/blogs/one.jpg",
     },
     {
@@ -215,28 +215,23 @@ export default function TopStories() {
       </div>
 
       {/* Main layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[71px]">
+      <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-[71px]">
         {/* Left - Stories Grid */}
-        <div className="lg:col-span-2 grid sm:grid-cols-2 gap-[42px] sm:gap-[78px]">
+        <div className="grid sm:grid-cols-2  gap-[42px] sm:gap-[78px]">
           {filteredStories.slice(0, visibleCount).map((story, idx) => (
-              <Link
-              key={idx}
-              href="/blogs/single-blog"
-              className="flex flex-col"
-            >
-                <Image
-                  src={story.img}
-                  alt={story.title}
-                  width={400}
-                  height={250}
-                  className="rounded-md object-cover w-full "
-                />
-                <h3 className="blog-heading text-thm-heading-text ">
-                  {story.title}
-                </h3>
-                <p className="blog-subheading ">{story.desc}</p>
-                <span className="blog-author ">Author: {story.author}</span>
-            
+            <Link key={idx} href="/blogs/single-blog" className="flex flex-col">
+              <Image
+                src={story.img}
+                alt={story.title}
+                width={400}
+                height={250}
+                className="rounded-md object-cover w-full "
+              />
+              <h3 className="blog-heading text-thm-heading-text ">
+                {story.title}
+              </h3>
+              <p className="blog-subheading ">{story.desc}</p>
+              <span className="blog-author ">Author: {story.author}</span>
             </Link>
           ))}
 
@@ -251,19 +246,22 @@ export default function TopStories() {
         </div>
 
         {/* Right - Related */}
-        <aside className="flex flex-col gap-[4] w-full">
+        <aside className="flex flex-col  gap-[16px] sm:gap-[24px] w-full">
           <h3 className="heading">Related</h3>
           {related.map((item, idx) => (
-            <div key={idx} className="flex gap-3 items-start mb-[20px]">
+            <div
+              key={idx}
+              className="flex gap-[24px] items-stretch "
+            >
               <Image
                 src={item.img}
                 alt={item.title}
                 width={141}
-                height={250}
-                className="rounded-md object-cover"
+                height={0}
+                className="rounded-md object-cover h-auto"
               />
-              <div>
-                <h4 className="side-heading text-[#E22A26] ">{item.title}</h4>
+              <div >
+                <h4 className="side-heading text-[#E22A26]  mb-[8px] sm:mb-[16px] ">{item.title}</h4>
                 <p className="side-subheading">{item.subtitle}</p>
               </div>
             </div>

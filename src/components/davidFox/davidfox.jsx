@@ -6,7 +6,7 @@ export default function davidfox() {
     {
       name: "Class: hero-heading",
       img: "/images/david/H1.png",
-      title: "A quick brown fox jumped over the lazy dog ",
+      title: "A quick brown fox\njumped over the lazy dog ",
       class: "hero-heading text-center",
       branding_name: " H1 Hero Heading",
       css: " font-size: 48px; font-style: normal;font-weight: 700;line-height: normal;",
@@ -14,7 +14,7 @@ export default function davidfox() {
     {
       name: "Class: heading",
       img: "/images/david/Section Heading.png",
-      title: "A quick brown fox jumped over the lazy dog",
+      title: "A quick brown fox\n jumped over the lazy dog",
       class: "heading text-center",
       branding_name: "H2 Heading",
       css: "font-size: 32px;font-weight: 600;line-height: normal;",
@@ -22,7 +22,7 @@ export default function davidfox() {
     {
       name: "Class: card_heading",
       img: "/images/david/Body text 1.png",
-      title: "A quick brown fox jumped \n over the lazy dog",
+      title: "A quick brown fox \njumped  over the lazy dog",
       class: "card_heading text-center",
       branding_name: "H3 Card Heading",
       css: "font-size: 24px;font-weight: 400;line-height: normal;",
@@ -30,7 +30,7 @@ export default function davidfox() {
     {
       name: "Class: card_subheading",
       img: "/images/david/Card body text.png",
-      title: "A quick brown fox jumped\nover the lazy dog",
+      title: "A quick brown fox \njumpedover the lazy dog",
       class: "card_subheading text-center",
       branding_name: "H4 Card Sub-Heading",
       css: "   font-size: 16px;font-weight: 400;line-height: normal;",
@@ -38,7 +38,7 @@ export default function davidfox() {
     {
       name: "Class: subheading",
       img: "/images/david/Body text 2.png",
-      title: "A quick brown fox jumped\n over the lazy dog",
+      title: "A quick brown fox \njumped over the lazy dog",
       class: "subheading text-center",
       branding_name: "Sub-Heading",
       css: "  font-size: 20px; font-style: normal;font-weight: 400; line-height: 26px;letter-spacing: 0;",
@@ -46,7 +46,7 @@ export default function davidfox() {
     {
       name: "Class: hero-button",
       img: "/images/david/Big Buttons.png",
-      title: "A quick brown fox jumped\n over the lazy dog",
+      title: "A quick brown fox \njumped over the lazy dog",
       class: "hero-button text-center",
       branding_name: "Buttons",
       css: "letter-spacing: 0;font-size: 18px;font-weight: 400;line-height: normal;",
@@ -54,7 +54,7 @@ export default function davidfox() {
     {
       name: "Class: nav-link",
       img: "/images/david/Button text.png",
-      title: "A quick brown fox jumped\n over the lazy dog",
+      title: "A quick brown fox \njumped over the lazy dog",
       class: "nav-link text-center",
       branding_name: "Nav Links",
       css: "font-size: 16px;font-weight: 500;letter-spacing: 0.64px;",
@@ -62,7 +62,7 @@ export default function davidfox() {
     {
       name: "Class: footer-links li ",
       img: "/images/david/Button text.png",
-      title: "A quick brown fox jumped\n over the lazy dog",
+      title: "A quick brown fox \njumped over the lazy dog",
       class: "footer-links li text-center",
       branding_name: "Footer Links",
       css: "font-size: 16px;font-style: normal;font-weight: 500;line-height: normal; letter-spacing: 0.64px;",
@@ -70,7 +70,7 @@ export default function davidfox() {
     {
       name: "Class: map_subheading",
       img: "/images/david/Body text 1.png",
-      title: "A quick brown fox jumped\n over the lazy dog",
+      title: "A quick brown fox\njumped over the lazy dog",
       class: "map_subheading text-center",
       branding_name: "Map_heading",
       css: "  font-size: 24px;font-weight: 400;line-height: normal;",
@@ -78,7 +78,7 @@ export default function davidfox() {
     {
       name: "Class: industry-span ",
       img: "/images/david/Big Buttons.png",
-      title: "A quick brown fox jumped \nover the lazy dog",
+      title: "A quick brown fox \njumped over the lazy dog",
       class: "industry-span  text-center",
       branding_name: "Industry image text",
       css: "font-size: 18px;font-weight: 400;",
@@ -86,7 +86,7 @@ export default function davidfox() {
     {
       name: "Class: fleet-hero__subtitle ",
       img: "/images/david/h2.png",
-      title: "A quick brown fox jumped\n over the lazy dog",
+      title: "A quick brown fox \njumped over the lazy dog",
       class: "fleet-hero__subtitle  text-center",
       branding_name: "Hero subtitle",
       css: " font-size: 36px;font-weight: 600;",
@@ -94,7 +94,7 @@ export default function davidfox() {
     {
       name: "Class: tab-header ",
       img: "/images/david/Section Heading.png",
-      title: "A quick brown fox jumped\n over the lazy dog",
+      title: "A quick brown fox \njumped over the lazy dog",
       class: "tab-header  text-center",
       branding_name: "Tab Header in sustability",
       css: "   font-size: 32px;font-weight: 600;",
@@ -102,7 +102,7 @@ export default function davidfox() {
     // {
     //   name: "Class: fleet-hero__overlay h1  ",
     //   img: "/images/H1.png",
-    //   title: "A quick brown fox jumped over the lazy dog",
+    //   title: "A quick brown fox \njumped over the lazy dog",
     //   class: "fleet-hero__overlay h1   text-center relative",
     //   branding_name: "Hero Text in sub pages",
     //   css: " font-weight: 700;font-size: 48px;line-height: normal;",
@@ -110,7 +110,7 @@ export default function davidfox() {
     {
       name: "Class: hero-section-heading  ",
       img: "/images/david/H1.png",
-      title: "A quick brown fox jumped over\n the lazy dog",
+      title: "A quick brown fox \njumped over the lazy dog",
       class: "hero-section-heading  text-center",
       branding_name: " Smart, sustainable, and fleet-first logistics.",
       css: "   font-size: 48px; font-style: normal; font-weight: 700;line-height: normal;",
@@ -118,7 +118,7 @@ export default function davidfox() {
     {
       name: "Class: text  ",
       img: "/images/david/fleet red box home page.png",
-      title: "A quick brown fox jumped \nover the lazy dog",
+      title: "A quick brown fox \njumped over the lazy dog",
       class: "text text-center",
       branding_name: "A Fleet of (Red  Strip)",
       css: "  font-size: 40px;font-style: normal;font-weight: 700;line-height:normal;letter-spacing: 0.8px;",
@@ -126,7 +126,7 @@ export default function davidfox() {
     {
       name: "Class: number  ",
       img: "/images/david/home page no.png",
-      title: "A quick brown fox jumped\n over the lazy dog",
+      title: "A quick brown fox \njumped over the lazy dog",
       class: "number text-center",
       branding_name: "A Fleet of (Red  Strip Number)",
       css: "  font-weight: 700;font-size: 60px;line-height: 1.2;",
@@ -134,7 +134,7 @@ export default function davidfox() {
     {
       name: "Class: stat-number  ",
       img: "/images/david/certifications no.png",
-      title: "A quick brown fox jumped \nover the lazy dog",
+      title: "A quick brown fox \njumped over the lazy dog",
       class: "stat-number text-center",
       branding_name: "Number(2M,250K)",
       css: " font-size: 96px;   font-weight: 700;line-height: normal;",
@@ -142,7 +142,7 @@ export default function davidfox() {
     {
       name: "Class: blog-meta  ",
       img: "/images/david/Body text 2.png",
-      title: "A quick brown fox jumped\n over the lazy dog",
+      title: "A quick brown fox \njumped over the lazy dog",
       class: "blog-meta text-center",
       branding_name: "Author Name/Quote",
       css: "  font-size: 20px;font-weight: 400;",
@@ -150,7 +150,7 @@ export default function davidfox() {
     {
       name: "Class: contact-para  ",
       img: "/images/david/Body text 2.png",
-      title: "A quick brown fox jumped\nover the lazy dog",
+      title: "A quick brown fox \njumpedover the lazy dog",
       class: "contact-para text-center",
       branding_name: "Author Name/Quote",
       css: "font-size: 20px;font-style: normal;font-weight: 400;line-height: 26px; ",
@@ -158,7 +158,7 @@ export default function davidfox() {
     {
       name: "Class: radio-group label  ",
       img: "/images/david/Button text.png",
-      title: "A quick brown fox jumped \nover the lazy dog",
+      title: "A quick brown fox\n jumped over the lazy dog",
       class: "radio-group label text-center",
       branding_name: "Radio button",
       css: "font-size: 16px;font-weight: 300;",
@@ -166,7 +166,7 @@ export default function davidfox() {
     {
       name: "Class: footer-desc  ",
       img: "/images/david/footer text.png",
-      title: "A quick brown fox jumped\n over the lazy dog",
+      title: "A quick brown fox \njumped over the lazy dog",
       class: "footer-desc text-center",
       branding_name: "Footer Text-Trans Expert Inc. is a premier ",
       css: "font-size: 12px;font-weight: 300;line-height: normal;letter-spacing: 0.64px;",
@@ -174,7 +174,7 @@ export default function davidfox() {
     {
       name: "Class: footer-contact p",
       img: "/images/david/Button text.png",
-      title: "A quick brown fox jumped \nover the lazy dog",
+      title: "A quick brown fox \njumped over the lazy dog",
       class: "footer-contact p text-center",
       branding_name: "F+1 905-864-6443 Mon-Fri, 8 AM - 6 PM ",
       css: "font-size: 16px; font-style: normal;font-weight: 400;line-height: normal;",
@@ -182,7 +182,7 @@ export default function davidfox() {
     {
       name: "Class: red-strip-text",
       img: "/images/david/H1.png",
-      title: "A quick brown fox jumped \nover the lazy dog",
+      title: "A quick brown fox \njumped over the lazy dog",
       class: "red-strip-text text-center",
       branding_name: "Fleet strength is more (Fleet &infrastructure and ftl) ",
       css: "font-size: 48px;font-style: normal; font-weight: 700; line-height: normal;",

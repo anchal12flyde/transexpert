@@ -66,7 +66,7 @@ export default function Strip() {
 
         <h2 className="text  ">
           A Fleet of{" "}
-          <span className="number">
+          <span className="number number-anime">
             {number.split("").map((digit, i) => (
               <RollingDigit key={i} target={parseInt(digit)} duration={2} />
             ))}

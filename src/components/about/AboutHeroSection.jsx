@@ -20,8 +20,8 @@ export default function AboutHero({ isScrolled }) {
       {/* Text Content */}
       <div className="about-hero-content global-container">
         <div className="hero-content">
-          <h1 className="hero-heading">North America's Elite Fleet</h1>
-          <p className="hero-description">
+          <h1 className="hero-heading mb-[26px]">North America's Elite Fleet</h1>
+          <p className="hero-description w-[200px] sm:w-[800px]">
             Trans Expert Inc. is a premier cross-border logistics provider,
             committed to delivering seamless freight solutions across Canada,
             the United States, and Mexico. Founded in 2010, we are powered by

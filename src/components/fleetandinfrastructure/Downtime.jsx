@@ -9,7 +9,7 @@ export default function DowntimeSection() {
           <h2 className="hero-section-heading mb-[16px]">
             Downtime is not an option
           </h2>
-          <p className="subheading mb-[30px]">
+          <p className="map_subheading mb-[30px]">
             Our in-house licensed mechanics and proactive diagnostics ensure
             top-tier fleet availability.
           </p>
@@ -17,7 +17,7 @@ export default function DowntimeSection() {
         </div>
 
         {/* Right side */}
-        <div className="downtime-right subheading">
+        <div className="downtime-right card_heading ">
           {[
             "Preventive maintenance schedules and telematics-driven alerts",
             "Backup vehicle dispatch system for urgent contingencies",

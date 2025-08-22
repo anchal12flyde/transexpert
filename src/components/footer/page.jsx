@@ -25,7 +25,7 @@ export default function Footer() {
             {/* Middle Section */}
             <div className="flex items-start gap-[50px] ">
               <div className="footer-links">
-                <ul>
+                <ul >
                   <li>
                     {" "}
                     <Link href="/about">About Us</Link>
@@ -71,12 +71,11 @@ export default function Footer() {
                     width={16}
                     height={16}
                     alt="call"
-                    className="mt-2 "
+                    className="mt-1 "
                   />
                   <p>
                     +1 905-864-6443
-                    <br />
-                    Mon–Fri, 8 AM – 6 PM
+                    
                   </p>
                 </div>
 
@@ -86,7 +85,7 @@ export default function Footer() {
                     width={16}
                     height={16}
                     alt="call"
-                    className="mt-1"
+                    
                   />
                   <p>100 Market Drive, Milton ON L9T 3H5 CANADA</p>
                 </div>
@@ -96,7 +95,7 @@ export default function Footer() {
                     width={16}
                     height={16}
                     alt="call"
-                    className="mt-1.5 "
+                    className="mt-1 "
                   />
                   <p>admin@transexpert.ca</p>
                 </div>

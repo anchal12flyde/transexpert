@@ -15,10 +15,10 @@ const Blog = () => {
                 <img src="/images/assets/arrowUp.png" alt="Arrow" />
               </div>
             </div>
-            <p className="card_subheading text-[#1B1F26B8]">
+            <h4 className="card_subheading text-[#1B1F26B8]">
               Your guide to smoother, faster shipments between Canada, the U.S.,
               and Mexico.
-            </p>
+            </h4>
           </div>
         </div>
 

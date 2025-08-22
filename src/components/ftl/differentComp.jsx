@@ -14,7 +14,7 @@ export default function differentComp({ title, imageSrc, points }) {
         {/* Right side */}
         <div className="downtime-right subheading">
           {points.map((text, i) => (
-            <div key={i} className="downtime-card subheading">
+            <div key={i} className="downtime-card card_heading ">
               {text}
             </div>
           ))}

@@ -2,7 +2,7 @@
   position: relative;
   background-color: #263879; /* Dark blue */
   color: #fff;
-  padding: 13vh;
+  padding:78px 136px ;
   overflow: hidden;
   font-family: "Onest", sans-serif;
 }
@@ -80,6 +80,12 @@
 }
 
 .footer-links li {
+  color: var(--color-thm-white);
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.64px;
   margin-bottom: 15px;
   cursor: pointer;
   transition: color 0.3s;
@@ -95,13 +101,24 @@
   gap: 4;
   align-items: flex-start;
 }
-
+.footer-contact p{
+  color: var(--color-thm-white);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
 .contact-btn {
   margin-top: 15px;
-  padding: 8px 16px;
-  background-color: #e5202b;
+  background-color: #dc2626;
+  padding: 12px 24px;
+  border-radius: 8px;
   color: white;
-  border: none;
+  text-decoration: none;
+  letter-spacing: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
   cursor: pointer;
 }
 
@@ -131,7 +148,8 @@
   .footer-desc {
     font-size: 12px;
     font-weight: 300;
-    line-height: 1.2;
+    line-height: normal;
+letter-spacing: 0.64px;
     margin-bottom: 24px;
   
   }
@@ -151,7 +169,8 @@
 
       li {
         font-size: 10px;
-        font-weight: 300;
+        letter-spacing: 0.4px;
+        font-weight: 400;
         margin-bottom: 6px;
         text-align: left;
         cursor: pointer;
@@ -170,7 +189,8 @@
   }
 
   .footer-copy {
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: 500;
     opacity: 0.8;
   }
 }

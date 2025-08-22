@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @theme {
-  --font-primary: "Onest", sans-serif;
+  --font-primary: "Onest";
   --color-primary-color: #263879;
   --color-secondary-color: #e22a26;
   --color-thm-white: #ffffff;
@@ -13,7 +13,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-family: "Onest", sans-serif;
+  --font-family: "Onest";
   --primary-color: #263879;
   --secondary-color: #e22a26;
   --thm-white: #ffffff;
@@ -39,7 +39,6 @@ body {
   background: var(--background);
   color: var(--foreground);
   overflow-x: hidden;
-
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -47,7 +46,6 @@ body {
 html,
 body {
   overflow-x: hidden;
-
   height: 100%;
 }
 body::-webkit-scrollbar {
@@ -72,8 +70,8 @@ body::-webkit-scrollbar {
 .global-container {
   display: var(--flex-default);
   flex-direction: column;
-  padding-left: 13vh;
-  padding-right: 13vh;
+  padding-left: 126px;
+  padding-right: 126px;
 }
 .bshadow {
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
@@ -85,22 +83,22 @@ body::-webkit-scrollbar {
 
 @media (max-width: 768px) {
   .global-container {
-    padding-left: 3.5vh;
-    padding-right: 3.5vh;
+    padding-left: 31px;
+    padding-right: 31px;
   }
 }
 
 @media (min-width: 1600px) {
   .global-container {
-    padding-left: 28vh;
-    padding-right: 28vh;
+    padding-left: 252px;
+    padding-right: 252px;
   }
 }
 
 .heading {
   font-size: 32px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: normal;
   margin-bottom: 20px;
 }
 
@@ -112,14 +110,16 @@ body::-webkit-scrollbar {
 
 .subheading {
   font-size: 20px;
+  font-style: normal;
   font-weight: 400;
   line-height: 26px;
-  letter-spacing: 0.2;
+  letter-spacing: 0;
 }
 
 @media (max-width: 768px) {
   .subheading {
     font-size: 16px;
+    font-weight: 300;
   }
 }
 .main-header {
@@ -148,26 +148,28 @@ body::-webkit-scrollbar {
 .nav-links {
   display: flex;
   gap: 36px;
-  font-size: 14px;
-  font-weight: 400;
   color: #fff;
   align-items: center;
 }
-
+.nav-link{
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.64px;
+}
 .nav-links a {
   text-decoration: none;
   color: inherit;
 }
 
-.contact-btn {
+/* .contact-btn {
   background-color: #e60000;
   color: white;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 12px 24px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   font-weight: 500;
-}
+} */
 
 .hero-section {
   position: relative;
@@ -207,11 +209,11 @@ body::-webkit-scrollbar {
 }
 
 .hero-heading {
+  /* color: var(--thm-white); */
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 0.84px;
 }
 
 @media screen and (max-width: 700px) {
@@ -225,7 +227,6 @@ body::-webkit-scrollbar {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 0.84px;
 }
 @media screen and (max-width: 700px) {
   .hero-section-heading {
@@ -236,28 +237,29 @@ body::-webkit-scrollbar {
 .hero-description {
   font-weight: 400;
   font-size:24px;
-  margin-top: 26px;
-  max-width: 700px;
-  letter-spacing: 0.84px;
+  line-height:28px;
+  letter-spacing: 0%;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .hero-button {
-  background-color: #dc2626;
-  padding: 10px 20px;
-  border-radius: 0.45rem;
-  color: white;
+  background-color: var(--thm-button-color);
+  text-align: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: var(--thm-white);
   text-decoration: none;
-  letter-spacing: 0.64px;
-  font-size: 16px;
+  letter-spacing: 0;
+  font-size: 18px;
   font-weight: 400;
   line-height: normal;
+  cursor: pointer;
   /* height: auto; */
 }
 @media (max-width: 768px) {
 .hero-button {
-  padding: 9.5px 9.5px;
-  font-size: 12px;
+  padding: 8px 19px;
+  font-size: 14px;
 }
 }
 .bgRed {
@@ -497,9 +499,9 @@ span:has(img) {
   top: 55%;
   right: 0;
   width: 600px;
-  transform: translate(-19%, -40%);
+  transform: translate(-22.5%, -40%);
   color: white;
-  max-width: 550px;
+  max-width: 500px;
   text-align: right;
   z-index: 2;
   justify-content: flex-end;
@@ -511,16 +513,16 @@ span:has(img) {
   }
 }
 .hero-testimonial p {
-  color: #fff;
-  font-size: 21.56px;
+  color: var(--thm-white);
+  font-size: 20px;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 400;
   line-height: 28.023px;
-  letter-spacing: 0.64px;
 }
 .hero-testimonial .testimonial-source {
-  /* margin-top: 1.8rem; */
-  font-size: 16.5px;
+  color: var(--thm-white);
+  font-size: 20px;
+  font-weight: 500;
   font-style: normal;
   line-height: 28.023px;
 }
@@ -530,7 +532,7 @@ span:has(img) {
   gap: 3rem;
   position: absolute;
   bottom: 6%;
-  right: 6.5%;
+  right:126px;
   left: auto;
   width: auto;
   z-index: 2;
@@ -872,7 +874,7 @@ span:has(img) {
 }
 
 .text {
-  font-size: 35px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -883,7 +885,7 @@ span:has(img) {
 
 @media (max-width: 768px) {
   .text {
-    font-size: 18px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -894,8 +896,12 @@ span:has(img) {
 .number {
   font-weight: 700;
   font-size: 60px;
-  margin: 0 0.75rem;
   line-height: 1.2;
+  
+}
+.number-anim{
+  
+  margin: 0 0.75rem;
   display: inline-flex;    
   white-space: nowrap;  
   transform: translateY(14px);
@@ -903,9 +909,13 @@ span:has(img) {
 
 @media (max-width: 768px) {
   .number {
-    margin: 0 0.25rem;
+   
     font-size: 25px;
+   
+  }
+  .number-anim{
     transform: translateY(2px);
+    margin: 0 0.25rem;
   }
 }
 
@@ -1012,12 +1022,12 @@ span:has(img) {
 /* Carrer Banner */
 
 .careers-banner {
-  position: relative;
-  background-image: url("/images/assets/joinUs.png");
-  background-size: cover;
-  background-position: center;
-  margin-top: 48px;
-  overflow: hidden;
+    position: relative;
+    background-color:#27397A;
+    margin-top: 48px;
+    overflow: hidden;
+  
+  
 }
 
 .careers-content-wrapper {
@@ -1027,7 +1037,7 @@ span:has(img) {
   margin: 78px 0;
   display: flex;
   flex-direction: row;
-  gap: 6rem;
+  gap: 70px;
 }
 
 @media (max-width: 768px) {
@@ -1050,7 +1060,6 @@ span:has(img) {
 
 .careers-image {
   border-radius: 1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .careers-text-content {
@@ -1115,10 +1124,10 @@ span:has(img) {
 }
 
 .card_heading {
+  color: var(--thm-black);
   font-size: 24px;
   font-weight: 400;
   line-height: normal;
-
   flex: 1;
 }
 @media (max-width: 767px) {
@@ -1138,7 +1147,7 @@ span:has(img) {
   }
 }
 .map_subheading {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 400;
   line-height: normal;
 }
@@ -1245,16 +1254,17 @@ span:has(img) {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.industry-card span {
+
+.industries-text button {
+  margin-top: 26px;
+}
+
+.industry-span{
   position: relative;
   font-size: 18px;
   font-weight: 400;
   z-index: 1;
 }
-.industries-text button {
-  margin-top: 26px;
-}
-
 /* About Hero Section */
 /* About Hero Section */
 .about-hero-section {
@@ -1299,7 +1309,7 @@ span:has(img) {
 }
 
 .about-hero-content button {
-  margin-top: 36px;
+  margin-top: 26px;
 }
 
 /* Desktop Floating Box */
@@ -1475,7 +1485,8 @@ span:has(img) {
   width: 100%;
   max-width: 380px;
   height: 100%;
-  box-shadow: 0 4px 4px rgba(27, 31, 38, 0.72);
+  box-shadow: 6px -1px 4px rgba(27, 31, 38, 0.72);
+
   transition: transform 0.3s ease;
 }
 
@@ -1702,8 +1713,8 @@ span:has(img) {
   justify-content: center;
   align-items: center;
   gap: 28px;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
   color: #1c1c1c80;
   margin-top: 16px;
   margin-bottom: 70px;
@@ -1758,8 +1769,8 @@ span:has(img) {
 
 .stat-text {
   font-size: 16px;
-  line-height: 1.5;
-  
+  font-weight: 400;
+  line-height: 26px;
   margin: 0 auto;
 }
 
@@ -1914,10 +1925,31 @@ span:has(img) {
 
 .fleet-hero__overlay h1 {
   color: var(--thm-white);
-  font-size: 46px;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: normal;
+}
+.red-strip-text{  
+text-align: center;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
 }
 
+.counterSection1 {
+  display: flex;
+  background-color: var(--thm-strip-red);
+  color: var(--thm-white);
+  justify-content: center;
+  padding: 25px 0;
+}
+
+@media (max-width: 768px) {
+  .counterSection1 {
+    padding: 1.5rem 0;
+  }
+}
 .fleet-hero__content {
   text-align: center;
   margin-top: 78px;
@@ -1925,7 +1957,7 @@ span:has(img) {
 
 .fleet-hero__subtitle {
   font-size: 36px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
@@ -1974,14 +2006,14 @@ Certifications */
 }
 
 .stat-number {
-  font-size: clamp(48px, 6vw, 86px);
-  font-weight: 600;
-  line-height: 1;
+  font-size: clamp(48px, 6vw, 96px);
+  font-weight: 700;
+  line-height: normal;
 }
 
 .stat-unit {
   font-size: clamp(18px, 2vw, 32px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
   white-space: wrap;
 }
@@ -2025,7 +2057,7 @@ Certifications */
 .tab-header {
   display: flex;
   justify-content: space-between;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 600;
 }
 
@@ -2172,7 +2204,7 @@ Certifications */
 .industries__desc {
   font-size: 20px;
   font-weight: 400;
-  margin-bottom: 15px;
+  line-height: 26px;
 }
 
 .industries__list {
@@ -2180,6 +2212,7 @@ Certifications */
   font-size: 20px;
   font-weight: 400;
   margin-left: 20px;
+  line-height: 26px;
 }
 
 .industries__card--image {
@@ -2372,6 +2405,7 @@ Certifications */
   font-weight: 300;
 }
 
+
 textarea {
   border: none;
   border-bottom: 1px solid #ccc;
@@ -2400,8 +2434,11 @@ textarea {
 }
 
 .contact-para{
-  font-size: 18px;
-  font-weight: 300;
+font-family: Onest;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px; 
 }
 
 @media (max-width: 768px) {
@@ -2464,13 +2501,13 @@ textarea {
   z-index: 9999;
 }
 .content_head{
-  font-size: 25px;
-  font-weight: 300;
+  font-size: 24px;
+  font-weight: 400;
 
 }
 .content_subhead{
-  font-size: 35px;
-  font-weight: 500;
+  font-size: 32px;
+  font-weight: 600;
   line-height: 1.2;
 }
 @media (max-width: 768px) {
@@ -2497,8 +2534,8 @@ textarea {
   z-index: 9999;
 }
 .content_subhead1{
-  font-size: 21px;
-  font-weight: 300;
+  font-size: 24px;
+  font-weight: 400;
   line-height: 1.2;
 }
 @media (max-width: 768px){
@@ -2512,11 +2549,11 @@ textarea {
   }
 }
 .blog-button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 0.45rem;
   text-decoration: none;
-  letter-spacing: 0.64px;
-  font-size: 16px;
+  letter-spacing: 0;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -2616,3 +2653,23 @@ textarea {
     text-align: center;
   }
 }
+
+
+
+
+
+/* DAVID FOX */
+/* .david-heading{
+  color: #000;
+font-size: 15.384px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.david-text{
+  color: #000;
+font-size: 24.664px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+} */

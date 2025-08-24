@@ -90,11 +90,12 @@ export default function IndustriesWork() {
           Special handling for enterprise clients with dedicated dispatch,
           SLA-aligned delivery, and scalable capacity for peak seasons.
         </p>
-        {/* <img
+        <img
           src="/images/assets/Group 2.png"
           alt="Close Icon"
           className="industries__banner-icon"
-        /> */}
+          
+        /> 
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import "./globals.css";
-import GlobalLoaderProvider from "@/components/GlobalLoader";
+import GlobalLoaderProvider from "@/components/GlobalLoader"; // client component
 import { Onest } from "next/font/google";
 
 const onest = Onest({ subsets: ["latin"], display: "swap" });
@@ -16,6 +16,5 @@ export default function RootLayout({ children }) {
         <GlobalLoaderProvider minMs={2500}>{children}</GlobalLoaderProvider>
       </body>
     </html>
-    
   );
 }

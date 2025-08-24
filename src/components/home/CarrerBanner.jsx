@@ -19,7 +19,7 @@ const CareersBanner = () => {
         {/* Right Text */}
         <div className="careers-text-content">
           <p className="heading">Drive Your Future with TransExpert</p>
-          <p className="subheading">
+          <p className="subheading pt-[10px]">
             We're always looking for dedicated drivers, logistics pros, and
             problem-solvers to join our growing North American team.
           </p>

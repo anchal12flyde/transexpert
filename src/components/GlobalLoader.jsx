@@ -6,11 +6,10 @@ const LoaderCtx = createContext(null);
 
 export default function GlobalLoaderProvider({ children, minMs = 2500 }) {
   const pathname = usePathname();
-  const [visible, setVisible] = useState(true); // first load pe visible
-  const marks = useRef(new Set()); // "hero" / "content"
+  const [visible, setVisible] = useState(true); 
+  const marks = useRef(new Set()); 
   const startTs = useRef(Date.now());
 
-  // on every route change -> loader show + reset timers/marks
   useEffect(() => {
     setVisible(true);
     marks.current = new Set();
@@ -18,7 +17,7 @@ export default function GlobalLoaderProvider({ children, minMs = 2500 }) {
   }, [pathname]);
 
   const tryClose = () => {
-    const need = ["hero", "content"]; // dono ready hone chahiye
+    const need = ["hero", "content"]; 
     const ok = need.every((k) => marks.current.has(k));
     if (!ok) return;
 
@@ -51,11 +50,11 @@ export default function GlobalLoaderProvider({ children, minMs = 2500 }) {
   return (
     <>
       {visible && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white   ">
           <img
             src="/images/videos/loader-x.gif"
             alt="Loading..."
-            className="w-20 h-20"
+            className="w-20 h-20 "
           />
         </div>
       )}

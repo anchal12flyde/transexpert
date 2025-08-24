@@ -174,7 +174,7 @@ export default function Header({ isScrolled = false }) {
           <Link href="/about" onClick={() => setMenuOpen(false)}>
             About Us
           </Link>
-          <Link href="/services" onClick={() => setMenuOpen(false)}>
+          <Link href="/ftl" onClick={() => setMenuOpen(false)}>
             Services
           </Link>
           <Link href="/sustainability" onClick={() => setMenuOpen(false)}>

@@ -83,8 +83,8 @@ body::-webkit-scrollbar {
 
 @media (max-width: 768px) {
   .global-container {
-    padding-left: 31px;
-    padding-right: 31px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -1047,8 +1047,7 @@ span:has(img) {
 }
 @media (max-width: 1300px){
   .careers-content-wrapper {
-    flex-direction: row;
-    gap: 7rem;
+    gap: 16px;
   }
 }
 
@@ -1076,16 +1075,18 @@ span:has(img) {
 
 .blog-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
-
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .blog-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
+
+ 
 }
 
 .blog-box {
@@ -1194,7 +1195,7 @@ span:has(img) {
   margin: 0 auto;
   display: flex;
   flex-direction: column-reverse;
-  gap: 6rem;
+  gap: 16px;
 }
 
 @media (min-width: 768px) {
@@ -1202,7 +1203,7 @@ span:has(img) {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 03.5rem;
+    gap: 3.5rem;
   }
 }
 
@@ -1225,14 +1226,22 @@ span:has(img) {
 }
 @media (max-width: 768px) {
   .industries-text {
-    padding-left: 3.5vh;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
   }
 
   .industries-cards {
     flex: 1;
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap:10px;
+    
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .industries-cards > div {
+    flex: 1;
   }
 }
 
@@ -1256,6 +1265,12 @@ span:has(img) {
   align-items: center;
   justify-content: center;
   color: #fff;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+.industry-card:hover {
+  filter: grayscale(0%);
+  transform: translateX(2px);
 }
 
 .industry-card::before {
@@ -1263,18 +1278,35 @@ span:has(img) {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
+  transition: background 0.5s ease-in-out;
 }
-
-
+.industry-card:hover::before {
+  background: rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .industry-card{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
 .industries-text button {
   margin-top: 26px;
 }
 
 .industry-span{
+  transition: color 0.5s ease-in-out; 
   position: relative;
   font-size: 18px;
   font-weight: 400;
   z-index: 1;
+}
+@media (max-width: 768px) {
+  .industry-span{
+   font-size: 12px;
+   
+  }
 }
 /* About Hero Section */
 .about-hero-section {
@@ -2264,11 +2296,17 @@ Certifications */
 .industries__banner {
   position: relative;
   background: var(--thm-strip-red);
-  padding: 32px 280px;
+  padding: 32px 220px;
   border-radius: 8px;
   color: #fff;
   margin-top: 78px;
 }
+@media (min-width:1000px) and (max-width:1300px) {
+  .industries__banner {
+    padding: 32px 130px;
+  }
+}
+
 
 .industries__banner-title {
   font-size: 32px;
@@ -2508,6 +2546,7 @@ line-height: 26px;
     font-size: 12px;
   }
 }
+/* globals.css */
 
 
 /* All Blogs */

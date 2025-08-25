@@ -238,8 +238,8 @@ body::-webkit-scrollbar {
 .hero-description {
   font-weight: 400;
   font-size:24px;
-  line-height:28px;
-  letter-spacing: 0%;
+  line-height:normal;
+  letter-spacing: normal;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -261,6 +261,12 @@ body::-webkit-scrollbar {
 .hero-button {
   padding: 8px 19px;
   font-size: 14px;
+}
+.hero-description {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: normal;
 }
 }
 .bgOverlay {
@@ -544,6 +550,13 @@ span:has(img) {
   object-fit: cover;
   margin: 0;
 }
+.card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
 .testimonial-cards .card {
   position: relative;
   width: 180px;
@@ -590,13 +603,8 @@ span:has(img) {
   bottom: 100px;
   transition: bottom 0.5s ease;
 }
-.card {
-  position: relative;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-}
+
+
 
 .card img {
   width: 100%;
@@ -638,11 +646,11 @@ span:has(img) {
 
 .card-overlay .x-icon {
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  bottom: -18px;
+  right: 0;
 
-  width: 50px !important;
-  height: 50px !important;
+  width: 70px !important;
+  height: 80px !important;
 }
 .card:hover img {
   transform: scale(1.05) translateY(-20%);
@@ -1517,7 +1525,7 @@ span:has(img) {
   display: grid;
   justify-content: space-between;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6.5rem;
+  gap: 101px;
 }
 
 .value {
@@ -1547,7 +1555,7 @@ span:has(img) {
   background-color: var(--thm-white);
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  padding: 22px 32px;
+  padding: 26px 40px;
   text-align: left;
   z-index: 2;
   box-shadow: 0 4px 12px rgba(27, 31, 38, 0.72);

@@ -43,6 +43,31 @@ body {
   -ms-overflow-style: none;
 }
 
+/* Hide the Google top banner */
+/* Hide Google top banner bar */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+/* Prevent body from being pushed down */
+body {
+  top: 0 !important;
+}
+
+/* Hide floating tooltip */
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+/* Hide default "Powered by Google" block if you only want custom UI */
+.goog-logo-link,
+.goog-te-gadget {
+  display: none !important;
+}
+
+
+
 html,
 body {
   overflow-x: hidden;

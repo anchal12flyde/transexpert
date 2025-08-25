@@ -15,6 +15,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { LanguageMenu } from "../languageSelector";
 
 export default function Header({ isScrolled = false }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -71,6 +72,8 @@ export default function Header({ isScrolled = false }) {
             {/* <Link href="/ftl" className="sm:block hidden">
               Services
             </Link> */}
+
+            <LanguageMenu />
 
             <div className="hidden md:block">
               <DropdownMenu>

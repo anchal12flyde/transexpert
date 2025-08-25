@@ -59,7 +59,7 @@
   line-height: 1.6;
   font-size: 16px;
   font-weight: 300;
-  text-align: justify;
+ 
 }
 
 .footer-copy {
@@ -145,6 +145,7 @@ text-underline-position: from-font;
 
 // Mobile Footer
 .footer-mobile {
+  position: relative;
   font-family: "Onest", sans-serif;
   background-color: #263879;
   color: #fff;
@@ -159,20 +160,20 @@ text-underline-position: from-font;
     
   }
 
-  .footer-desc {
-    font-size: 12px;
+  .footer-desc-mobile {
+    font-size: 10px;
     font-weight: 300;
     line-height: normal;
-letter-spacing: 0.64px;
+    letter-spacing: 0.4px;
     margin-bottom: 24px;
-  
+    text-align: center;
   }
 
-  .footer-links {
+  .footer-links-mobile {
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
-    gap: 40px;
+  justify-content: space-between;
     margin-bottom: 24px;
 
     ul {
@@ -185,7 +186,7 @@ letter-spacing: 0.64px;
         font-size: 10px;
         letter-spacing: 0.4px;
         font-weight: 400;
-        margin-bottom: 6px;
+        margin-bottom: 20px;
         text-align: left;
         cursor: pointer;
         &:hover {
@@ -198,13 +199,26 @@ letter-spacing: 0.64px;
   .footer-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 8px;
     margin-bottom: 16px;
   }
 
-  .footer-copy {
-    font-size: 16px;
-    font-weight: 500;
-    opacity: 0.8;
+  .footer-copy-mobile {
+    color: var(--color-thm-white);
+    font-family: Onest;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    text-align: left;
   }
 }
+.decor-image-footer-mobile{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 140px;
+  width: 106px;
+}
+

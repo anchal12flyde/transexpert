@@ -1066,6 +1066,28 @@ span:has(img) {
   
   
 }
+.careers-content-wrapper-home {
+  position: relative;
+  z-index: 1;
+
+  margin: 78px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 115px;
+}
+
+@media (max-width: 768px) {
+  .careers-content-wrapper-home {
+    flex-direction: column;
+    margin: 28px 0;
+    gap: 2rem;
+  }
+}
+@media (max-width: 1300px){
+  .careers-content-wrapper-home {
+    gap: 16px;
+  }
+}
 
 .careers-content-wrapper {
   position: relative;
@@ -1094,7 +1116,10 @@ span:has(img) {
   flex: 1.32;
   display: flex;
 }
-
+.careers-image-container-home {
+  flex: 1.42;
+  display: flex;
+}
 .careers-image {
   border-radius: 1rem;
 }
@@ -1122,7 +1147,7 @@ span:has(img) {
 @media (max-width: 767px) {
   .blog-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 5px;
   }
 
  
@@ -1143,7 +1168,11 @@ span:has(img) {
 .blog-box:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-
+@media (max-width:768px){
+  .blog-box{
+    padding: 16px; 
+  }
+}
 .blog-image {
   width: 100%;
   height: auto;
@@ -1163,6 +1192,24 @@ span:has(img) {
   align-items: flex-start;
   gap: 40px;
   margin-top: 25px;
+}
+@media (max-width:768px){
+  .title-with-icon {
+    gap: 5px;
+  }
+}
+
+/* Side cards small */
+.custom-slick .slick-slide .blog-box {
+  transform: scale(0.85);
+  transition: transform 0.4s ease;
+  opacity: 0.6;
+}
+
+/* Center card normal */
+.custom-slick .slick-center .blog-box {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .card_heading {
@@ -1224,7 +1271,13 @@ span:has(img) {
   height: 44px;
   object-fit: contain;
 }
-
+@media (max-width:768px){
+  .arrow-icon img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+  }
+}
 .industries-section {
   padding: 78px 0;
   background: #fff;

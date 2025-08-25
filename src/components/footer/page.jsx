@@ -74,7 +74,8 @@ export default function Footer() {
                     className="mt-1 "
                   />
                   <p>
-                    <span className="address-details">+1 905-864-6443</span><br/>
+                    <span className="address-details">+1 905-864-6443</span>
+                    <br />
                     <span>Mon-Fri, 8 AM - 6 PM</span>
                   </p>
                 </div>
@@ -116,24 +117,24 @@ export default function Footer() {
         {" "}
         <div className="global-container">
           {/* Logo */}
-          <div className="footer-logo">
+          <div className="justify-items-center mb-[24px]">
             <Image
               src="/images/assets/logo2.png"
               alt="TransExpert Logo"
-              width={180}
-              height={50}
+              width={172}
+              height={47}
             />
           </div>
 
           {/* Description */}
-          <p className="footer-desc">
+          <p className="footer-desc-mobile">
             Trans Expert Inc. is a premier cross-border logistics provider,
             committed to delivering seamless freight solutions across Canada,
             the United States, and Mexico.
           </p>
 
           {/* Links */}
-          <div className="footer-links">
+          <div className="footer-links-mobile">
             <ul>
               <li>About Us</li>
               <li>Services</li>
@@ -180,10 +181,17 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <p className="footer-copy">
+          <p className="footer-copy-mobile">
             Copyright 2017. Trans Expert Inc – All Rights Reserved
           </p>
         </div>
+        
+          <img
+            src="/images/assets/vector2.png"
+            alt="Decoration"
+            className="decor-image-footer-mobile"
+          />
+        
       </footer>
     </>
   );

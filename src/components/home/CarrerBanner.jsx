@@ -4,9 +4,9 @@ import Image from "next/image";
 const CareersBanner = () => {
   return (
     <section className="careers-banner global-container">
-      <div className="careers-content-wrapper">
+      <div className="careers-content-wrapper-home">
         {/* Left Image */}
-        <div className="careers-image-container">
+        <div className="careers-image-container-home">
           <Image
             src="/images/assets/Frame.png"
             alt="Driver"

@@ -1,4 +1,6 @@
 "use client";
+
+import { useLoader } from "@/components/GlobalLoader";
 import Header from "@/components/home/Header";
 import HeroSection from "@/components/contact/HeroSection";
 import ContactDetails from "@/components/contact/ContactDetails";
@@ -8,6 +10,12 @@ import { useEffect, useRef, useState } from "react";
 export default function page() {
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef(null);
+
+  const { PageContentReady, skip } = useLoader();
+  useEffect(() => {
+    skip("hero");
+  }, [skip]);
+
 
   useEffect(() => {
     const container = containerRef.current;
@@ -29,6 +37,9 @@ export default function page() {
     };
   }, []);
   return (
+<>
+
+    <PageContentReady />
     <div className="mainCon" ref={containerRef}>
       {/* <Header /> */}
        <Header isScrolled={true} />
@@ -37,5 +48,6 @@ export default function page() {
       <ContactDetails/>
       <Footer />
     </div>
+  </>
   );
 }

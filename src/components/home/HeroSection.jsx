@@ -69,15 +69,20 @@ export default function HeroSection({ isScrolled }) {
         <div className="overlay-X-Mob sm:hidden "></div>
 
         <div className="hero-content  ">
-          <h1 className=" hero-heading mb-[36px]">
+          <h1 className=" hero-heading mb-[24px] sm:mb-[36px]">
             We Don’t Just Move Freight. <br />
             We Power North American Enterprise.
           </h1>
-          <p className="hero-description w-[250px] sm:w-[550px]">
+          <p className="hero-description w-full sm:w-[550px] hidden sm:block">
             From mission-critical deliveries to cross-border precision, Trans
             Expert is the logistics backbone trusted by industry leaders
           </p>
-          <a href="#about" className="hero-button mt-[36px]">
+
+          <p className="hero-description w-full sm:w-[550px] block sm:hidden">
+            Trans Expert is the logistics backbone trusted by industry leaders
+          </p>
+
+          <a href="#about" className="hero-button mt-[24px] sm:mt-[36px]">
             About Us
           </a>
         </div>
@@ -119,12 +124,16 @@ export default function HeroSection({ isScrolled }) {
                 className="arrow-img"
               />
             </div>
-            <div className="card-overlay">
+            <div className="card-overlay ">
               <div className="card-content">
                 <h3>Full Truck Load</h3>
                 <p>Dedicated capacity for your larger shipments</p>
               </div>
-              {/* <img src="/images/assets/x-icon.png" alt="X" className="x-icon" /> */}
+              <img
+                src="/images/assets/vector2.png"
+                alt="X"
+                className="x-icon"
+              />
             </div>
           </div>
 
@@ -142,7 +151,11 @@ export default function HeroSection({ isScrolled }) {
                 <h3>Temperature Controlled</h3>
                 <p>Temperature-sensitive logistics just refrigeration.</p>
               </div>
-              {/* <img src="/images/assets/x-icon.png" alt="X" className="x-icon" /> */}
+              <img
+                src="/images/assets/vector2.png"
+                alt="X"
+                className="x-icon"
+              />
             </div>
           </div>
           <div className="card">
@@ -159,7 +172,11 @@ export default function HeroSection({ isScrolled }) {
                 <h3>Full Truck Load</h3>
                 <p>Dedicated capacity for your larger shipments</p>
               </div>
-              {/* <img src="/images/assets/x-icon.png" alt="X" className="x-icon" /> */}
+              <img
+                src="/images/assets/vector2.png"
+                alt="X"
+                className="x-icon"
+              />
             </div>
           </div>
 
@@ -177,7 +194,11 @@ export default function HeroSection({ isScrolled }) {
                 <h3>Cross Docking</h3>
                 <p>Build for urgent freight that can not afford to wait</p>
               </div>
-              {/* <img src="/images/assets/x-icon.png" alt="X" className="x-icon" /> */}
+              <img
+                src="/images/assets/vector2.png"
+                alt="X"
+                className="x-icon"
+              />
             </div>
           </div>
         </div>

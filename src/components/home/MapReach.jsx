@@ -8,7 +8,7 @@ export default function GeographicalCoverage() {
         <h2 className="sm:hidden  heading">
           Geographical Coverage & Infrastructure
         </h2>
-        <p className=" sm:hidden  card_subheading">
+        <p className=" sm:hidden  map_subheading-phone">
           We move freight across Canada, the USA, and Mexico with speed and
           reliability.
         </p>
@@ -29,7 +29,7 @@ export default function GeographicalCoverage() {
         {/* Right side - Text */}
         <div className="hidden md:flex md:col-span-5 map-text flex-col justify-end ">
           <h2 className=" heading">Geographical Coverage & Infrastructure</h2>
-          <p className=" map_subheading">
+          <p className="map_subheading">
             We move freight across Canada, the USA, and Mexico with speed and
             reliability.
           </p>

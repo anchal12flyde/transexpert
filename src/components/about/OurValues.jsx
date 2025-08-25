@@ -25,18 +25,18 @@ export default function CardsSection() {
   const cards = [
     {
       img: "/images/assets/IMG1.png",
+      heading: "Cohesion",
+      text: "We operate as one synchronized unit, between teams, with clients, and across borders.",
+    },
+    {
+      img: "/images/assets/IMG4.png",
       heading: "Reliability",
       text: "With a 98.7% on-time delivery rate, we prove consistency is not a goal, it’s a standard.",
     },
     {
       img: "/images/assets/IMG3.png",
       heading: "Modernization",
-      text: "We invest in advanced fleet technologies, and sustainable practices that move the industry forward.",
-    },
-    {
-      img: "/images/assets/IMG4.png",
-      heading: "Cohesion",
-      text: "We operate as one synchronized unit, between teams, with clients. and across borders.",
+      text: "We invest in advanced  technologies, and sustainable practices that move the industry forward.",
     },
   ];
 

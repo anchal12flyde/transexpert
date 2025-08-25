@@ -20,10 +20,22 @@ const Relaibility = () => {
 
             {/* Right Text */}
             <div className="careers-text-content">
-              <p className="heading">
-                Reliability isn’t a metric. It’s a mindset.
+              <p className=" quote-heading ">
+                <img
+                  src="/images/assets/quote1.png"
+                  alt="quote"
+                  className="quote-icon-open"
+                />
+                <span> Reliability isn't a metric.It's a mindset.</span>
+                <img
+                  src="/images/assets/quote2.png"
+                  alt="quote"
+                  className="quote-icon-close"
+                />
               </p>
-              <p className="card_heading ">— Raman Deol, Co-founder</p>
+              <p className="card_heading mt-[5px] sm:mt-[16px]">
+                — Raman Deol, Co-founder
+              </p>
 
               <p className="subheading">
                 From a modest beginning with a single route to becoming a

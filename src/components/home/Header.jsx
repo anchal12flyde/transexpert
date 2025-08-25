@@ -54,6 +54,7 @@ export default function Header({ isScrolled = false }) {
               alt="TransExpert Logo"
               width={176}
               height={37}
+              className="w-[130px] h-auto sm:w-[176px]"
             />
           </Link>
 
@@ -71,32 +72,34 @@ export default function Header({ isScrolled = false }) {
               Services
             </Link> */}
 
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center space-x-1 font-[400] text-foreground hover:text-accent transition-colors cursor-pointer">
-                <span>Services</span>
-                <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-64 bg-white !border-none ">
-                {services.map((service) => {
-                  const Icon = service.icon;
-                  return (
-                    <DropdownMenuItem
-                      key={service.path}
-                      className="hover:bg-blue-100 cursor-pointer "
-                      asChild
-                    >
-                      <Link
-                        href={service.path}
-                        className="flex items-center space-x-3 px-4 py-2 nav-link"
+            <div className="hidden md:block">
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center space-x-1 font-[400] text-foreground hover:text-accent transition-colors cursor-pointer">
+                  <span>Services</span>
+                  <ChevronDown className="h-4 w-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-64 bg-white !border-none ">
+                  {services.map((service) => {
+                    const Icon = service.icon;
+                    return (
+                      <DropdownMenuItem
+                        key={service.path}
+                        className="hover:bg-blue-100 cursor-pointer "
+                        asChild
                       >
-                        {/* <Icon className="h-4 w-4 text-accent" /> */}
-                        <span>{service.name}</span>
-                      </Link>
-                    </DropdownMenuItem>
-                  );
-                })}
-              </DropdownMenuContent>
-            </DropdownMenu>
+                        <Link
+                          href={service.path}
+                          className="flex items-center space-x-3 px-4 py-2 nav-link"
+                        >
+                          {/* <Icon className="h-4 w-4 text-accent" /> */}
+                          <span>{service.name}</span>
+                        </Link>
+                      </DropdownMenuItem>
+                    );
+                  })}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
 
             <Link href="/sustainability" className="sm:block hidden nav-link">
               Sustainability
@@ -142,10 +145,13 @@ export default function Header({ isScrolled = false }) {
                 alt="flag"
               />
               <Image
-                src="/images/hamburger.png"
+                src={
+                  isScrolled ? "/images/menuBlue.png" : "/images/hamburger.png"
+                }
                 width={20}
                 height={20}
                 alt="hamburger"
+                className="w-[15px] h-auto sm:w-[20px]"
               />
             </div>
           </nav>
@@ -155,28 +161,57 @@ export default function Header({ isScrolled = false }) {
       {/* Overlay */}
       {menuOpen && (
         <div
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity"
+          className="fixed inset-0 bg-black/40 backdrop-blur-[4px] z-40 transition-opacity"
           onClick={() => setMenuOpen(false)}
         ></div>
       )}
 
       {/* Mobile Slide Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-800 z-50 ${
+        className={`fixed top-10 right-0 h-[531px] w-[203px] transform transition-transform duration-700 z-50 ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
+        style={{
+          backgroundImage: "url('/images/assets/sideMenu.png')",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          filter: "drop-shadow(5px 5px 8.3px rgba(0, 0, 0, 0.25))",
+        }}
       >
         <div className="flex justify-end p-4">
           <button onClick={() => setMenuOpen(false)}>✕</button>
         </div>
 
-        <div className="flex flex-col gap-6 p-6 text-black">
+        <div className="flex flex-col gap-6 p-6 text-black items-end text-right">
           <Link href="/about" onClick={() => setMenuOpen(false)}>
             About Us
           </Link>
-          <Link href="/services" onClick={() => setMenuOpen(false)}>
-            Services
-          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center space-x-1 font-[400] text-foreground hover:text-accent transition-colors cursor-pointer">
+              <span>Services</span>
+              <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-64 bg-white !border-none ">
+              {services.map((service) => {
+                const Icon = service.icon;
+                return (
+                  <DropdownMenuItem
+                    key={service.path}
+                    className="hover:bg-blue-100 cursor-pointer "
+                    asChild
+                  >
+                    <Link
+                      href={service.path}
+                      className="flex items-center space-x-3 px-4 py-2 nav-link"
+                    >
+                      {/* <Icon className="h-4 w-4 text-accent" /> */}
+                      <span>{service.name}</span>
+                    </Link>
+                  </DropdownMenuItem>
+                );
+              })}
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Link href="/sustainability" onClick={() => setMenuOpen(false)}>
             Sustainability
           </Link>

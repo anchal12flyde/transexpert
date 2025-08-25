@@ -1,5 +1,7 @@
 "use client";
 
+
+import { useLoader } from "@/components/GlobalLoader";
 import Header from "@/components/home/Header";
 import Footer from "@/components/footer/page";
 import { useEffect, useRef, useState } from "react";
@@ -12,6 +14,11 @@ import DifferentComp from "@/components/tempControlled/differentComp";
 export default function TempControlled() {
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef(null);
+
+  const { PageContentReady, skip } = useLoader();
+  useEffect(() => {
+    skip("hero");
+  }, [skip]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -36,13 +43,16 @@ export default function TempControlled() {
   const data = services.crossDocking;
 
   return (
-    <div className="mainCon" ref={containerRef}>
-      {isScrolled && <Header isScrolled={isScrolled} />}
-      <HeroSectionFTL isScrolled={isScrolled} {...data.hero} />
-      <TruckImageSection {...data.truckImageSection} />
-      <StripFtl {...data.strip} />
-      <DifferentComp {...data.weAreDifferent} />
-      <Footer />
-    </div>
+    <>
+      <PageContentReady />
+      <div className="mainCon" ref={containerRef}>
+        {isScrolled && <Header isScrolled={isScrolled} />}
+        <HeroSectionFTL isScrolled={isScrolled} {...data.hero} />
+        <TruckImageSection {...data.truckImageSection} />
+        <StripFtl {...data.strip} />
+        <DifferentComp {...data.weAreDifferent} />
+        <Footer />
+      </div>
+    </>
   );
 }

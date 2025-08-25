@@ -4,7 +4,7 @@ import Header from "../home/Header";
 
 export default function SingleBlogHero({ isScrolled }) {
   return (
-    <section className="single-blog-hero mb-200  ">
+    <section className="single-blog-hero">
       {!isScrolled && (
         <div
           className={`fixed top-0 left-0 w-full z-50 transition-all duration-300`}

@@ -1,5 +1,7 @@
 "use client";
 
+
+import { useLoader } from "@/components/GlobalLoader";
 import WeAreDifferent from "@/components/ftl/differentComp";
 import HeroSectionFTL from "@/components/ftl/HeroFtl";
 import StripFtl from "@/components/ftl/stripComp";
@@ -12,6 +14,12 @@ import services from "@/components/services/services.json";
 export default function FTL() {
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef(null);
+
+  const { PageContentReady, skip } = useLoader();
+  useEffect(() => {
+    skip("hero");
+  }, [skip]);
+
 
   useEffect(() => {
     const container = containerRef.current;
@@ -36,6 +44,9 @@ export default function FTL() {
   const data = services.ftl;
 
   return (
+
+    <>
+    <PageContentReady />
     <div className="mainCon" ref={containerRef}>
       {isScrolled && <Header isScrolled={isScrolled} />}
       <HeroSectionFTL isScrolled={isScrolled} {...data.hero} />
@@ -44,5 +55,6 @@ export default function FTL() {
       <WeAreDifferent {...data.weAreDifferent} />
       <Footer />
     </div>
+    </>
   );
 }

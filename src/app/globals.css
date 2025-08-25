@@ -77,9 +77,8 @@ body::-webkit-scrollbar {
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-.mainImagDivTruck {
-  position: relative;
-}
+
+
 
 @media (max-width: 768px) {
   .global-container {
@@ -335,6 +334,36 @@ body::-webkit-scrollbar {
     width: 455px;
   }
 }
+.section-blue{
+  margin-top: 12px;
+  position: relative;
+  background-color: var(--primary-color);
+  width: auto;
+}
+.section-blue .ftl-description,
+.section-blue .ftl-list {
+  font-size: 12px;
+  font-weight: 400;
+}
+.ftl-heading{
+  font-size: 16px;
+  font-weight: 700;
+}
+.corner-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  height: 335px;
+  z-index: 11;
+}
+
+@media  (max-width: 768px){
+  .corner-icon{
+   display: none;
+  }
+}
+
 /* .squareimg {
 } */
 
@@ -1050,6 +1079,7 @@ span:has(img) {
 @media (max-width: 768px) {
   .careers-content-wrapper {
     flex-direction: column;
+    margin: 28px 0;
     gap: 2rem;
   }
 }
@@ -1060,7 +1090,7 @@ span:has(img) {
 }
 
 .careers-image-container {
-  flex: 1.42;
+  flex: 1.32;
   display: flex;
 }
 
@@ -1137,7 +1167,7 @@ span:has(img) {
 .card_heading {
   /* color: var(--thm-black); */
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
   flex: 1;
 }
@@ -1316,6 +1346,19 @@ span:has(img) {
    
   }
 }
+
+
+/* FTl */
+
+.mainImagDivTruck {
+  position: relative;
+  width: 100%;    
+  max-width: 817px;    
+  overflow: visible !important;
+  border-radius: 1rem; 
+}
+
+
 /* About Hero Section */
 .about-hero-section {
   margin-bottom: 300px;
@@ -1507,7 +1550,12 @@ span:has(img) {
 /* Reliability section */
 
 .drive_div {
-  padding: 0 54px;
+  padding: 0 50px;
+}
+@media (max-width:768px){
+  .drive_div{
+    padding: 0 19px;
+  }
 }
 .careers-banner_border {
   border-radius: 20px;
@@ -1515,6 +1563,53 @@ span:has(img) {
 .careers-text-content .card_heading {
   margin-bottom: 30px;
 }
+
+.quote-heading {
+  position: relative;
+  text-align: left;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.quote-heading span{
+  z-index: 10;
+}
+.quote-heading .quote-icon-open {
+margin-left: -30px;
+margin-right: -10px;
+margin-bottom: -20px;
+  width: 50px;
+  height: 30px;
+}
+.quote-heading .quote-icon-close {
+  position: absolute;
+  top: 69px; 
+  right: -22px;
+  width: 50px;
+  height: 30px;
+  z-index: -1;
+}
+
+
+@media (max-width: 768px) {
+  .quote-heading{
+    font-size: 24px;
+  }
+  .quote-heading .quote-icon-open {
+    margin-left: -10px;
+    width: 50px;
+    height: 30px;
+  }
+  .quote-heading .quote-icon-close {
+    margin-right: 17px;
+    margin-top: -40px;
+    width: 50px;
+    height: 30px;
+  }
+}
+
+
 
 /* Our Values Section */
 

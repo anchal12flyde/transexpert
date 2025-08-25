@@ -108,6 +108,20 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+.address-details{
+  color: var(--color-thm-white);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: none;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+}
 .contact-btn {
   margin-top: 15px;
   background-color: #dc2626;
@@ -117,7 +131,7 @@ line-height: normal;
   text-decoration: none;
   letter-spacing: 0;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
   cursor: pointer;
 }

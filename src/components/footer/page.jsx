@@ -25,7 +25,7 @@ export default function Footer() {
             {/* Middle Section */}
             <div className="flex items-start gap-[50px] ">
               <div className="footer-links">
-                <ul >
+                <ul>
                   <li>
                     {" "}
                     <Link href="/about">About Us</Link>
@@ -74,8 +74,8 @@ export default function Footer() {
                     className="mt-1 "
                   />
                   <p>
-                    +1 905-864-6443
-                    
+                    <span className="address-details">+1 905-864-6443</span><br/>
+                    <span>Mon-Fri, 8 AM - 6 PM</span>
                   </p>
                 </div>
 
@@ -85,7 +85,6 @@ export default function Footer() {
                     width={16}
                     height={16}
                     alt="call"
-                    
                   />
                   <p>100 Market Drive, Milton ON L9T 3H5 CANADA</p>
                 </div>

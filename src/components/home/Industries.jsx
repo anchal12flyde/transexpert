@@ -38,21 +38,21 @@ export default function Industries() {
             <div
               className="industry-card"
               style={{
-                backgroundImage: `url('/images/assets/wholesaleImg.jpg')`,
+                backgroundImage: `url('/images/assets/Wholesale.jpg')`,
               }}
             >
               <span className="industry-span">Wholesale</span>
             </div>
             <div
               className="industry-card"
-              style={{ backgroundImage: `url('/images/assets/retailImg.jpg')` }}
+              style={{ backgroundImage: `url('/images/assets/Retail.jpg')` }}
             >
               <span className="industry-span">Retail</span>
             </div>
             <div
               className="industry-card"
               style={{
-                backgroundImage: `url('/images/assets/manufacturersImg.jpg')`,
+                backgroundImage: `url('/images/assets/Manufacture.jpg')`,
               }}
             >
               <span className="industry-span">Manufacturers</span>

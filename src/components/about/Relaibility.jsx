@@ -14,7 +14,7 @@ const Relaibility = () => {
                 alt="Driver"
                 width={800}
                 height={0}
-                className="careers-image cover"
+                className="careers-image "
               />
             </div>
 

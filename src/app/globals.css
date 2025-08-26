@@ -1093,7 +1093,9 @@ span:has(img) {
 }
 .careers-image {
   border-radius: 16px;
-  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @media (max-width:768px){
   .careers-image {
@@ -2216,7 +2218,6 @@ flex-shrink: 0;
   text-align: center;
   z-index: 20;
   width: 100%;
-  padding: 0 16px; /* safe padding for mobile */
 }
 
 .fleet-hero__overlay h1 {

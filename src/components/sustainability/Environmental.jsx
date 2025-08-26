@@ -5,7 +5,7 @@ export default function Environmental() {
   return (
     <>
       <section className="careers-banner global-container mb-[42px] sm:mb-[78px]">
-        <div className="careers-content-wrapper">
+        <div className="careers-content-wrapper-sustain">
           {/* Left Image */}
           <div className="careers-image-container">
             <Image
@@ -13,7 +13,7 @@ export default function Environmental() {
               alt="Driver"
               width={800}
               height={400}
-              className="careers-image"
+              className="careers-image cover"
             />
           </div>
 

@@ -44,7 +44,7 @@ const Blog = () => {
     className: "center custom-slick",
     centerMode: true,
     infinite: true,
-    centerPadding: "40px", 
+    centerPadding: "45px", 
     slidesToShow: 1,
     speed: 500,
     dots: false,

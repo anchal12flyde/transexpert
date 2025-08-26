@@ -11,8 +11,8 @@ const CareersBanner = () => {
             src="/images/assets/Frame.png"
             alt="Driver"
             width={800}
-            height={400}
-            className="careers-image"
+            height={0}
+            className="careers-image cover"
           />
         </div>
 

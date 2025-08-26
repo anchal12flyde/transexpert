@@ -5,34 +5,28 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/ui/dropdown-menu";
-import {
-  ChevronDown,
-  ChevronRight,
-  Settings,
-  Thermometer,
-  Truck,
-} from "lucide-react";
+import { ChevronDown, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header({ isScrolled = false }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // check screen width
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 1330);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const services = [
     { name: "Full Truckload (FTL)", path: "/ftl" },
-
-    {
-      name: "Temperature-Controlled",
-      path: "/temperature-controlled"
-    },
-    {
-      name: "Cross Border",
-      path: "/cross-border"
-    },
-    {
-      name: "Cross Docking",
-      path: "/cross-docking"
-    },
+    { name: "Temperature-Controlled", path: "/temperature-controlled" },
+    { name: "Cross Border", path: "/cross-border" },
+    { name: "Cross Docking", path: "/cross-docking" },
   ];
 
   return (
@@ -42,7 +36,7 @@ export default function Header({ isScrolled = false }) {
       }`}
     >
       <div className="global-container">
-        <div className="container flex items-center justify-between">
+        <div className="header-container ">
           {/* Logo */}
           <Link href="/">
             <Image
@@ -59,83 +53,76 @@ export default function Header({ isScrolled = false }) {
           </Link>
 
           {/* Navigation */}
-          <nav
-            className={`nav-links flex gap-6 ${
-              isScrolled ? "!text-primary-color " : "text-white"
-            }`}
-          >
-            {/* Desktop links */}
-            <Link href="/about" className="sm:block hidden nav-link">
-              About Us
-            </Link>
-            {/* <Link href="/ftl" className="sm:block hidden">
-              Services
-            </Link> */}
+          {!isMobile ? (
+            // -------- Desktop Nav --------
+            <nav
+              className={`nav-links flex gap-6 ${
+                isScrolled ? "!text-primary-color" : "text-white"
+              }`}
+            >
+              <Link href="/about" className="nav-link">
+                About Us
+              </Link>
 
-            <div className="hidden md:block">
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center space-x-1 font-[400] text-foreground hover:text-accent transition-colors cursor-pointer">
                   <span>Services</span>
                   <ChevronDown className="h-4 w-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-64 bg-white !border-none ">
-                  {services.map((service) => {
-                    const Icon = service.icon;
-                    return (
-                      <DropdownMenuItem
-                        key={service.path}
-                        className="hover:bg-blue-100 cursor-pointer "
-                        asChild
+                  {services.map((service) => (
+                    <DropdownMenuItem
+                      key={service.path}
+                      className="hover:bg-blue-100 cursor-pointer "
+                      asChild
+                    >
+                      <Link
+                        href={service.path}
+                        className="flex items-center space-x-3 px-4 py-2 nav-link"
                       >
-                        <Link
-                          href={service.path}
-                          className="flex items-center space-x-3 px-4 py-2 nav-link"
-                        >
-                          {/* <Icon className="h-4 w-4 text-accent" /> */}
-                          <span>{service.name}</span>
-                        </Link>
-                      </DropdownMenuItem>
-                    );
-                  })}
+                        <span>{service.name}</span>
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
                 </DropdownMenuContent>
               </DropdownMenu>
-            </div>
 
-            <Link href="/sustainability" className="sm:block hidden nav-link">
-              Sustainability
-            </Link>
-            <Link href="/industries" className="sm:block hidden nav-link">
-              Industries
-            </Link>
-            <Link href="/contact-us" className="sm:block hidden nav-link">
-              Get a quote
-            </Link>
-
-            <div className="sm:flex sm:gap-10 hidden">
-              <div className="hero-button flex items-center gap-2">
-                <Image
-                  src="/images/assets/Frame.svg"
-                  width={25}
-                  height={52}
-                  alt="flag img"
-                />
-                <ChevronRight size={16} />
-              </div>
-
-              <Link href="#">
-                <button
-                  className={`hero-button ${
-                    isScrolled ? "text-black" : "text-white"
-                  }`}
-                >
-                  Contact us
-                </button>
+              <Link href="/sustainability" className="nav-link">
+                Sustainability
               </Link>
-            </div>
+              <Link href="/industries" className="nav-link">
+                Industries
+              </Link>
+              <Link href="/contact-us" className="nav-link">
+                Get a quote
+              </Link>
 
-            {/* Mobile Hamburger */}
+              <div className="flex gap-10">
+                <div className="hero-button flex items-center gap-2">
+                  <Image
+                    src="/images/assets/Frame.svg"
+                    width={25}
+                    height={52}
+                    alt="flag img"
+                  />
+                  <ChevronRight size={16} />
+                </div>
+
+                <Link href="#">
+                  <button
+                    className={`hero-button ${
+                      isScrolled ? "text-black" : "text-white"
+                    }`}
+                  >
+                    Contact us
+                  </button>
+                </Link>
+              </div>
+            </nav>
+          ) : (
+            // -------- Mobile Hamburger --------
             <div
-              className="flex items-center gap-5 sm:hidden cursor-pointer"
+              className="flex items-center gap-5 cursor-pointer"
               onClick={() => setMenuOpen(true)}
             >
               <Image
@@ -151,10 +138,10 @@ export default function Header({ isScrolled = false }) {
                 width={20}
                 height={20}
                 alt="hamburger"
-                className="w-[15px] h-auto sm:w-[20px]"
+                className="w-[15px] h-auto"
               />
             </div>
-          </nav>
+          )}
         </div>
       </div>
 
@@ -192,24 +179,20 @@ export default function Header({ isScrolled = false }) {
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-64 bg-white !border-none ">
-              {services.map((service) => {
-                const Icon = service.icon;
-                return (
-                  <DropdownMenuItem
-                    key={service.path}
-                    className="hover:bg-blue-100 cursor-pointer "
-                    asChild
+              {services.map((service) => (
+                <DropdownMenuItem
+                  key={service.path}
+                  className="hover:bg-blue-100 cursor-pointer "
+                  asChild
+                >
+                  <Link
+                    href={service.path}
+                    className="flex items-center space-x-3 px-4 py-2 nav-link"
                   >
-                    <Link
-                      href={service.path}
-                      className="flex items-center space-x-3 px-4 py-2 nav-link"
-                    >
-                      {/* <Icon className="h-4 w-4 text-accent" /> */}
-                      <span>{service.name}</span>
-                    </Link>
-                  </DropdownMenuItem>
-                );
-              })}
+                    <span>{service.name}</span>
+                  </Link>
+                </DropdownMenuItem>
+              ))}
             </DropdownMenuContent>
           </DropdownMenu>
           <Link href="/sustainability" onClick={() => setMenuOpen(false)}>
@@ -224,9 +207,7 @@ export default function Header({ isScrolled = false }) {
 
           <Link href="#">
             <button
-              className={`hero-button ${
-                isScrolled ? "text-black" : "text-black"
-              }`}
+              className={`hero-button text-black`}
               onClick={() => setMenuOpen(false)}
             >
               Contact us

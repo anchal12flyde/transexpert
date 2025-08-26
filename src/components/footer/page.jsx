@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <>
-      <footer className="footer md:block hidden">
-        <div className="footer-content">
+      <footer className="footer md:block hidden ">
+        <div className="footer-content global-container">
           <div className="footer-main">
             {/* Left Section */}
             <div className="footer-left">
@@ -185,13 +185,11 @@ export default function Footer() {
             Copyright 2017. Trans Expert Inc – All Rights Reserved
           </p>
         </div>
-        
-          <img
-            src="/images/assets/vector2.png"
-            alt="Decoration"
-            className="decor-image-footer-mobile"
-          />
-        
+        <img
+          src="/images/assets/vector2.png"
+          alt="Decoration"
+          className="decor-image-footer-mobile"
+        />
       </footer>
     </>
   );

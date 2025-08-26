@@ -1,6 +1,6 @@
 export default function TruckImageSection({ imageSrc, overlay, cornerIcon }) {
   return (
-    <div className="global-container sm:mt-[78px] mt-[42px]">
+    <div className="global-container sm:mt-[78px] mt-[42px] relative">
       <div className="relative overflow-visible">
         <div className="mainImagDivTruck ">
           {/* Truck Image */}

@@ -7,7 +7,7 @@ export default function Certification() {
       <div className="certification-container global-container">
         <h2 className="heading">Credentialed for Seamless Movement</h2>
 
-        <p className="subheading desktop-only w-300">
+        <p className="subheading desktop-only ">
           We work according to the latest technologies and working methods. Our
           company has extensive experience in providing services.
         </p>

@@ -169,8 +169,8 @@ export default function HeroSection({ isScrolled }) {
             </div>
             <div className="card-overlay">
               <div className="card-content">
-                <h3>Full Truck Load</h3>
-                <p>Dedicated capacity for your larger shipments</p>
+                <h3>Cross Border</h3>
+                <p>Seamless Borders.Limitless Reach.</p>
               </div>
               <img
                 src="/images/assets/vector2.png"

@@ -4,8 +4,8 @@ import HeroSectionComponent from "../globalcomponents/HeroSectionComponent";
 export default function HeroSection({ isScrolled }) {
   return (
     <>
-      <HeroSectionComponent 
-        imageSrc="/images/certificate.png"
+      <HeroSectionComponent
+        imageSrc="/images/certifications hero section.png"
         title={`Built on Trust
           Backed by Standards`}
         subtitle="Our Recognized Certifications        "

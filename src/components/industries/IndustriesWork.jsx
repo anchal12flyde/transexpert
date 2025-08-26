@@ -8,7 +8,7 @@ export default function IndustriesWork() {
         {/* Wholesale */}
         <div className="industries__card industries__card--image">
           <Image
-            src="/images/assets/manufacturersImg.jpg"
+            src="/images/assets/Rectangle 8.png"
             alt="Wholesale"
             width={400}
             height={250}
@@ -45,7 +45,7 @@ export default function IndustriesWork() {
         </div>
         <div className="industries__card industries__card--image order-1 lg:order-2">
           <Image
-            src="/images/assets/retailImg.jpg"
+            src="/images/assets/Rectangle 6.png"
             alt="Retail"
             width={400}
             height={250}
@@ -59,7 +59,7 @@ export default function IndustriesWork() {
       <div className="industries__grid">
         <div className="industries__card industries__card--image">
           <Image
-            src="/images/assets/wholesaleImg.jpg"
+            src="/images/assets/Rectangle 7.png"
             alt="Manufactures"
             width={400}
             height={250}
@@ -94,8 +94,7 @@ export default function IndustriesWork() {
           src="/images/assets/Group 2.png"
           alt="Close Icon"
           className="industries__banner-icon"
-          
-        /> 
+        />
       </div>
     </section>
   );

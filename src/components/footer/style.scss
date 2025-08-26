@@ -2,7 +2,7 @@
   position: relative;
   background-color: #263879; /* Dark blue */
   color: #fff;
-  padding:78px 136px ;
+  padding:78px 0 ;
   overflow: hidden;
   font-family: "Onest", sans-serif;
 }
@@ -37,11 +37,8 @@
 .footer-content {
   position: relative;
   display: flex;
-
   flex-direction: column;
   z-index: 1;
-  // max-width: 1200px;
-  margin: auto;
 }
 
 .footer-left {

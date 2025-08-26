@@ -1077,11 +1077,11 @@ span:has(img) {
     gap: 2rem;
   }
 }
-@media (max-width: 1300px){
+/* @media (max-width: 1300px){
   .careers-content-wrapper {
     gap: 16px;
   }
-}
+} */
 
 .careers-image-container {
   flex: 1.32;

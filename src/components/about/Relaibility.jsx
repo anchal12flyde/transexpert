@@ -13,8 +13,8 @@ const Relaibility = () => {
                 src="/images/assets/IMG2.png"
                 alt="Driver"
                 width={800}
-                height={400}
-                className="careers-image"
+                height={0}
+                className="careers-image cover"
               />
             </div>
 

@@ -1889,29 +1889,57 @@ margin-bottom: -20px;
   font-size: 10px; /* dot chhoti badi karni ho to */
   color: #000;     /* active/inactive color control */
 }
+/* Blogs */
 
+  @media (min-width: 1200px) and (max-width: 1300px) {
+    .stories-grid {
+    gap: 50px;
+    }
+    .stories-grid-blogs{
+      gap: 50px;
+    }
+  }
 
 /* Single Blog */
 .single-blog-hero {
   position: relative;
   top: 0;
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   background: url("/images/assets/ArticleImage.png") no-repeat center
     center/cover;
-    margin-bottom: 56.8%;
+    margin-bottom: 62.7%;
 }
 @media (max-width:768px){
   .single-blog-hero{
-    margin-bottom: 50%;
+    margin-bottom: 537%;
   }
 }
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .single-blog-hero {
+    margin-bottom: 74.5%;
+  }
+}
+@media (min-width:1600px){
+  .single-blog-hero {
+    margin-bottom: 20%;
+  }
+}
+
 .single-blog-overlay {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 350px;
+  top: 480px;
+}
+.blog-card {
+  background: white;
+  padding: 38px;
+  border-radius: 8px;
+  width: 750px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: left;
 }
 .blog-card h1 {
   font-size: 46px;
@@ -1927,14 +1955,7 @@ margin-bottom: -20px;
   }
 }
 
-.blog-card {
-  background: white;
-  padding: 38px;
-  border-radius: 8px;
-  width: 750px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  text-align: left;
-}
+
 
 .blog-meta {
   display: flex;

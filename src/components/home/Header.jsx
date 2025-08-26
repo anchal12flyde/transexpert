@@ -66,7 +66,7 @@ export default function Header({ isScrolled = false }) {
 
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center space-x-1 font-[400] text-foreground hover:text-accent transition-colors cursor-pointer">
-                  <span>Services</span>
+                  <span className="nav-link">Services</span>
                   <ChevronDown className="h-4 w-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-64 bg-white !border-none ">

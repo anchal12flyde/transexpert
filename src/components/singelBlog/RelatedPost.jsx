@@ -2,7 +2,7 @@
 
 const RelatedPost = () => {
   return (
-    <section className="blog-section global-container ">
+    <section className="blog-section global-container mt-[78px]">
       <h2 className="heading ju">Related posts</h2>
 
       <div className="blog-grid-blog">

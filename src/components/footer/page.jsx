@@ -76,7 +76,7 @@ export default function Footer() {
                   <p>
                     <span className="address-details">+1 905-864-6443</span>
                     <br />
-                    <span>Mon-Fri, 8 AM - 6 PM</span>
+                    <span>24 X 7</span>
                   </p>
                 </div>
 

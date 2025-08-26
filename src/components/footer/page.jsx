@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <>
-      <footer className="footer md:block hidden ">
+      <footer className="footer lg:block hidden ">
         <div className="footer-content global-container">
           <div className="footer-main">
             {/* Left Section */}
@@ -76,7 +76,7 @@ export default function Footer() {
                   <p>
                     <span className="address-details">+1 905-864-6443</span>
                     <br />
-                    <span>24 X 7</span>
+                    <span>Available 24 X 7</span>
                   </p>
                 </div>
 
@@ -113,7 +113,7 @@ export default function Footer() {
         </div>
       </footer>
 
-      <footer className="footer-mobile md:hidden">
+      <footer className="footer-mobile lg:hidden">
         {" "}
         <div className="global-container">
           {/* Logo */}

@@ -1,8 +1,7 @@
 "use client";
 
-import { motion, animate, useMotionValue } from "framer-motion";
+import { motion, animate, useMotionValue, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { useInView } from "framer-motion";
 
 function RollingDigit({ target, duration = 2 }) {
   const ref = useRef(null);
@@ -30,7 +29,7 @@ function RollingDigit({ target, duration = 2 }) {
       style={{
         overflow: "hidden",
         height: "1em",
-        display: "flex", 
+        display: "flex",
         verticalAlign: "bottom",
       }}
     >
@@ -60,11 +59,26 @@ export default function Strip() {
 
   const number = start ? "250" : "000";
 
+  // fade-in-up variant
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
     <section className="counterSection" ref={ref}>
       <div className="global-container">
-
-        <h2 className="text  ">
+        <motion.h2
+          className="text"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+        >
           A Fleet of{" "}
           <span className="number number-anime">
             {number.split("").map((digit, i) => (
@@ -72,8 +86,7 @@ export default function Strip() {
             ))}
           </span>
           + Vehicles Ready to Move Your Business Forward
-        </h2>
-
+        </motion.h2>
       </div>
     </section>
   );

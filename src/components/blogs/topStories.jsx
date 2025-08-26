@@ -225,7 +225,7 @@ export default function TopStories() {
                 alt={story.title}
                 width={400}
                 height={250}
-                className="rounded-md object-cover w-full "
+                className="rounded-md object-cover w-full h-auto "
               />
               <h3 className="blog-heading text-thm-heading-text ">
                 {story.title}
@@ -249,7 +249,7 @@ export default function TopStories() {
         <aside className="flex flex-col  gap-[16px] sm:gap-[24px] w-full">
           <h3 className="heading">Related</h3>
           {related.map((item, idx) => (
-            <div key={idx} className="flex gap-[24px] items-stretch ">
+            <div key={idx} className="flex gap-[24px] ">
               <Image
                 src={item.img}
                 alt={item.title}

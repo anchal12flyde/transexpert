@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion"; // ✅ Framer Motion
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -11,6 +13,7 @@ const Slider = dynamic(() => import("react-slick").then((m) => m.default), {
 
 const Blog = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleResize = () => {
@@ -40,44 +43,42 @@ const Blog = () => {
     },
   ];
 
+  // ✅ Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.25 }, // delay between cards
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
   const sliderSettings = {
     className: "center custom-slick",
     centerMode: true,
     infinite: true,
-    centerPadding: "45px", 
+    centerPadding: "45px",
     slidesToShow: 1,
     speed: 500,
     dots: false,
   };
-  
 
   return (
     <section className={`blog-section ${!isMobile ? "global-container" : ""}`}>
       {isMobile ? (
         <Slider {...sliderSettings}>
           {blogData.map((item, idx) => (
-            <div key={idx} className="">
-              <div className="blog-box transition-transform duration-500 h-[420px]">
-                <img src={item.img} alt="Truck" className="blog-image" />
-                <div className="blog-content">
-                  <div className="title-with-icon">
-                    <h3 className="card_heading">{item.title}</h3>
-                    <div className="arrow-icon">
-                      <img src="/images/assets/arrowUp.png" alt="Arrow" />
-                    </div>
-                  </div>
-                  <p className="card_subheading text-[#1B1F26B8]">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      ) : (
-        <div className="blog-grid">
-          {blogData.map((item, idx) => (
-            <div className="blog-box" key={idx}>
+            <motion.div
+              key={idx}
+              variants={cardVariants}
+              initial="hidden"
+              animate="show"
+              className="blog-box transition-transform duration-500 h-[420px]"
+            >
               <img src={item.img} alt="Truck" className="blog-image" />
               <div className="blog-content">
                 <div className="title-with-icon">
@@ -88,9 +89,37 @@ const Blog = () => {
                 </div>
                 <p className="card_subheading text-[#1B1F26B8]">{item.desc}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </Slider>
+      ) : (
+        <motion.div
+          className="blog-grid"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show" 
+          viewport={{ once: false, amount: 0.2 }} 
+        >
+          {blogData.map((item, idx) => (
+            <motion.div
+              className="blog-box"
+              key={idx}
+              variants={cardVariants}
+              onClick={() => router.push("/blogs")}
+            >
+              <img src={item.img} alt="Truck" className="blog-image" />
+              <div className="blog-content">
+                <div className="title-with-icon">
+                  <h3 className="card_heading">{item.title}</h3>
+                  <div className="arrow-icon">
+                    <img src="/images/assets/arrowUp.png" alt="Arrow" />
+                  </div>
+                </div>
+                <p className="card_subheading text-[#1B1F26B8]">{item.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       )}
     </section>
   );

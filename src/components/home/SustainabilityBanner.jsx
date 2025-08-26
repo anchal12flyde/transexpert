@@ -1,6 +1,18 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 const SustainabilityBanner = () => {
+  // fade-in-up variant
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
     <div className="content">
       <div className="heroSection">
@@ -14,12 +26,26 @@ const SustainabilityBanner = () => {
         />
         <div className="global-container">
           <div className="textOverlay">
-            <h2 className="heading text-thm-white">
+            <motion.h2
+              className="heading text-thm-white"
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.3 }}
+            >
               We Care. And We Prove It.
-            </h2>
-            <p className="subheading">
+            </motion.h2>
+
+            <motion.p
+              className="subheading"
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ delay: 0.2 }} // small delay after heading
+            >
               Sustainability isn’t a campaign, it’s our operating system.
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>

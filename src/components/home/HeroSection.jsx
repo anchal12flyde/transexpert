@@ -3,10 +3,12 @@
 import { useEffect, useRef, useState } from "react";
 import Header from "./Header";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function HeroSection({ isScrolled }) {
   const overlayRef = useRef(null);
   const squareRef = useRef(null);
+  const router = useRouter();
 
   useEffect(() => {
     const calcValues = () => {
@@ -115,9 +117,13 @@ export default function HeroSection({ isScrolled }) {
               SERVICES
             </p>
           </div>
-          <div className="card">
+          <div className="card" onClick={() => router.push("/ftl")}>
             <div className="img-wrapper">
-              <img src="/images/img2.png" alt="Full Truck Load" />
+              <img
+                src="/images/img2.png"
+                alt="Full Truck Load"
+                className="h-auto object-cover"
+              />
               <img
                 src="/images/assets/redarrow.png"
                 alt="Arrow"
@@ -137,9 +143,16 @@ export default function HeroSection({ isScrolled }) {
             </div>
           </div>
 
-          <div className="card">
+          <div
+            className="card"
+            onClick={() => router.push("/temperature-controlled")}
+          >
             <div className="img-wrapper">
-              <img src="/images/img1.png" alt="Full Truck Load" />
+              <img
+                src="/images/img1.png"
+                alt="Full Truck Load"
+                className="h-auto object-cover"
+              />
               <img
                 src="/images/assets/redarrow.png"
                 alt="Arrow"
@@ -158,9 +171,13 @@ export default function HeroSection({ isScrolled }) {
               />
             </div>
           </div>
-          <div className="card">
+          <div className="card" onClick={() => router.push("/cross-border")}>
             <div className="img-wrapper">
-              <img src="/images/img2.png" alt="Full Truck Load" />
+              <img
+                src="/images/img2.png"
+                alt="Full Truck Load"
+                className="h-auto object-cover"
+              />
               <img
                 src="/images/assets/redarrow.png"
                 alt="Arrow"
@@ -180,9 +197,13 @@ export default function HeroSection({ isScrolled }) {
             </div>
           </div>
 
-          <div className="card">
+          <div className="card" onClick={() => router.push("/cross-docking")}>
             <div className="img-wrapper">
-              <img src="/images/img1.png" alt="Full Truck Load" />
+              <img
+                src="/images/img1.png"
+                alt="Full Truck Load"
+                className="h-auto object-cover"
+              />
               <img
                 src="/images/assets/redarrow.png"
                 alt="Arrow"
@@ -203,6 +224,7 @@ export default function HeroSection({ isScrolled }) {
           </div>
         </div>
       </section>
+
       <div className=" sm:hidden flex gap-[37px] flex-col mb-[0px] mt-[0px] global-container bgMob pb-[110px] pt-[42px] ">
         <p className="sm:hidden text-center text-[24px] text-white font-bold  ">
           Services

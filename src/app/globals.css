@@ -2200,12 +2200,14 @@ flex-shrink: 0;
 }
 
 .fleet-hero__image {
+  object-fit: cover;
   width: 100%;
   height: auto;
   border-radius: 0 0 0 305px;
 }
 @media (max-width:767px){
   .fleet-hero__image {
+    object-fit: cover;
     width: 100%;
     height: 194px;
     border-radius: 0 0 0 91px;
@@ -2958,7 +2960,9 @@ line-height: 26px;
 .downtime-image {
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 370px;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
 }
 @media (min-width: 768px) {
   .downtime-left1 {

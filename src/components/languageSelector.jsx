@@ -1,11 +1,9 @@
 "use client";
-
 import UseGoogleTranslate from "./customGoogleTranslator";
-
-
 
 export function LanguageMenu() {
   const { ready, currentLang, setLanguage } = UseGoogleTranslate();
+
   if (!ready) return null;
 
   return (

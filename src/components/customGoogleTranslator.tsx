@@ -1,9 +1,8 @@
 "use client";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import "@/app/globals.css"
 
+// Extract current language from cookie
 function getCurrentLangFromCookie(): string | null {
-  // Cookie format: googtrans=/source/target (e.g., /en/hi)
   const match = document.cookie.match(/(?:^|;\s*)googtrans=([^;]+)/);
   if (!match) return null;
   const parts = decodeURIComponent(match[1]).split("/");
@@ -44,14 +43,12 @@ export default function UseGoogleTranslate(): UseGoogleTranslateResult {
     const select = document.querySelector<HTMLSelectElement>(".goog-te-combo");
     if (!select) return;
     select.value = lang;
-    // Fire native change event so Google’s script reacts
-    select.dispatchEvent(new Event("change"));
+    select.dispatchEvent(new Event("change")); // Trigger Google Translate
     setCurrentLang(lang);
   }, []);
 
   const reset = useCallback(() => {
-    // Reset to original language: set to pageLanguage (en)
-    setLanguage("en");
+    setLanguage("en"); // Reset to default language
   }, [setLanguage]);
 
   return useMemo(

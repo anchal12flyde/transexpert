@@ -5,36 +5,35 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/ui/dropdown-menu";
-import {
-  ChevronDown,
-  ChevronRight,
-  Settings,
-  Thermometer,
-  Truck,
-} from "lucide-react";
+import { ChevronDown, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { LanguageMenu } from "../languageSelector";
+import UseGoogleTranslate from "../customGoogleTranslator";
 
 export default function Header({ isScrolled = false }) {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const { ready, currentLang, setLanguage } = UseGoogleTranslate();
+  if (!ready) return null;
+
   const services = [
     { name: "Full Truckload (FTL)", path: "/ftl" },
-
-    {
-      name: "Temperature-Controlled",
-      path: "/temperature-controlled",
-    },
-    {
-      name: "Cross Border",
-      path: "/cross-border",
-    },
-    {
-      name: "Cross Docking",
-      path: "/cross-docking",
-    },
+    { name: "Temperature-Controlled", path: "/temperature-controlled" },
+    { name: "Cross Border", path: "/cross-border" },
+    { name: "Cross Docking", path: "/cross-docking" },
   ];
+
+  // 🌍 Languages with flags
+  const countries = [
+    { code: "en", name: "English", flag: "/images/assets/Frame.svg" },
+    { code: "hi", name: "हिंदी", flag: "/images/assets/Frame.svg" },
+    { code: "fr", name: "Français", flag: "/images/assets/Frame.svg" },
+  ];
+
+  // find current language object
+  const selectedCountry =
+    countries.find((c) => c.code === currentLang) || countries[0];
 
   return (
     <header
@@ -69,11 +68,8 @@ export default function Header({ isScrolled = false }) {
             <Link href="/about" className="sm:block hidden nav-link">
               About Us
             </Link>
-            {/* <Link href="/ftl" className="sm:block hidden">
-              Services
-            </Link> */}
 
-            <LanguageMenu />
+            {/* ✅ Language Dropdown with Flags */}
 
             <div className="hidden md:block">
               <DropdownMenu>
@@ -82,24 +78,20 @@ export default function Header({ isScrolled = false }) {
                   <ChevronDown className="h-4 w-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-64 bg-white !border-none ">
-                  {services.map((service) => {
-                    const Icon = service.icon;
-                    return (
-                      <DropdownMenuItem
-                        key={service.path}
-                        className="hover:bg-blue-100 cursor-pointer "
-                        asChild
+                  {services.map((service) => (
+                    <DropdownMenuItem
+                      key={service.path}
+                      className="hover:bg-blue-100 cursor-pointer "
+                      asChild
+                    >
+                      <Link
+                        href={service.path}
+                        className="flex items-center space-x-3 px-4 py-2 nav-link"
                       >
-                        <Link
-                          href={service.path}
-                          className="flex items-center space-x-3 px-4 py-2 nav-link"
-                        >
-                          {/* <Icon className="h-4 w-4 text-accent" /> */}
-                          <span>{service.name}</span>
-                        </Link>
-                      </DropdownMenuItem>
-                    );
-                  })}
+                        <span>{service.name}</span>
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
@@ -115,16 +107,38 @@ export default function Header({ isScrolled = false }) {
             </Link>
 
             <div className="sm:flex sm:gap-10 hidden">
-              <div className="hero-button flex items-center gap-2">
-                <Image
-                  src="/images/assets/Frame.svg"
-                  width={25}
-                  height={52}
-                  alt="flag img"
-                />
-                <ChevronRight size={16} />
+              <div className="hidden md:block">
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="hero-button flex items-center gap-2 cursor-pointer focus:outline-0 ">
+                    <Image
+                      src={selectedCountry.flag}
+                      width={25}
+                      height={18}
+                      alt={selectedCountry.name}
+                    />
+                    <ChevronRight size={16} />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-44 bg-white !border-none">
+                    {countries.map((country) => (
+                      <DropdownMenuItem
+                        key={country.code}
+                        className="hover:bg-blue-100 cursor-pointer"
+                        onClick={() => setLanguage(country.code)}
+                      >
+                        <div className="flex items-center gap-2">
+                          <Image
+                            src={country.flag}
+                            width={20}
+                            height={15}
+                            alt={country.name}
+                          />
+                          <span>{country.name}</span>
+                        </div>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
-
               <Link href="#">
                 <button
                   className={`hero-button ${
@@ -142,9 +156,9 @@ export default function Header({ isScrolled = false }) {
               onClick={() => setMenuOpen(true)}
             >
               <Image
-                src="/images/assets/Frame.svg"
+                src={selectedCountry.flag}
                 width={25}
-                height={52}
+                height={18}
                 alt="flag"
               />
               <Image
@@ -195,24 +209,20 @@ export default function Header({ isScrolled = false }) {
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-64 bg-white !border-none ">
-              {services.map((service) => {
-                const Icon = service.icon;
-                return (
-                  <DropdownMenuItem
-                    key={service.path}
-                    className="hover:bg-blue-100 cursor-pointer "
-                    asChild
+              {services.map((service) => (
+                <DropdownMenuItem
+                  key={service.path}
+                  className="hover:bg-blue-100 cursor-pointer "
+                  asChild
+                >
+                  <Link
+                    href={service.path}
+                    className="flex items-center space-x-3 px-4 py-2 nav-link"
                   >
-                    <Link
-                      href={service.path}
-                      className="flex items-center space-x-3 px-4 py-2 nav-link"
-                    >
-                      {/* <Icon className="h-4 w-4 text-accent" /> */}
-                      <span>{service.name}</span>
-                    </Link>
-                  </DropdownMenuItem>
-                );
-              })}
+                    <span>{service.name}</span>
+                  </Link>
+                </DropdownMenuItem>
+              ))}
             </DropdownMenuContent>
           </DropdownMenu>
           <Link href="/sustainability" onClick={() => setMenuOpen(false)}>

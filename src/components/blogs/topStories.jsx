@@ -246,20 +246,20 @@ export default function TopStories() {
         </div>
 
         {/* Right - Related */}
-        <aside className="flex flex-col  gap-[16px] sm:gap-[24px] w-full">
+        <aside className="flex flex-col  gap-[10px] sm:gap-[30px] w-full">
           <h3 className="heading">Related</h3>
           {related.map((item, idx) => (
-            <div key={idx} className="flex gap-[24px] ">
+            <div key={idx} className="flex flex-col items-start gap-[8px] macbookDev ">
               <Image
                 src={item.img}
                 alt={item.title}
                 width={141}
                 height={0}
-                className="rounded-md object-cover h-auto"
+                className="rounded-md object-cover h-[2cm]  w-full "
               />
               <div>
-                <h4 className="side-heading text-[#E22A26]  mb-[8px] sm:mb-[16px] ">
-                  {item.title}
+                <h4 className="side-heading text-[#E22A26]  mb-[8px] sm:mb-[0px] ">
+                  {item.title} 
                 </h4>
                 <p className="side-subheading">{item.subtitle}</p>
               </div>

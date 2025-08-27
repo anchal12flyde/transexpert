@@ -14,10 +14,10 @@ export default function TempControlled() {
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef(null);
 
-   const { PageContentReady, skip } = useLoader();
-    useEffect(() => {
-      skip("hero");
-    }, [skip]);
+  const { PageContentReady, skip } = useLoader();
+  useEffect(() => {
+    skip("hero");
+  }, [skip]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -40,6 +40,7 @@ export default function TempControlled() {
   }, []);
 
   const data = services.crossBorder;
+  const [m, setM] = useState(0);
 
   return (
     <>
@@ -47,8 +48,8 @@ export default function TempControlled() {
       <div className="mainCon" ref={containerRef}>
         {isScrolled && <Header isScrolled={isScrolled} />}
         <HeroSectionFTL isScrolled={isScrolled} {...data.hero} />
-        <TruckImageSection {...data.truckImageSection} />
-        <StripFtl {...data.strip} />
+        <TruckImageSection {...data.truckImageSection} setM={setM} />
+        <StripFtl {...data.strip} m={m} />
         <DifferentComp {...data.weAreDifferent} />
         <Footer />
       </div>

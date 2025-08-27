@@ -100,28 +100,55 @@ export default function Header({ isScrolled = false }) {
               </DropdownMenu>
             </div>
 
-            <Link href="/sustainability" className="lg:block hidden nav-link">
+            {/* Language Selector */}
+
+            {/* Contact Button */}
+
+            <Link href="/sustainability" className="sm:block hidden nav-link">
               Sustainability
             </Link>
             <Link href="/industries" className="lg:block hidden nav-link">
               Industries
             </Link>
-            <Link href="/contact-us" className="lg:block hidden nav-link">
+            <Link href="/get-a-qoute" className="sm:block hidden nav-link">
               Get a quote
             </Link>
 
-            <div className="lg:flex lg:gap-8 hidden macbook-navlink">
-              <div className="hero-button flex items-center gap-2">
-                <Image
-                  src="/images/assets/Frame.svg"
-                  width={25}
-                  height={52}
-                  alt="flag img"
-                />
-                <ChevronRight size={16} />
+            <div className="sm:flex sm:gap-8 hidden macbook-navlink">
+              <div className="hidden md:flex hero-button !items-center ">
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="flex items-center gap-2 cursor-pointer focus:outline-0">
+                    <Image
+                      src={selectedCountry.flag}
+                      width={25}
+                      height={18}
+                      alt={selectedCountry.name}
+                    />
+                    <ChevronRight size={16} />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-44 bg-white !border-none">
+                    {countries.map((country) => (
+                      <DropdownMenuItem
+                        key={country.code}
+                        className="hover:bg-blue-100 cursor-pointer"
+                        onClick={() => setLanguage(country.code)}
+                      >
+                        <div className="flex items-center gap-2">
+                          <Image
+                            src={country.flag}
+                            width={20}
+                            height={15}
+                            alt={country.name}
+                          />
+                          <span>{country.name}</span>
+                        </div>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
 
-              <Link href="#">
+              <Link href="/contact-us">
                 <button
                   className={`hero-button ${
                     isScrolled ? "text-black" : "text-white"

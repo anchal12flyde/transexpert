@@ -1,6 +1,5 @@
 "use client";
 
-
 import { useLoader } from "@/components/GlobalLoader";
 import Header from "@/components/home/Header";
 import Footer from "@/components/footer/page";
@@ -41,6 +40,7 @@ export default function TempControlled() {
   }, []);
 
   const data = services.crossDocking;
+  const [m, setM] = useState(0);
 
   return (
     <>
@@ -48,8 +48,8 @@ export default function TempControlled() {
       <div className="mainCon" ref={containerRef}>
         {isScrolled && <Header isScrolled={isScrolled} />}
         <HeroSectionFTL isScrolled={isScrolled} {...data.hero} />
-        <TruckImageSection {...data.truckImageSection} />
-        <StripFtl {...data.strip} />
+        <TruckImageSection {...data.truckImageSection} setM={setM} />
+        <StripFtl {...data.strip} m={m} />
         <DifferentComp {...data.weAreDifferent} />
         <Footer />
       </div>

@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 
 const LoaderCtx = createContext(null);
 
-export default function GlobalLoaderProvider({ children, minMs = 2500 }) {
+export default function GlobalLoaderProvider({ children, minMs = 2500 }) { 
   const pathname = usePathname();
   const [visible, setVisible] = useState(true); 
   const marks = useRef(new Set()); 

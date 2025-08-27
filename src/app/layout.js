@@ -1,5 +1,6 @@
 import "./globals.css";
 import GlobalLoaderProvider from "@/components/GlobalLoader"; // client component
+import GoogleTranslator from "@/components/googleTranslator"; // ✅ script loader
 import { Onest } from "next/font/google";
 
 const onest = Onest({ subsets: ["latin"], display: "swap" });
@@ -14,6 +15,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={onest.className}>
         <GlobalLoaderProvider minMs={2500}>{children}</GlobalLoaderProvider>
+
+        {/* Google Translate script inject */}
+        <GoogleTranslator />
       </body>
     </html>
   );

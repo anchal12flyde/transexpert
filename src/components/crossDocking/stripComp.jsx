@@ -1,11 +1,21 @@
+import { useEffect, useState } from "react";
 import { MoveRightIcon } from "lucide-react";
 
 export default function StripFtl({ text, button, m }) {
+  const [marginTop, setMarginTop] = useState("78px");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.innerWidth >= 640) {
+        setMarginTop(`${m}px`);
+      } else {
+        setMarginTop("78px");
+      }
+    }
+  }, [m]);
+
   return (
-    <div
-      className="counterSection1  sm:mt-0"
-      style={{ marginTop: window.innerWidth >= 640 ? `${m}px` : "78px" }}
-    >
+    <div className="counterSection1 sm:mt-0" style={{ marginTop }}>
       <div className="global-container flex items-center gap-[26px]">
         <h2
           className="red-strip-text"

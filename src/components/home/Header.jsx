@@ -52,7 +52,7 @@ export default function Header({ isScrolled = false }) {
               alt="TransExpert Logo"
               width={176}
               height={37}
-              className="w-[130px] h-auto sm:w-[176px]"
+              className="w-[130px] h-auto lg:w-[176px]"
             />
           </Link>
 
@@ -63,10 +63,10 @@ export default function Header({ isScrolled = false }) {
             }`}
           >
             {/* Desktop links */}
-            <Link href="/about" className="sm:block hidden nav-link">
+            <Link href="/about" className="lg:block hidden nav-link">
               About Us
             </Link>
-            {/* <Link href="/ftl" className="sm:block hidden">
+            {/* <Link href="/ftl" className="lg:block hidden">
               Services
             </Link> */}
 
@@ -99,17 +99,17 @@ export default function Header({ isScrolled = false }) {
               </DropdownMenu>
             </div>
 
-            <Link href="/sustainability" className="sm:block hidden nav-link">
+            <Link href="/sustainability" className="lg:block hidden nav-link">
               Sustainability
             </Link>
-            <Link href="/industries" className="sm:block hidden nav-link">
+            <Link href="/industries" className="lg:block hidden nav-link">
               Industries
             </Link>
-            <Link href="/contact-us" className="sm:block hidden nav-link">
+            <Link href="/contact-us" className="lg:block hidden nav-link">
               Get a quote
             </Link>
 
-            <div className="sm:flex sm:gap-8 hidden macbook-navlink">
+            <div className="lg:flex lg:gap-8 hidden macbook-navlink">
               <div className="hero-button flex items-center gap-2">
                 <Image
                   src="/images/assets/Frame.svg"
@@ -133,7 +133,7 @@ export default function Header({ isScrolled = false }) {
 
             {/* Mobile Hamburger */}
             <div
-              className="flex items-center gap-5 sm:hidden cursor-pointer"
+              className="flex items-center gap-5 lg:hidden cursor-pointer"
               onClick={() => setMenuOpen(true)}
             >
               <Image
@@ -149,7 +149,7 @@ export default function Header({ isScrolled = false }) {
                 width={20}
                 height={20}
                 alt="hamburger"
-                className="w-[15px] h-auto sm:w-[20px]"
+                className="w-[15px] h-auto lg:w-[20px]"
               />
             </div>
           </nav>

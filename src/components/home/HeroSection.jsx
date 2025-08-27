@@ -68,23 +68,23 @@ export default function HeroSection({ isScrolled }) {
           />
         </div>
 
-        <div className="overlay-X-Mob sm:hidden "></div>
+        <div className="overlay-X-Mob lg:hidden "></div>
 
         <div className="hero-content  ">
-          <h1 className=" hero-heading mb-[24px] sm:mb-[36px]">
+          <h1 className=" hero-heading mb-[24px] lg:mb-[36px]">
             We Don’t Just Move Freight. <br />
             We Power North American Enterprise.
           </h1>
-          <p className="hero-description w-full sm:w-[550px] hidden sm:block">
+          <p className="hero-description w-full lg:w-[550px] hidden lg:block">
             From mission-critical deliveries to cross-border precision, Trans
             Expert is the logistics backbone trusted by industry leaders
           </p>
 
-          <p className="hero-description w-full sm:w-[550px] block sm:hidden">
+          <p className="hero-description w-full lg:w-[550px] block lg:hidden">
             Trans Expert is the logistics backbone trusted by industry leaders
           </p>
 
-          <a href="#about" className="hero-button mt-[24px] sm:mt-[36px]">
+          <a href="#about" className="hero-button mt-[24px] lg:mt-[36px]">
             About Us
           </a>
         </div>
@@ -225,11 +225,11 @@ export default function HeroSection({ isScrolled }) {
         </div>
       </section>
 
-      <div className=" sm:hidden flex gap-[37px] flex-col mb-[0px] mt-[0px] global-container bgMob pb-[110px] pt-[42px] ">
+      <div className=" lg:hidden flex gap-[37px] flex-col mb-[0px] mt-[0px] global-container bgMob pb-[110px] pt-[42px] ">
         <p className="sm:hidden text-center text-[24px] text-white font-bold  ">
           Services
         </p>
-        <div className=" sm:hidden grid grid-cols-2 gap-[33px] ">
+        <div className=" lg:hidden grid grid-cols-2 gap-[33px] ">
           <div className="card1 ">
             <div className="img-wrapper1">
               <img src="/images/img2.png" alt="Full Truck Load" />

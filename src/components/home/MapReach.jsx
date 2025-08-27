@@ -15,7 +15,7 @@ export default function GeographicalCoverage() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="sm:hidden heading"
         >
           Geographical Coverage & Infrastructure
@@ -25,7 +25,7 @@ export default function GeographicalCoverage() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="sm:hidden map_subheading-phone"
         >
           We move freight across Canada, the USA, and Mexico with speed and
@@ -39,7 +39,7 @@ export default function GeographicalCoverage() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="sm:col-span-7"
         >
           <motion.video
@@ -57,7 +57,7 @@ export default function GeographicalCoverage() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="hidden md:flex md:col-span-5 map-text flex-col justify-end"
         >
           <h2 className="heading">Geographical Coverage & Infrastructure</h2>
@@ -92,7 +92,7 @@ export default function GeographicalCoverage() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="global-container mb-[42px]"
         >
           <div className="block md:hidden text-gray-800 mobile-map-text">

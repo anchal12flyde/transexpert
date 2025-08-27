@@ -1221,14 +1221,8 @@ span:has(img) {
   opacity: 1;
 }
 
-.slick-slide {
-  opacity: 0 !important;
-  transition: opacity 0.4s ease-in-out;
-}
 
-.slick-slide.slick-active {
-  opacity: 1 !important;
-}
+
 
 .card_heading {
   /* color: var(--thm-black); */

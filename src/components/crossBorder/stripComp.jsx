@@ -5,7 +5,7 @@ export default function StripFtl({ text, button, m }) {
     <div
       className="counterSection1  sm:mt-0"
       style={{ marginTop: window.innerWidth >= 640 ? `${m}px` : "78px" }}
-    >
+    >.
       <div className="global-container flex items-center gap-[26px]">
         <h2
           className="red-strip-text"

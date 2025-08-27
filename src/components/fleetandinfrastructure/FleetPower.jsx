@@ -7,7 +7,7 @@ export default function FleetPower() {
         <section className="fleet-section">
           <div className="fleet-stats">
             <div className="stat">
-              <h2 className="stat-number">50</h2>
+              <h2 className="stat-number">500+</h2>
               <div className="divider"></div>
               <p className="stat-text">
                 Dry Vans – For general
@@ -17,7 +17,7 @@ export default function FleetPower() {
             </div>
 
             <div className="stat">
-              <h2 className="stat-number">500+</h2>
+              <h2 className="stat-number">50</h2>
               <div className="divider"></div>
               <p className="stat-text">
                 Refrigerated Reefers – Temperature <br />

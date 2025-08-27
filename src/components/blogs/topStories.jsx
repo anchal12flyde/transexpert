@@ -215,9 +215,9 @@ export default function TopStories() {
       </div>
 
       {/* Main layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-[71px]">
+      <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-[71px] stories-grid">
         {/* Left - Stories Grid */}
-        <div className="grid sm:grid-cols-2  gap-[42px] sm:gap-[78px]">
+        <div className="grid sm:grid-cols-2  gap-[42px] sm:gap-[78px] stories-grid-blogs">
           {filteredStories.slice(0, visibleCount).map((story, idx) => (
             <Link key={idx} href="/blogs/single-blog" className="flex flex-col">
               <Image
@@ -225,7 +225,7 @@ export default function TopStories() {
                 alt={story.title}
                 width={400}
                 height={250}
-                className="rounded-md object-cover w-full "
+                className="rounded-md object-cover w-full h-auto "
               />
               <h3 className="blog-heading text-thm-heading-text ">
                 {story.title}
@@ -249,10 +249,7 @@ export default function TopStories() {
         <aside className="flex flex-col  gap-[16px] sm:gap-[24px] w-full">
           <h3 className="heading">Related</h3>
           {related.map((item, idx) => (
-            <div
-              key={idx}
-              className="flex gap-[24px] items-stretch "
-            >
+            <div key={idx} className="flex gap-[24px] ">
               <Image
                 src={item.img}
                 alt={item.title}
@@ -260,8 +257,10 @@ export default function TopStories() {
                 height={0}
                 className="rounded-md object-cover h-auto"
               />
-              <div >
-                <h4 className="side-heading text-[#E22A26]  mb-[8px] sm:mb-[16px] ">{item.title}</h4>
+              <div>
+                <h4 className="side-heading text-[#E22A26]  mb-[8px] sm:mb-[16px] ">
+                  {item.title}
+                </h4>
                 <p className="side-subheading">{item.subtitle}</p>
               </div>
             </div>

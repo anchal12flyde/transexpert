@@ -54,7 +54,7 @@ export default function GlobalLoaderProvider({ children, minMs = 2500 }) {
           <img
             src="/images/videos/loader-x.gif"
             alt="Loading..."
-            className="w-20 h-20 "
+            className="w-40 h-40 "
           />
         </div>
       )}

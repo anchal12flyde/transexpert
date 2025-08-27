@@ -15,7 +15,7 @@ export default function HeroSectionComponent({ isScrolled }) {
       <section className="fleet-hero">
         <div className="fleet-hero__image-wrap">
           <img
-            src="/images/industries.png"
+            src="/images/industries hero.png"
             alt="Fleet background"
             className="fleet-hero__image"
           />

@@ -1,65 +1,69 @@
-"use client"
+"use client";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 export default function Industries() {
   const router = useRouter();
-  return (
-    <>
-      <section className="industries-section ">
-        <div className="industries-container">
-          {/* Left Side */}
-          <div className="industries-text ">
-            <h2 className="heading">Industries we work with</h2>
-            <p className="subheading">
-              From raw materials to finished goods, we deliver reliable,
-              cross-border logistics solutions tailored to your industry.
-              Whether you're stocking shelves, supplying storefronts, or fueling
-              production lines, TransExpert ensures fast, secure, and seamless
-              transportation across Canada, the U.S., and Mexico.
-            </p>
-            <br />
-            <p className="subheading">
-              From raw materials to finished goods, we deliver reliable,
-              cross-border logistics solutions tailored to your industry.
-              Whether you're stocking shelves, supplying storefronts, or fueling
-              production lines, TransExpert ensures fast, secure, and seamless
-              transportation across Canada, the U.S., and Mexico.
-            </p>
-            <button
-              className="hero-button"
-              onClick={() => router.push("/industries")}
-            >
-              Know more
-            </button>
-          </div>
 
-          {/* Right Side */}
-          <div className="industries-cards">
+  // Animation variants
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  return (
+    <section className="industries-section ">
+      <div className="industries-container">
+        {/* Left Side */}
+        <motion.div
+          className="industries-text"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h2 className="heading">Industries we work with</h2>
+          <p className="subheading">
+            From raw materials to finished goods, we deliver reliable,
+            cross-border logistics solutions tailored to your industry. Whether
+            you're stocking shelves, supplying storefronts, or fueling
+            production lines, TransExpert ensures fast, secure, and seamless
+            transportation across Canada, the U.S., and Mexico.
+          </p>
+          <br />
+          <p className="subheading">
+            From raw materials to finished goods, we deliver reliable,
+            cross-border logistics solutions tailored to your industry. Whether
+            you're stocking shelves, supplying storefronts, or fueling
+            production lines, TransExpert ensures fast, secure, and seamless
+            transportation across Canada, the U.S., and Mexico.
+          </p>
+          <button
+            className="hero-button"
+            onClick={() => router.push("/industries")}
+          >
+            Know more
+          </button>
+        </motion.div>
+
+        {/* Right Side */}
+        <div className="industries-cards">
+          {[
+            { img: "/images/assets/Wholesale.jpg", label: "Wholesale" },
+            { img: "/images/assets/Retail.jpg", label: "Retail" },
+            { img: "/images/assets/Manufacture.jpg", label: "Manufacturers" },
+          ].map((card, index) => (
             <div
+              key={index}
               className="industry-card"
-              style={{
-                backgroundImage: `url('/images/assets/wholesaleImg.jpg')`,
-              }}
+              style={{ backgroundImage: `url(${card.img})` }}
             >
-              <span className="industry-span">Wholesale</span>
+              <span className="industry-span">{card.label}</span>
             </div>
-            <div
-              className="industry-card"
-              style={{ backgroundImage: `url('/images/assets/retailImg.jpg')` }}
-            >
-              <span className="industry-span">Retail</span>
-            </div>
-            <div
-              className="industry-card"
-              style={{
-                backgroundImage: `url('/images/assets/manufacturersImg.jpg')`,
-              }}
-            >
-              <span className="industry-span">Manufacturers</span>
-            </div>
-          </div>
+          ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

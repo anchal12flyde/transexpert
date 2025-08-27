@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <>
-      <footer className="footer md:block hidden">
-        <div className="footer-content">
+      <footer className="footer lg:block hidden ">
+        <div className="footer-content global-container">
           <div className="footer-main">
             {/* Left Section */}
             <div className="footer-left">
@@ -25,7 +25,7 @@ export default function Footer() {
             {/* Middle Section */}
             <div className="flex items-start gap-[50px] ">
               <div className="footer-links">
-                <ul >
+                <ul>
                   <li>
                     {" "}
                     <Link href="/about">About Us</Link>
@@ -74,8 +74,9 @@ export default function Footer() {
                     className="mt-1 "
                   />
                   <p>
-                    +1 905-864-6443
-                    
+                    <span className="address-details">+1 905-864-6443</span>
+                    <br />
+                    <span>Available 24 X 7</span>
                   </p>
                 </div>
 
@@ -85,7 +86,6 @@ export default function Footer() {
                     width={16}
                     height={16}
                     alt="call"
-                    
                   />
                   <p>100 Market Drive, Milton ON L9T 3H5 CANADA</p>
                 </div>
@@ -113,28 +113,28 @@ export default function Footer() {
         </div>
       </footer>
 
-      <footer className="footer-mobile md:hidden">
+      <footer className="footer-mobile lg:hidden">
         {" "}
         <div className="global-container">
           {/* Logo */}
-          <div className="footer-logo">
+          <div className="justify-items-center mb-[24px]">
             <Image
               src="/images/assets/logo2.png"
               alt="TransExpert Logo"
-              width={180}
-              height={50}
+              width={172}
+              height={47}
             />
           </div>
 
           {/* Description */}
-          <p className="footer-desc">
+          <p className="footer-desc-mobile">
             Trans Expert Inc. is a premier cross-border logistics provider,
             committed to delivering seamless freight solutions across Canada,
             the United States, and Mexico.
           </p>
 
           {/* Links */}
-          <div className="footer-links">
+          <div className="footer-links-mobile">
             <ul>
               <li>About Us</li>
               <li>Services</li>
@@ -181,10 +181,15 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <p className="footer-copy">
+          <p className="footer-copy-mobile">
             Copyright 2017. Trans Expert Inc – All Rights Reserved
           </p>
         </div>
+        <img
+          src="/images/assets/vector2.png"
+          alt="Decoration"
+          className="decor-image-footer-mobile"
+        />
       </footer>
     </>
   );

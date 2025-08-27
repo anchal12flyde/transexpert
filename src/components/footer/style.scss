@@ -2,7 +2,7 @@
   position: relative;
   background-color: #263879; /* Dark blue */
   color: #fff;
-  padding:78px 136px ;
+  padding:78px 0 ;
   overflow: hidden;
   font-family: "Onest", sans-serif;
 }
@@ -37,11 +37,8 @@
 .footer-content {
   position: relative;
   display: flex;
-
   flex-direction: column;
   z-index: 1;
-  // max-width: 1200px;
-  margin: auto;
 }
 
 .footer-left {
@@ -59,7 +56,7 @@
   line-height: 1.6;
   font-size: 16px;
   font-weight: 300;
-  text-align: justify;
+ 
 }
 
 .footer-copy {
@@ -108,6 +105,20 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+.address-details{
+  color: var(--color-thm-white);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: none;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+}
 .contact-btn {
   margin-top: 15px;
   background-color: #dc2626;
@@ -117,7 +128,7 @@ line-height: normal;
   text-decoration: none;
   letter-spacing: 0;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
   cursor: pointer;
 }
@@ -131,6 +142,7 @@ line-height: normal;
 
 // Mobile Footer
 .footer-mobile {
+  position: relative;
   font-family: "Onest", sans-serif;
   background-color: #263879;
   color: #fff;
@@ -145,20 +157,20 @@ line-height: normal;
     
   }
 
-  .footer-desc {
-    font-size: 12px;
+  .footer-desc-mobile {
+    font-size: 10px;
     font-weight: 300;
     line-height: normal;
-letter-spacing: 0.64px;
+    letter-spacing: 0.4px;
     margin-bottom: 24px;
-  
+    text-align: center;
   }
 
-  .footer-links {
+  .footer-links-mobile {
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
-    gap: 40px;
+  justify-content: space-between;
     margin-bottom: 24px;
 
     ul {
@@ -171,7 +183,7 @@ letter-spacing: 0.64px;
         font-size: 10px;
         letter-spacing: 0.4px;
         font-weight: 400;
-        margin-bottom: 6px;
+        margin-bottom: 20px;
         text-align: left;
         cursor: pointer;
         &:hover {
@@ -184,13 +196,26 @@ letter-spacing: 0.64px;
   .footer-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 8px;
     margin-bottom: 16px;
   }
 
-  .footer-copy {
-    font-size: 16px;
-    font-weight: 500;
-    opacity: 0.8;
+  .footer-copy-mobile {
+    color: var(--color-thm-white);
+    font-family: Onest;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    text-align: left;
   }
 }
+.decor-image-footer-mobile{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 140px;
+  width: 106px;
+}
+

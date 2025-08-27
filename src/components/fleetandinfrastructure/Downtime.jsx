@@ -13,7 +13,7 @@ export default function DowntimeSection() {
             Our in-house licensed mechanics and proactive diagnostics ensure
             top-tier fleet availability.
           </p>
-          <img src="/images/assets/f&i.png" alt="Fleet" />
+          <img src="/images/assets/f&i.png" alt="Fleet" className="downtime-image" />
         </div>
 
         {/* Right side */}

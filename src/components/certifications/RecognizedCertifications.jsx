@@ -1,20 +1,31 @@
-import { useRef } from "react";
+"use client";
+
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import dynamic from "next/dynamic";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const Slider = dynamic(() => import("react-slick").then((m) => m.default), {
+  ssr: false,
+});
+
+function Arrow({ onClick, dir }) {
+  return (
+    <button
+      aria-label={dir === "left" ? "Previous" : "Next"}
+      onClick={onClick}
+      className={`absolute top-1/2 -translate-y-1/2 ${
+        dir === "left" ? "-left-7" : "-right-7"
+      } z-10  px-3 py-2`}
+    >
+      <span className="block text-5xl leading-none">
+        {dir === "left" ? "‹" : "›"}
+      </span>
+    </button>
+  );
+}
 
 export default function RecognizedCertifications() {
-  const scrollRef = useRef(null);
-
-  const scroll = (direction) => {
-    if (scrollRef.current) {
-      const scrollAmount = scrollRef.current.offsetWidth; 
-      if (direction === "left") {
-        scrollRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-      } else {
-        scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-      }
-    }
-  };
   const certificationsData = [
     {
       title: "SmartWay Partner",
@@ -74,18 +85,35 @@ export default function RecognizedCertifications() {
     },
   ];
 
+  const mobileSettings = {
+    dots: true,
+    infinite: true,
+    arrows: true,
+    speed: 400,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <Arrow dir="right" />,
+    prevArrow: <Arrow dir="left" />,
+    appendDots: (dots) => (
+      <div style={{ bottom: "-30px" }}>
+        <ul className="!m-0">{dots}</ul>
+      </div>
+    ),
+    dotsClass: "slick-dots",
+  };
+
   return (
-    <div className="mt-16">
+    <div className="mt-16 ">
       <div className="global-container mt-[42px] sm:mt-[78px] relative">
-        {/* Desktop Grid */}
+        {/* Desktop */}
         <div className="hidden sm:grid grid-cols-2 gap-[81px]">
           {certificationsData.map((c, index) => (
             <div
               key={index}
-              className="flex items-start rounded-[16px] p-[78px] gap-4 bshadow"
+              className="flex items-start rounded-[16px] p-[78px] gap-4 bshadow h-[380px]"
             >
               <Image alt={c.title} src={c.logo} width={150} height={200} />
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-[16px]">
                 <div>
                   <p className="heading !mb-0">{c.title}</p>
                   <p className="subheading">{c.subtitle}</p>
@@ -96,46 +124,22 @@ export default function RecognizedCertifications() {
           ))}
         </div>
 
-        {/* Mobile Carousel */}
-        <div className="sm:hidden relative">
-          <div
-            ref={scrollRef}
-            className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar"
-          >
+        {/* Mobile */}
+        <div className="block sm:hidden relative mb-[80px]">
+          <Slider {...mobileSettings}>
             {certificationsData.map((c, index) => (
-              <div
-                key={index}
-                className="w-full flex-shrink-0 snap-center flex flex-col items-center justify-center text-center rounded-[16px] p-6 bshadow bg-white"
-              >
-                <Image
-                  alt={c.title}
-                  src={c.logo}
-                  width={120}
-                  height={120}
-                  className="mx-auto"
-                />
-                <div className="flex flex-col gap-3 mt-4">
-                  <p className="heading">{c.title}</p>
-                  <p className="subheading">{c.subtitle}</p>
-                  <p className="subheading">{c.description}</p>
+              <div key={index} className="px-2">
+                <div className="flex flex-col items-center justify-center text-center rounded-[16px] px-[22px] py-[34px] gap-6 bshadow bg-white h-[340px]">
+                  <Image alt={c.title} src={c.logo} width={120} height={120} />
+                  <div className="flex flex-col gap-3 mt-4">
+                    <p className="heading">{c.title}</p>
+                    <p className="subheading">{c.subtitle}</p>
+                    <p className="subheading">{c.description}</p>
+                  </div>
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Arrows */}
-          <button
-            onClick={() => scroll("left")}
-            className="absolute top-1/2 left-2 -translate-y-1/2 bg-white rounded-full p-2 shadow"
-          >
-            <ChevronLeft size={20} />
-          </button>
-          <button
-            onClick={() => scroll("right")}
-            className="absolute top-1/2 right-2 -translate-y-1/2 bg-white rounded-full p-2 shadow"
-          >
-            <ChevronRight size={20} />
-          </button>
+          </Slider>
         </div>
       </div>
     </div>

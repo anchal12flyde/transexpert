@@ -2,10 +2,10 @@
 
 const RelatedPost = () => {
   return (
-    <section className="blog-section global-container ">
+    <section className="blog-section global-container mt-[78px]">
       <h2 className="heading ju">Related posts</h2>
 
-      <div className="blog-grid">
+      <div className="blog-grid-blog">
         <div className="blog-box">
           <img src="/images/Image1.png" alt="Truck" className="blog-image" />
           <div className="blog-content">

@@ -13,8 +13,8 @@ const Relaibility = () => {
                 src="/images/assets/IMG2.png"
                 alt="Driver"
                 width={800}
-                height={400}
-                className="careers-image"
+                height={0}
+                className="careers-image "
               />
             </div>
 
@@ -26,12 +26,18 @@ const Relaibility = () => {
                   alt="quote"
                   className="quote-icon-open"
                 />
-                <span> Reliability isn't a metric.It's a mindset.</span>
-                <img
-                  src="/images/assets/quote2.png"
-                  alt="quote"
-                  className="quote-icon-close"
-                />
+                <span>
+                  {" "}
+                  Reliability isn't a metric.It's a{" "}
+                  <span className="mindset">
+                    mindset.{" "}
+                    <img
+                      src="/images/assets/quote2.png"
+                      alt="quote"
+                      className="quote-icon-close"
+                    />
+                  </span>
+                </span>
               </p>
               <p className="card_heading mt-[5px] sm:mt-[16px]">
                 — Raman Deol, Co-founder

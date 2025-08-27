@@ -1,34 +1,66 @@
-// components/GeographicalCoverage.js
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 export default function GeographicalCoverage() {
   return (
     <section className="bg-white">
       <div className="global-container mb-[16px]">
-        <h2 className="sm:hidden  heading">
+        <motion.h2
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.2 }}
+          className="sm:hidden heading"
+        >
           Geographical Coverage & Infrastructure
-        </h2>
-        <p className=" sm:hidden  map_subheading-phone">
+        </motion.h2>
+
+        <motion.p
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.2 }}
+          className="sm:hidden map_subheading-phone"
+        >
           We move freight across Canada, the USA, and Mexico with speed and
           reliability.
-        </p>
+        </motion.p>
       </div>
-      <div className="grid sm:grid-cols-12 gap-12 ">
+
+      <div className="grid sm:grid-cols-12 gap-12">
         {/* Left side - Video */}
-        <div className="sm:col-span-7">
-          <video
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.2 }}
+          className="sm:col-span-7"
+        >
+          <motion.video
             src="/images/videos/map.mp4"
             autoPlay
             loop
             muted
             playsInline
-            className="w-full h-auto "
+            className="w-full h-auto"
           />
-        </div>
+        </motion.div>
 
         {/* Right side - Text */}
-        <div className="hidden md:flex md:col-span-5 map-text flex-col justify-end ">
-          <h2 className=" heading">Geographical Coverage & Infrastructure</h2>
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.2 }}
+          className="hidden md:flex md:col-span-5 map-text flex-col justify-end"
+        >
+          <h2 className="heading">Geographical Coverage & Infrastructure</h2>
           <p className="map_subheading">
             We move freight across Canada, the USA, and Mexico with speed and
             reliability.
@@ -53,9 +85,16 @@ export default function GeographicalCoverage() {
             Taylor (MI), Toledo (OH), Laredo (TX), Milton (ON), Cambridge (ON),
             Indianapolis (IN), Pointe-Claire (QC)
           </p>
-        </div>
+        </motion.div>
 
-        <div className="global-container mb-[42px]">
+        {/* Mobile Text */}
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.2 }}
+          className="global-container mb-[42px]"
+        >
           <div className="block md:hidden text-gray-800 mobile-map-text">
             <p className="map_subheading mt-5">Operational Reach</p>
 
@@ -78,7 +117,7 @@ export default function GeographicalCoverage() {
               (ON), Indianapolis (IN), Pointe-Claire (QC)
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

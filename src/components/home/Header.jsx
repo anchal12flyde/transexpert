@@ -51,7 +51,6 @@ export default function Header({ isScrolled = false }) {
               }
               alt="TransExpert Logo"
               width={176}
-              
               height={37}
               className="w-[130px] h-auto lg:w-[176px]"
             />
@@ -240,11 +239,11 @@ export default function Header({ isScrolled = false }) {
           <Link href="/industries" onClick={() => setMenuOpen(false)}>
             Industries
           </Link>
-          <Link href="/contact-us" onClick={() => setMenuOpen(false)}>
+          <Link href="/get-a-qoute" onClick={() => setMenuOpen(false)}>
             Get a quote
           </Link>
 
-          <Link href="#">
+          <Link href="/contact-us">
             <button
               className={`hero-button text-black`}
               onClick={() => setMenuOpen(false)}

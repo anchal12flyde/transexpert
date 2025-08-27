@@ -37,7 +37,7 @@ export default function Footer() {
                     <Link href="/sustainability">Sustainability</Link>
                   </li>
                   <li>
-                    <Link href="/contact-us">Get a quote</Link>
+                    <Link href="/get-a-qoute">Get a quote</Link>
                   </li>
                   <li>
                     <Link href="/industries">Industries</Link>
@@ -105,7 +105,10 @@ export default function Footer() {
                   <p>admin@transexpert.ca</p>
                 </div>
 
-                <button className="contact-btn">Contact us</button>
+                <Link href="/contact-us">
+                  {" "}
+                  <button className="contact-btn">Contact us</button>
+                </Link>
               </div>
             </div>
           </div>

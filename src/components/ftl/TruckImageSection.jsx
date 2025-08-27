@@ -39,7 +39,7 @@ export default function TruckImageSection({
           {/* Blue overlay */}
           <div
             ref={overlayRef}
-            className="overlay-blue rounded-2xl relative z-10 p-6"
+            className="overlay-blue rounded-2xl relative z-10 p-6 hidden  sm:block "
           >
             <p className="heading text-white text-2xl font-semibold mb-4 text-center">
               {overlay.title}
@@ -62,11 +62,35 @@ export default function TruckImageSection({
             )}
           </div>
 
+          <div className="section-blue rounded-2xl relative z-10 px-[30px] py-[30px] sm:hidden block">
+            <p className="ftl-heading text-white mb-4 text-center">
+              {overlay.title}
+            </p>
+            <p className="text-white ftl-description mb-6 ml-[13px]">
+              {overlay.description}
+            </p>
+            <ul className="space-y-3 text-white ftl-list">
+              {overlay.points.map((point, i) => (
+                <li key={i} className="flex items-center gap-[13px]">
+                  <span className="bg-red-500 w-[3px]  h-[24px] rounded-full"></span>
+                  <span className="">{point}</span>
+                </li>
+              ))}
+            </ul>
+            {overlay.button && (
+              <div className="text-center">
+                <button className="mt-[16px] hero-button">
+                  {overlay.button.label}
+                </button>
+              </div>
+            )}
+          </div>
+
           {/* Corner Icon */}
           <img
             src={cornerIcon}
             alt="corner-icon"
-            className="absolute bottom-0 right-0 w-[500px] h-[335px] z-[11]"
+            className="absolute bottom-0 right-0 w-[500px] h-[335px] z-[11] hidden sm:block "
           />
         </div>
       </div>

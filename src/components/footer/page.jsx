@@ -30,9 +30,9 @@ export default function Footer() {
                     {" "}
                     <Link href="/about">About Us</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/services">Services</Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link href="/sustainability">Sustainability</Link>
                   </li>
@@ -144,25 +144,46 @@ export default function Footer() {
           {/* Links */}
           <div className="footer-links-mobile">
             <ul>
-              <li>About Us</li>
-              <li>Services</li>
+              <li>
+                {" "}
+                <Link href="/about">About Us</Link>
+              </li>
+              {/* <li>Services</li> */}
               <li>Careers</li>
-              <li>Blogs</li>
-              <li>Industries</li>
+              <li>
+                <Link href="/blogs">Blog Posts</Link>
+              </li>
+              <li>
+                <Link href="/industries">Industries</Link>
+              </li>
             </ul>
             <ul>
-              <li>Sustainability</li>
-              <li>Get a quote</li>
+              <li>
+                <Link href="/sustainability">Sustainability</Link>
+              </li>
+              <li>
+                <Link href="/get-a-qoute">Get a quote</Link>
+              </li>
               {/* <li>Locations</li> */}
               {/* <li>Raise a Query</li> */}
-              <li>Fleet & Infrastructure</li>
+              <li>
+                <Link href="/fleet-and-infrastructure">
+                  Fleet & Infrastructure
+                </Link>
+              </li>
             </ul>
             <ul>
-              <li>Privacy Policy</li>
-              <li>Terms and conditions</li>
+              <Link href="/privacy-policy">
+                <li>Privacy Policy</li>
+              </Link>
+              <Link href="/terms-and-conditions">
+                <li>Terms and conditions</li>
+              </Link>
               {/* <li>Refund & cancellation</li>
               <li>Drivers Safety</li> */}
-              <li>Contact Us</li>
+              <li>
+                <Link href="/contact-us">Contact Us</Link>
+              </li>
             </ul>
           </div>
 

@@ -127,14 +127,14 @@ export default function Header({ isScrolled = false }) {
             <Link href="/industries" className="sm:block hidden nav-link">
               Industries
             </Link>
-            <Link href="/contact-us" className="sm:block hidden nav-link">
+            <Link href="/get-a-qoute" className="sm:block hidden nav-link">
               Get a quote
             </Link>
 
             <div className="sm:flex sm:gap-8 hidden macbook-navlink">
-              <div className="hidden md:block md:hero-button ">
+              <div className="hidden md:flex hero-button !items-center ">
                 <DropdownMenu>
-                  <DropdownMenuTrigger className="hero-button flex items-center gap-2 cursor-pointer focus:outline-0">
+                  <DropdownMenuTrigger className="flex items-center gap-2 cursor-pointer focus:outline-0">
                     <Image
                       src={selectedCountry.flag}
                       width={25}
@@ -165,7 +165,7 @@ export default function Header({ isScrolled = false }) {
                 </DropdownMenu>
               </div>
 
-              <Link href="#">
+              <Link href="/contact-us">
                 <button
                   className={`hero-button ${
                     isScrolled ? "text-black" : "text-white"

@@ -1,6 +1,5 @@
 "use client";
 
-
 import { useLoader } from "@/components/GlobalLoader";
 
 import Header from "@/components/home/Header";
@@ -42,18 +41,19 @@ export default function TempControlled() {
   }, []);
 
   const data = services.temperatureControlled;
+  const [m, setM] = useState(0);
 
   return (
     <>
-    <PageContentReady />
-    <div className="mainCon" ref={containerRef}>
-      {isScrolled && <Header isScrolled={isScrolled} />}
-      <HeroSectionFTL isScrolled={isScrolled} {...data.hero} />
-      <TruckImageSection {...data.truckImageSection} />
-      <StripFtl {...data.strip} />
-      <DifferentComp {...data.weAreDifferent} />
-      <Footer />
-    </div>
+      <PageContentReady />
+      <div className="mainCon" ref={containerRef}>
+        {isScrolled && <Header isScrolled={isScrolled} />}
+        <HeroSectionFTL isScrolled={isScrolled} {...data.hero} />
+        <TruckImageSection {...data.truckImageSection} setM={setM} />
+        <StripFtl {...data.strip} m={m} />
+        <DifferentComp {...data.weAreDifferent} />
+        <Footer />
+      </div>
     </>
   );
 }

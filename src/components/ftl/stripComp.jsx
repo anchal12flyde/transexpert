@@ -1,8 +1,8 @@
 import { MoveRightIcon } from "lucide-react";
 
-export default function StripFtl({ text, button }) {
+export default function StripFtl({ text, button, m }) {
   return (
-    <div className="counterSection1 sm:mt-[418px] mt-[42px]">
+    <div className="counterSection1" style={{ marginTop: `${m}px` }}>
       <div className="global-container flex items-center gap-[26px]">
         <h2
           className="red-strip-text"

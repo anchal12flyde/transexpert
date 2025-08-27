@@ -1,6 +1,5 @@
 "use client";
 
-
 import { useLoader } from "@/components/GlobalLoader";
 import WeAreDifferent from "@/components/ftl/differentComp";
 import HeroSectionFTL from "@/components/ftl/HeroFtl";
@@ -15,11 +14,13 @@ export default function FTL() {
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef(null);
 
+  // State to hold the 'm' variable
+  const [m, setM] = useState(0);
+
   const { PageContentReady, skip } = useLoader();
   useEffect(() => {
     skip("hero");
   }, [skip]);
-
 
   useEffect(() => {
     const container = containerRef.current;
@@ -29,33 +30,33 @@ export default function FTL() {
       setIsScrolled(container.scrollTop > 50);
     };
 
-    // Attach listener to the container
     container.addEventListener("scroll", handleScroll, { passive: true });
-
-    // Call once for initial state
     handleScroll();
 
-    // Cleanup
     return () => {
       container.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const data = services.ftl;
+  // console.log(m);
 
   return (
-
     <>
-    <PageContentReady />
-    <div className="mainCon" ref={containerRef}>
-      {isScrolled && <Header isScrolled={isScrolled} />}
-      <HeroSectionFTL isScrolled={isScrolled} {...data.hero} />
-      <TruckImageSection {...data.truckImageSection} />
-      <StripFtl {...data.strip} />
-      <WeAreDifferent {...data.weAreDifferent} />
-      <Footer />
-    </div>
+      <PageContentReady />
+      <div className="mainCon" ref={containerRef}>
+        {isScrolled && <Header isScrolled={isScrolled} />}
+        <HeroSectionFTL isScrolled={isScrolled} {...data.hero} />
+
+        {/* Pass setM to TruckImageSection */}
+        <TruckImageSection {...data.truckImageSection} setM={setM} />
+
+        {/* Pass m to StripFtl */}
+        <StripFtl {...data.strip} m={m} />
+
+        <WeAreDifferent {...data.weAreDifferent} />
+        <Footer />
+      </div>
     </>
-    
   );
 }

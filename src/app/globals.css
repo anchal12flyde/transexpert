@@ -335,11 +335,24 @@ body::-webkit-scrollbar {
   z-index: 10;
   padding: 78px 104px ;
 }
-@media  (max-width: 1280px){
+@media  (max-width: 1300px){
   .overlay-blue{
     width: 455px;
+    padding: 49px 52px ;
   }
 }
+@media (max-width:1300px){
+  .macbook{
+    gap: 54px;
+  }
+  .macbook .heading{
+    font-size: 28px;
+  }
+  .macbook .subheading{
+    font-size: 16px;
+  }
+}
+
 .section-blue{
   margin-top: 12px;
   position: relative;
@@ -1206,6 +1219,15 @@ span:has(img) {
 .custom-slick .slick-center .blog-box {
   transform: scale(1);
   opacity: 1;
+}
+
+.slick-slide {
+  opacity: 0 !important;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slick-slide.slick-active {
+  opacity: 1 !important;
 }
 
 .card_heading {

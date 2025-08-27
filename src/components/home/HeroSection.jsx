@@ -4,6 +4,13 @@ import { useEffect, useRef, useState } from "react";
 import Header from "./Header";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+
+
+const slideInLeft = {
+  hidden: { opacity: 0, x: -50 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 export default function HeroSection({ isScrolled }) {
   const overlayRef = useRef(null);
@@ -70,24 +77,46 @@ export default function HeroSection({ isScrolled }) {
 
         <div className="overlay-X-Mob sm:hidden "></div>
 
-        <div className="hero-content  ">
-          <h1 className=" hero-heading mb-[24px] sm:mb-[36px]">
+        <motion.div
+          className="hero-content"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.2 }}
+        >
+          <motion.h1
+            variants={slideInLeft}
+            className="hero-heading mb-[24px] sm:mb-[36px]"
+          >
             We Don’t Just Move Freight. <br />
             We Power North American Enterprise.
-          </h1>
-          <p className="hero-description w-full sm:w-[550px] hidden sm:block">
+          </motion.h1>
+
+          <motion.p
+            variants={slideInLeft}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="hero-description w-full sm:w-[550px] hidden sm:block"
+          >
             From mission-critical deliveries to cross-border precision, Trans
             Expert is the logistics backbone trusted by industry leaders
-          </p>
+          </motion.p>
 
-          <p className="hero-description w-full sm:w-[550px] block sm:hidden">
+          <motion.p
+            variants={slideInLeft}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="hero-description w-full sm:w-[550px] block sm:hidden"
+          >
             Trans Expert is the logistics backbone trusted by industry leaders
-          </p>
+          </motion.p>
 
-          <a href="#about" className="hero-button mt-[24px] sm:mt-[36px]">
+          <motion.a
+            href="#about"
+            variants={slideInLeft}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="hero-button mt-[24px] sm:mt-[36px]"
+          >
             About Us
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
 
         <div className="hero-testimonial ">
           <div className="star-rating">

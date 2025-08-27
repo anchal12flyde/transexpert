@@ -42,7 +42,7 @@ const SustainabilityBanner = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false, amount: 0.3 }}
-              transition={{ delay: 0.2 }} // small delay after heading
+              transition={{ delay: 0.2 }} 
             >
               Sustainability isn’t a campaign, it’s our operating system.
             </motion.p>

@@ -38,19 +38,18 @@ const CareersBanner = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: false, amount: 0.2 }}
       >
-        {/* Left Image with smooth animation */}
+        
         <motion.div
           className="careers-image-container-home"
-          variants={imageVariants}
-        >
+          variants={imageVariants}>
           <Image
             src="/images/assets/Frame.png"
             alt="Driver"
             width={800}
             height={0}
-            className="careers-image cover"
+            className="careers-image object-cover"
           />
         </motion.div>
 

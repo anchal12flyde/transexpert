@@ -51,6 +51,7 @@ export default function Header({ isScrolled = false }) {
               }
               alt="TransExpert Logo"
               width={176}
+              
               height={37}
               className="w-[130px] h-auto lg:w-[176px]"
             />

@@ -8,23 +8,14 @@ import {
 import { ChevronDown, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import UseGoogleTranslate from "../customGoogleTranslator";
 
 export default function Header({ isScrolled = false }) {
-  // ✅ 1. Put all hooks at the top in consistent order
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
   const { ready, currentLang, setLanguage } = UseGoogleTranslate();
-
-  // ✅ 2. Never return before hooks — instead handle conditional render later
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 1330);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  if (!ready) return null;
 
   // Data
   const services = [
@@ -67,7 +58,7 @@ export default function Header({ isScrolled = false }) {
       }`}
     >
       <div className="global-container">
-        <div className="header-container ">
+        <div className="container flex items-center justify-between">
           {/* Logo */}
           <Link href="/">
             <Image
@@ -83,89 +74,98 @@ export default function Header({ isScrolled = false }) {
             />
           </Link>
 
-          {/* Desktop Nav */}
-          {!isMobile ? (
-            <nav
-              className={`nav-links flex gap-6 ${
-                isScrolled ? "!text-primary-color" : "text-white"
-              }`}
-            >
-              <Link href="/about" className="nav-link">
-                About Us
-              </Link>
+          {/* Navigation */}
+          <nav
+            className={`nav-links flex gap-6 ${
+              isScrolled ? "!text-primary-color " : "text-white"
+            }`}
+          >
+            {/* Desktop links */}
+            <Link href="/about" className="sm:block hidden nav-link">
+              About Us
+            </Link>
+            {/* <Link href="/ftl" className="sm:block hidden">
+              Services
+            </Link> */}
 
-              {/* Services Dropdown */}
+            <div className="hidden md:block">
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center space-x-1 font-[400] hover:text-accent transition-colors cursor-pointer">
                   <span className="nav-link">Services</span>
                   <ChevronDown className="h-4 w-4" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-64 bg-white !border-none">
-                  {services.map((service) => (
-                    <DropdownMenuItem
-                      key={service.path}
-                      className="hover:bg-blue-100 cursor-pointer"
-                      asChild
-                    >
-                      <Link
-                        href={service.path}
-                        className="flex items-center space-x-3 px-4 py-2 nav-link"
+                <DropdownMenuContent className="w-64 bg-white !border-none ">
+                  {services.map((service) => {
+                    const Icon = service.icon;
+                    return (
+                      <DropdownMenuItem
+                        key={service.path}
+                        className="hover:bg-blue-100 cursor-pointer "
+                        asChild
                       >
-                        <span>{service.name}</span>
-                      </Link>
-                    </DropdownMenuItem>
-                  ))}
+                        <Link
+                          href={service.path}
+                          className="flex items-center space-x-3 px-4 py-2 nav-link"
+                        >
+                          {/* <Icon className="h-4 w-4 text-accent" /> */}
+                          <span>{service.name}</span>
+                        </Link>
+                      </DropdownMenuItem>
+                    );
+                  })}
                 </DropdownMenuContent>
               </DropdownMenu>
+            </div>
 
-              <Link href="/sustainability" className="sm:block hidden nav-link">
-                Sustainability
-              </Link>
-              <Link href="/industries" className="sm:block hidden nav-link">
-                Industries
-              </Link>
-              <Link href="/get-a-qoute" className="sm:block hidden nav-link">
-                Get a quote
-              </Link>
+            {/* Language Selector */}
 
-              {/* Language Selector */}
-              <div className="sm:flex sm:gap-10 hidden">
-                <div className="hidden md:block">
-                  <DropdownMenu>
-                    <DropdownMenuTrigger className="hero-button flex items-center gap-2 cursor-pointer focus:outline-0">
-                      <Image
-                        src={selectedCountry.flag}
-                        width={25}
-                        height={18}
-                        alt={selectedCountry.name}
-                      />
-                      <ChevronRight size={16} />
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent className="w-44 bg-white !border-none">
-                      {countries.map((country) => (
-                        <DropdownMenuItem
-                          key={country.code}
-                          className="hover:bg-blue-100 cursor-pointer"
-                          onClick={() => setLanguage(country.code)}
-                        >
-                          <div className="flex items-center gap-2">
-                            <Image
-                              src={country.flag}
-                              width={20}
-                              height={15}
-                              alt={country.name}
-                            />
-                            <span>{country.name}</span>
-                          </div>
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
+            {/* Contact Button */}
+
+            <Link href="/sustainability" className="sm:block hidden nav-link">
+              Sustainability
+            </Link>
+            <Link href="/industries" className="sm:block hidden nav-link">
+              Industries
+            </Link>
+            <Link href="/contact-us" className="sm:block hidden nav-link">
+              Get a quote
+            </Link>
+
+            <div className="sm:flex sm:gap-8 hidden macbook-navlink">
+              <div className="hidden md:block md:hero-button ">
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="hero-button flex items-center gap-2 cursor-pointer focus:outline-0">
+                    <Image
+                      src={selectedCountry.flag}
+                      width={25}
+                      height={18}
+                      alt={selectedCountry.name}
+                    />
+                    <ChevronRight size={16} />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-44 bg-white !border-none">
+                    {countries.map((country) => (
+                      <DropdownMenuItem
+                        key={country.code}
+                        className="hover:bg-blue-100 cursor-pointer"
+                        onClick={() => setLanguage(country.code)}
+                      >
+                        <div className="flex items-center gap-2">
+                          <Image
+                            src={country.flag}
+                            width={20}
+                            height={15}
+                            alt={country.name}
+                          />
+                          <span>{country.name}</span>
+                        </div>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
 
-              {/* Contact Button */}
-              <Link href="/contact-us">
+              <Link href="#">
                 <button
                   className={`hero-button ${
                     isScrolled ? "text-black" : "text-white"
@@ -174,17 +174,17 @@ export default function Header({ isScrolled = false }) {
                   Contact us
                 </button>
               </Link>
-            </nav>
-          ) : (
-            // Mobile Hamburger
+            </div>
+
+            {/* Mobile Hamburger */}
             <div
-              className="flex items-center gap-5 cursor-pointer"
+              className="flex items-center gap-5 sm:hidden cursor-pointer"
               onClick={() => setMenuOpen(true)}
             >
               <Image
-                src={selectedCountry.flag}
+                src="/images/assets/Frame.svg"
                 width={25}
-                height={18}
+                height={52}
                 alt="flag"
               />
               <Image
@@ -194,10 +194,10 @@ export default function Header({ isScrolled = false }) {
                 width={20}
                 height={20}
                 alt="hamburger"
-                className="w-[15px] h-auto"
+                className="w-[15px] h-auto sm:w-[20px]"
               />
             </div>
-          )}
+          </nav>
         </div>
       </div>
 

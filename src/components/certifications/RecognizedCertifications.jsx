@@ -106,7 +106,7 @@ export default function RecognizedCertifications() {
     <div className="mt-16 ">
       <div className="global-container mt-[42px] sm:mt-[78px] relative">
         {/* Desktop */}
-        <div className="hidden sm:grid grid-cols-2 gap-[81px]">
+        <div className="hidden sm:grid grid-cols-2 gap-[81px] macbook">
           {certificationsData.map((c, index) => (
             <div
               key={index}

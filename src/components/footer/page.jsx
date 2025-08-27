@@ -42,12 +42,14 @@ export default function Footer() {
                   <li>
                     <Link href="/industries">Industries</Link>
                   </li>
-                  <li>Privacy Policy</li>
+                  <Link href="/privacy-policy">
+                    <li>Privacy Policy</li>
+                  </Link>
                 </ul>
                 <ul>
-                  <li>
+                  {/* <li>
                     <Link href="#">Locations</Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link href="/blogs">Blog Posts</Link>
                   </li>
@@ -58,7 +60,10 @@ export default function Footer() {
                     </Link>
                   </li>
                   {/* <li>Raise a Query</li> */}
-                  <li>Terms and conditions</li>
+                  <Link href="/terms-and-conditions">
+                    <li>Terms and conditions</li>
+                  </Link>
+
                   {/* <li>Refund and cancellation policy</li> */}
                 </ul>
               </div>
@@ -145,15 +150,15 @@ export default function Footer() {
             <ul>
               <li>Sustainability</li>
               <li>Get a quote</li>
-              <li>Locations</li>
-              <li>Raise a Query</li>
+              {/* <li>Locations</li> */}
+              {/* <li>Raise a Query</li> */}
               <li>Fleet & Infrastructure</li>
             </ul>
             <ul>
               <li>Privacy Policy</li>
               <li>Terms and conditions</li>
-              <li>Refund & cancellation</li>
-              <li>Drivers Safety</li>
+              {/* <li>Refund & cancellation</li>
+              <li>Drivers Safety</li> */}
               <li>Contact Us</li>
             </ul>
           </div>

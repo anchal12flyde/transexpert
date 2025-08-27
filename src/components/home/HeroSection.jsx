@@ -89,6 +89,9 @@ export default function HeroSection({ isScrolled }) {
           </a>
         </div>
 
+
+
+
         <div className="hero-testimonial ">
           <div className="star-rating">
             <img src="/images/assets/star.png" alt="star" />

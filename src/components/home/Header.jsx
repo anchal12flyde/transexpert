@@ -26,9 +26,9 @@ export default function Header({ isScrolled = false }) {
   ];
 
   const countries = [
-    { code: "en", name: "English", flag: "/images/assets/Frame.svg" },
-    { code: "hi", name: "हिंदी", flag: "/images/assets/Frame.svg" },
-    { code: "fr", name: "Français", flag: "/images/assets/Frame.svg" },
+    { code: "en", name: "English", flag: "/images/assets/GB.png" },
+    { code: "fr", name: "French", flag: "/images/assets/FR.png" },
+    { code: "es", name: "Spanish", flag: "/images/assets/SP.svg" },
   ];
 
   const selectedCountry =
@@ -143,7 +143,7 @@ export default function Header({ isScrolled = false }) {
                     />
                     <ChevronRight size={16} />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-44 bg-white !border-none">
+                  <DropdownMenuContent className="w-44 bg-white !border-none mt-[.5cm] ">
                     {countries.map((country) => (
                       <DropdownMenuItem
                         key={country.code}

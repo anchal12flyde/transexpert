@@ -1566,7 +1566,7 @@ span:has(img) {
   position: relative;
   background-color: var(--primary-color);
   color: white;
-  padding: 78px 72px 78px 72px;
+  padding: 70px 126px 70px 52px;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
 }

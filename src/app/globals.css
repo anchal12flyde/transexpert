@@ -2737,6 +2737,12 @@ Certifications */
   }  
 }
 
+@media (max-width : 1300px){
+  .macbookAit{
+    left: -11cm;
+  }
+}
+
 .industries__desc {
   font-size: 20px;
   font-weight: 400;

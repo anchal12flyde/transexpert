@@ -13,21 +13,42 @@ import UseGoogleTranslate from "../customGoogleTranslator";
 
 export default function Header({ isScrolled = false }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   const { ready, currentLang, setLanguage } = UseGoogleTranslate();
   if (!ready) return null;
-
-  const services = [
-    { name: "Full Truckload (FTL)", path: "/ftl" },
-    { name: "Temperature-Controlled", path: "/temperature-controlled" },
-    { name: "Cross Border", path: "/cross-border" },
-    { name: "Cross Docking", path: "/cross-docking" },
-  ];
 
   const countries = [
     { code: "en", name: "English", flag: "/images/assets/GB.png" },
     { code: "fr", name: "French", flag: "/images/assets/FR.png" },
     { code: "es", name: "Spanish", flag: "/images/assets/SP.svg" },
+  ];
+
+  const services = [
+    {
+      name: "Full Truckload",
+      desc: "They’re about full control, full visibility, and full confidence.",
+      img: "/images/assets/mmimg.png",
+      path: "/ftl",
+    },
+    {
+      name: "Temp-Controlled Freight",
+      desc: "We specialize in temperature-controlled freight that safeguards.",
+      img: "/images/assets/mmimg.png",
+      path: "/temperature-controlled",
+    },
+    {
+      name: "Cross Border",
+      desc: "Our cross-docking solutions are designed to keep freight moving swiftly.",
+      img: "/images/assets/mmimg.png",
+      path: "/cross-border",
+    },
+    {
+      name: "Cross Docking",
+      desc: "Our express delivery service is built for urgent freight that can’t afford to wait.",
+      img: "/images/assets/mmimg.png",
+      path: "/cross-docking",
+    },
   ];
 
   const selectedCountry =
@@ -70,33 +91,80 @@ export default function Header({ isScrolled = false }) {
               Services
             </Link> */}
 
-            <div className="hidden md:block">
-              <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center space-x-1 font-[400] text-foreground hover:text-accent transition-colors cursor-pointer">
-                  <span className="nav-link">Services</span>
-                  <ChevronDown className="h-4 w-4" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-64 bg-white !border-none ">
-                  {services.map((service) => {
-                    const Icon = service.icon;
-                    return (
-                      <DropdownMenuItem
-                        key={service.path}
-                        className="hover:bg-blue-100 cursor-pointer "
-                        asChild
-                      >
+            <div
+              className="relative hidden lg:block"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
+              <button className="flex items-center gap-1 nav-link">
+                Services <ChevronDown className="h-4 w-4" />
+              </button>
+
+              {servicesOpen && (
+                <div className="absolute left-[-12.5cm] px-[32px] py-[34px] top-full mt-2 w-[1254px] macbookAit bg-white shadow-xl rounded-xl  z-50">
+                  <div className="flex  gap-[51px] ">
+                    {/* Services list */}
+                    <div className="grid grid-cols-2 w-[934px]  gap-6  ">
+                      {services.map((s) => (
                         <Link
-                          href={service.path}
-                          className="flex items-center space-x-3 px-4 py-2 nav-link"
+                          key={s.name}
+                          href={s.path}
+                          className="flex gap-3  items-start hover:bg-gray-50 h-fit  rounded-lg transition"
                         >
-                          {/* <Icon className="h-4 w-4 text-accent" /> */}
-                          <span>{service.name}</span>
+                          <div className="!w-[111px]    shrink-0 ">
+                            <Image
+                              src={s.img}
+                              alt={s.name}
+                              width={111}
+                              height={81}
+                              className="rounded-[8px]   "
+                            />
+                          </div>
+                          <div>
+                            <p className="font-[400] text-black text-[20px] ">
+                              {s.name}
+                            </p>
+                            <p className="text-[16px] text-[#4F4F4F] font-[300] leading-tight ">
+                              {s.desc}
+                            </p>
+                          </div>
                         </Link>
-                      </DropdownMenuItem>
-                    );
-                  })}
-                </DropdownMenuContent>
-              </DropdownMenu>
+                      ))}
+                    </div>
+
+                    {/* Right Side Promo */}
+                    <div className="bg-gray-50 shrink-0   rounded-xl flex flex-col justify-between !w-[320px] ">
+                      <Image
+                        src="/images/assets/mmimg.png"
+                        alt="Promo"
+                        width={300}
+                        height={180}
+                        className="rounded-lg object-cover w-full "
+                      />
+                      <div className="mt-3 flex items-center justify-between ">
+                        <div>
+                          <Link href="/fleet-and-infrastructure" className=" ">
+                            <p className="font-[400] text-[16px] text-[#27397A] ">
+                              Fleet & Infrastructure
+                            </p>
+                          </Link>
+                          <p className="text-[12px] text-[#4F4F4F] font-[400] ">
+                            Take a free tour of our platform features
+                          </p>
+                        </div>
+                        <div className="w-[36px] flex items-center justify-center aspect-square ">
+                          <Image
+                            src="/images/assets/aicon.png"
+                            width={18}
+                            height={9}
+                            alt="icon"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Language Selector */}

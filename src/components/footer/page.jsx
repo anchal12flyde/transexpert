@@ -7,9 +7,9 @@ export default function Footer() {
     <>
       <footer className="footer lg:block hidden ">
         <div className="footer-content global-container">
-          <div className="footer-main">
+          <div className="footer-main footer-main-macbook">
             {/* Left Section */}
-            <div className="footer-left">
+            <div className="footer-left footer-left-macbook">
               <img
                 src="/images/assets/logo2.png"
                 alt="TransExpert Logo"
@@ -23,7 +23,7 @@ export default function Footer() {
             </div>
 
             {/* Middle Section */}
-            <div className="flex items-start gap-[50px] ">
+            <div className="flex items-start gap-[50px] footer-middle-macbook ">
               <div className="footer-links">
                 <ul>
                   <li>

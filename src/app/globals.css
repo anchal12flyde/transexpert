@@ -2229,7 +2229,7 @@ line-height: normal;
 /* Fleet Power */
 .fleet-stats-section {
   width: 85%;
-  margin: 118px auto;
+  margin: auto auto 118px auto;
   justify-content: center;
 }
 

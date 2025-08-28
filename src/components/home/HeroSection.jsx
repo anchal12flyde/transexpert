@@ -13,7 +13,6 @@ export default function HeroSection({ isScrolled }) {
   useEffect(() => {
     const calcValues = () => {
       if (!overlayRef.current) return;
-
       const rect = overlayRef.current.getBoundingClientRect();
       const fullWidth = rect.width;
       const fullHeight = rect.height;
@@ -71,7 +70,7 @@ export default function HeroSection({ isScrolled }) {
         <div className="overlay-X-Mob lg:hidden "></div>
 
         <div className="hero-content  ">
-          <h1 className=" hero-heading mb-[24px] lg:mb-[36px]">
+          <h1 className=" hero-heading  hero-heading-macbook mb-[24px] lg:mb-[36px]">
             We Don’t Just Move Freight. <br />
             We Power North American Enterprise.
           </h1>
@@ -89,9 +88,6 @@ export default function HeroSection({ isScrolled }) {
           </a>
         </div>
 
-
-
-
         <div className="hero-testimonial ">
           <div className="star-rating">
             <img src="/images/assets/star.png" alt="star" />
@@ -108,10 +104,11 @@ export default function HeroSection({ isScrolled }) {
             if a solution does not exist they are willing to work with you to
             assist in developing one or offering alternative approaches.
           </p>
-          <p className="testimonial-source">— Paper Manufacturing Industry</p>
+          <br />
+          <p className="testimonial-source">Paper Manufacturing Industry</p>
         </div>
 
-        <div className="testimonial-cards">
+        <div className="testimonial-cards  ">
           <div className=" flex justify-end ">
             <p
               className="   text-[46px] font-bold mr-[-.8cm]  "

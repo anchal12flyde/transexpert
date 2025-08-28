@@ -45,7 +45,7 @@ export default function CardsSection() {
       <h2 className="heading ">Our Core Values</h2>
       <div className="cards-container mt-[20px]" ref={containerRef}>
         {cards.map((card, index) => (
-          <div className="value" key={index}>
+          <div className="value bshadow" key={index}>
             <img src={card.img} alt={card.heading} className="card-image" />
             <div className="card-text">
               <h3 className="card_heading">{card.heading}</h3>

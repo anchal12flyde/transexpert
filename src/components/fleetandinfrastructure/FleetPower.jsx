@@ -3,8 +3,70 @@
 export default function FleetPower() {
   return (
     <>
-      <div className="global-container mt-[42px] lg:mt-[100px]  ">
-        <section className="fleet-section">
+      <div className="global-container mt-[42px] lg:mt-[100px]">
+
+        {/* For Desktop */}
+        <section className="hidden sm:block fleet-section">
+          <div class="fleet-stats-section ">
+            <div class="fleet-stats-numbers-row">
+              <div class="fleet-stats-number-item">50</div>
+              <div class="fleet-stats-number-item">500+</div>
+              <div class="fleet-stats-number-item">20</div>
+            </div>
+
+            <div class="fleet-stats-divider"></div>
+
+            <div class="fleet-stats-descriptions-row">
+              <div class="fleet-stats-description-item">
+                Dry Vans – For general freight and high-volume distribution
+              </div>
+              <div class="fleet-stats-description-item">
+                Refrigerated Reefers – Temperature controlled delivery for food,
+                pharma, and perishables
+              </div>
+              <div class="fleet-stats-description-item">
+                Flatbeds – For industrial, oversized, and non-containerized
+                cargo
+              </div>
+            </div>
+          </div>
+
+          <div className="fleet-info">
+            <div className="fleet-one">
+              <h3 className="">
+                Smart, sustainable, and fleet-first logistics.
+              </h3>
+            </div>
+            <div className="fleet-two">
+              <p className="subheading">
+                Our fleet is built for reliability, efficiency, and
+                sustainability. With an average vehicle age of less than five
+                years, we ensure our equipment remains modern, well-maintained,
+                and ready to meet the demands of high-performance logistics.
+                Each vehicle is equipped with Samsara-powered GPS tracking,
+                providing real-time visibility, route optimization, and enhanced
+                driver safety — so our clients always know where their shipments
+                are.
+                <br />
+                <br />
+                In line with our commitment to environmental responsibility, our
+                fleet consists of fuel-efficient, low-emission models designed
+                with advanced aerodynamic features. These upgrades not only
+                reduce our carbon footprint but also improve fuel economy and
+                delivery speed. This combination of smart technology,
+                sustainability, and proactive maintenance allows us to offer
+                scalable, enterprise-grade logistics solutions across Canada,
+                the U.S., and Mexico.
+              </p>
+            </div>
+          </div>
+        </section>
+
+
+
+        {/* For MObile */}
+
+        <section className="fleet-section sm:hidden block">
           <div className="fleet-stats">
             <div className="stat">
               <h2 className="stat-number">500+</h2>
@@ -30,8 +92,9 @@ export default function FleetPower() {
               <h2 className="stat-number ">20</h2>
               <div className="divider"></div>
               <p className="stat-text">
-                Flatbeds – For industrial,<br/> oversized, and non <br/>containerized
-                cargo
+                Flatbeds – For industrial,
+                <br /> oversized, and non <br />
+                containerized cargo
               </p>
             </div>
           </div>

@@ -102,7 +102,10 @@ export default function Footer() {
                     alt="call"
                     className="mt-1 "
                   />
-                  <p>admin@transexpert.ca</p>
+                  <p>
+                    <span>admin@transexpert.ca</span><br/>
+                    <span>We reply within 24 hours</span>
+                  </p>
                 </div>
 
                 <Link href="/contact-us">

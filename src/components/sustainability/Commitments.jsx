@@ -34,7 +34,7 @@ export default function Commitments() {
       logo: "/images/assets/heart-health-muscle.png",
     },
     {
-      title: "Health & Safety",
+      title: "Health & \n Safety",
       description:
         "Strict adherence to safety protocols and proactive training for every team member.",
       logo: "/images/assets/shield-check.png",
@@ -52,7 +52,7 @@ export default function Commitments() {
       logo: "/images/assets/crm-alt.png",
     },
     {
-      title: "Supplier Ethics",
+      title: "Supplier \n Ethics",
       description:
         "Fair treatment and shared sustainability values throughout our supply chain.",
       logo: "/images/assets/supplier-alt.png",
@@ -106,7 +106,7 @@ export default function Commitments() {
             >
               <Image alt={c.title} src={c.logo} width={36} height={36} />
               <div className="flex flex-col gap-5">
-                <p className="heading !mb-0 text-center">{c.title}</p>
+                <p className="heading heading-line-break !mb-0 text-center">{c.title}</p>
                 <p className="subheading text-center">{c.description}</p>
               </div>
             </div>

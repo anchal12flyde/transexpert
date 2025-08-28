@@ -5,13 +5,15 @@ import dynamic from "next/dynamic";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import { useRouter } from "next/navigation";
+
 const Slider = dynamic(() => import("react-slick").then((m) => m.default), {
   ssr: false,
 });
 
 const Blog = () => {
   const [isMobile, setIsMobile] = useState(false);
-
+  const router = useRouter();
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -56,11 +58,14 @@ const Blog = () => {
         <Slider {...sliderSettings}>
           {blogData.map((item, idx) => (
             <div key={idx} className="">
-              <div className="blog-box transition-transform duration-500 h-[420px]">
+              <div
+                className="blog-box transition-transform duration-500 h-[420px]"
+                onClick={() => router.push("/blogs")}
+              >
                 <img src={item.img} alt="Truck" className="blog-image" />
                 <div className="blog-content">
                   <div className="title-with-icon">
-                    <h3 className="card_heading">{item.title}</h3>
+                    <h3 className="card_heading ">{item.title}</h3>
                     <div className="arrow-icon">
                       <img src="/images/assets/arrowUp.png" alt="Arrow" />
                     </div>
@@ -76,11 +81,17 @@ const Blog = () => {
       ) : (
         <div className="blog-grid">
           {blogData.map((item, idx) => (
-            <div className="blog-box" key={idx}>
+            <div
+              className="blog-box"
+              key={idx}
+              onClick={() => router.push("/blogs")}
+            >
               <img src={item.img} alt="Truck" className="blog-image" />
               <div className="blog-content">
                 <div className="title-with-icon">
-                  <h3 className="card_heading">{item.title}</h3>
+                  <h3 className="card_heading macbook-card_heading">
+                    {item.title}
+                  </h3>
                   <div className="arrow-icon">
                     <img src="/images/assets/arrowUp.png" alt="Arrow" />
                   </div>

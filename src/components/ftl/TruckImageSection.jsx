@@ -46,9 +46,9 @@ export default function TruckImageSection({
             </p>
             <p className="text-white text-[20px] mb-6">{overlay.description}</p>
 
-            <ul className="space-y-3 text-white ml-[-34px]">
+            <ul className="space-y-3 text-white ml-[-20px]">
               {overlay.points.map((point, i) => (
-                <li key={i} className="flex items-center gap-[26px]">
+                <li key={i} className="flex items-center gap-[16]">
                   <span className="bg-red-500 w-[8px] h-[46px] rounded-full"></span>
                   <span className="text-[20px]">{point}</span>
                 </li>

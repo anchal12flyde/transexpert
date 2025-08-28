@@ -5,7 +5,7 @@ export default function differentComp({ title, imageSrc, points }) {
         {/* Left side */}
         <div className="downtime-left1">
           <h2
-            className="hero-section-heading mb-[16px]"
+            className="hero-section-heading hero-section-heading-macbook mb-[16px]"
             dangerouslySetInnerHTML={{ __html: title }}
           />
           <img src={imageSrc} alt="Fleet" className="downtime-image" />

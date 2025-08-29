@@ -133,9 +133,9 @@ export default function Header({ isScrolled = false }) {
                     </div>
 
                     {/* Right Side Promo */}
-                    <div className="bg-gray-50 shrink-0   rounded-xl flex flex-col justify-between !w-[320px] ">
+                    <div className="bg-gray-50 shrink-0  rounded-xl flex flex-col justify-between !w-[320px] ">
                       <Image
-                        src="/images/assets/mmimg.png"
+                        src="/images/assets/sbg.png"
                         alt="Promo"
                         width={300}
                         height={180}

@@ -47,6 +47,14 @@ export default function HeroSection({ isScrolled }) {
     return () => window.removeEventListener("resize", calcValues);
   }, []);
 
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   // console.log(isScrolled);
   return (
     <>

@@ -94,7 +94,9 @@ export default function Header({ isScrolled = false }) {
             <div
               className="relative hidden lg:block"
               onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
+              onMouseLeave={() => {
+                setTimeout(setServicesOpen(false), 2000);
+              }}
             >
               <button className="flex items-center gap-1 nav-link">
                 Services <ChevronDown className="h-4 w-4" />

@@ -46,6 +46,9 @@ export default function Environmental() {
             <button className="hero-button">Apply Now</button>
           </div>
         </div>
+        <div className="drive-image">
+          <img src="/images/assets/drive-x.png" alt="Decoration" />
+        </div>
       </section>
     </>
   );

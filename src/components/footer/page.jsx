@@ -97,7 +97,7 @@ export default function Footer() {
                 <div className="flex items-start gap-2 pb-[25px]">
                   <Image
 
-                  
+
                     src="/images/assets/mail.png"
                     width={16}
                     height={16}
@@ -156,7 +156,7 @@ export default function Footer() {
               {/* <li>Services</li> */}
               <li>Careers</li>
               <li>
-                <Link href="/blogs">Blog Posts</Link>
+                <Link href="/blogs">Blog</Link>
               </li>
               <li>
                 <Link href="/industries">Industries</Link>

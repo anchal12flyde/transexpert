@@ -117,7 +117,7 @@ export default function Commitments() {
         <div className="block sm:hidden relative">
           <Slider {...mobileSettings}>
             {certificationsData.map((c, index) => (
-              <div key={index} className="px-2">
+              <div key={index} className="px-2 pb-1 pt-1 ">
                 <div className="flex flex-col items-center rounded-[16px] px-[22px] py-[34px] gap-6 bshadow bg-white h-[320px]">
                   <Image alt={c.title} src={c.logo} width={36} height={36} />
                   <div className="flex flex-col gap-5">

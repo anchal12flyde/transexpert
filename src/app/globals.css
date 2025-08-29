@@ -187,17 +187,17 @@ body::-webkit-scrollbar {
   text-decoration: none;
   color: inherit;
 }
-@media (max-width:1300px){
+@media (min-width: 1000px) and (max-width: 1300px){
   .nav-links{
     gap: 24px;
   }
 }
-@media (max-width:1300px){
+@media (min-width: 1000px) and (max-width: 1300px){
   .macbook-navlink{
     gap: 22px;
   }
 }
-@media (max-width:1300px){
+@media (min-width: 1000px) and (max-width: 1300px){
   .macbook{
     gap: 54px;
   }
@@ -271,7 +271,7 @@ body::-webkit-scrollbar {
     margin-top: 2cm;
   }
 }
-@media (max-width:1350px){
+@media (min-width: 1000px) and (max-width: 1300px){
   .hero-heading-macbook{
     width: 700px;
   }
@@ -384,7 +384,7 @@ body::-webkit-scrollbar {
   padding: 78px 104px;
   /* border: 5px solid red; */
 }
-@media (max-width: 1300px) {
+@media (min-width: 1000px) and (max-width: 1300px){
   .overlay-blue {
     width: 455px;
     padding: 70px 52px;
@@ -469,7 +469,10 @@ span:has(img) {
   }
 }
 
-@media screen and (max-width: 1300px) {
+@media 
+
+
+screen and (max-width: 1300px) {
   .square-video {
     position: absolute;
     top: -20%;
@@ -637,7 +640,7 @@ span:has(img) {
     padding-right: 252px;
   }
 }
-@media (max-width: 1300) {
+@media (min-width: 1000px) and (max-width: 1300px) {
   .testimonial-cards {
     bottom: 5%;
   }
@@ -998,7 +1001,7 @@ span:has(img) {
     letter-spacing: 0.4px;
   }
 }
-@media (max-width: 1300px) {
+@media (min-width: 1000px) and (max-width: 1300px){
   .text {
     font-size: 28px;
   }
@@ -1025,7 +1028,7 @@ span:has(img) {
     font-size: 25px;
   }
   .number-anime {
-    transform: translateY(2px);
+    top: 1px;
     margin: 0 0.25rem;
   }
 }
@@ -1137,16 +1140,22 @@ span:has(img) {
   right: 0;
   bottom: 0;
   height: 315px;
-  width: 380px;
+  width: 360px;
   opacity: 0.22;
 mix-blend-mode: multiply;
 flex-shrink: 0;
+}
+@media (max-width:768px){
+  .drive-image {
+    height: 140px;
+  width: 160px;
+  }
 }
 .macbook-map-padding{
   padding-bottom: 210px;
   margin-left: -38px;
 }
-@media (max-width:1300px){
+@media (min-width: 1000px) and (max-width: 1300px){
   .macbook-map-padding{
   padding-bottom: 80;
   }
@@ -1330,7 +1339,7 @@ flex-shrink: 0;
     gap: 5px;
   }
 }
-@media (max-width:1300px){
+@media (min-width: 1000px) and (max-width: 1300px){
   .title-with-icon {
     gap: 0;
   }
@@ -1358,7 +1367,7 @@ flex-shrink: 0;
   line-height: normal;
   flex: 1;
 }
-@media (max-width:1300px){
+@media (min-width: 1000px) and (max-width: 1300px){
   .macbook-card_heading{
     font-size: 22px;
   }
@@ -1638,7 +1647,7 @@ line-height: normal;
   padding: 0;
   z-index: 10;
 }
-@media (max-width:1300px){
+@media (min-width: 1000px) and (max-width: 1300px){
   .outer-float-box{
     position: absolute;
   bottom: -40%;
@@ -2348,7 +2357,7 @@ line-height: normal;
   }
 }
 
-@media (max-width: 1300px) {
+@media (min-width: 1000px) and (max-width: 1300px){
   .hero-section-heading-macbook{
     font-size: 44px;
   }
@@ -2612,7 +2621,7 @@ Certifications */
   font-size: 28px;
   font-weight: 600;
 }
-@media (max-width:1300px){
+@media (min-width: 1000px) and (max-width: 1300px){
   .tab-header{
     font-size: 24px;
   }
@@ -2731,7 +2740,7 @@ Certifications */
   grid-template-columns: 1fr 2fr;
   gap: 78px;
 }
-@media (max-width: 1300px) {
+@media (min-width: 1000px) and (max-width: 1300px) {
   .industries__grid {
     gap: 42px;
    
@@ -2744,7 +2753,7 @@ Certifications */
   margin-top: 78px;
   margin-bottom: 78px;
 }
-@media (max-width: 1300px) {
+@media (min-width: 1000px) and (max-width: 1300px) {
   .industries__grid1 {
     gap: 42px;
     margin-top: 42px;
@@ -2757,7 +2766,7 @@ Certifications */
   border-radius: 0 0 0 120px;
   color: #fff;
 }
-@media (max-width: 1300px) {
+@media (min-width: 1000px) and (max-width: 1300px) {
   .industries__card {
     padding: 22px 60px;
     border-radius: 0 0 0 94px;
@@ -2771,7 +2780,7 @@ Certifications */
   border-radius: 0 0 120px 0;
   color: #fff;
 }
-@media (max-width: 1300px) {
+@media (min-width: 1000px) and (max-width: 1300px) {
   .industries__card1 {
     padding: 22px 60px;
   }
@@ -2792,13 +2801,13 @@ Certifications */
   font-weight: 600;
   margin-bottom: 15px;
 }
-@media (max-width:1300px){
+@media (min-width: 1000px) and (max-width: 1300px){
   .industries__title {
     margin-bottom: 7px;
   }  
 }
 
-@media (max-width : 1300px){
+@media (min-width: 1000px) and (max-width: 1300px){
   .macbookAit{
     left: -11cm;
   }
@@ -3222,7 +3231,7 @@ textarea {
   font-size: 24px;
 }
 
-@media (max-width: 1300px) {
+@media (min-width: 1000px) and (max-width: 1300px) {
   .macbookDev {
     flex-direction: column;
     gap: 10px;

@@ -128,7 +128,7 @@ export default function RecognizedCertifications() {
         <div className="block sm:hidden relative mb-[80px]">
           <Slider {...mobileSettings}>
             {certificationsData.map((c, index) => (
-              <div key={index} className="px-2">
+              <div key={index} className="px-2 pb-1 pt-1">
                 <div className="flex flex-col items-center justify-center text-center rounded-[16px] px-[22px] py-[34px] gap-6 bshadow bg-white h-[340px]">
                   <Image alt={c.title} src={c.logo} width={120} height={120} />
                   <div className="flex flex-col gap-3 mt-4">

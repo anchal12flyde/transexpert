@@ -48,7 +48,9 @@ export default function Industries() {
         </motion.div>
 
         {/* Right Side */}
+       
         <div className="industries-cards">
+          
           {[
             { img: "/images/assets/Wholesale.jpg", label: "Wholesale" },
             { img: "/images/assets/Retail.jpg", label: "Retail" },

@@ -1,6 +1,6 @@
 export default function DifferentComp({ title, imageSrc, points }) {
   return (
-    <section className="global-container mb-[78px]">
+    <section className="global-container mb-[78px]  ">
       <div className="downtime-container">
         {/* Left side */}
         <div className="downtime-left1"> 

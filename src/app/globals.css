@@ -1139,7 +1139,7 @@ screen and (max-width: 1300px) {
   position: absolute;
   right: 0;
   bottom: 0;
-  height: 315px;
+  height: 300px;
   width: 360px;
   opacity: 0.22;
 mix-blend-mode: multiply;
@@ -2337,7 +2337,7 @@ line-height: normal;
 
 /* Section container */
 .downtime-container {
-  margin-top: 78px;
+  margin-top: 42px;
   display: flex;
   flex-direction: column;
   gap: 100px;
@@ -2346,6 +2346,7 @@ line-height: normal;
 @media (min-width: 768px) {
   .downtime-container {
     flex-direction: row;
+    margin-top: 78px;
   }
 
   .downtime-left {

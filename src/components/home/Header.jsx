@@ -95,7 +95,7 @@ export default function Header({ isScrolled = false }) {
               className="relative hidden lg:block"
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => {
-                setTimeout(setServicesOpen(false), 2000);
+                setTimeout(() => setServicesOpen(false), 2000);
               }}
             >
               <button className="flex items-center gap-1 nav-link">

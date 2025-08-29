@@ -116,7 +116,6 @@ export default function HeroSection({ isScrolled }) {
           <br />
           <p className="testimonial-source">Paper Manufacturing Industry</p>
         </div>
-        
 
         <div className="testimonial-cards  ">
           <div className=" flex justify-end ">
@@ -130,7 +129,7 @@ export default function HeroSection({ isScrolled }) {
           <div className="card" onClick={() => router.push("/ftl")}>
             <div className="img-wrapper">
               <img
-                src="/images/img2.png"
+                src="/images/assets/Full Truck Load.png"
                 alt="Full Truck Load"
                 className="h-auto object-cover"
               />
@@ -159,7 +158,7 @@ export default function HeroSection({ isScrolled }) {
           >
             <div className="img-wrapper">
               <img
-                src="/images/img1.png"
+                src="/images/assets/Refigereted.png"
                 alt="Full Truck Load"
                 className="h-auto object-cover"
               />
@@ -184,7 +183,7 @@ export default function HeroSection({ isScrolled }) {
           <div className="card" onClick={() => router.push("/cross-border")}>
             <div className="img-wrapper">
               <img
-                src="/images/img2.png"
+                src="/images/assets/Cross Border.png"
                 alt="Full Truck Load"
                 className="h-auto object-cover"
               />
@@ -210,7 +209,7 @@ export default function HeroSection({ isScrolled }) {
           <div className="card" onClick={() => router.push("/cross-docking")}>
             <div className="img-wrapper">
               <img
-                src="/images/img1.png"
+                src="/images/assets/Cross Docking.png"
                 alt="Full Truck Load"
                 className="h-auto object-cover"
               />

@@ -1,7 +1,7 @@
 {
   "ftl": {
     "hero": {
-      "imageSrc": "/images/ftl hero section.png",
+      "imageSrc": "/images/assets/FTL Cover.png",
       "title": "Full Truckload",
       "subtitle": "Dedicated Capacity.<br/>Consistent Performance.",
       "description": "At Trans Expert Inc., compliance isn’t an afterthought, it’s the foundation of how we operate. Our certifications are more than checkboxes; they are a daily commitment to safety, security, and performance."
@@ -43,7 +43,7 @@
   },
   "temperatureControlled": {
     "hero": {
-      "imageSrc": "/images/ftl hero section.png",
+      "imageSrc": "/images/assets/Refigerated Cover.png",
       "title": "Temperature-Controlled Transport",
       "subtitle": "Precision Cooling.<br/> Reliable Delivery.",
       "description": "At Trans Expert Inc., we understand that temperature-sensitive cargo requires more than just refrigeration — it requires consistency, vigilance, and compliance at every mile. Our temperature-controlled transport services are purpose-built to protect your products from origin to destination."
@@ -86,7 +86,7 @@
   },
   "crossBorder": {
     "hero": {
-      "imageSrc": "/images/ftl hero section.png",
+      "imageSrc": "/images/assets/Cross Border Cover.png",
       "title": "Cross-border Logistics",
       "subtitle": "Seamless Borders.<br/> Limitless Reach.",
       "description": "Navigating customs and compliance is complex. That’s why Trans Expert Inc. makes cross-border logistics feel local — with dedicated expertise, bilingual dispatchers, and end-to-end visibility across North America."
@@ -129,7 +129,7 @@
   },
   "crossDocking": {
     "hero": {
-      "imageSrc": "/images/ftl hero section.png",
+      "imageSrc": "/images/assets/Cross Docking Cover.png",
       "title": "Cross-docking Solutions",
       "subtitle": "Faster Turnaround.<br/> Leaner Supply Chains.",
       "description": "In today’s fast-moving supply chain, minimizing warehouse dwell time is key. Our cross-docking solutions reduce handling, cut costs, and accelerate delivery — keeping your freight moving and your margins intact."

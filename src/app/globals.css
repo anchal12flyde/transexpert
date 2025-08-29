@@ -1353,8 +1353,8 @@ flex-shrink: 0;
 
 .card_heading {
   /* color: var(--thm-black); */
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 24.316px;
+  font-weight: 400;
   line-height: normal;
   flex: 1;
 }
@@ -1371,7 +1371,27 @@ flex-shrink: 0;
     font-size: 20px;
   }
 }
-
+.related-post-subheading{
+  font-size: 16.211px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+color: var(--miscellaneous-keyboard-emoji-mic, rgba(27, 31, 38, 0.72));
+}
+.related-post-heading{
+  font-size: 24.316px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+@media (max-width:768px){
+  .related-post-subheading{
+    font-size: 10.997px;
+  }
+  .related-post-heading{
+    font-size: 16.495px;
+  }
+}
 .card_subheading {
   font-size: 16px;
   font-weight: 400;
@@ -2379,8 +2399,10 @@ line-height: normal;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  height: 416px;
   width: 100%;
   border-radius: 0 0 0 305px;
+  
 }
 .fleet-hero__image-wrap::before {
   position: absolute;
@@ -2416,6 +2438,7 @@ line-height: normal;
 }
 
 .fleet-hero__image {
+  background-position: center;
   object-fit: cover;
   width: 100%;
   height: auto;

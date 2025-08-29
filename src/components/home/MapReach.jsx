@@ -33,7 +33,7 @@ export default function GeographicalCoverage() {
         </motion.p>
       </div>
 
-      <div className="grid sm:grid-cols-12 gap-12">
+      <div className="grid sm:grid-cols-11 ">
         {/* Left side - Video */}
         <motion.div
           variants={fadeInUp}
@@ -48,7 +48,7 @@ export default function GeographicalCoverage() {
             loop
             muted
             playsInline
-            className="w-full h-full"
+            className="w-full h-full macbook-video"
           />
         </motion.div>
 
@@ -58,28 +58,30 @@ export default function GeographicalCoverage() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="hidden md:flex md:col-span-5 map-text flex-col justify-end"
+          className="hidden md:flex md:col-span-4 map-text flex-col justify-end  macbook-map-padding"
         >
-          <h2 className="heading">Geographical Coverage & Infrastructure</h2>
-          <p className="map_subheading">
+          <h2 className="heading ">Geographical Coverage & Infrastructure</h2>
+          <p className="map_subheading macbook-subheading">
             We move freight across Canada, the USA, and Mexico with speed and
             reliability.
           </p>
-          <p className="map_subheading mt-5">Operational Reach</p>
+          <p className="map_subheading mt-5 macbook-subheading">
+            Operational Reach
+          </p>
 
-          <p className="subheading para">
+          <p className="subheading para macbook-para">
             <span>Canada: </span>Ontario, Quebec, Nova Scotia, New Brunswick,
             Newfoundland and Labrador.
           </p>
-          <p className="subheading para">
+          <p className="subheading para macbook-para">
             <span>USA: </span> Extensive coverage across the continental United
             States.
           </p>
-          <p className="subheading para">
+          <p className="subheading para macbook-para">
             <span>Mexico: </span>Supported through trusted cross-border
             partnerships.
           </p>
-          <p className="subheading para">
+          <p className="subheading para macbook-para">
             Terminal Locations
             <br />
             Taylor (MI), Toledo (OH), Laredo (TX), Milton (ON), Cambridge (ON),
@@ -93,7 +95,7 @@ export default function GeographicalCoverage() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="global-container mb-[42px]"
+          className="global-container mb-[42px] sm:mb-[0]"
         >
           <div className="block md:hidden text-gray-800 mobile-map-text">
             <p className="map_subheading mt-5">Operational Reach</p>

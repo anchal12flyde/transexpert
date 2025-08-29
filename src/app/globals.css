@@ -641,9 +641,7 @@ span:has(img) {
   .testimonial-cards {
     bottom: 5%;
   }
-  .hero-section{
-    height: 180vh;
-  }
+ 
 }
 .testimonial-cards img {
   width: 180px;
@@ -1134,6 +1132,40 @@ span:has(img) {
 
 /* Carrer Banner */
 
+.drive-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 315px;
+  width: 380px;
+  opacity: 0.22;
+mix-blend-mode: multiply;
+flex-shrink: 0;
+}
+.macbook-map-padding{
+  padding-bottom: 210px;
+  margin-left: -38px;
+}
+@media (max-width:1300px){
+  .macbook-map-padding{
+  padding-bottom: 80;
+  }
+  .macbook-video{
+    width: 700px;
+  }
+  .macbook-map-padding h2{
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .macbook-map-padding
+  .macbook-subheading{
+    font-size: 20px;
+  }
+  .macbook-map-padding
+  .macbook-para{
+    font-size: 16px;
+  }
+}
 .careers-banner {
   position: relative;
   background-color: #27397a;
@@ -1352,7 +1384,7 @@ span:has(img) {
 }
 .map_subheading {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
 }
 @media (max-width: 767px) {
@@ -1394,31 +1426,40 @@ span:has(img) {
   padding: 78px 0;
   background: #fff;
 }
-
+@media (max-width:768px){
+  .industries-section {
+    padding: 42px 0;
+    background: #fff;
+  }
+ 
+}
 .industries-container {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 115px;
   margin: 0 auto;
   display: flex;
+  
+}
+
+@media (max-width: 768px) {
+  .industries-container {
+   
   flex-direction: column-reverse;
   gap: 16px;
-}
-
-@media (min-width: 768px) {
-  .industries-container {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 3.5rem;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) and (max-width: 1300px) {
   .industries-container {
-    gap: 6rem;
+    gap: 83px;
   }
 }
+
 
 .industries-text {
-  flex: 1.2;
+  flex: 1.13;
   padding-left: 126px;
 }
 
@@ -1436,13 +1477,10 @@ span:has(img) {
   }
 
   .industries-cards {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 0 30px;
   }
   .industries-cards > div {
     flex: 1;
@@ -1992,17 +2030,17 @@ span:has(img) {
   }
 }
 .map-text {
-  padding-right: 13vh;
+  padding-right: 126px;
 }
 @media (max-width: 768px) {
   .map-text {
-    padding-right: 3.5vh;
+    padding-right: 30px;
   }
 }
 
 @media (min-width: 1600px) {
   .map-text {
-    padding-right: 28vh;
+    padding-right: 252px;
   }
 }
 /* slick dots spacing override */

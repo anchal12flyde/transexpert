@@ -79,7 +79,9 @@ const CareersBanner = () => {
           </motion.button>
         </motion.div>
       </motion.div>
-     
+      <div className="drive-image">
+        <img src="/images/assets/drive-x.png" alt="Decoration" />
+      </div>
     </section>
   );
 };

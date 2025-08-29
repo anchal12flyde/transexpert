@@ -96,6 +96,8 @@ export default function Footer() {
                 </div>
                 <div className="flex items-start gap-2 pb-[25px]">
                   <Image
+
+                  
                     src="/images/assets/mail.png"
                     width={16}
                     height={16}

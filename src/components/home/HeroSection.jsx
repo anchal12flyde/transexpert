@@ -5,6 +5,7 @@ import Header from "./Header";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
+
 export default function HeroSection({ isScrolled }) {
   const overlayRef = useRef(null);
   const squareRef = useRef(null);
@@ -107,6 +108,7 @@ export default function HeroSection({ isScrolled }) {
           <br />
           <p className="testimonial-source">Paper Manufacturing Industry</p>
         </div>
+        
 
         <div className="testimonial-cards  ">
           <div className=" flex justify-end ">

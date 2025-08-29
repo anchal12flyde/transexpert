@@ -156,7 +156,7 @@ export default function Footer() {
               {/* <li>Services</li> */}
               <li>Careers</li>
               <li>
-                <Link href="/blogs">Blog</Link>
+                <Link href="/blogs">Blogs</Link>
               </li>
               <li>
                 <Link href="/industries">Industries</Link>

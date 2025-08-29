@@ -7,7 +7,6 @@ import Relaibility from "@/components/about/Relaibility";
 import CardsSection from "@/components/about/OurValues";
 import { useEffect, useRef, useState } from "react";
 import Footer from "@/components/footer/page";
-import GoToTop from "@/top";
 
 export default function page() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,7 +47,7 @@ export default function page() {
         <Relaibility />
         <Footer />
 
-        <GoToTop />
+        
       </div>
     </>
   );

@@ -2746,6 +2746,7 @@ Certifications */
    
   }
 }
+
 .industries__grid1 {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -2895,7 +2896,7 @@ Certifications */
   }
 
   .industries {
-    margin: 42px ;
+    margin:  42px 0;
   }
 
   .industries__card--text {

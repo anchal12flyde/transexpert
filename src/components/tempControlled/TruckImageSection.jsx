@@ -62,7 +62,7 @@ export default function TruckImageSection({
             )}
           </div>
 
-          <div className="section-blue rounded-2xl relative z-10 px-[30px] py-[30px] sm:hidden block">
+          <div className="section-blue rounded-2xl relative z-10 px-[30px] py-[30px] sm:hidden block mb-[47px]">
             <p className="ftl-heading text-white mb-4 text-center">
               {overlay.title}
             </p>

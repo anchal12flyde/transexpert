@@ -10,7 +10,7 @@ const fadeInUp = {
 export default function GeographicalCoverage() {
   return (
     <section className="bg-white">
-      <div className="global-container mb-[16px]">
+      <div className="global-container">
         <motion.h2
           variants={fadeInUp}
           initial="hidden"
@@ -48,7 +48,7 @@ export default function GeographicalCoverage() {
             loop
             muted
             playsInline
-            className="w-full h-auto"
+            className="w-full h-full"
           />
         </motion.div>
 

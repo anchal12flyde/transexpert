@@ -40,10 +40,10 @@ const CareersBanner = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.2 }}
       >
-        
         <motion.div
           className="careers-image-container-home"
-          variants={imageVariants}>
+          variants={imageVariants}
+        >
           <Image
             src="/images/assets/Frame.png"
             alt="Driver"
@@ -59,12 +59,12 @@ const CareersBanner = () => {
             Drive Your Future with TransExpert
           </motion.p>
 
-          <motion.p className="subheading pt-[10px]" variants={textVariants}>
+          <motion.p className="subheading pb-[8px]" variants={textVariants}>
             We're always looking for dedicated drivers, logistics pros, and
             problem-solvers to join our growing North American team.
           </motion.p>
 
-          <motion.p className="subheading" variants={textVariants}>
+          <motion.p className="subheading pb-[8px]" variants={textVariants}>
             We're always looking for dedicated drivers, logistics pros, and
             problem-solvers to join our growing North American team.
           </motion.p>
@@ -79,6 +79,7 @@ const CareersBanner = () => {
           </motion.button>
         </motion.div>
       </motion.div>
+     
     </section>
   );
 };

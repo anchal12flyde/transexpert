@@ -7,6 +7,7 @@ import Relaibility from "@/components/about/Relaibility";
 import CardsSection from "@/components/about/OurValues";
 import { useEffect, useRef, useState } from "react";
 import Footer from "@/components/footer/page";
+import GoToTop from "@/top";
 
 export default function page() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,7 +17,6 @@ export default function page() {
   useEffect(() => {
     skip("hero");
   }, [skip]);
-
 
   useEffect(() => {
     const container = containerRef.current;
@@ -40,14 +40,16 @@ export default function page() {
   return (
     <>
       <PageContentReady />
-    <div className="mainCon" ref={containerRef}>
-      {isScrolled && <Header isScrolled={isScrolled} />}
-      <AboutHero isScrolled={isScrolled} />
-      <CardsSection />
-      {/* <LeadershipSection /> */}
-      <Relaibility />
-      <Footer/>
-    </div>
+      <div className="mainCon" ref={containerRef}>
+        {isScrolled && <Header isScrolled={isScrolled} />}
+        <AboutHero isScrolled={isScrolled} />
+        <CardsSection />
+        {/* <LeadershipSection /> */}
+        <Relaibility />
+        <Footer />
+
+        <GoToTop />
+      </div>
     </>
   );
 }

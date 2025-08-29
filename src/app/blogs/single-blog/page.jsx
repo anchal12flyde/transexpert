@@ -35,16 +35,21 @@ export default function page() {
     };
   }, []);
 
+  const [calcValue, setCalcValue] = useState(0);
+
   return (
     <>
-
-<PageContentReady />
-    <div className="mainCon" ref={containerRef}>
-      {isScrolled && <Header isScrolled={isScrolled} />}
-      <SingleBlogHero isScrolled={isScrolled} />
-      <RelatedPost />
-      <Footer />
-    </div>
+      <PageContentReady />
+      <div className="mainCon" ref={containerRef}>
+        {isScrolled && <Header isScrolled={isScrolled} />}
+        <SingleBlogHero
+          isScrolled={isScrolled}
+          calcValue={calcValue}
+          setCalcValue={setCalcValue}
+        />
+        <RelatedPost calcValue={calcValue} setCalcValue={setCalcValue} />
+        <Footer />
+      </div>
     </>
   );
 }

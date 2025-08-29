@@ -1,8 +1,34 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Header from "../home/Header";
 
-export default function SingleBlogHero({ isScrolled }) {
+export default function SingleBlogHero({
+  isScrolled,
+  setCalcValue,
+  calcValue,
+}) {
+  const truckRef = useRef(null);
+  const overlayRef = useRef(null);
+
+  useEffect(() => {
+    if (overlayRef.current) {
+      const overlayEl = overlayRef.current;
+
+      const overlayHeight = overlayEl.offsetHeight;
+
+      // viewport se distance
+      const offsetFromTopViewport = overlayEl.getBoundingClientRect().top;
+
+      // document ke top se distance
+      const offsetFromTopDocument = offsetFromTopViewport + window.scrollY;
+
+      const calculatedValue = offsetFromTopDocument + (overlayHeight + 78) / 2;
+
+      setCalcValue(overlayHeight);
+    }
+  }, []);
+
   return (
     <section className="single-blog-hero">
       {!isScrolled && (
@@ -12,7 +38,7 @@ export default function SingleBlogHero({ isScrolled }) {
           <Header />
         </div>
       )}
-      <div className="global-container ">
+      <div className="global-container  " ref={overlayRef}>
         <div className="single-blog-overlay ">
           <div className="blog-card">
             <h1 className="hero-heading">

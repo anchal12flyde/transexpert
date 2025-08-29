@@ -22,7 +22,7 @@ export default function TruckImageSection({
       setCalcValue(value);
       setM(value);
     }
-  }, [setM]);
+  }, [setM]); 
 
   return (
     <div className="global-container sm:mt-[78px] mt-[42px]">

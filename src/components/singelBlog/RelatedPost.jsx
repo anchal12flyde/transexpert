@@ -1,8 +1,9 @@
 "use client";
 
-const RelatedPost = () => {
+const RelatedPost = ({ calcValue }) => {
+  console.log(calcValue);
   return (
-    <section className="blog-section global-container mt-[78px]">
+    <section className="blog-section global-container" style={{marginTop : `${calcValue - 50  }px` }} >
       <h2 className="heading ju">Related posts</h2>
 
       <div className="blog-grid-blog">

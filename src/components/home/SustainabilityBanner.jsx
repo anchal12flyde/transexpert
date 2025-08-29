@@ -16,14 +16,12 @@ const SustainabilityBanner = () => {
   return (
     <div className="content">
       <div className="heroSection">
-        <video
-          src="/images/videos/trucks_1.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
+        <img
+          src="/images/assets/Care-truck.jpg"
+          alt="background"
           className="backgroundVideo"
         />
+
         <div className="global-container">
           <div className="textOverlay">
             <motion.h2
@@ -42,7 +40,7 @@ const SustainabilityBanner = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false, amount: 0.3 }}
-              transition={{ delay: 0.2 }} 
+              transition={{ delay: 0.2 }}
             >
               Sustainability isn’t a campaign, it’s our operating system.
             </motion.p>

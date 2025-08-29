@@ -242,11 +242,7 @@ export default function HeroSection({ isScrolled }) {
           <div className="card1 ">
             <div className="img-wrapper1">
               <img src="/images/img2.png" alt="Full Truck Load" />
-              <img
-                src="/images/assets/redarrow.png"
-                alt="Arrow"
-                className="arrow-img1"
-              />
+              
             </div>
             <div className="card-overlay1 ">
               <div className="card-content flex flex-col justify-between  ">
@@ -261,7 +257,7 @@ export default function HeroSection({ isScrolled }) {
                   </div>
                   <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
                     <img
-                      src="/images/assets/x.png"
+                      src="/images/assets/vector2.png"
                       alt="Arrow"
                       className="w-full aspect-square scale-120 !ml-[.5cm] "
                     />
@@ -288,7 +284,7 @@ export default function HeroSection({ isScrolled }) {
                   </div>
                   <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
                     <img
-                      src="/images/assets/x.png"
+                      src="/images/assets/vector2.png"
                       alt="Arrow"
                       className="w-full aspect-square scale-120 !ml-[.5cm] "
                     />
@@ -314,7 +310,7 @@ export default function HeroSection({ isScrolled }) {
                   </div>
                   <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
                     <img
-                      src="/images/assets/x.png"
+                      src="/images/assets/vector2.png"
                       alt="Arrow"
                       className="w-full aspect-square scale-120 !ml-[.5cm] "
                     />
@@ -341,7 +337,7 @@ export default function HeroSection({ isScrolled }) {
                   </div>
                   <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
                     <img
-                      src="/images/assets/x.png"
+                      src="/images/assets/vector2.png"
                       alt="Arrow"
                       className="w-full aspect-square scale-120 !ml-[.5cm] "
                     />

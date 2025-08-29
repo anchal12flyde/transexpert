@@ -28,25 +28,25 @@ export default function Header({ isScrolled = false }) {
     {
       name: "Full Truckload",
       desc: "They’re about full control, full visibility, and full confidence.",
-      img: "/images/assets/mmimg.png",
+      img: "/images/assets/Full Truck Load.png",
       path: "/ftl",
     },
     {
       name: "Temp-Controlled Freight",
       desc: "We specialize in temperature-controlled freight that safeguards.",
-      img: "/images/assets/mmimg.png",
+      img: "/images/assets/Refigereted.png",
       path: "/temperature-controlled",
     },
     {
       name: "Cross Border",
       desc: "Our cross-docking solutions are designed to keep freight moving swiftly.",
-      img: "/images/assets/mmimg.png",
+      img: "/images/assets/Cross Border.png",
       path: "/cross-border",
     },
     {
       name: "Cross Docking",
       desc: "Our express delivery service is built for urgent freight that can’t afford to wait.",
-      img: "/images/assets/mmimg.png",
+      img: "/images/assets/Cross Docking.png",
       path: "/cross-docking",
     },
   ];
@@ -135,7 +135,7 @@ export default function Header({ isScrolled = false }) {
                     {/* Right Side Promo */}
                     <div className="bg-gray-50 shrink-0  rounded-xl flex flex-col justify-between !w-[320px] ">
                       <Image
-                        src="/images/assets/sbg.png"
+                        src="/images/assets/sbg.jpg"
                         alt="Promo"
                         width={300}
                         height={180}

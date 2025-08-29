@@ -10,7 +10,6 @@ export default function DifferentComp({ title, imageSrc, points }) {
           />
           <img src={imageSrc} alt="Fleet" className="downtime-image" />
         </div>
-
         {/* Right side */}
         <div className="downtime-right subheading">
           {points.map((text, i) => (

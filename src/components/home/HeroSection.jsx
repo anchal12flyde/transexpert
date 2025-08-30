@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import Header from "./Header";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Slider from "react-slick";
 
@@ -11,12 +10,41 @@ export default function HeroSection({ isScrolled }) {
   const squareRef = useRef(null);
   const router = useRouter();
 
+  const [baseWidth, setBaseWidth] = useState(0);
+  const [fullHeight, setFullHeight] = useState(0);
+
+  const greenBoxRef = useRef(null); // Reference for the green box (image)
+  const [greenBoxHeight, setGreenBoxHeight] = useState(0); // State to store green box height
+
+  const calcGreenBoxHeight = () => {
+    // Check if the green box reference is valid
+    if (greenBoxRef.current) {
+      const greenBoxRect = greenBoxRef.current.getBoundingClientRect();
+      setGreenBoxHeight(greenBoxRect.height); // Set height of green box
+      console.log(greenBoxHeight);
+    }
+  };
+
+  const handleImageLoad = () => {
+    // Recalculate height once the image is loaded
+    calcGreenBoxHeight();
+  };
+
+  useEffect(() => {
+    calcGreenBoxHeight(); // Call the function to measure height initially
+    window.addEventListener("resize", calcGreenBoxHeight); // Recalculate on window resize
+
+    return () => window.removeEventListener("resize", calcGreenBoxHeight); // Cleanup listener
+  }, []);
+
   useEffect(() => {
     const calcValues = () => {
       if (!overlayRef.current) return;
       const rect = overlayRef.current.getBoundingClientRect();
       const fullWidth = rect.width;
       const fullHeight = rect.height;
+
+      setFullHeight(fullHeight);
 
       // Full hypotenuse (Pythagoras theorem)
       const fullHypotenuse = Math.sqrt(fullWidth ** 2 + fullHeight ** 2);
@@ -30,16 +58,7 @@ export default function HeroSection({ isScrolled }) {
       // Hypotenuse for 100vh height
       const hypotenuseAt100vh = Math.sqrt(baseAt100vh ** 2 + vhHeight ** 2);
 
-      squareRef.current.style.width = `${baseAt100vh}px`;
-
-      console.clear();
-      console.log("=== Overlay Measurements ===");
-      console.log("Full Width (px):", fullWidth);
-      console.log("Full Height (px):", fullHeight);
-      console.log("Full Hypotenuse (px):", fullHypotenuse);
-      console.log("100vh Height (px):", vhHeight);
-      console.log("Base at 100vh (px):", baseAt100vh);
-      console.log("Hypotenuse at 100vh (px):", hypotenuseAt100vh);
+      setBaseWidth(baseAt100vh);
     };
 
     calcValues();
@@ -47,7 +66,7 @@ export default function HeroSection({ isScrolled }) {
     return () => window.removeEventListener("resize", calcValues);
   }, []);
 
-  var settings = {
+  const settings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -60,7 +79,6 @@ export default function HeroSection({ isScrolled }) {
     cssEase: "linear",
   };
 
-  // console.log(isScrolled);
   return (
     <>
       {!isScrolled && (
@@ -72,19 +90,23 @@ export default function HeroSection({ isScrolled }) {
       )}
       <section className="hero-section global-container ">
         <div ref={overlayRef} className="hero-diagonal-overlay"></div>
-        <div className="square-videon  hidden lg:block  ">
+        {/* <div
+          className="square-videon hidden lg:block"
+          style={{ width: `${baseWidth}px` }}
+        >
           <img
-            ref={squareRef}
+            ref={greenBoxRef}
             src="/images/assets/x.png"
             alt="Animation"
-            className=" squareimg h-full  "
+            className="border-6 border-green-500  "
+            onLoad={handleImageLoad} // Trigger height calculation on image load
           />
-        </div>
+        </div> */}
 
-        <div className="overlay-X-Mob lg:hidden "></div>
+        <div className="overlay-X-Mob lg:hidden"></div>
 
-        <div className="hero-content  ">
-          <h1 className=" hero-heading  hero-heading-macbook mb-[24px] lg:mb-[36px]">
+        <div className="hero-content">
+          <h1 className="hero-heading hero-heading-macbook mb-[24px] lg:mb-[36px]">
             We Don’t Just Move Freight. <br />
             We Power North American Enterprise.
           </h1>
@@ -133,16 +155,15 @@ export default function HeroSection({ isScrolled }) {
                 <img src="/images/assets/star.png" alt="star" />
               </div>
               <p>
-                TransExpert has been an exceptional partner to work with. Not
-                only have they brought forward strategic solutions, but have
-                allowed us to manage our business with peace-of-mind and strive
-                towards our value of delivering on Commitment and Customer
-                Focus. As a partner, if a solution does not exist they are
-                willing to work with you to assist in developing one or offering
-                alternative approaches.
+                Working with Transexpert has been a smooth experience. The team
+                is responsive, on time and doesn’t give a chance to disappoint.
+                They’re up to speed with planning to ensure loads are picked and
+                delivered on time.
               </p>
               <br />
-              <p className="testimonial-source">Paper Manufacturing Industry</p>
+              <p className="testimonial-source">
+                Construction Materials Industry
+              </p>
             </div>
           </Slider>
         </div>

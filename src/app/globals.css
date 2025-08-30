@@ -130,7 +130,7 @@ body::-webkit-scrollbar {
 @media (max-width: 768px) {
   .heading {
     font-size: 22px;
-    margin-bottom: 6px;
+    margin-bottom: 16px;
   }
 }
 
@@ -1309,7 +1309,7 @@ margin-top: 42px;
 @media (max-width: 767px) {
   .blog-grid-blog {
     grid-template-columns: 1fr;
-    gap: 5px;
+    gap: 30px;
   }
 }
 
@@ -1351,11 +1351,16 @@ margin-top: 42px;
   justify-content: space-between;
   align-items: flex-start;
   gap: 38px;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 @media (max-width: 768px) {
   .title-with-icon {
     gap: 5px;
+    margin-top: 16px;
+  }
+  .blog-content{
+    gap:8px;
+    padding-top: 5px;
   }
 }
 @media (min-width: 1000px) and (max-width: 1300px){

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Header from "./Header";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-
+import Slider from "react-slick";
 
 export default function HeroSection({ isScrolled }) {
   const overlayRef = useRef(null);
@@ -48,11 +48,16 @@ export default function HeroSection({ isScrolled }) {
   }, []);
 
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
   };
 
   // console.log(isScrolled);
@@ -97,24 +102,49 @@ export default function HeroSection({ isScrolled }) {
           </a>
         </div>
 
-        <div className="hero-testimonial ">
-          <div className="star-rating">
-            <img src="/images/assets/star.png" alt="star" />
-            <img src="/images/assets/star.png" alt="star" />
-            <img src="/images/assets/star.png" alt="star" />
-            <img src="/images/assets/star.png" alt="star" />
-            <img src="/images/assets/star.png" alt="star" />
-          </div>
-          <p>
-            TransExpert has been an exceptional partner to work with. Not only
-            have they brought forward strategic solutions, but have allowed us
-            to manage our business with peace-of-mind and strive towards our
-            value of delivering on Commitment and Customer Focus. As a partner,
-            if a solution does not exist they are willing to work with you to
-            assist in developing one or offering alternative approaches.
-          </p>
-          <br />
-          <p className="testimonial-source">Paper Manufacturing Industry</p>
+        <div className="hero-testimonial">
+          <Slider {...settings}>
+            <div className=" px-2">
+              <div className="star-rating">
+                <img src="/images/assets/star.png" alt="star" />
+                <img src="/images/assets/star.png" alt="star" />
+                <img src="/images/assets/star.png" alt="star" />
+                <img src="/images/assets/star.png" alt="star" />
+                <img src="/images/assets/star.png" alt="star" />
+              </div>
+              <p>
+                TransExpert has been an exceptional partner to work with. Not
+                only have they brought forward strategic solutions, but have
+                allowed us to manage our business with peace-of-mind and strive
+                towards our value of delivering on Commitment and Customer
+                Focus. As a partner, if a solution does not exist they are
+                willing to work with you to assist in developing one or offering
+                alternative approaches.
+              </p>
+              <br />
+              <p className="testimonial-source">Paper Manufacturing Industry</p>
+            </div>
+            <div className=" px-2 ">
+              <div className="star-rating">
+                <img src="/images/assets/star.png" alt="star" />
+                <img src="/images/assets/star.png" alt="star" />
+                <img src="/images/assets/star.png" alt="star" />
+                <img src="/images/assets/star.png" alt="star" />
+                <img src="/images/assets/star.png" alt="star" />
+              </div>
+              <p>
+                TransExpert has been an exceptional partner to work with. Not
+                only have they brought forward strategic solutions, but have
+                allowed us to manage our business with peace-of-mind and strive
+                towards our value of delivering on Commitment and Customer
+                Focus. As a partner, if a solution does not exist they are
+                willing to work with you to assist in developing one or offering
+                alternative approaches.
+              </p>
+              <br />
+              <p className="testimonial-source">Paper Manufacturing Industry</p>
+            </div>
+          </Slider>
         </div>
 
         <div className="testimonial-cards  ">

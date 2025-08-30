@@ -94,16 +94,18 @@ export default function Header({ isScrolled = false }) {
             <div
               className="relative hidden lg:block"
               onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => {
-                setTimeout(() => setServicesOpen(false), 600);
-              }}
             >
               <button className="flex items-center gap-1 nav-link">
                 Services <ChevronDown className="h-4 w-4" />
               </button>
 
               {servicesOpen && (
-                <div className="absolute left-[-12.5cm] px-[32px] py-[34px] top-full mt-2 w-[1254px] macbookAit bg-white shadow-xl rounded-xl  z-50">
+                <div
+                  onMouseLeave={() => {
+                    setServicesOpen(false);
+                  }}
+                  className="absolute left-[-12.5cm] px-[32px] py-[34px] top-full mt-2 w-[1254px] macbookAit bg-white shadow-xl rounded-xl  z-50"
+                >
                   <div className="flex  gap-[51px] ">
                     {/* Services list */}
                     <div className="grid grid-cols-2 w-[934px]  gap-6  ">
@@ -111,15 +113,15 @@ export default function Header({ isScrolled = false }) {
                         <Link
                           key={s.name}
                           href={s.path}
-                          className="flex gap-3  items-start hover:bg-gray-50 h-fit  rounded-lg transition"
+                          className="flex gap-3  items-start hover:bg-gray-50 h-fit  rounded-lg transition  "
                         >
-                          <div className="!w-[111px]    shrink-0 ">
+                          <div className="!w-[111px] aspect-[16/12]   shrink-0 ">
                             <Image
                               src={s.img}
                               alt={s.name}
                               width={111}
                               height={81}
-                              className="rounded-[8px]   "
+                              className="rounded-[8px] object-cover w-full h-full   "
                             />
                           </div>
                           <div>

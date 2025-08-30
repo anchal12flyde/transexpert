@@ -12,7 +12,7 @@ import services from "@/components/services/services.json";
 
 export default function FTL() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const containerRef = useRef(null);
+  const containerRef = useRef < HTMLDivElement > null;
   const [m, setM] = useState(0);
   const { PageContentReady, skip } = useLoader();
   const data = services.ftl;
@@ -24,35 +24,39 @@ export default function FTL() {
 
   // Wait for all images to load before hiding loader
   useEffect(() => {
-    const images = Array.from(document.querySelectorAll("img"));
-    let loadedCount = 0;
+    const observer = new MutationObserver(() => checkImages());
+    observer.observe(document.body, { childList: true, subtree: true });
 
-    if (images.length === 0) {
-      PageContentReady();
-      return;
+    function checkImages() {
+      const images = Array.from(document.querySelectorAll("img"));
+      let loadedCount = 0;
+
+      if (images.length === 0) {
+        PageContentReady();
+        return;
+      }
+
+      const handleLoad = () => {
+        loadedCount++;
+        if (loadedCount === images.length) {
+          PageContentReady();
+          observer.disconnect(); // stop observing once all images are loaded
+        }
+      };
+
+      images.forEach((img) => {
+        if (img.complete) handleLoad();
+        else {
+          img.addEventListener("load", handleLoad, { once: true });
+          img.addEventListener("error", handleLoad, { once: true });
+        }
+      });
     }
 
-    const handleLoad = () => {
-      loadedCount++;
-      if (loadedCount === images.length) {
-        PageContentReady();
-      }
-    };
+    // initial check
+    checkImages();
 
-    images.forEach((img) => {
-      if (img.complete) handleLoad();
-      else {
-        img.addEventListener("load", handleLoad);
-        img.addEventListener("error", handleLoad);
-      }
-    });
-
-    return () => {
-      images.forEach((img) => {
-        img.removeEventListener("load", handleLoad);
-        img.removeEventListener("error", handleLoad);
-      });
-    };
+    return () => observer.disconnect();
   }, [PageContentReady]);
 
   // Scroll detection for sticky header
@@ -73,16 +77,13 @@ export default function FTL() {
   }, []);
 
   return (
-    <>
-      <PageContentReady />
-      <div className="mainCon" ref={containerRef}>
-        {isScrolled && <Header isScrolled={isScrolled} />}
-        <HeroSectionFTL isScrolled={isScrolled} {...data.hero} />
-        <TruckImageSection {...data.truckImageSection} setM={setM} />
-        <StripFtl {...data.strip} m={m} />
-        <WeAreDifferent {...data.weAreDifferent} />
-        <Footer />
-      </div>
-    </>
+    <div className="mainCon" ref={containerRef}>
+      {isScrolled && <Header isScrolled={isScrolled} />}
+      <HeroSectionFTL isScrolled={isScrolled} {...data.hero} />
+      <TruckImageSection {...data.truckImageSection} setM={setM} />
+      <StripFtl {...data.strip} m={m} />
+      <WeAreDifferent {...data.weAreDifferent} />
+      <Footer />
+    </div>
   );
 }

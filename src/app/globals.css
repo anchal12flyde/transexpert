@@ -821,20 +821,16 @@ screen and (max-width: 1300px) {
 }
 @media (max-width: 768px){
   .card-overlay1 .card-content h3 {
-    font-size: 20px;
+    font-size: 16px;
 font-style: normal;
 font-weight: 500;
 line-height: 20px;
+margin: 0;
+padding-left: 10px;
+padding-right: 10px;
   }
 }
-.card-overlay1 .card-content h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding-left: 10px;
-  padding-right: 10px;
-  /* border: 1px solid red; */
-}
+
 
 .card-overlay1 .card-content p {
   margin-top: 0.5rem;

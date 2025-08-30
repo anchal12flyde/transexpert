@@ -1,6 +1,7 @@
 "use client";
 
 import { useLoader } from "@/components/GlobalLoader";
+
 import Header from "@/components/home/Header";
 import Footer from "@/components/footer/page";
 import { useEffect, useRef, useState } from "react";
@@ -12,7 +13,7 @@ import DifferentComp from "@/components/tempControlled/differentComp";
 
 export default function TempControlled() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const containerRef = (useRef < HTMLDivElement) | (null > null);
+  const containerRef = useRef(null);
   const [m, setM] = useState(0);
   const { PageContentReady, skip } = useLoader();
   const data = services.temperatureControlled;
@@ -24,39 +25,35 @@ export default function TempControlled() {
 
   // Wait for all images to load before hiding loader
   useEffect(() => {
-    const observer = new MutationObserver(() => checkImages());
-    observer.observe(document.body, { childList: true, subtree: true });
+    const images = Array.from(document.querySelectorAll("img"));
+    let loadedCount = 0;
 
-    function checkImages() {
-      const images = Array.from(document.querySelectorAll("img"));
-      let loadedCount = 0;
-
-      if (images.length === 0) {
-        PageContentReady();
-        return;
-      }
-
-      const handleLoad = () => {
-        loadedCount++;
-        if (loadedCount === images.length) {
-          PageContentReady();
-          observer.disconnect(); // stop observing once all images are loaded
-        }
-      };
-
-      images.forEach((img) => {
-        if (img.complete) handleLoad();
-        else {
-          img.addEventListener("load", handleLoad, { once: true });
-          img.addEventListener("error", handleLoad, { once: true });
-        }
-      });
+    if (images.length === 0) {
+      PageContentReady();
+      return;
     }
 
-    // initial check for images
-    checkImages();
+    const handleLoad = () => {
+      loadedCount++;
+      if (loadedCount === images.length) {
+        PageContentReady();
+      }
+    };
 
-    return () => observer.disconnect();
+    images.forEach((img) => {
+      if (img.complete) handleLoad();
+      else {
+        img.addEventListener("load", handleLoad);
+        img.addEventListener("error", handleLoad);
+      }
+    });
+
+    return () => {
+      images.forEach((img) => {
+        img.removeEventListener("load", handleLoad);
+        img.removeEventListener("error", handleLoad);
+      });
+    };
   }, [PageContentReady]);
 
   // Scroll detection for sticky header
@@ -77,13 +74,16 @@ export default function TempControlled() {
   }, []);
 
   return (
-    <div className="mainCon" ref={containerRef}>
-      {isScrolled && <Header isScrolled={isScrolled} />}
-      <HeroSectionFTL isScrolled={isScrolled} {...data.hero} />
-      <TruckImageSection {...data.truckImageSection} setM={setM} />
-      <StripFtl {...data.strip} m={m} />
-      <DifferentComp {...data.weAreDifferent} />
-      <Footer />
-    </div>
+    <>
+      <PageContentReady />
+      <div className="mainCon" ref={containerRef}>
+        {isScrolled && <Header isScrolled={isScrolled} />}
+        <HeroSectionFTL isScrolled={isScrolled} {...data.hero} />
+        <TruckImageSection {...data.truckImageSection} setM={setM} />
+        <StripFtl {...data.strip} m={m} />
+        <DifferentComp {...data.weAreDifferent} />
+        <Footer />
+      </div>
+    </>
   );
 }

@@ -69,7 +69,7 @@ export default function AllBlogs() {
     <>
       <PageContentReady />
       <div ref={containerRef}>
-        <Header isScrolled={isScrolled} />
+        <Header isScrolled={true} />
         <HomeGrid />
         <TopStories />
         <Footer />

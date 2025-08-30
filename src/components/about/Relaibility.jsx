@@ -4,7 +4,7 @@ import Image from "next/image";
 const Relaibility = () => {
   return (
     <>
-      <div className="global-container mb-[78px]">
+      <div className="global-container  mb-[42px] sm:mb-[78px]">
         <section className="careers-banner careers-banner_border">
           <div className="careers-content-wrapper drive_div">
             {/* Left Image */}

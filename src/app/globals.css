@@ -130,7 +130,7 @@ body::-webkit-scrollbar {
 @media (max-width: 768px) {
   .heading {
     font-size: 22px;
-    margin-bottom: 6px;
+    margin-bottom: 16px;
   }
 }
 
@@ -1309,7 +1309,7 @@ margin-top: 42px;
 @media (max-width: 767px) {
   .blog-grid-blog {
     grid-template-columns: 1fr;
-    gap: 5px;
+    gap: 30px;
   }
 }
 
@@ -1351,11 +1351,16 @@ margin-top: 42px;
   justify-content: space-between;
   align-items: flex-start;
   gap: 38px;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 @media (max-width: 768px) {
   .title-with-icon {
     gap: 5px;
+    margin-top: 16px;
+  }
+  .blog-content{
+    gap:8px;
+    padding-top: 5px;
   }
 }
 @media (min-width: 1000px) and (max-width: 1300px){
@@ -1894,15 +1899,13 @@ line-height: normal;
   border-radius: 12px;
   overflow: hidden;
   width: 100%;
-  max-width: 380px;
   height: 100%;
-
   transition: transform 0.3s ease;
 }
 
 .card-image {
   width: 100%;
-  height: 40vh;
+  height: 350px;
   object-fit: cover;
   display: block;
 }
@@ -1941,6 +1944,10 @@ line-height: normal;
     flex: 0 0 auto;
     scroll-snap-align: start;
     border-radius: 10px;
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
   .cards-section {
     margin-top: 342px;

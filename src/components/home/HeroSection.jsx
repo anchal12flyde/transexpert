@@ -278,8 +278,8 @@ export default function HeroSection({ isScrolled }) {
               <div className="card-overlay1 ">
                 <div className="card-content flex flex-col justify-between  ">
                   <h3>Full Truck Load</h3>
-                  <div className=" flex items-center justify-between">
-                    <div className="!w-[40px]  pb-[10px] ">
+                  <div className=" flex justify-between">
+                    <div className="!w-[40px]   ">
                       <img
                         src="/images/assets/redarrow.png"
                         alt="Arrow"
@@ -290,7 +290,7 @@ export default function HeroSection({ isScrolled }) {
                       <img
                         src="/images/assets/vector2.png"
                         alt="Arrow"
-                        className="w-full aspect-square scale-120 !ml-[.5cm] "
+                        className="x-icon "
                       />
                     </div>
                   </div>
@@ -310,7 +310,7 @@ export default function HeroSection({ isScrolled }) {
               <div className="card-content flex flex-col justify-between  ">
                 <h3>Temperature Controlled</h3>
                 <div className=" flex items-center justify-between    ">
-                  <div className="!w-[40px]  pb-[10px] ">
+                  <div className="!w-[40px]  ">
                     <img
                       src="/images/assets/redarrow.png"
                       alt="Arrow"
@@ -321,7 +321,7 @@ export default function HeroSection({ isScrolled }) {
                     <img
                       src="/images/assets/vector2.png"
                       alt="Arrow"
-                      className="w-full aspect-square scale-120 !ml-[.5cm] "
+                      className="x-icon "
                     />
                   </div>
                 </div>
@@ -339,7 +339,7 @@ export default function HeroSection({ isScrolled }) {
               <div className="card-content flex flex-col justify-between  ">
                 <h3>Cross Border</h3>
                 <div className=" flex items-center justify-between    ">
-                  <div className="!w-[40px]  pb-[10px] ">
+                  <div className="!w-[40px]">
                     <img
                       src="/images/assets/redarrow.png"
                       alt="Arrow"
@@ -350,7 +350,7 @@ export default function HeroSection({ isScrolled }) {
                     <img
                       src="/images/assets/vector2.png"
                       alt="Arrow"
-                      className="w-full aspect-square scale-120 !ml-[.5cm] "
+                      className="x-icon"
                     />
                   </div>
                 </div>
@@ -369,7 +369,7 @@ export default function HeroSection({ isScrolled }) {
               <div className="card-content flex flex-col justify-between  ">
                 <h3>Cross Docking</h3>
                 <div className=" flex items-center justify-between    ">
-                  <div className="!w-[40px]  pb-[10px] ">
+                  <div className="!w-[40px] ">
                     <img
                       src="/images/assets/redarrow.png"
                       alt="Arrow"
@@ -380,7 +380,7 @@ export default function HeroSection({ isScrolled }) {
                     <img
                       src="/images/assets/vector2.png"
                       alt="Arrow"
-                      className="w-full aspect-square scale-120 !ml-[.5cm] "
+                      className="x-icon"
                     />
                   </div>
                 </div>

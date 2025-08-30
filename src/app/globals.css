@@ -932,7 +932,11 @@ line-height: 20px;
   text-align: center;
   margin: 78px auto;
 }
-
+@media (max-width:768px){
+  .certification-container {
+    margin: 42px auto;
+  }
+}
 .certification-logos {
   display: flex;
   flex-wrap: wrap;
@@ -1193,8 +1197,12 @@ flex-shrink: 0;
 .careers-banner {
   position: relative;
   background-color: #27397a;
-  margin-top: 48px;
   overflow: hidden;
+}
+@media (max-width:768px){
+  .careers-banner {
+margin-top: 42px;
+  }
 }
 .careers-content-wrapper-sustain {
   position: relative;
@@ -1525,10 +1533,10 @@ line-height: normal;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 0 30px;
+    width: 100%; 
   }
-  .industries-cards > div {
-    flex: 1;
-  }
+ 
+
 }
 
 @media (min-width: 1600px) {
@@ -2142,7 +2150,7 @@ line-height: normal;
 }
 .blog-card {
   background: white;
-  padding: 38px;
+  padding: 78px 74px;
   border-radius: 8px;
   width: 750px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -2161,7 +2169,9 @@ line-height: normal;
     font-size: 24px;
   }
 }
-
+.blogs-details{
+  padding: 0 33px;
+}
 .blog-meta {
   display: flex;
   justify-content: center;
@@ -2169,9 +2179,10 @@ line-height: normal;
   gap: 28px;
   font-size: 20px;
   font-weight: 400;
-  color: #1c1c1c80;
+  line-height: 26px;
+  color: rgba(28, 28, 28, 0.50);
   margin-top: 16px;
-  margin-bottom: 70px;
+  margin-bottom: 74px;
   text-align: center;
   flex-wrap: wrap;
 }
@@ -2184,13 +2195,17 @@ line-height: normal;
   .blog-meta {
     flex-direction: column;
     gap: 8px;
+    color: rgba(28, 28, 28, 0.50);
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 16px;
   }
   .blog-card {
-    padding: 20px;
+    padding: 30px;
   }
-  .blog-card .author {
-    font-size: 16px;
-  }
+  .blogs-details{
+    padding: 0 0;
+  }  
 }
 
 .blog-card .author {
@@ -2198,12 +2213,31 @@ line-height: normal;
   font-weight: 400;
   margin-top: 72px;
 }
- 
+ @media (max-width:768px){
+  .blog-card .author {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 28px;
+  }
+ }
 .fleet-stats {
   display: flex;
   flex-direction: column;
 }
-
+.author-at-the-rate{
+  font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+color: rgba(28, 28, 28, 0.50);
+}
+@media (max-width:768px){
+  .author-at-the-rate{
+    font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  }
+}
 .stat {
   text-align: center;
   margin-bottom: 42px;
@@ -2466,7 +2500,7 @@ line-height: normal;
   background-position: center;
   object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 416;
   border-radius: 0 0 0 305px;
 }
 @media (max-width: 767px) {

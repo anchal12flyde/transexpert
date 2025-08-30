@@ -24,6 +24,8 @@ export default function Industries() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="heading">Industries we work with</h2>
+          
+          
           <p className="subheading">
             From raw materials to finished goods, we deliver reliable,
             cross-border logistics solutions tailored to your industry. Whether
@@ -48,9 +50,8 @@ export default function Industries() {
         </motion.div>
 
         {/* Right Side */}
-       
+        
         <div className="industries-cards">
-          
           {[
             { img: "/images/assets/Wholesale.jpg", label: "Wholesale" },
             { img: "/images/assets/Retail.jpg", label: "Retail" },

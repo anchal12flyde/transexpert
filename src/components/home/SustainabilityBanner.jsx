@@ -17,7 +17,7 @@ const SustainabilityBanner = () => {
     <div className="content">
       <div className="heroSection">
         <img
-          src="/images/assets/Care-truck.jpg"
+          src="/images/assets/frame-41.jpg"
           alt="background"
           className="backgroundVideo"
         />

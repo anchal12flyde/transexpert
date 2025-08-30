@@ -241,7 +241,10 @@ export default function HeroSection({ isScrolled }) {
         <div className=" lg:hidden grid grid-cols-2 gap-[33px] ">
           <div className="card1 " onClick={() => router.push("/ftl")}>
             <div className="img-wrapper1">
-              <img src="/images/img2.png" alt="Full Truck Load" />
+              <img
+                src="/images/assets/Full Truck Load.png"
+                alt="Full Truck Load"
+              />
             </div>
             <div className="card-overlay1 ">
               <div className="card-content flex flex-col justify-between  ">
@@ -271,7 +274,7 @@ export default function HeroSection({ isScrolled }) {
             onClick={() => router.push("/temperature-controlled")}
           >
             <div className="img-wrapper1">
-              <img src="/images/img1.png" alt="Full Truck Load" />
+              <img src="/images/assets/Refigereted.png" alt="Full Truck Load" />
             </div>
             <div className="card-overlay1 ">
               <div className="card-content flex flex-col justify-between  ">
@@ -297,11 +300,14 @@ export default function HeroSection({ isScrolled }) {
           </div>
           <div className="card1" onClick={() => router.push("/cross-border")}>
             <div className="img-wrapper1">
-              <img src="/images/img2.png" alt="Full Truck Load" />
+              <img
+                src="/images/assets/Cross Border.png"
+                alt="Full Truck Load"
+              />
             </div>
             <div className="card-overlay1 ">
               <div className="card-content flex flex-col justify-between  ">
-                <h3>Full Truck Load</h3>
+                <h3>Cross Border</h3>
                 <div className=" flex items-center justify-between    ">
                   <div className="!w-[40px]  pb-[10px] ">
                     <img
@@ -324,11 +330,14 @@ export default function HeroSection({ isScrolled }) {
 
           <div className="card1" onClick={() => router.push("/cross-docking")}>
             <div className="img-wrapper1">
-              <img src="/images/img1.png" alt="Full Truck Load" />
+              <img
+                src="/images/assets/Cross Docking.png"
+                alt="Full Truck Load"
+              />
             </div>
             <div className="card-overlay1 ">
               <div className="card-content flex flex-col justify-between  ">
-                <h3>Temperature Controlled</h3>
+                <h3>Cross Docking</h3>
                 <div className=" flex items-center justify-between    ">
                   <div className="!w-[40px]  pb-[10px] ">
                     <img

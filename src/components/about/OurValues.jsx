@@ -43,7 +43,7 @@ export default function CardsSection() {
   return (
     <section className="cards-section global-container">
       <h2 className="heading ">Our Core Values</h2>
-      <div className="cards-container mt-[20px]" ref={containerRef}>
+      <div className="cards-container mt-[20px] mb-[0] sm:mb-[78px]" ref={containerRef}>
         {cards.map((card, index) => (
           <div className="value bshadow" key={index}>
             <img src={card.img} alt={card.heading} className="card-image" />

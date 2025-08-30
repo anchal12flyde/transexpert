@@ -1899,15 +1899,13 @@ line-height: normal;
   border-radius: 12px;
   overflow: hidden;
   width: 100%;
-  max-width: 380px;
   height: 100%;
-
   transition: transform 0.3s ease;
 }
 
 .card-image {
   width: 100%;
-  height: 40vh;
+  height: 350px;
   object-fit: cover;
   display: block;
 }
@@ -1946,6 +1944,10 @@ line-height: normal;
     flex: 0 0 auto;
     scroll-snap-align: start;
     border-radius: 10px;
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
   .cards-section {
     margin-top: 342px;

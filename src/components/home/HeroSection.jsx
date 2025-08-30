@@ -239,10 +239,9 @@ export default function HeroSection({ isScrolled }) {
           Services
         </p>
         <div className=" lg:hidden grid grid-cols-2 gap-[33px] ">
-          <div className="card1 ">
+          <div className="card1 " onClick={() => router.push("/ftl")}>
             <div className="img-wrapper1">
               <img src="/images/img2.png" alt="Full Truck Load" />
-              
             </div>
             <div className="card-overlay1 ">
               <div className="card-content flex flex-col justify-between  ">
@@ -267,7 +266,10 @@ export default function HeroSection({ isScrolled }) {
             </div>
           </div>
 
-          <div className="card1">
+          <div
+            className="card1"
+            onClick={() => router.push("/temperature-controlled")}
+          >
             <div className="img-wrapper1">
               <img src="/images/img1.png" alt="Full Truck Load" />
             </div>
@@ -293,7 +295,7 @@ export default function HeroSection({ isScrolled }) {
               </div>
             </div>
           </div>
-          <div className="card1">
+          <div className="card1" onClick={() => router.push("/cross-border")}>
             <div className="img-wrapper1">
               <img src="/images/img2.png" alt="Full Truck Load" />
             </div>
@@ -320,7 +322,7 @@ export default function HeroSection({ isScrolled }) {
             </div>
           </div>
 
-          <div className="card1">
+          <div className="card1" onClick={() => router.push("/cross-docking")}>
             <div className="img-wrapper1">
               <img src="/images/img1.png" alt="Full Truck Load" />
             </div>

@@ -229,7 +229,7 @@ export default function ContactDetails() {
               <textarea placeholder="Write your message.." />
             </div>
           </form>
-          <div className="flex justify-center mt-[78px]">
+          <div className="flex justify-center mt-[42px] sm:mt-[78px]">
             <button className="hero-button">Apply Now</button>
           </div>
         </div>

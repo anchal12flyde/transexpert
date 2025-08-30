@@ -12,9 +12,42 @@ export default function AllBlogs() {
   const containerRef = useRef(null);
 
   const { PageContentReady, skip } = useLoader();
+
   useEffect(() => {
     skip("hero");
-  }, [skip]);
+
+    // wait until all images are loaded
+    const images = Array.from(document.querySelectorAll("img"));
+    let loadedCount = 0;
+
+    if (images.length === 0) {
+      PageContentReady();
+      return;
+    }
+
+    const handleImageLoad = () => {
+      loadedCount++;
+      if (loadedCount === images.length) {
+        PageContentReady();
+      }
+    };
+
+    images.forEach((img) => {
+      if (img.complete) {
+        handleImageLoad();
+      } else {
+        img.addEventListener("load", handleImageLoad);
+        img.addEventListener("error", handleImageLoad);
+      }
+    });
+
+    return () => {
+      images.forEach((img) => {
+        img.removeEventListener("load", handleImageLoad);
+        img.removeEventListener("error", handleImageLoad);
+      });
+    };
+  }, [skip, PageContentReady]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -24,22 +57,19 @@ export default function AllBlogs() {
       setIsScrolled(container.scrollTop > 50);
     };
 
-    // Attach listener to the container
     container.addEventListener("scroll", handleScroll, { passive: true });
-
-    // Call once for initial state
     handleScroll();
 
-    // Cleanup
     return () => {
       container.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <>
       <PageContentReady />
-      <div>
-        <Header isScrolled={true} />
+      <div ref={containerRef}>
+        <Header isScrolled={isScrolled} />
         <HomeGrid />
         <TopStories />
         <Footer />

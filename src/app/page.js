@@ -1,8 +1,8 @@
 "use client";
 import { useLoader } from "@/components/GlobalLoader";
 
-import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 import Blog from "@/components/home/Blog";
 import CareersBanner from "@/components/home/CarrerBanner";
@@ -16,52 +16,42 @@ import SustainabilityBanner from "@/components/home/SustainabilityBanner";
 import Footer from "@/components/footer/page";
 
 export default function HomePage() {
-  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
-  const containerRef = useRef(null); 
+  const containerRef = useRef(null);
 
-  const { PageContentReady, skip } = useLoader();
+  const { PageContentReady, setRequired } = useLoader();
+
   useEffect(() => {
-    skip("hero");
-  }, [skip]);
+    // HomePage ke liye required sections
+    setRequired(["content", "hero", "industries", "map"]);
+  }, [setRequired]);
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
-
     const handleScroll = () => {
       setIsScrolled(container.scrollTop > 50);
     };
-
-    // Attach listener to the container
     container.addEventListener("scroll", handleScroll, { passive: true });
-
-    // Call once for initial state
     handleScroll();
-
-    // Cleanup
-    return () => {
-      container.removeEventListener("scroll", handleScroll);
-    };
+    return () => container.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // console.log(isScrolled);
 
   return (
     <>
-    <PageContentReady />
-    <div className="mainCon" ref={containerRef}>
-      {isScrolled && <Header isScrolled={isScrolled} />}
-      <HeroSection isScrolled={isScrolled} />
-      <Certification />
-      <Strip />
-      <SustainabilityBanner />
-      <Blog />
-      <CareersBanner />
-      <Industries />
-      <MapReach />
-      <Footer />
-    </div>
+      <PageContentReady />
+      <div className="mainCon" ref={containerRef}>
+        {isScrolled && <Header isScrolled={isScrolled} />}
+        <HeroSection isScrolled={isScrolled} />
+        <Certification />
+        <Strip />
+        <SustainabilityBanner />
+        <Blog />
+        <CareersBanner />
+        <Industries />
+        <MapReach />
+        <Footer />
+      </div>
     </>
   );
 }

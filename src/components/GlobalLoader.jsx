@@ -4,25 +4,30 @@ import { usePathname } from "next/navigation";
 
 const LoaderCtx = createContext(null);
 
-export default function GlobalLoaderProvider({ children, minMs = 2500 }) { 
+export default function GlobalLoaderProvider({ children, minMs = 2500 }) {
   const pathname = usePathname();
-  const [visible, setVisible] = useState(true); 
-  const marks = useRef(new Set()); 
+  const [visible, setVisible] = useState(true);
+  const marks = useRef(new Set());
   const startTs = useRef(Date.now());
+  const requiredKeys = useRef(["content"]); // default requirement
 
   useEffect(() => {
     setVisible(true);
     marks.current = new Set();
     startTs.current = Date.now();
+    requiredKeys.current = ["content"]; // reset default on route change
   }, [pathname]);
 
+  const setRequired = (keys) => {
+    requiredKeys.current = keys;
+  };
+
   const tryClose = () => {
-    const need = ["hero", "content"]; 
-    const ok = need.every((k) => marks.current.has(k));
+    const ok = requiredKeys.current.every((k) => marks.current.has(k));
     if (!ok) return;
 
     const elapsed = Date.now() - startTs.current;
-    const wait = Math.max(minMs - elapsed, 0); // min display time
+    const wait = Math.max(minMs - elapsed, 0);
     const t = setTimeout(() => setVisible(false), wait);
     return () => clearTimeout(t);
   };
@@ -33,16 +38,13 @@ export default function GlobalLoaderProvider({ children, minMs = 2500 }) {
   };
 
   const skip = (key) => {
-    // page me hero hi nahi? skip kar do
     marks.current.add(key);
     tryClose();
   };
 
-  // page mount hone par "content" ready mark karne ka helper
   const PageContentReady = () => {
     useEffect(() => {
       markReady("content");
-      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     return null;
   };
@@ -50,16 +52,16 @@ export default function GlobalLoaderProvider({ children, minMs = 2500 }) {
   return (
     <>
       {visible && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white   ">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white">
           <img
             src="/images/videos/loader-x.gif"
             alt="Loading..."
-            className="w-40 h-40 "
+            className="w-40 h-40"
           />
         </div>
       )}
       <LoaderCtx.Provider
-        value={{ visible, markReady, skip, PageContentReady }}
+        value={{ visible, markReady, skip, PageContentReady, setRequired }}
       >
         {children}
       </LoaderCtx.Provider>

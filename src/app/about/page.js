@@ -8,15 +8,18 @@ import CardsSection from "@/components/about/OurValues";
 import { useEffect, useRef, useState } from "react";
 import Footer from "@/components/footer/page";
 
-export default function page() {
+export default function AboutPage() {
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef(null);
 
   const { PageContentReady, skip } = useLoader();
+
+  // Loader ko hero section ke liye skip kara
   useEffect(() => {
     skip("hero");
   }, [skip]);
 
+  // Scroll listener
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -25,17 +28,15 @@ export default function page() {
       setIsScrolled(container.scrollTop > 50);
     };
 
-    // Attach listener to the container
     container.addEventListener("scroll", handleScroll, { passive: true });
 
-    // Call once for initial state
-    handleScroll();
+    handleScroll(); // initial check
 
-    // Cleanup
     return () => {
       container.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <>
       <PageContentReady />
@@ -43,11 +44,10 @@ export default function page() {
         {isScrolled && <Header isScrolled={isScrolled} />}
         <AboutHero isScrolled={isScrolled} />
         <CardsSection />
+        {/* Uncomment agar leadership dikhani hai */}
         {/* <LeadershipSection /> */}
         <Relaibility />
         <Footer />
-
-        
       </div>
     </>
   );

@@ -245,24 +245,24 @@ export default function HeroSection({ isScrolled }) {
                 src="/images/assets/Full Truck Load.png"
                 alt="Full Truck Load"
               />
-            </div>
-            <div className="card-overlay1 ">
-              <div className="card-content flex flex-col justify-between  ">
-                <h3>Full Truck Load</h3>
-                <div className=" flex items-center justify-between    ">
-                  <div className="!w-[40px]  pb-[10px] ">
-                    <img
-                      src="/images/assets/redarrow.png"
-                      alt="Arrow"
-                      className=" !w-[30px] aspect-square rotate-[-47deg] "
-                    />
-                  </div>
-                  <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
-                    <img
-                      src="/images/assets/vector2.png"
-                      alt="Arrow"
-                      className="w-full aspect-square scale-120 !ml-[.5cm] "
-                    />
+              <div className="card-overlay1 ">
+                <div className="card-content flex flex-col justify-between  ">
+                  <h3>Full Truck Load</h3>
+                  <div className=" flex items-center justify-between">
+                    <div className="!w-[40px]  pb-[10px] ">
+                      <img
+                        src="/images/assets/redarrow.png"
+                        alt="Arrow"
+                        className=" !w-[30px] aspect-square rotate-[-47deg] "
+                      />
+                    </div>
+                    <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
+                      <img
+                        src="/images/assets/vector2.png"
+                        alt="Arrow"
+                        className="w-full aspect-square scale-120 !ml-[.5cm] "
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

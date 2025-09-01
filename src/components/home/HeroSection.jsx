@@ -191,7 +191,7 @@ export default function HeroSection({ isScrolled }) {
               />
             </div>
             <div className="card-overlay ">
-              <div className="card-content">
+              <div className="card-content w-[70%]">
                 <h3>Full Truck Load</h3>
                 <p>Dedicated capacity for your larger shipments</p>
               </div>
@@ -220,7 +220,7 @@ export default function HeroSection({ isScrolled }) {
               />
             </div>
             <div className="card-overlay">
-              <div className="card-content">
+              <div className="card-content w-[70%]">
                 <h3>Temperature Controlled</h3>
                 <p>Temperature-sensitive logistics just refrigeration.</p>
               </div>
@@ -245,7 +245,7 @@ export default function HeroSection({ isScrolled }) {
               />
             </div>
             <div className="card-overlay">
-              <div className="card-content">
+              <div className="card-content w-[50%]">
                 <h3>Cross Border</h3>
                 <p>Seamless Borders.Limitless Reach.</p>
               </div>
@@ -271,7 +271,7 @@ export default function HeroSection({ isScrolled }) {
               />
             </div>
             <div className="card-overlay">
-              <div className="card-content">
+              <div className="card-content w-[70%]">
                 <h3>Cross Docking</h3>
                 <p>Build for urgent freight that can not afford to wait</p>
               </div>

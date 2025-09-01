@@ -1,5 +1,5 @@
 import { MoveRightIcon } from "lucide-react";
-
+import Link from "next/link";
 export default function StripFtl({ text, button, m }) {
   return (
     <div className="counterSection1" style={{ marginTop: `${m}px` }}>
@@ -11,7 +11,9 @@ export default function StripFtl({ text, button, m }) {
         <div className="flex items-center hero-button !bg-white gap-2 w-fit">
           <p className="text-thm-strip-red font-semibold">{button.label}</p>
           {button.icon === "MoveRightIcon" && (
-            <MoveRightIcon color={button.color} />
+            <Link href="/fleet-and-infrastructure">
+              <MoveRightIcon color={button.color} />
+            </Link>
           )}
         </div>
       </div>

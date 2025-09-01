@@ -110,7 +110,7 @@ export default function RecognizedCertifications() {
           {certificationsData.map((c, index) => (
             <div
               key={index}
-              className="flex items-start rounded-[16px] p-[78px] gap-4 bshadow h-[380px]"
+              className="flex items-start rounded-[16px] p-[78px] gap-4 bshadow "
             >
               <Image alt={c.title} src={c.logo} width={150} height={200} />
               <div className="flex flex-col gap-[16px]">

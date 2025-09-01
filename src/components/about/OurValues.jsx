@@ -41,7 +41,7 @@ export default function CardsSection() {
   ];
 
   return (
-    <section className="cards-section global-container">
+    <section className="cards-section global-container  mt-[42px] sm:mt-[78px]">
       <h2 className="heading ">Our Core Values</h2>
       <div className="cards-container mt-[20px] mb-[0] sm:mb-[78px]" ref={containerRef}>
         {cards.map((card, index) => (

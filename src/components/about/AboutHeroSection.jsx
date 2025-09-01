@@ -37,8 +37,8 @@ export default function AboutHero({ isScrolled }) {
       {/* Floating Box - Desktop Version */}
       <div className="outer-float-box hidden md:block">
         <div className="white-wrapper">
-          <div className="about-floating-box">
-            <div className="w-0 lg:w-[500px]">
+          <div className="about-floating-box ">
+            <div className="">
               <h3 className="heading">Our Core Values</h3>
               <p className="subheading">
                 Our reputation is built on consistency, responsiveness, and

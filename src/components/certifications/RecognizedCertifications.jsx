@@ -56,7 +56,7 @@ export default function RecognizedCertifications() {
       logo: "/images/assets/image6.png",
     },
     {
-      title: "ACE & ACI",
+      title: "ACE ",
       subtitle: "Integration",
       description:
         "Real-time electronic documentation for customs authorities across North America.",
@@ -70,7 +70,7 @@ export default function RecognizedCertifications() {
       logo: "/images/assets/image7.png",
     },
     {
-      title: "ACE & ACI",
+      title: "ACI",
       subtitle: "Integration",
       description:
         "Real-time electronic documentation for customs authorities across North America.",

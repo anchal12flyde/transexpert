@@ -247,7 +247,7 @@ export default function TopStories() {
 
         {/* Right - Related */}
         <aside className="flex flex-col  gap-[10px] sm:gap-[30px] w-full">
-          <h3 className="heading">Related</h3>
+          <h3 className="heading !mb-0">Related</h3>
           {related.map((item, idx) => (
             <div key={idx} className="flex flex-col items-start gap-[8px] macbookDev ">
               <Image

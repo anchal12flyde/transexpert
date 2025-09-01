@@ -606,10 +606,11 @@ span:has(img) {
     display: none;
   }
 }
+
 @media (min-width: 1600) {
   .hero-testimonial {
     padding-right: 252px;
-  }
+    width: 900px;  }
 }
 .hero-testimonial p {
   color: var(--thm-white);
@@ -2164,7 +2165,6 @@ padding-right: 15px;
   padding: 78px 74px;
   border-radius: 8px;
   width: 750px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   text-align: left;
 }
 .blog-card h1 {

@@ -40,7 +40,7 @@ export default function SingleBlogHero({
       )}
       <div className="global-container  " ref={overlayRef}>
         <div className="single-blog-overlay ">
-          <div className="blog-card">
+          <div className="blog-card bshadow">
             <h1 className="">
               Why Same-Day Delivery is the Future of Retail Logistics
             </h1>

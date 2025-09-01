@@ -7,24 +7,24 @@ export default function FleetPower() {
 
         {/* For Desktop */}
         <section className="hidden sm:block fleet-section">
-          <div class="fleet-stats-section ">
-            <div class="fleet-stats-numbers-row">
-              <div class="fleet-stats-number-item">50</div>
-              <div class="fleet-stats-number-item">500+</div>
-              <div class="fleet-stats-number-item">20</div>
+          <div className="fleet-stats-section ">
+            <div className="fleet-stats-numbers-row ">
+              <div className="fleet-stats-number-item">50</div>
+              <div className="fleet-stats-number-item">500+</div>
+              <div className="fleet-stats-number-item">20</div>
             </div>
 
-            <div class="fleet-stats-divider"></div>
+            <div className="fleet-stats-divider"></div>
 
-            <div class="fleet-stats-descriptions-row">
-              <div class="fleet-stats-description-item">
+            <div className="fleet-stats-descriptions-row">
+              <div className="fleet-stats-description-item">
                 Dry Vans – For general freight and high-volume distribution
               </div>
-              <div class="fleet-stats-description-item">
+              <div className="fleet-stats-description-item">
                 Refrigerated Reefers – Temperature controlled delivery for food,
                 pharma, and perishables
               </div>
-              <div class="fleet-stats-description-item">
+              <div className="fleet-stats-description-item">
                 Flatbeds – For industrial, oversized, and non-containerized
                 cargo
               </div>

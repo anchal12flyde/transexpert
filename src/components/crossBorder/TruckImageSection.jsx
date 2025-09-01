@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function TruckImageSection({
   imageSrc,
@@ -56,9 +57,11 @@ export default function TruckImageSection({
             </ul>
 
             {overlay.button && (
-              <button className="mt-6 bg-red-500 text-white px-6 py-2 rounded-md font-medium hover:bg-red-600 transition">
-                {overlay.button.label}
-              </button>
+              <Link href="/get-a-qoute">
+                <button className="mt-[26px] text-button">
+                  {overlay.button.label}
+                </button>
+              </Link>
             )}
           </div>
 
@@ -78,11 +81,13 @@ export default function TruckImageSection({
               ))}
             </ul>
             {overlay.button && (
-              <div className="text-center">
-                <button className="mt-[16px] hero-button">
-                  {overlay.button.label}
-                </button>
-              </div>
+              <Link href="/get-a-qoute">
+                <div className="text-center  ">
+                  <button className="mt-[16px] text-button">
+                    {overlay.button.label}
+                  </button>
+                </div>
+              </Link>
             )}
           </div>
 

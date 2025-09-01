@@ -13,7 +13,7 @@ export default function Certification() {
   };
   return (
     <>
-      <div className="certification-container global-container">
+      <div className="certification-container global-container !z-100 " >
         <motion.h2
           className="heading"
           variants={fadeInUp}

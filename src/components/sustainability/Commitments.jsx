@@ -28,7 +28,7 @@ function Arrow({ onClick, dir }) {
 export default function Commitments() {
   const certificationsData = [
     {
-      title: "Employee Well-being",
+      title: "Employee \n Well-being",
       description:
         " Safe, fair, inclusive workplaces with living wages, equal pay, mental health days, and flexible support for new mothers.",
       logo: "/images/assets/heart-health-muscle.png",

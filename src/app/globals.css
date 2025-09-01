@@ -229,6 +229,7 @@ body::-webkit-scrollbar {
   align-items: flex-start;
   color: white;
   z-index: 1;
+  overflow: hidden;
 }
 .hero-section::before {
   content: "";
@@ -349,15 +350,15 @@ body::-webkit-scrollbar {
   mix-blend-mode: multiply;
   transform: skewY(-42deg); /* angle locked */
   transform-origin: top right;
+  overflow-y: hidden;
 }
-
 
 .square-videon {
   position: absolute;
   top: 0;
   right: 0;
   height: 100vh;
-  aspect-ratio: 1/1;       /* keeps square */
+  aspect-ratio: 1/1; /* keeps square */
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
@@ -367,13 +368,11 @@ body::-webkit-scrollbar {
 .square-videon img {
   height: 100%;
   margin-top: 55px;
-  width: auto;             /* preserve ratio */
-  object-fit: contain;     /* no distortion */
+  width: auto; /* preserve ratio */
+  object-fit: contain; /* no distortion */
   object-position: top right; /* snug in corner */
-  transform: scale(.9);
-  
+  transform: scale(0.9);
 }
-
 
 /* .squareimg{
   height: 50%;

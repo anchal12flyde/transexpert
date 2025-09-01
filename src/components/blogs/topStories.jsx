@@ -190,7 +190,7 @@ export default function TopStories() {
   };
 
   return (
-    <section className="global-container sm:mt-[78px] mt-[42px] sm:mb-[78px] mb-[42px]">
+    <section className="global-container sm:mt-[78px] mt-[84px] sm:mb-[78px] mb-[42px]">
       {/* Heading */}
       <h2 className="heading">Top Stories</h2>
 

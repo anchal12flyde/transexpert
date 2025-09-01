@@ -248,13 +248,13 @@ body::-webkit-scrollbar {
   align-items: flex-start;
   justify-content: start;
   height: 100%;
-  margin-top: 6rem;
+  margin-top: 60px;
   color: var(--thm-white);
 }
 @media screen and (min-width: 1024px) {
   .hero-content {
     justify-content: flex-start;
-    margin-top: 10rem;
+    margin-top: 194px;
   }
 }
 
@@ -1669,19 +1669,33 @@ line-height: 16px;
 
 /* Mobile view: Swap to About_img2.png */
 @media (max-width: 768px) {
-  .about-hero-bg {
-    background-image: url("/images/About_img2.png");
-  }
+ 
   .about-hero-section {
-    height: 150vh;
-margin-bottom: 380px;
+    height: 140vh;
+margin-bottom: 315px;
   }
 }
-
+.realiable-author{
+  color: var(--thm-white);
+  font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-bottom: 26px;
+}
+@media(max-width:768px){
+  .realiable-author{
+    font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 15px;
+  }
+}
 .about-hero-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 12, 58, 0.64);
+  background: rgba(0, 12, 58, 0.64);
   mix-blend-mode: multiply;
 }
 
@@ -1870,7 +1884,7 @@ margin-bottom: 380px;
 }
 @media (max-width: 768px) {
   .drive_div {
-    padding: 0 19px;
+    padding: 0 16px;
   }
 }
 .careers-banner_border {
@@ -1923,8 +1937,8 @@ margin-bottom: 380px;
     height: 25px;
   }
   .quote-heading .quote-icon-close {
-    right: -35px;
-    margin-top: 0;
+    right: -31px;
+    margin-top: -4px;
     width: 40px;
     height: 25px;
   }
@@ -2931,6 +2945,11 @@ Certifications */
   border-radius: 16px;
   height: 100%;
 }
+@media (max-width:768px){
+  .industries__card--image {
+    height:139px;
+}
+}
 
 .industries__img {
   height: 100%;
@@ -2980,18 +2999,18 @@ Certifications */
 /* Responsive */
 @media (max-width: 768px) {
   .industries__grid {
-    gap: 42px;
+    gap: 16px;
     grid-template-columns: 1fr;
   }
   .industries__grid1 {
-    gap: 42px;
+    gap: 16px;
     grid-template-columns: 1fr;
     margin-top: 42px;
     margin-bottom: 42px;
   }
 
   .industries {
-    margin: 42px 0;
+    margin: 41px 0;
   }
 
   .industries__card--text {
@@ -3004,6 +3023,7 @@ Certifications */
   }
   .industries__label {
     font-size: 24px;
+    font-weight: 400;
   }
 
   .industries__banner {
@@ -3017,6 +3037,8 @@ Certifications */
   .industries__desc,
   .industries__list {
     font-size: 16px;
+    line-height: normal;
+    font-weight: 300;
   }
 }
 .industries__banner-icon {

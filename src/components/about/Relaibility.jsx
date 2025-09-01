@@ -39,7 +39,7 @@ const Relaibility = () => {
                   </span>
                 </span>
               </p>
-              <p className="card_heading mt-[5px] sm:mt-[16px]">
+              <p className="realiable-author mt-[5px] sm:mt-[16px]">
                 — Raman Deol, Co-founder
               </p>
 

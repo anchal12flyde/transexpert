@@ -230,6 +230,7 @@ body::-webkit-scrollbar {
   align-items: flex-start;
   color: white;
   z-index: 1;
+  overflow: hidden;
 }
 .hero-section::before {
   content: "";
@@ -294,21 +295,21 @@ body::-webkit-scrollbar {
   line-height: normal;
   letter-spacing: normal;
 }
-.text-button{
+.text-button {
   background-color: var(--thm-button-color);
   display: inline-flex;
-padding: 12px 24px;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 10px;
-color: var(--thm-white);
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-border-radius: 8px;
-cursor: pointer;
+  padding: 12px 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--thm-white);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 8px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .text-button {
@@ -324,7 +325,7 @@ cursor: pointer;
   background-color: var(--thm-button-color);
   text-align: center;
   justify-content: center;
-align-items: center;
+  align-items: center;
   padding: 12px 24px;
   border-radius: 8px;
   color: var(--thm-white);
@@ -378,15 +379,15 @@ align-items: center;
   mix-blend-mode: multiply;
   transform: skewY(-42deg); /* angle locked */
   transform-origin: top right;
+  overflow-y: hidden;
 }
-
 
 .square-videon {
   position: absolute;
   top: 0;
   right: 0;
   height: 100vh;
-  aspect-ratio: 1/1;       /* keeps square */
+  aspect-ratio: 1/1; /* keeps square */
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
@@ -396,13 +397,17 @@ align-items: center;
 .square-videon img {
   height: 100%;
   margin-top: 55px;
-  width: auto;             /* preserve ratio */
-  object-fit: contain;     /* no distortion */
+  width: auto; /* preserve ratio */
+  object-fit: contain; /* no distortion */
   object-position: top right; /* snug in corner */
-  transform: scale(.9);
-  
+  transform: scale(0.9);
 }
 
+@media (max-width: 800px) {
+  .square-videon img {
+    display: none;
+  }
+}
 
 /* .squareimg{
   height: 50%;
@@ -640,7 +645,8 @@ span:has(img) {
 @media (min-width: 1600) {
   .hero-testimonial {
     padding-right: 252px;
-    width: 900px;  }
+    width: 900px;
+  }
 }
 .hero-testimonial p {
   color: var(--thm-white);
@@ -778,7 +784,7 @@ span:has(img) {
   margin-top: 0.5rem;
   font-size: 16px;
   font-weight: 300;
-line-height: 16px;
+  line-height: 16px;
 }
 
 .card-overlay .x-icon {
@@ -1503,7 +1509,7 @@ line-height: 16px;
   width: 40px;
   height: 40px;
   object-fit: contain;
-  transition: transform 0.3s ease-in-out; 
+  transition: transform 0.3s ease-in-out;
 }
 .blog-box:hover .arrow-icon img {
   transform: rotate(47deg);
@@ -2178,8 +2184,6 @@ margin-bottom: 15px;
   }
 }
 
-
-
 /* Single Blog */
 .single-blog-hero {
   position: relative;
@@ -2332,12 +2336,7 @@ margin-bottom: 15px;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
   }
-
-
-
-  
 }
-
 
 .fleet-stats-text {
   width: 300px;
@@ -2371,12 +2370,12 @@ margin-bottom: 15px;
   font-weight: 700;
   line-height: normal;
 }
-@media (max-width:768px){
+@media (max-width: 768px) {
   .downtime-heading {
     font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
   }
 }
 @media (max-width: 768px) {
@@ -2400,7 +2399,6 @@ line-height: normal;
 }
 /* Fleet Power */
 .fleet-stats-section {
- 
   margin: auto auto 118px auto;
   justify-content: center;
 }
@@ -2431,8 +2429,6 @@ line-height: normal;
   justify-content: space-between;
   gap: 50px;
 
-
-  
   text-align: left;
   padding: 0 105px;
 }
@@ -3229,8 +3225,6 @@ textarea {
 
 /* All Blogs */
 
-
-
 .text_on_image {
   position: absolute;
   bottom: 81px;
@@ -3255,7 +3249,7 @@ textarea {
     font-size: 24px;
   }
   .text_on_image {
-    bottom:42px;
+    bottom: 42px;
     left: 26px;
     right: 31px;
   }
@@ -3378,7 +3372,7 @@ textarea {
   }
 }
 .downtime-image {
-  border-radius:8px;
+  border-radius: 8px;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -3389,11 +3383,11 @@ textarea {
     flex: 1;
   }
   .downtime-image {
-  margin-top: 50px;
-  border-radius: 8px;
-  height: auto;
-  width: 100%;
-  object-fit: cover;
+    margin-top: 50px;
+    border-radius: 8px;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
   }
 }
 

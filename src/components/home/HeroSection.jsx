@@ -7,34 +7,126 @@ import Slider from "react-slick";
 
 export default function HeroSection({ isScrolled }) {
   const overlayRef = useRef(null);
-  const squareRef = useRef(null);
+  const squareRef = useRef(null); // 🔴 Red Box reference
   const router = useRouter();
 
   const [baseWidth, setBaseWidth] = useState(0);
   const [fullHeight, setFullHeight] = useState(0);
 
-  const greenBoxRef = useRef(null); // Reference for the green box (image)
-  const [greenBoxHeight, setGreenBoxHeight] = useState(0); // State to store green box height
+  const greenBoxRef = useRef(null); // 🟢 Green Box reference
+  const [greenBoxHeight, setGreenBoxHeight] = useState(0);
 
   const calcGreenBoxHeight = () => {
-    // Check if the green box reference is valid
     if (greenBoxRef.current) {
       const greenBoxRect = greenBoxRef.current.getBoundingClientRect();
-      setGreenBoxHeight(greenBoxRect.height); // Set height of green box
-      console.log(greenBoxHeight);
+      setGreenBoxHeight(greenBoxRect.height);
+
+      console.log("🟢 Green Box:", {
+        top: greenBoxRect.top,
+        left: greenBoxRect.left,
+        width: greenBoxRect.width,
+        height: greenBoxRect.height,
+        right: greenBoxRect.right,
+        bottom: greenBoxRect.bottom,
+      });
+
+      // agar red box hai to dono ka intersection bhi calc karo
+      if (squareRef.current) {
+        const redRect = squareRef.current.getBoundingClientRect();
+
+        console.log("🔴 Red Box:", {
+          top: redRect.top,
+          left: redRect.left,
+          width: redRect.width,
+          height: redRect.height,
+          right: redRect.right,
+          bottom: redRect.bottom,
+        });
+
+        // ✅ Normal bounding-box intersection
+        const intersectLeft = Math.max(redRect.left, greenBoxRect.left);
+        const intersectTop = Math.max(redRect.top, greenBoxRect.top);
+        const intersectRight = Math.min(redRect.right, greenBoxRect.right);
+        const intersectBottom = Math.min(redRect.bottom, greenBoxRect.bottom);
+
+        if (intersectRight > intersectLeft && intersectBottom > intersectTop) {
+          const iWidth = intersectRight - intersectLeft;
+          const iHeight = intersectBottom - intersectTop;
+          console.log("📐 Intersection (Rect vs Rect):", {
+            left: intersectLeft,
+            top: intersectTop,
+            width: iWidth,
+            height: iHeight,
+            area: iWidth * iHeight,
+          });
+        } else {
+          console.log("❌ No Intersection between Red & Green box");
+        }
+
+        // ✅ Red diagonal equation (top-left → bottom-right)
+        const x1 = redRect.left;
+        const y1 = redRect.top;
+        const x2 = redRect.right;
+        const y2 = redRect.bottom;
+        const m = (y2 - y1) / (x2 - x1); // slope
+        const c = y1 - m * x1;
+
+        console.log(
+          "📐 Red Diagonal Equation: y =",
+          m.toFixed(2),
+          "x +",
+          c.toFixed(2)
+        );
+
+        // ✅ Find intersection of diagonal with Green box edges
+        let intersectionPoint = null;
+
+        // check top & bottom edges of green box
+        [greenBoxRect.top, greenBoxRect.bottom].forEach((gy) => {
+          const x = (gy - c) / m;
+          if (x >= greenBoxRect.left && x <= greenBoxRect.right) {
+            intersectionPoint = { x, y: gy };
+          }
+        });
+
+        // check left & right edges of green box
+        [greenBoxRect.left, greenBoxRect.right].forEach((gx) => {
+          const y = m * gx + c;
+          if (y >= greenBoxRect.top && y <= greenBoxRect.bottom) {
+            intersectionPoint = { x: gx, y };
+          }
+        });
+
+        if (intersectionPoint) {
+          console.log("⚡ Intersection with Red Diagonal:", intersectionPoint);
+
+          // Green base till intersection
+          const baseTillIntersection = intersectionPoint.x - greenBoxRect.left;
+          console.log("📏 Green Base till Intersection:", baseTillIntersection);
+
+          // Distances for clarity
+          const distFromTop = intersectionPoint.y - greenBoxRect.top;
+          const distFromBottom = greenBoxRect.bottom - intersectionPoint.y;
+          console.log("↕️ Distances inside Green:", {
+            fromTop: distFromTop,
+            fromBottom: distFromBottom,
+          });
+        } else {
+          console.log("❌ No Diagonal ↔ Green Box intersection");
+        }
+      }
     }
   };
 
   const handleImageLoad = () => {
-    // Recalculate height once the image is loaded
+    console.log("🖼️ Green Box Image Loaded");
     calcGreenBoxHeight();
   };
 
   useEffect(() => {
-    calcGreenBoxHeight(); // Call the function to measure height initially
-    window.addEventListener("resize", calcGreenBoxHeight); // Recalculate on window resize
-
-    return () => window.removeEventListener("resize", calcGreenBoxHeight); // Cleanup listener
+    calcGreenBoxHeight();
+    window.addEventListener("resize", calcGreenBoxHeight);
+    return () => window.removeEventListener("resize", calcGreenBoxHeight);
   }, []);
 
   useEffect(() => {
@@ -46,22 +138,38 @@ export default function HeroSection({ isScrolled }) {
 
       setFullHeight(fullHeight);
 
+      console.log("📏 Overlay (Diagonal Background):", {
+        width: fullWidth,
+        height: fullHeight,
+      });
+
       // Full hypotenuse (Pythagoras theorem)
       const fullHypotenuse = Math.sqrt(fullWidth ** 2 + fullHeight ** 2);
 
-      // 100vh ki height
+      // 100vh height
       const vhHeight = window.innerHeight;
 
-      // 45° slope ke liye base = height
+      // 45° slope ke liye base = height proportion
       const baseAt100vh = vhHeight * (fullWidth / fullHeight);
+
+      const ratio = baseAt100vh / fullHeight;
+      console.log("📏 Red Box Width/Height Ratio:", ratio.toFixed(2));
 
       // Hypotenuse for 100vh height
       const hypotenuseAt100vh = Math.sqrt(baseAt100vh ** 2 + vhHeight ** 2);
+
+      console.log("📐 Diagonal Math:", {
+        fullHypotenuse,
+        vhHeight,
+        baseAt100vh,
+        hypotenuseAt100vh,
+      });
 
       setBaseWidth(baseAt100vh);
     };
 
     calcValues();
+
     window.addEventListener("resize", calcValues);
     return () => window.removeEventListener("resize", calcValues);
   }, []);
@@ -69,11 +177,10 @@ export default function HeroSection({ isScrolled }) {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: true ,
+    autoplay: false,
     speed: 5000,
     autoplaySpeed: 3000,
     cssEase: "linear",
@@ -90,18 +197,15 @@ export default function HeroSection({ isScrolled }) {
       )}
       <section className="hero-section global-container ">
         <div ref={overlayRef} className="hero-diagonal-overlay"></div>
-        {/* <div
-          className="square-videon hidden lg:block"
-          style={{ width: `${baseWidth}px` }}
-        >
+        <div className="square-videon hidden lg:block">
           <img
             ref={greenBoxRef}
             src="/images/assets/x.png"
             alt="Animation"
-            className="border-6 border-green-500  "
+            className="  "
             onLoad={handleImageLoad} // Trigger height calculation on image load
           />
-        </div> */}
+        </div>
 
         <div className="overlay-X-Mob lg:hidden"></div>
 
@@ -296,24 +400,24 @@ export default function HeroSection({ isScrolled }) {
                 src="/images/assets/Full Truck Load.png"
                 alt="Full Truck Load"
               />
-              <div className="card-overlay1 ">
-                <div className="card-content flex flex-col justify-between  ">
-                  <h3>Full Truck Load</h3>
-                  <div className=" flex justify-between">
-                    <div className="!w-[40px]   ">
-                      <img
-                        src="/images/assets/redarrow.png"
-                        alt="Arrow"
-                        className=" !w-[30px] aspect-square rotate-[-47deg] "
-                      />
-                    </div>
-                    <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
-                      <img
-                        src="/images/assets/vector2.png"
-                        alt="Arrow"
-                        className="x-icon "
-                      />
-                    </div>
+            </div>
+            <div className="card-overlay1 ">
+              <div className="card-content flex flex-col justify-between  ">
+                <h3>Full Truck Load</h3>
+                <div className=" flex items-center justify-between    ">
+                  <div className="!w-[40px]  pb-[10px] ">
+                    <img
+                      src="/images/assets/redarrow.png"
+                      alt="Arrow"
+                      className=" !w-[30px] aspect-square rotate-[-47deg] "
+                    />
+                  </div>
+                  <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
+                    <img
+                      src="/images/assets/vector2.png"
+                      alt="Arrow"
+                      className="w-full aspect-square scale-120 !ml-[.5cm] "
+                    />
                   </div>
                 </div>
               </div>
@@ -331,7 +435,7 @@ export default function HeroSection({ isScrolled }) {
               <div className="card-content flex flex-col justify-between  ">
                 <h3>Temperature Controlled</h3>
                 <div className=" flex items-center justify-between    ">
-                  <div className="!w-[40px]  ">
+                  <div className="!w-[40px]  pb-[10px] ">
                     <img
                       src="/images/assets/redarrow.png"
                       alt="Arrow"
@@ -342,7 +446,7 @@ export default function HeroSection({ isScrolled }) {
                     <img
                       src="/images/assets/vector2.png"
                       alt="Arrow"
-                      className="x-icon "
+                      className="w-full aspect-square scale-120 !ml-[.5cm] "
                     />
                   </div>
                 </div>
@@ -360,7 +464,7 @@ export default function HeroSection({ isScrolled }) {
               <div className="card-content flex flex-col justify-between  ">
                 <h3>Cross Border</h3>
                 <div className=" flex items-center justify-between    ">
-                  <div className="!w-[40px]">
+                  <div className="!w-[40px]  pb-[10px] ">
                     <img
                       src="/images/assets/redarrow.png"
                       alt="Arrow"
@@ -371,7 +475,7 @@ export default function HeroSection({ isScrolled }) {
                     <img
                       src="/images/assets/vector2.png"
                       alt="Arrow"
-                      className="x-icon"
+                      className="w-full aspect-square scale-120 !ml-[.5cm] "
                     />
                   </div>
                 </div>
@@ -390,7 +494,7 @@ export default function HeroSection({ isScrolled }) {
               <div className="card-content flex flex-col justify-between  ">
                 <h3>Cross Docking</h3>
                 <div className=" flex items-center justify-between    ">
-                  <div className="!w-[40px] ">
+                  <div className="!w-[40px]  pb-[10px] ">
                     <img
                       src="/images/assets/redarrow.png"
                       alt="Arrow"
@@ -401,7 +505,7 @@ export default function HeroSection({ isScrolled }) {
                     <img
                       src="/images/assets/vector2.png"
                       alt="Arrow"
-                      className="x-icon"
+                      className="w-full aspect-square scale-120 !ml-[.5cm] "
                     />
                   </div>
                 </div>

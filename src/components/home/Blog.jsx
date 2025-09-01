@@ -93,7 +93,7 @@ const Blog = () => {
                     {item.title}
                   </h3>
                   <div className="arrow-icon">
-                    <img src="/images/assets/arrowUp.png" alt="Arrow" />
+                    <img src="/images/assets/redArrow.png" alt="Arrow" />
                   </div>
                 </div>
                 <p className="card_subheading text-[#1B1F26B8]">{item.desc}</p>

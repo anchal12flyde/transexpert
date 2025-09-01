@@ -103,7 +103,8 @@ body::-webkit-scrollbar {
   padding-right: 126px;
 }
 .bshadow {
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+
 }
 
 @media (max-width: 768px) {
@@ -1512,7 +1513,7 @@ span:has(img) {
   transition: transform 0.3s ease-in-out;
 }
 .blog-box:hover .arrow-icon img {
-  transform: rotate(47deg);
+  transform: rotate(-47deg);
 }
 @media (max-width: 768px) {
   .arrow-icon img {
@@ -1523,7 +1524,7 @@ span:has(img) {
 }
 .industries-section {
   padding: 78px 0;
-  background: #fff;
+  background: transparent;
 }
 @media (max-width: 768px) {
   .industries-section {
@@ -2439,6 +2440,24 @@ margin-bottom: 15px;
   font-weight: 400;
 }
 
+
+
+/* We are different */
+
+.downtime-container1 {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+  gap: 62px;
+}
+@media (max-width:768px){
+  .downtime-container1 {
+    flex-direction: column;
+    margin-top: 36px;
+    gap: 26px;
+  }
+}
+
 /* Section container */
 .downtime-container {
   margin-top: 26px;
@@ -2484,9 +2503,9 @@ margin-bottom: 15px;
   background-color: var(--primary-color);
   color: var(--thm-white);
   text-align: left;
-  padding: 30px 15px;
+  padding: 30px 62px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 2.27px 1.13px 1.93px 0px rgba(0, 0, 0, 0.25); 
 }
 
 @media (max-width: 768px) {
@@ -3371,6 +3390,14 @@ textarea {
     font-size: 18px;
   }
 }
+
+.downtime-image1{
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .downtime-image {
   border-radius: 8px;
   height: 100%;

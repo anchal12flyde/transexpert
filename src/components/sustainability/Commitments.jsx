@@ -42,7 +42,7 @@ export default function Commitments() {
     {
       title: "Environmental Responsibility",
       description:
-        "SmartWay-certified operations, idle-reduction technologies, and an energy-efficient fleet.",
+        "SmartWay-certified operations, idle reduction technologies, and an energy-efficient fleet.",
       logo: "/images/assets/plant-care.png",
     },
     {

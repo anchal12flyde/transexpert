@@ -38,7 +38,7 @@ export default function Environmental() {
               </li>
               <li>Driver training in fuel-efficient methods</li>
               <li>
-                Program: Driving to Be Green — quick tips to reduce the carbon
+                Program: Driving to Be Green, quick tips to reduce the carbon
                 footprint
               </li>
             </ul>

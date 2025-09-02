@@ -266,7 +266,7 @@ export default function HeroSection({ isScrolled }) {
         <div className="hero-content">
           <h1 className="hero-heading hero-heading-macbook mb-[24px] lg:mb-[36px]">
             We Don’t Just Move Freight. <br />
-            We Power North American Enterprise.
+            We Power North American <br /> Enterprise.
           </h1>
           <p className="hero-description w-full lg:w-[550px] hidden lg:block">
             From mission-critical deliveries to cross-border precision, Trans

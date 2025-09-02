@@ -63,7 +63,7 @@
         "description": "Whether you're shipping pharmaceuticals, perishable foods, or other climate-sensitive materials, our solutions offer:",
         "points": [
           "Real-time temperature monitoring and reporting",
-          "Insulated trailers equipped with multi-zone temperature control",
+          
           "24/7 proactive response team for in-transit temperature deviations",
           "Compliant with FDA, FSMA, and international cold chain standards"
         ],
@@ -150,8 +150,7 @@
         "points": [
           "Immediate transfer from inbound to outbound shipments",
           "Reduced warehousing costs and storage times",
-          "Strategically located cross-dock terminals",
-          "Integrated WMS and real-time inventory visibility"
+          "Strategically located cross-dock terminals"
         ],
         "button": {
           "label": "Get a quote"

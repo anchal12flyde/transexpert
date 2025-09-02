@@ -1,8 +1,19 @@
 "use client";
 
 import Header from "../home/Header";
+import { motion } from "framer-motion";
+import { useState,useEffect } from "react";
 
 export default function AboutHero({ isScrolled }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <section className="about-hero-section">
       {!isScrolled && (
@@ -18,21 +29,26 @@ export default function AboutHero({ isScrolled }) {
       </div>
 
       {/* Text Content */}
-      <div className="about-hero-content global-container">
+      <motion.div
+        className="about-hero-content global-container"
+        initial={{ opacity: 0, x: -80 }}
+        animate={isLoaded ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         <div className="hero-content">
-          <h1 className="hero-heading  mb-[24px] ">
+          <h1 className="hero-heading mb-[24px]">
             North America's Elite Fleet
           </h1>
           <p className="hero-description w-full sm:w-[800px]">
-            Trans Expert Inc. is a premier cross-border logistics provider,
+            Trans Expert Inc. is a premier cross-border asset-based transportation provider,
             committed to delivering seamless freight solutions across Canada,
             the United States, and Mexico. Founded in 2010, we are powered by
             over five decades of combined logistics expertise and a relentless
             pursuit of operational excellence.
           </p>
-          <button className="hero-button ">Know More</button>
+          <button className="hero-button">Know More</button>
         </div>
-      </div>
+      </motion.div>
 
       {/* Floating Box - Desktop Version */}
       <div className="outer-float-box hidden md:block">
@@ -49,9 +65,9 @@ export default function AboutHero({ isScrolled }) {
               <br />
               <p className="subheading">
                 We envision a logistics infrastructure that is fast, secure,
-                sustainable, and human-led — built to serve businesses that <br />
-                expect more than 
-                just delivery.
+                sustainable, and human-led — built to serve businesses that{" "}
+                <br />
+                expect more than just delivery.
               </p>
             </div>
           </div>

@@ -5,23 +5,24 @@ export default function ContactDetails() {
       <section className="contact-section global-container">
         <div className="contact-info">
           <div className="section">
-            <h3 className="heading">Head Office</h3>
+            <h3 className="contact-heading">Head Office</h3>
             <p className="contact-para mb-[16px]">
               <img
                 src="/images/assets/location.png"
                 alt="Location Icon"
-                width={19}
-                height={19}
+                width={16}
+                height={16}
                 style={{
                   display: "inline-block",
                   marginRight: "8px",
                   verticalAlign: "middle",
                 }}
               />
-              Trans Expert Inc.<br/>
-              <span style={{ paddingLeft: "27px" }}>100 Market Drive,</span><br/>
-              <span style={{ paddingLeft: "27px" }}>
-                {" "}
+              Trans Expert Inc.
+              <br />
+              <span style={{ paddingLeft: "27px" }}>100 Market Drive,</span>
+              <br />
+              <span className="block ml-[27px]">
                 Milton, Ontario, L9T 3H5, Canada
               </span>
             </p>
@@ -30,8 +31,8 @@ export default function ContactDetails() {
               <img
                 src="/images/assets/phone-call.png"
                 alt="Location Icon"
-                width={16}
-                height={16}
+                width={19}
+                height={19}
                 style={{
                   display: "inline-block",
                   marginRight: "8px",
@@ -58,14 +59,14 @@ export default function ContactDetails() {
           </div>
 
           <div className="section">
-            <h3 className="heading">General Inquiries</h3>
+            <h3 className="contact-heading">General Inquiries</h3>
             <p className="contact-para mb-[16px]">
               {" "}
               <img
                 src="/images/assets/mail.png"
                 alt="Location Icon"
-                width={19}
-                height={19}
+                width={16}
+                height={16}
                 style={{
                   display: "inline-block",
                   marginRight: "8px",
@@ -79,8 +80,8 @@ export default function ContactDetails() {
               <img
                 src="/images/assets/phone-call.png"
                 alt="Location Icon"
-                width={16}
-                height={16}
+                width={19}
+                height={19}
                 style={{
                   display: "inline-block",
                   marginRight: "8px",
@@ -95,7 +96,7 @@ export default function ContactDetails() {
           </div>
 
           <div className="section">
-            <h3 className="heading">Enterprise Sales</h3>
+            <h3 className="contact-heading">Sales</h3>
             <p className="contact-para mb-[16px]">
               Looking to discuss enterprise logistics or request a proposal?
             </p>
@@ -104,8 +105,8 @@ export default function ContactDetails() {
               <img
                 src="/images/assets/mail.png"
                 alt="Location Icon"
-                width={19}
-                height={19}
+                width={16}
+                height={16}
                 style={{
                   display: "inline-block",
                   marginRight: "8px",
@@ -119,9 +120,9 @@ export default function ContactDetails() {
             </p>
           </div>
           <div className="section">
-            <h3 className="heading">Carrier Partnerships</h3>
+            <h3 className="contact-heading">Partnerships</h3>
             <p className="contact-para  mb-[16px]">
-              Interested in becoming an approved carrier or vendor?
+              Interested in becoming an approved c vendor?
             </p>
 
             <p className="contact-para">
@@ -129,8 +130,8 @@ export default function ContactDetails() {
               <img
                 src="/images/assets/mail.png"
                 alt="Location Icon"
-                width={19}
-                height={19}
+                width={16}
+                height={16}
                 style={{
                   display: "inline-block",
                   marginRight: "8px",
@@ -141,7 +142,7 @@ export default function ContactDetails() {
             </p>
           </div>
           <div className="section">
-            <h3 className="heading">Careers</h3>
+            <h3 className="contact-heading">Careers</h3>
             <p className="contact-para  mb-[16px]">
               We’re always on the lookout for drivers, dispatchers, and
               logistics pros
@@ -151,8 +152,8 @@ export default function ContactDetails() {
               <img
                 src="/images/assets/mail.png"
                 alt="Location Icon"
-                width={19}
-                height={19}
+                width={16}
+                height={16}
                 style={{
                   display: "inline-block",
                   marginRight: "8px",

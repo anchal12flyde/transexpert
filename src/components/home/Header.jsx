@@ -28,7 +28,7 @@ export default function Header({ isScrolled = false }) {
     {
       name: "Full Truckload",
       desc: "They’re about full control, full visibility, and full confidence.",
-      img: "/images/assets/Full Truck Load.png",
+      img: "/images/mmenu1.jpg",
       path: "/ftl",
     },
     {

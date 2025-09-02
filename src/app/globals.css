@@ -104,8 +104,6 @@ body::-webkit-scrollbar {
 }
 .bshadow {
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
-
-
 }
 
 @media (max-width: 768px) {
@@ -233,13 +231,12 @@ body::-webkit-scrollbar {
   color: white;
   z-index: 1;
   overflow: hidden;
-  
 }
 .hero-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/hhh.png");
+  background-image: url("/images/himg1.png");
   background-size: cover;
   background-position: center;
   opacity: 0.9;
@@ -340,6 +337,15 @@ body::-webkit-scrollbar {
   cursor: pointer;
   /* height: auto; */
 }
+
+
+.hero-button:hover{
+  background-color: #A60400;
+  transition: .3s all ease;
+}
+
+
+
 @media (max-width: 768px) {
   .hero-button {
     padding: 8px 19.321px;
@@ -741,7 +747,8 @@ span:has(img) {
   z-index: 2;
   width: 40px;
   height: 40px;
-  transition: transform 0.5s ease, bottom 0.5s ease, width 0.5s ease, height 0.5s ease;
+  transition: transform 0.5s ease, bottom 0.5s ease, width 0.5s ease,
+    height 0.5s ease;
 }
 
 .arrow-img img {
@@ -762,7 +769,6 @@ span:has(img) {
   width: 28px !important;
   height: 28px !important;
 }
-
 
 .card img {
   width: 100%;
@@ -795,7 +801,6 @@ span:has(img) {
   font-size: 20px;
   font-weight: bold;
 }
-
 
 .card-overlay .card-content p {
   margin-top: 0.5rem;
@@ -1698,27 +1703,26 @@ span:has(img) {
 
 /* Mobile view: Swap to About_img2.png */
 @media (max-width: 768px) {
- 
   .about-hero-section {
     height: 140vh;
-margin-bottom: 315px;
+    margin-bottom: 315px;
   }
 }
-.realiable-author{
+.realiable-author {
   color: var(--thm-white);
   font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-margin-bottom: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 26px;
 }
-@media(max-width:768px){
-  .realiable-author{
+@media (max-width: 768px) {
+  .realiable-author {
     font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-bottom: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 15px;
   }
 }
 .about-hero-overlay {
@@ -2462,8 +2466,6 @@ margin-bottom: 15px;
   font-weight: 400;
 }
 
-
-
 /* We are different */
 
 .downtime-container1 {
@@ -2472,7 +2474,7 @@ margin-bottom: 15px;
   flex-direction: row;
   gap: 62px;
 }
-@media (max-width:768px){
+@media (max-width: 768px) {
   .downtime-container1 {
     flex-direction: column;
     margin-top: 36px;
@@ -2527,7 +2529,7 @@ margin-bottom: 15px;
   text-align: left;
   padding: 30px 62px;
   border-radius: 8px;
-  box-shadow: 2.27px 1.13px 1.93px 0px rgba(0, 0, 0, 0.25); 
+  box-shadow: 2.27px 1.13px 1.93px 0px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
@@ -2557,7 +2559,7 @@ margin-bottom: 15px;
   height: 416px;
   width: 100%;
   border-radius: 0 0 0 305px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .fleet-hero__image {
@@ -2602,7 +2604,7 @@ margin-bottom: 15px;
 
 .fleet-hero__image {
   object-fit: cover;
-  object-position:  center;
+  object-position: center;
   width: 100%;
   height: 100%;
 }
@@ -2684,10 +2686,10 @@ margin-bottom: 15px;
 
 /* Responsive */
 @media (max-width: 768px) {
-  .fleet-hero__overlay{
-bottom: 24px;
-width: 100%;
-   }
+  .fleet-hero__overlay {
+    bottom: 24px;
+    width: 100%;
+  }
   .fleet-hero__overlay h1 {
     font-size: 24px;
   }
@@ -2998,10 +3000,10 @@ Certifications */
   border-radius: 16px;
   height: 100%;
 }
-@media (max-width:768px){
+@media (max-width: 768px) {
   .industries__card--image {
-    height:139px;
-}
+    height: 139px;
+  }
 }
 
 .industries__img {
@@ -3115,7 +3117,6 @@ Certifications */
 }
 /* Contact Page */
 
-
 .contact-section {
   display: flex;
   flex-direction: row;
@@ -3137,15 +3138,15 @@ Certifications */
   justify-content: space-between;
   overflow: hidden;
 }
-.contact-heading{
+.contact-heading {
   font-size: 32px;
   font-weight: 600;
   line-height: normal;
   letter-spacing: normal;
   margin-bottom: 16px;
 }
-@media (max-width:768px){
-  .contact-heading{
+@media (max-width: 768px) {
+  .contact-heading {
     font-size: 24px;
     font-weight: 600;
   }
@@ -3443,7 +3444,7 @@ textarea {
   }
 }
 
-.downtime-image1{
+.downtime-image1 {
   border-radius: 8px;
   height: 100%;
   width: 100%;

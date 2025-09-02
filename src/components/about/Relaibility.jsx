@@ -58,7 +58,7 @@ const Relaibility = () => {
               </p>
               <br />
               <p className="subheading">
-                Today, we operate from 7 logistics hubs with over 235 trucks,
+                Today, we operate from 7 logistics hubs with over 250 trucks,
                 backed by real-time GPS systems, compliance certifications, and
                 a client-first team culture.
               </p>

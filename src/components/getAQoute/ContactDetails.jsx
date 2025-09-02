@@ -30,7 +30,7 @@ export default function ContactDetails() {
               <input type="text" placeholder="Toronto, ON" />
             </div>
             <div className="form-group">
-              <label className="contact-para">Drop Location</label>
+              <label className="contact-para">Delivery Location</label>
               <input type="text" placeholder="Vancouver, BC" />
             </div>
 
@@ -64,9 +64,9 @@ export default function ContactDetails() {
                 <label>
                   <input type="radio" name="loadType" /> Flatbed
                 </label>
-                <label>
+                {/* <label>
                   <input type="radio" name="loadType" /> Hazmat
-                </label>
+                </label> */}
               </div>
             </div>
 
@@ -74,10 +74,10 @@ export default function ContactDetails() {
               <label className="contact-para">Weight (kg/lb)</label>
               <input type="number" placeholder="1000 kg" />
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <label className="contact-para">Dimensions (L × W × H)</label>
               <input type="text" placeholder="2m × 1.5m × 1.8m" />
-            </div>
+            </div> */}
 
             <div className="full-width">
               <label className="contact-para">Pickup Date</label>

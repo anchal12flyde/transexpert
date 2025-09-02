@@ -74,12 +74,10 @@ export default function GeographicalCoverage() {
             Newfoundland and Labrador.
           </p>
           <p className="subheading para macbook-para">
-            <span>USA: </span> Extensive coverage across the continental United
-            States.
+            <span>USA: </span> Extensive coverage across the country.
           </p>
           <p className="subheading para macbook-para">
-            <span>Mexico: </span>Supported through trusted cross-border
-            partnerships.
+            <span>Mexico: </span>Wide-reaching coverage throughout the nation.
           </p>
           <p className="subheading para macbook-para">
             Terminal Locations

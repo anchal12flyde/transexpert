@@ -113,7 +113,7 @@ export default function Header({ isScrolled = false }) {
                         <Link
                           key={s.name}
                           href={s.path}
-                          className="flex gap-3  items-start hover:bg-gray-50 h-fit  rounded-lg transition  "
+                          className="flex gap-3  items-start hover:bg-gray-50 h-fit  rounded-lg transition p-4  "
                         >
                           <div className="!w-[111px] aspect-[16/12]   shrink-0 ">
                             <Image

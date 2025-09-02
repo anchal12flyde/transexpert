@@ -2,7 +2,7 @@
 
 import Header from "../home/Header";
 import { motion } from "framer-motion";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function AboutHero({ isScrolled }) {
   const [isLoaded, setIsLoaded] = useState(false);

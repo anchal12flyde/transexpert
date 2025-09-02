@@ -4,6 +4,33 @@ import { useEffect, useRef, useState } from "react";
 import Header from "./Header";
 import { useRouter } from "next/navigation";
 import Slider from "react-slick";
+import { motion, MotionConfig } from "framer-motion";
+
+
+
+
+
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15, // gap between cards
+      delayChildren: 0.2, // SERVICES ke baad cards start
+      staggerDirection: 1, // left to right
+    },
+  },
+};
+
+const fadeLeftToRight = {
+  hidden: { opacity: 0, x: -40, filter: "blur(6px)" },
+  visible: {
+    opacity: 1,
+    x: 0,
+    filter: "blur(0px)",
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
 
 export default function HeroSection({ isScrolled }) {
   const overlayRef = useRef(null);
@@ -176,7 +203,7 @@ export default function HeroSection({ isScrolled }) {
 
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -203,7 +230,7 @@ export default function HeroSection({ isScrolled }) {
             src="/images/assets/x.png"
             alt="Animation"
             className="  "
-            onLoad={handleImageLoad} 
+            onLoad={handleImageLoad}
           />
         </div>
 
@@ -272,21 +299,33 @@ export default function HeroSection({ isScrolled }) {
           </Slider>
         </div>
 
-        <div className="testimonial-cards  ">
-          <div className=" flex justify-end ">
+        <motion.div
+          className="testimonial-cards"
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+        >
+          {/* SERVICES text (fade in pehle) */}
+          <motion.div className="flex justify-end" variants={fadeLeftToRight}>
             <p
-              className="   text-[46px] font-bold mr-[-.8cm]  "
+              className="text-[46px] font-bold mr-[-.8cm]"
               style={{ writingMode: "sideways-lr" }}
             >
               SERVICES
             </p>
-          </div>
-          <div className="card" onClick={() => router.push("/ftl")}>
+          </motion.div>
+
+          {/* Card 1 */}
+          <motion.div
+            className="card"
+            variants={fadeLeftToRight}
+            onClick={() => router.push("/ftl")}
+          >
             <div className="img-wrapper">
               <img
                 src="/images/assets/Full Truck Load.png"
                 alt="Full Truck Load"
-                className="h-auto object-cover"
               />
               <img
                 src="/images/assets/redarrow.png"
@@ -305,17 +344,18 @@ export default function HeroSection({ isScrolled }) {
                 className="x-icon"
               />
             </div>
-          </div>
+          </motion.div>
 
-          <div
+          {/* Card 2 */}
+          <motion.div
             className="card"
+            variants={fadeLeftToRight}
             onClick={() => router.push("/temperature-controlled")}
           >
             <div className="img-wrapper">
               <img
                 src="/images/assets/Refigereted.png"
-                alt="Full Truck Load"
-                className="h-auto object-cover"
+                alt="Temperature Controlled"
               />
               <img
                 src="/images/assets/redarrow.png"
@@ -334,14 +374,16 @@ export default function HeroSection({ isScrolled }) {
                 className="x-icon"
               />
             </div>
-          </div>
-          <div className="card" onClick={() => router.push("/cross-border")}>
+          </motion.div>
+
+          {/* Card 3 */}
+          <motion.div
+            className="card"
+            variants={fadeLeftToRight}
+            onClick={() => router.push("/cross-border")}
+          >
             <div className="img-wrapper">
-              <img
-                src="/images/assets/Cross Border.png"
-                alt="Full Truck Load"
-                className="h-auto object-cover"
-              />
+              <img src="/images/assets/Cross Border.png" alt="Cross Border" />
               <img
                 src="/images/assets/redarrow.png"
                 alt="Arrow"
@@ -359,15 +401,16 @@ export default function HeroSection({ isScrolled }) {
                 className="x-icon"
               />
             </div>
-          </div>
+          </motion.div>
 
-          <div className="card" onClick={() => router.push("/cross-docking")}>
+          {/* Card 4 */}
+          <motion.div
+            className="card"
+            variants={fadeLeftToRight}
+            onClick={() => router.push("/cross-docking")}
+          >
             <div className="img-wrapper">
-              <img
-                src="/images/assets/Cross Docking.png"
-                alt="Full Truck Load"
-                className="h-auto object-cover"
-              />
+              <img src="/images/assets/Cross Docking.png" alt="Cross Docking" />
               <img
                 src="/images/assets/redarrow.png"
                 alt="Arrow"
@@ -385,8 +428,8 @@ export default function HeroSection({ isScrolled }) {
                 className="x-icon"
               />
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       <div className=" lg:hidden flex gap-[37px] flex-col mb-[0px] mt-[0px] global-container bgMob pb-[110px] pt-[42px] ">

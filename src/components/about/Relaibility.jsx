@@ -1,11 +1,18 @@
 "use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Relaibility = () => {
   return (
     <>
-      <div className="global-container  mb-[42px] sm:mb-[78px]">
-        <section className="careers-banner careers-banner_border">
+      <div className="global-container mb-[42px] sm:mb-[78px]">
+        <motion.section
+          className="careers-banner careers-banner_border"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           <div className="careers-content-wrapper drive_div">
             {/* Left Image */}
             <div className="careers-image-container">
@@ -14,21 +21,20 @@ const Relaibility = () => {
                 alt="Driver"
                 width={800}
                 height={0}
-                className="careers-image "
+                className="careers-image"
               />
             </div>
 
             {/* Right Text */}
             <div className="careers-text-content">
-              <p className=" quote-heading ">
+              <p className="quote-heading">
                 <img
                   src="/images/assets/quote1.png"
                   alt="quote"
                   className="quote-icon-open"
                 />
                 <span>
-                  {" "}
-                  Reliability isn't a metric.It's a{" "}
+                  Reliability isn't a metric. It's a{" "}
                   <span className="mindset">
                     mindset.{" "}
                     <img
@@ -58,7 +64,7 @@ const Relaibility = () => {
               </p>
             </div>
           </div>
-        </section>
+        </motion.section>
       </div>
     </>
   );

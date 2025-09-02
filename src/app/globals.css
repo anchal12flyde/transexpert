@@ -2433,7 +2433,7 @@ margin-bottom: 15px;
   font-weight: 700;
   text-align: left;
   gap: 50px;
-  padding: 0 105px;
+  padding: 0 50px;
 }
 
 .fleet-stats-number-item {
@@ -2453,7 +2453,7 @@ margin-bottom: 15px;
   gap: 50px;
 
   text-align: left;
-  padding: 0 105px;
+  padding: 0 50px;
 }
 
 .fleet-stats-description-item {

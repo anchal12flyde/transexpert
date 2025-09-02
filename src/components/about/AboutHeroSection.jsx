@@ -2,7 +2,7 @@
 
 import Header from "../home/Header";
 import { motion } from "framer-motion";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function AboutHero({ isScrolled }) {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -40,10 +40,12 @@ export default function AboutHero({ isScrolled }) {
             North America's Elite Fleet
           </h1>
           <p className="hero-description w-full sm:w-[800px]">
-            Trans Expert Inc. is a premier cross-border asset-based transportation provider,
-            committed to delivering seamless freight solutions across Canada,
-            the United States, and Mexico. Founded in 2010, we are powered by
-            over five decades of combined logistics expertise and a relentless
+            Trans Expert Inc. is a premier cross-border, asset-based
+            transportation provider, committed to delivering seamless freight
+            solutions across Canada, the United States, and Mexico. Backed by a
+            fleet of more than 250 trucks, we ensure capacity, reliability, and
+            speed for every shipment. Founded in 2010, we are powered by over
+            five decades of combined logistics expertise and a relentless
             pursuit of operational excellence.
           </p>
           <button className="hero-button">Know More</button>

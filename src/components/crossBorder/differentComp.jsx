@@ -1,20 +1,21 @@
 export default function DifferentComp({ title, imageSrc, points }) {
   return (
-    <section className="global-container mb-[42px] sm:mb-[78px]">
-      <div className="downtime-container">
+    <section className="global-container mb-[42px] sm:mb-[78px] mt-[42px] sm:mt-[78px]">
+      <h2
+        className="hero-section-heading hero-section-heading-macbook w-[250px] sm:w-[500px] text-center sm:text-left"
+        dangerouslySetInnerHTML={{ __html: title }}
+      />
+      <div className="downtime-container1">
         {/* Left side */}
+
         <div className="downtime-left1">
-          <h2
-            className="hero-section-heading mb-[16px]"
-            dangerouslySetInnerHTML={{ __html: title }}
-          />
-          <img src={imageSrc} alt="Fleet" className="downtime-image" />
+          <img src={imageSrc} alt="Fleet" className="downtime-image1" />
         </div>
 
         {/* Right side */}
         <div className="downtime-right subheading">
           {points.map((text, i) => (
-            <div key={i} className="downtime-card subheading">
+            <div key={i} className="downtime-card subheading ">
               {text}
             </div>
           ))}

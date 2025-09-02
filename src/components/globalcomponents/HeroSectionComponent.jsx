@@ -26,7 +26,7 @@ export default function HeroSectionComponent({
         />
 
         <div className="fleet-hero__overlay global-container">
-          <h1 dangerouslySetInnerHTML={{ __html: title }} />
+          <h1 className="">{title}</h1>
         </div>
       </div>
 

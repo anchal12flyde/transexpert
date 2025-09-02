@@ -103,7 +103,9 @@ body::-webkit-scrollbar {
   padding-right: 126px;
 }
 .bshadow {
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+
+
 }
 
 @media (max-width: 768px) {
@@ -249,13 +251,13 @@ body::-webkit-scrollbar {
   align-items: flex-start;
   justify-content: start;
   height: 100%;
-  margin-top: 6rem;
+  margin-top: 60px;
   color: var(--thm-white);
 }
 @media screen and (min-width: 1024px) {
   .hero-content {
     justify-content: flex-start;
-    margin-top: 10rem;
+    margin-top: 194px;
   }
 }
 
@@ -1554,7 +1556,7 @@ span:has(img) {
   transition: transform 0.3s ease-in-out;
 }
 .blog-box:hover .arrow-icon img {
-  transform: rotate(47deg);
+  transform: rotate(-47deg);
 }
 @media (max-width: 768px) {
   .arrow-icon img {
@@ -1565,7 +1567,7 @@ span:has(img) {
 }
 .industries-section {
   padding: 78px 0;
-  background: #fff;
+  background: transparent;
 }
 @media (max-width: 768px) {
   .industries-section {
@@ -1717,19 +1719,33 @@ span:has(img) {
 
 /* Mobile view: Swap to About_img2.png */
 @media (max-width: 768px) {
-  .about-hero-bg {
-    background-image: url("/images/About_img2.png");
-  }
+ 
   .about-hero-section {
-    height: 150vh;
-    margin-bottom: 380px;
+    height: 140vh;
+margin-bottom: 315px;
   }
 }
-
+.realiable-author{
+  color: var(--thm-white);
+  font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-bottom: 26px;
+}
+@media(max-width:768px){
+  .realiable-author{
+    font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 15px;
+  }
+}
 .about-hero-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 12, 58, 0.64);
+  background: rgba(0, 12, 58, 0.64);
   mix-blend-mode: multiply;
 }
 
@@ -1918,7 +1934,7 @@ span:has(img) {
 }
 @media (max-width: 768px) {
   .drive_div {
-    padding: 0 19px;
+    padding: 0 16px;
   }
 }
 .careers-banner_border {
@@ -1971,8 +1987,8 @@ span:has(img) {
     height: 25px;
   }
   .quote-heading .quote-icon-close {
-    right: -35px;
-    margin-top: 0;
+    right: -31px;
+    margin-top: -4px;
     width: 40px;
     height: 25px;
   }
@@ -2467,6 +2483,24 @@ span:has(img) {
   font-weight: 400;
 }
 
+
+
+/* We are different */
+
+.downtime-container1 {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+  gap: 62px;
+}
+@media (max-width:768px){
+  .downtime-container1 {
+    flex-direction: column;
+    margin-top: 36px;
+    gap: 26px;
+  }
+}
+
 /* Section container */
 .downtime-container {
   margin-top: 26px;
@@ -2512,9 +2546,9 @@ span:has(img) {
   background-color: var(--primary-color);
   color: var(--thm-white);
   text-align: left;
-  padding: 30px 15px;
+  padding: 30px 62px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 2.27px 1.13px 1.93px 0px rgba(0, 0, 0, 0.25); 
 }
 
 @media (max-width: 768px) {
@@ -2969,6 +3003,11 @@ Certifications */
   border-radius: 16px;
   height: 100%;
 }
+@media (max-width:768px){
+  .industries__card--image {
+    height:139px;
+}
+}
 
 .industries__img {
   height: 100%;
@@ -3018,18 +3057,18 @@ Certifications */
 /* Responsive */
 @media (max-width: 768px) {
   .industries__grid {
-    gap: 42px;
+    gap: 16px;
     grid-template-columns: 1fr;
   }
   .industries__grid1 {
-    gap: 42px;
+    gap: 16px;
     grid-template-columns: 1fr;
     margin-top: 42px;
     margin-bottom: 42px;
   }
 
   .industries {
-    margin: 42px 0;
+    margin: 41px 0;
   }
 
   .industries__card--text {
@@ -3042,6 +3081,7 @@ Certifications */
   }
   .industries__label {
     font-size: 24px;
+    font-weight: 400;
   }
 
   .industries__banner {
@@ -3055,6 +3095,8 @@ Certifications */
   .industries__desc,
   .industries__list {
     font-size: 16px;
+    line-height: normal;
+    font-weight: 300;
   }
 }
 .industries__banner-icon {
@@ -3391,6 +3433,14 @@ textarea {
     font-size: 18px;
   }
 }
+
+.downtime-image1{
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .downtime-image {
   border-radius: 8px;
   height: 100%;

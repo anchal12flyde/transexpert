@@ -104,8 +104,6 @@ body::-webkit-scrollbar {
 }
 .bshadow {
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
-
-
 }
 
 @media (max-width: 768px) {
@@ -398,7 +396,6 @@ body::-webkit-scrollbar {
     opacity: 1;
   }
 }
-
 
 /* X Image container */
 .square-videon {
@@ -1568,11 +1565,13 @@ span:has(img) {
 .industries-section {
   padding: 78px 0;
   background: transparent;
+
+  /* margin-bottom: 382px; */
 }
 @media (max-width: 768px) {
   .industries-section {
     padding: 42px 0;
-    background: #fff;
+    background: transparent;
   }
 }
 .industries-container {
@@ -1719,27 +1718,26 @@ span:has(img) {
 
 /* Mobile view: Swap to About_img2.png */
 @media (max-width: 768px) {
- 
   .about-hero-section {
     height: 140vh;
-margin-bottom: 315px;
+    margin-bottom: 315px;
   }
 }
-.realiable-author{
+.realiable-author {
   color: var(--thm-white);
   font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-margin-bottom: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 26px;
 }
-@media(max-width:768px){
-  .realiable-author{
+@media (max-width: 768px) {
+  .realiable-author {
     font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-bottom: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 15px;
   }
 }
 .about-hero-overlay {
@@ -2398,6 +2396,7 @@ margin-bottom: 15px;
 
 .fleet-two {
   flex: 1.8;
+  max-width: 832px;
 }
 
 .fleet-one h3 {
@@ -2406,6 +2405,16 @@ margin-bottom: 15px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+@media (max-width : 1600px){
+  .fleet-one h3 {
+    color: var(--thm-heading-text);
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 }
 .downtime-heading {
   font-family: Onest;
@@ -2483,8 +2492,6 @@ margin-bottom: 15px;
   font-weight: 400;
 }
 
-
-
 /* We are different */
 
 .downtime-container1 {
@@ -2493,7 +2500,7 @@ margin-bottom: 15px;
   flex-direction: row;
   gap: 62px;
 }
-@media (max-width:768px){
+@media (max-width: 768px) {
   .downtime-container1 {
     flex-direction: column;
     margin-top: 36px;
@@ -2548,7 +2555,7 @@ margin-bottom: 15px;
   text-align: left;
   padding: 30px 62px;
   border-radius: 8px;
-  box-shadow: 2.27px 1.13px 1.93px 0px rgba(0, 0, 0, 0.25); 
+  box-shadow: 2.27px 1.13px 1.93px 0px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
@@ -3003,10 +3010,10 @@ Certifications */
   border-radius: 16px;
   height: 100%;
 }
-@media (max-width:768px){
+@media (max-width: 768px) {
   .industries__card--image {
-    height:139px;
-}
+    height: 139px;
+  }
 }
 
 .industries__img {
@@ -3434,7 +3441,7 @@ textarea {
   }
 }
 
-.downtime-image1{
+.downtime-image1 {
   border-radius: 8px;
   height: 100%;
   width: 100%;

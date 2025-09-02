@@ -15,7 +15,7 @@
       }
     },
     "truckImageSection": {
-      "imageSrc": "/images/truck.png",
+      "imageSrc": "/images/ftlimg.png",
       "overlay": {
         "title": "Why you need FTL?",
         "description": "Whether it’s recurring production shipments, large-scale retail fulfillment, or high-value cargo requiring minimal touchpoints, our FTL model is engineered for:",
@@ -57,7 +57,7 @@
       }
     },
     "truckImageSection": {
-      "imageSrc": "/images/truck.png",
+      "imageSrc": "/images/tcimg.png",
       "overlay": {
         "title": "Why you need Temperature-Controlled Transport?",
         "description": "Whether you're shipping pharmaceuticals, perishable foods, or other climate-sensitive materials, our solutions offer:",
@@ -100,7 +100,7 @@
       }
     },
     "truckImageSection": {
-      "imageSrc": "/images/truck.png",
+      "imageSrc": "/images/cbimg.png",
       "overlay": {
         "title": "Why you need Cross-border Logistics?",
         "description": "Whether it's regular import/export, specialized permits, or bonded shipments, our cross-border services ensure:",
@@ -143,7 +143,7 @@
       }
     },
     "truckImageSection": {
-      "imageSrc": "/images/truck.png",
+      "imageSrc": "/images/cdimg.png",
       "overlay": {
         "title": "Why you need Cross-docking Solutions?",
         "description": "From retail replenishment to just-in-time manufacturing, our facilities and process are optimized for:",

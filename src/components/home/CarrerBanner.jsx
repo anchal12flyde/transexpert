@@ -60,18 +60,18 @@ const CareersBanner = () => {
           </motion.p>
 
           <motion.p className="subheading pb-[8px]" variants={textVariants}>
-            We're always looking for dedicated drivers, logistics pros, and
-            problem-solvers to join our growing North American team.
+            Join us as a dedicated driver and help keep goods moving safely,
+            reliably, and on time.
           </motion.p>
 
           <motion.p className="subheading pb-[8px]" variants={textVariants}>
-            We're always looking for dedicated drivers, logistics pros, and
-            problem-solvers to join our growing North American team.
+            Bring your skills as a logistics professional and make supply chains
+            smarter and more efficient.
           </motion.p>
 
           <motion.p className="subheading" variants={textVariants}>
-            We're always looking for dedicated drivers, logistics pros, and
-            problem-solvers to join our growing North American team.
+            Be part of a supportive team that’s growing across North America and
+            shaping the future of logistics together.
           </motion.p>
 
           <motion.button className="hero-button" variants={textVariants}>

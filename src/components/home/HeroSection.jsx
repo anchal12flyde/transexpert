@@ -36,6 +36,33 @@ export default function HeroSection({ isScrolled }) {
   const overlayRef = useRef(null);
   const squareRef = useRef(null); // 🔴 Red Box reference
   const router = useRouter();
+  const [activeIndex, setActiveIndex] = useState(0);
+  const cards = [
+    {
+      img: "/images/assets/Full Truck Load.png",
+      title: "Full Truck Load",
+      desc: "Dedicated capacity for your larger shipments",
+      link: "/ftl",
+    },
+    {
+      img: "/images/assets/Refigereted.png",
+      title: "Temperature Controlled",
+      desc: "Temperature-sensitive logistics just refrigeration.",
+      link: "/temperature-controlled",
+    },
+    {
+      img: "/images/assets/Cross Border.png",
+      title: "Cross Border",
+      desc: "Seamless Borders. Limitless Reach.",
+      link: "/cross-border",
+    },
+    {
+      img: "/images/assets/Cross Docking.png",
+      title: "Cross Docking",
+      desc: "Build for urgent freight that can not afford to wait",
+      link: "/cross-docking",
+    },
+  ];
 
   const [baseWidth, setBaseWidth] = useState(0);
   const [fullHeight, setFullHeight] = useState(0);
@@ -306,7 +333,6 @@ export default function HeroSection({ isScrolled }) {
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
         >
-          {/* SERVICES text (fade in pehle) */}
           <motion.div className="flex justify-end" variants={fadeLeftToRight}>
             <p
               className="text-[46px] font-bold mr-[-.8cm]"
@@ -316,119 +342,34 @@ export default function HeroSection({ isScrolled }) {
             </p>
           </motion.div>
 
-          {/* Card 1 */}
-          <motion.div
-            className="card"
-            variants={fadeLeftToRight}
-            onClick={() => router.push("/ftl")}
-          >
-            <div className="img-wrapper">
-              <img
-                src="/images/assets/Full Truck Load.png"
-                alt="Full Truck Load"
-              />
-              <img
-                src="/images/assets/redarrow.png"
-                alt="Arrow"
-                className="arrow-img"
-              />
-            </div>
-            <div className="card-overlay ">
-              <div className="card-content w-[70%]">
-                <h3>Full Truck Load</h3>
-                <p>Dedicated capacity for your larger shipments</p>
+          {cards.map((card, index) => (
+            <motion.div
+              key={index}
+              className={`card ${activeIndex === index ? "active" : ""}`}
+              variants={fadeLeftToRight}
+              onMouseEnter={() => setActiveIndex(index)}
+              onMouseLeave={() => setActiveIndex(null)}
+              onClick={() => router.push(card.link)}
+            >
+              <div className="img-wrapper">
+                <img src={card.img} alt={card.title} />
+                <div class="arrow-img">
+                  <img src="/images/assets/redarrow.png" alt="arrow" />
+                </div>
               </div>
-              <img
-                src="/images/assets/vector2.png"
-                alt="X"
-                className="x-icon"
-              />
-            </div>
-          </motion.div>
-
-          {/* Card 2 */}
-          <motion.div
-            className="card"
-            variants={fadeLeftToRight}
-            onClick={() => router.push("/temperature-controlled")}
-          >
-            <div className="img-wrapper">
-              <img
-                src="/images/assets/Refigereted.png"
-                alt="Temperature Controlled"
-              />
-              <img
-                src="/images/assets/redarrow.png"
-                alt="Arrow"
-                className="arrow-img"
-              />
-            </div>
-            <div className="card-overlay">
-              <div className="card-content w-[70%]">
-                <h3>Temperature Controlled</h3>
-                <p>Temperature-sensitive logistics just refrigeration.</p>
+              <div className="card-overlay">
+                <div className="card-content w-[70%]">
+                  <h3>{card.title}</h3>
+                  <p>{card.desc}</p>
+                </div>
+                <img
+                  src="/images/assets/vector2.png"
+                  alt="X"
+                  className="x-icon"
+                />
               </div>
-              <img
-                src="/images/assets/vector2.png"
-                alt="X"
-                className="x-icon"
-              />
-            </div>
-          </motion.div>
-
-          {/* Card 3 */}
-          <motion.div
-            className="card"
-            variants={fadeLeftToRight}
-            onClick={() => router.push("/cross-border")}
-          >
-            <div className="img-wrapper">
-              <img src="/images/assets/Cross Border.png" alt="Cross Border" />
-              <img
-                src="/images/assets/redarrow.png"
-                alt="Arrow"
-                className="arrow-img"
-              />
-            </div>
-            <div className="card-overlay">
-              <div className="card-content w-[50%]">
-                <h3>Cross Border</h3>
-                <p>Seamless Borders.Limitless Reach.</p>
-              </div>
-              <img
-                src="/images/assets/vector2.png"
-                alt="X"
-                className="x-icon"
-              />
-            </div>
-          </motion.div>
-
-          {/* Card 4 */}
-          <motion.div
-            className="card"
-            variants={fadeLeftToRight}
-            onClick={() => router.push("/cross-docking")}
-          >
-            <div className="img-wrapper">
-              <img src="/images/assets/Cross Docking.png" alt="Cross Docking" />
-              <img
-                src="/images/assets/redarrow.png"
-                alt="Arrow"
-                className="arrow-img"
-              />
-            </div>
-            <div className="card-overlay">
-              <div className="card-content w-[70%]">
-                <h3>Cross Docking</h3>
-                <p>Build for urgent freight that can not afford to wait</p>
-              </div>
-              <img
-                src="/images/assets/vector2.png"
-                alt="X"
-                className="x-icon"
-              />
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </motion.div>
       </section>
 

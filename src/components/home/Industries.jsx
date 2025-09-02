@@ -24,8 +24,7 @@ export default function Industries() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="heading">Industries we work with</h2>
-          
-          
+
           <p className="subheading">
             From raw materials to finished goods, we deliver reliable,
             cross-border logistics solutions tailored to your industry. Whether
@@ -35,11 +34,11 @@ export default function Industries() {
           </p>
           <br />
           <p className="subheading">
-            From raw materials to finished goods, we deliver reliable,
-            cross-border logistics solutions tailored to your industry. Whether
-            you're stocking shelves, supplying storefronts, or fueling
-            production lines, TransExpert ensures fast, secure, and seamless
-            transportation across Canada, the U.S., and Mexico.
+            Our expertise spans manufacturing, retail, automotive, and consumer
+            goods, giving us the insight to handle every supply chain challenge
+            with precision. With dedicated routes, real-time tracking, and a
+            commitment to on-time delivery, TransExpert keeps your business
+            moving without disruption.
           </p>
           <button
             className="hero-button"
@@ -50,7 +49,7 @@ export default function Industries() {
         </motion.div>
 
         {/* Right Side */}
-        
+
         <div className="industries-cards">
           {[
             { img: "/images/assets/Wholesale.jpg", label: "Wholesale" },

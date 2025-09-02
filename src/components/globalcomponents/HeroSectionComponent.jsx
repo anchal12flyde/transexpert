@@ -30,6 +30,8 @@ export default function HeroSectionComponent({
         </div>
       </div>
 
+   
+
       <div className="global-container">
         <div className="fleet-hero__content">
           <h2 className="fleet-hero__subtitle ">{subtitle}</h2>

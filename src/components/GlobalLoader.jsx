@@ -45,6 +45,12 @@ export default function GlobalLoaderProvider({ children, minMs = 2500 }) {
   const PageContentReady = () => {
     useEffect(() => {
       markReady("content");
+
+      const timer = setTimeout(() => {
+        document.body.classList.add("loaded");
+        console.log("loaded class added");
+      }, 5000);
+      return () => clearTimeout(timer);
     }, []);
     return null;
   };

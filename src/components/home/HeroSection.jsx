@@ -203,7 +203,7 @@ export default function HeroSection({ isScrolled }) {
             src="/images/assets/x.png"
             alt="Animation"
             className="  "
-            onLoad={handleImageLoad} 
+            
           />
         </div>
 

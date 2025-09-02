@@ -372,35 +372,77 @@ body::-webkit-scrollbar {
   filter: brightness(1.1);
 }
 
+/* Triangle overlay animation */
 .hero-diagonal-overlay {
   position: absolute;
   inset: 0;
   background: var(--company-blue, #27397acb);
   mix-blend-mode: multiply;
-  transform: skewY(-42deg); /* angle locked */
-  transform-origin: top right;
-  overflow-y: hidden;
+  transform: skewY(-42deg) scaleY(0);
+  transform-origin: top right; /* it will “grow” from the top edge */
+  overflow: hidden;
+  opacity: 0;
+  /* animation: triangleForm 1.2s ease-out forwards; */
 }
 
+/* Keyframes for triangle "forming" */
+@keyframes triangleForm {
+  0% {
+    transform: skewY(-42deg) scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: skewY(-42deg) scaleX(1);
+    opacity: 1;
+  }
+}
+
+
+/* X Image container */
 .square-videon {
   position: absolute;
   top: 0;
   right: 0;
   height: 100vh;
-  aspect-ratio: 1/1; /* keeps square */
+  aspect-ratio: 1/1;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
   overflow: hidden;
   z-index: 1000;
+  opacity: 0; /* Start hidden */
+  /* animation: fadeUpX 1s ease-out forwards; */
+  animation-delay: 1s; /* Wait until triangle is done */
 }
+
+/* Keyframes for X fade-up */
+@keyframes fadeUpX {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(0.9);
+  }
+}
+
 .square-videon img {
   height: 100%;
   margin-top: 55px;
-  width: auto; /* preserve ratio */
-  object-fit: contain; /* no distortion */
-  object-position: top right; /* snug in corner */
-  transform: scale(0.9);
+  width: auto;
+  object-fit: contain;
+  object-position: top right;
+}
+
+/* When page is "loaded", play animations */
+body.loaded .hero-diagonal-overlay {
+  animation: triangleForm 1.2s ease-out forwards;
+}
+
+body.loaded .square-videon {
+  animation: fadeUpX 1s ease-out forwards;
+  animation-delay: 1.2s; /* starts after triangle */
 }
 
 @media (max-width: 800px) {
@@ -1605,7 +1647,7 @@ span:has(img) {
 }
 .industry-card:hover {
   filter: grayscale(0%);
-  transform: translateX(2px);
+  transform: scale(1.02);
 }
 
 .industry-card::before {

@@ -137,13 +137,13 @@ export default function Header({ isScrolled = false }) {
                     </div>
 
                     {/* Right Side Promo */}
-                    <div className="bg-gray-50 shrink-0  rounded-xl flex flex-col justify-between !w-[320px] ">
+                    <div className=" flex flex-col justify-between  ">
                       <Image
                         src="/images/assets/fleet-and-infra.jpg"
                         alt="Promo"
                         width={300}
-                        height={180}
-                        className="rounded-lg object-cover w-full "
+                        height={291}
+                        className="rounded-[24px] object-cover w-full "
                       />
                       <div className="mt-3 flex items-center justify-between ">
                         <div>

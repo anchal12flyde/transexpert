@@ -9,7 +9,7 @@ export default function Environmental() {
           {/* Left Image */}
           <div className="careers-image-container">
             <Image
-              src="/images/assets/Frame.png"
+              src="/images/sustain.jpg"
               alt="Driver"
               width={800}
               height={0}

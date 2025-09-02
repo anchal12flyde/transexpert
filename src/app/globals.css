@@ -2484,16 +2484,16 @@ span:has(img) {
 
 /* Section container */
 .downtime-container {
-  margin-top: 26px;
   display: flex;
   flex-direction: column;
   gap: 100px;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .downtime-container {
     flex-direction: row;
-    margin-top: 78px;
+   
   }
 
   .downtime-left {
@@ -2511,16 +2511,18 @@ span:has(img) {
   }
 }
 .downtime-left img {
-  border-radius: 0.5rem;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 270px;
+  height: 100%;
 }
 
 .downtime-right {
   display: flex;
+ 
+
   flex-direction: column;
   gap: 26px;
-  justify-content: flex-end;
+  
 }
 
 .downtime-card {
@@ -2528,19 +2530,19 @@ span:has(img) {
   color: var(--thm-white);
   text-align: left;
   padding: 30px 62px;
-  border-radius: 8px;
+  border-radius: 9px;
   box-shadow: 2.27px 1.13px 1.93px 0px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
   .downtime-container {
-    gap: 26px;
+    gap: 29px;
   }
   .downtime-right {
     gap: 16px;
   }
   .downtime-left img {
-    height: 200px;
+    height: auto;
   }
 }
 

@@ -9,7 +9,7 @@ const fadeInUp = {
 
 export default function GeographicalCoverage() {
   return (
-    <section className="bg-transparent relative mt-[-300px] z-[-1]  ">
+    <section className="bg-transparent relative mt-[0px] lg:mt-[-400px] z-[-1]  ">
       <div className="global-container  ">
         <motion.h2
           variants={fadeInUp}
@@ -33,7 +33,7 @@ export default function GeographicalCoverage() {
         </motion.p>
       </div>
 
-      <div className="grid sm:grid-cols-11">
+      <div className="grid sm:grid-cols-11 ">
         {/* Left side - Video */}
         <motion.div
           variants={fadeInUp}
@@ -80,7 +80,7 @@ export default function GeographicalCoverage() {
             <span>Mexico: </span>Wide-reaching coverage throughout the nation.
           </p>
           <p className="subheading para macbook-para">
-            Terminal Locations
+            <span className="terminal">Terminal Locations</span>
             <br />
             Taylor (MI), Toledo (OH), Laredo (TX), Milton (ON), Cambridge (ON),
             Indianapolis (IN), Pointe-Claire (QC)
@@ -111,7 +111,7 @@ export default function GeographicalCoverage() {
               partnerships.
             </p>
             <p className="subheading para">
-              Terminal Locations
+              <span className="bold-text">Terminal Locations</span>
               <br />
               Taylor (MI), Toledo (OH), Laredo (TX), Milton (ON), Cambridge
               (ON), Indianapolis (IN), Pointe-Claire (QC)

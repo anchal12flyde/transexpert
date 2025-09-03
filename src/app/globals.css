@@ -724,7 +724,7 @@ span:has(img) {
 @media (min-width: 1600) {
   .hero-testimonial {
     padding-right: 252px;
-    width: 900px;
+    width: 850px;
   }
 }
 .hero-testimonial p {
@@ -1724,7 +1724,7 @@ span:has(img) {
 }
 .industry-card:hover {
   filter: grayscale(0%);
-  transform: translateX(2px);
+  transform: scale(1.01);
 }
 
 .industry-card::before {
@@ -2220,6 +2220,10 @@ span:has(img) {
 }
 .map-text span {
   color: var(--thm-strip-red);
+}
+.map-text .terminal{
+  font-weight: 600;
+  color: var(--thm-black);
 }
 .map-text .para {
   margin-top: 10px;

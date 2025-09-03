@@ -10,6 +10,7 @@ export default function GlobalLoaderProvider({ children, minMs = 2500 }) {
   const marks = useRef(new Set());
   const startTs = useRef(Date.now());
   const requiredKeys = useRef(["content"]); // default requirement
+  const [animationDone, setAnimationDone] = useState(false)
 
   useEffect(() => {
     setVisible(true);
@@ -46,13 +47,13 @@ export default function GlobalLoaderProvider({ children, minMs = 2500 }) {
     useEffect(() => {
       markReady("content");
 
-      if (!visible) {
+      if (!visible ) {
         document.body.classList.add("loaded");
-        console.log("loaded class added");
+        setAnimationDone(true)
       } else {
         document.body.classList.remove("loaded");
       }
-    }, [visible]);
+    }, [visible, animationDone]);
     return null;
   };
 

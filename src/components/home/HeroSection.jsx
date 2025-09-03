@@ -350,7 +350,7 @@ export default function HeroSection({ isScrolled }) {
             >
               <div className="img-wrapper">
                 <img src={card.img} alt={card.title} />
-                <div class="arrow-img">
+                <div className="arrow-img">
                   <img src="/images/assets/redarrow.png" alt="arrow" />
                 </div>
               </div>

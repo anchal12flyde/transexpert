@@ -44,7 +44,7 @@ export default function AboutPage() {
         {isScrolled && <Header isScrolled={isScrolled} />}
         <AboutHero isScrolled={isScrolled} />
         <CardsSection />
-        {/* Uncomment agar leadership dikhani hai */}
+        
         {/* <LeadershipSection /> */}
         <Relaibility />
         <Footer />

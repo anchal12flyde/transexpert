@@ -122,10 +122,10 @@ export default function ContactDetails() {
           <div className="section">
             <h3 className="contact-heading">Partnerships</h3>
             <p className="contact-para  mb-[16px]">
-              Interested in becoming an approved c vendor?
+              Interested in becoming an approved vendor?
             </p>
 
-            <p className="contact-para">
+            <p className="contact-para ">
               {" "}
               <img
                 src="/images/assets/mail.png"
@@ -138,7 +138,7 @@ export default function ContactDetails() {
                   verticalAlign: "middle",
                 }}
               />{" "}
-              partnerships@transexpert.ca
+              <span className="email-text">partnerships@transexpert.ca</span>
             </p>
           </div>
           <div className="section">

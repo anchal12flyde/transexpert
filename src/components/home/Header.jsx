@@ -175,17 +175,17 @@ export default function Header({ isScrolled = false }) {
 
             {/* Contact Button */}
 
-            <Link href="/sustainability" className="sm:block hidden nav-link">
+            <Link href="/sustainability" className="lg:block hidden nav-link">
               Sustainability
             </Link>
             <Link href="/industries" className="lg:block hidden nav-link">
               Industries
             </Link>
-            <Link href="/get-a-qoute" className="sm:block hidden nav-link">
+            <Link href="/get-a-qoute" className="lg:block hidden nav-link">
               Get a quote
             </Link>
 
-            <div className="sm:flex sm:gap-8 hidden macbook-navlink">
+            <div className="lg:flex lg:gap-8 hidden macbook-navlink">
               <div className="hidden md:flex hero-button !items-center ">
                 <DropdownMenu>
                   <DropdownMenuTrigger className="flex items-center gap-2 cursor-pointer focus:outline-0">

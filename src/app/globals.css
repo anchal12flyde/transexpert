@@ -106,7 +106,7 @@ body::-webkit-scrollbar {
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .global-container {
     padding-left: 30px;
     padding-right: 30px;
@@ -127,7 +127,7 @@ body::-webkit-scrollbar {
   margin-bottom: 26px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .heading {
     font-size: 22px;
     margin-bottom: 16px;
@@ -142,7 +142,7 @@ body::-webkit-scrollbar {
   letter-spacing: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .subheading {
     font-size: 16px;
     font-weight: 300;
@@ -412,7 +412,7 @@ body::-webkit-scrollbar {
   transform: scale(0.9);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 868px) {
   .square-videon img {
     display: none;
   }
@@ -644,7 +644,7 @@ span:has(img) {
   z-index: 2;
   justify-content: flex-end;
 }
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .hero-testimonial,
   .hero-diagonal-overlay {
     display: none;
@@ -724,7 +724,7 @@ span:has(img) {
   transform-origin: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .testimonial-cards {
     justify-content: center;
     flex-wrap: wrap;
@@ -976,7 +976,7 @@ span:has(img) {
   height: 5cm;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .testimonial-cards .card:first-child,
   .testimonial-cards {
     display: none;
@@ -2236,6 +2236,20 @@ span:has(img) {
     margin-bottom: 20%;
   }
 }
+.related_heading{
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+  line-break: normal;
+  margin-bottom: 26px;
+}
+@media (max-width:768px){
+  .related_heading{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+}
 
 .single-blog-overlay {
   position: relative;
@@ -3241,6 +3255,9 @@ textarea {
 }
 
 .contact-para {
+   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   font-family: Onest;
   font-size: 20px;
   font-style: normal;
@@ -3345,7 +3362,7 @@ textarea {
   .text_on_image1 {
     bottom: 16px;
     left: 16px;
-    right: 0;
+    right: 2px;
   }
   .content_subhead1 {
     font-size: 16px;

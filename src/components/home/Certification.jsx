@@ -19,7 +19,7 @@ export default function Certification() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           Credentialed for Seamless Movement
         </motion.h2>
@@ -29,7 +29,7 @@ export default function Certification() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ delay: 0.2 }}
         >
           We work according to the latest technologies and working methods. Our
@@ -40,7 +40,7 @@ export default function Certification() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ delay: 0.3 }}
         >
           {[
@@ -64,7 +64,7 @@ export default function Certification() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ delay: 0.4 }}
         >
           We work according to the latest technologies and working methods. Our

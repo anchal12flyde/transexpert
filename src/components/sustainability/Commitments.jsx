@@ -4,6 +4,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
 
 const Slider = dynamic(() => import("react-slick").then((m) => m.default), {
   ssr: false,
@@ -100,16 +101,26 @@ export default function Commitments() {
         {/* Desktop */}
         <div className="hidden sm:grid grid-cols-4 gap-[81px] macbook">
           {certificationsData.map((c, index) => (
-            <div
+            <motion.div
               key={index}
               className="flex flex-col items-center rounded-[16px] px-[22px] py-[34px] gap-6 bshadow h-[380px]"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
+              viewport={{ once: false }}
             >
               <Image alt={c.title} src={c.logo} width={36} height={36} />
               <div className="flex flex-col gap-5">
-                <p className="heading heading-line-break !mb-0 text-center">{c.title}</p>
+                <p className="heading heading-line-break !mb-0 text-center">
+                  {c.title}
+                </p>
                 <p className="subheading text-center">{c.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

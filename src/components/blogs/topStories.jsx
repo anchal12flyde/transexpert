@@ -130,22 +130,22 @@ export default function TopStories() {
     {
       title: "Vehicle Tech",
       subtitle: "The Best Accessories for your Ipad",
-      img: "/images/blogs/one.jpg",
+      img: "/images/blogs/img1.png",
     },
     {
       title: "Fuel Efficiency",
       subtitle: "AI Revolutionizing Healthcare",
-      img: "/images/blogs/one.jpg",
+      img: "/images/blogs/img2.png",
     },
     {
       title: "Fleet Safety",
       subtitle: "Sustainable Tech Progress",
-      img: "/images/blogs/one.jpg",
+      img: "/images/blogs/img3.png",
     },
     {
       title: "GPS & Telematics",
       subtitle: "Remote Work Challenges",
-      img: "/images/blogs/one.jpg",
+      img: "/images/blogs/img4.png",
     },
   ];
 
@@ -195,7 +195,7 @@ export default function TopStories() {
       <h2 className="heading">Top Stories</h2>
 
       {/* Filter Buttons */}
-      <div className="flex gap-2 mb-6 flex-wrap">
+      <div className="flex gap-2 mb-[29px] sm:mb-[78px] flex-wrap">
         {categories.map((cat) => (
           <button
             key={cat}
@@ -215,7 +215,7 @@ export default function TopStories() {
       </div>
 
       {/* Main layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-[71px] stories-grid">
+      <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-[71px] sm:gap-[60px] stories-grid">
         {/* Left - Stories Grid */}
         <div className="grid sm:grid-cols-2  gap-[42px] sm:gap-[78px] stories-grid-blogs">
           {filteredStories.slice(0, visibleCount).map((story, idx) => (
@@ -246,25 +246,31 @@ export default function TopStories() {
         </div>
 
         {/* Right - Related */}
-        <aside className="flex flex-col  gap-[10px] sm:gap-[30px] w-full">
+        <aside className="flex flex-col  gap-[24px] sm:gap-[30px] w-full">
           <h3 className="heading !mb-0">Related</h3>
-          {related.map((item, idx) => (
-            <div key={idx} className="flex flex-col items-start gap-[8px] macbookDev ">
-              <Image
-                src={item.img}
-                alt={item.title}
-                width={141}
-                height={0}
-                className="rounded-md object-cover h-[2cm]  w-full "
-              />
-              <div>
-                <h4 className="side-heading text-[#E22A26]  mb-[8px] sm:mb-[0px] ">
-                  {item.title} 
-                </h4>
-                <p className="side-subheading">{item.subtitle}</p>
+
+          <div className="flex gap-[16px] sm:gap-[24px] flex-col">
+            {related.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-start gap-[8px] macbookDev "
+              >
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  width={141}
+                  height={0}
+                  className="rounded-md object-cover h-[2cm]  w-full "
+                />
+                <div>
+                  <h4 className="side-heading text-[#E22A26]  mb-[8px] sm:mb-[0px] ">
+                    {item.title}
+                  </h4>
+                  <p className="side-subheading">{item.subtitle}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </aside>
       </div>
     </section>

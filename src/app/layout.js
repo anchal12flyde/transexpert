@@ -1,6 +1,6 @@
 import "./globals.css";
-import GlobalLoaderProvider from "@/components/GlobalLoader"; // client component
-import GoogleTranslator from "@/components/googleTranslator"; // ✅ script loader
+import GlobalLoaderProvider from "@/components/GlobalLoader"; 
+import GoogleTranslator from "@/components/googleTranslator"; 
 import { Onest } from "next/font/google";
 
 const onest = Onest({ subsets: ["latin"], display: "swap" });

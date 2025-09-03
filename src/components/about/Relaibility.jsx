@@ -10,7 +10,7 @@ const Relaibility = () => {
           className="careers-banner careers-banner_border"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <div className="careers-content-wrapper drive_div">

@@ -20,7 +20,7 @@ export default function Industries() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="heading">Industries we work with</h2>

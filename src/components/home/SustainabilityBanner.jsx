@@ -29,7 +29,7 @@ const SustainabilityBanner = () => {
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
             >
               We Care. And We Prove It.
             </motion.h2>
@@ -39,7 +39,7 @@ const SustainabilityBanner = () => {
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: 0.2 }}
             >
               Sustainability isn’t a campaign, it’s our operating system.

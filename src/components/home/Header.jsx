@@ -137,13 +137,13 @@ export default function Header({ isScrolled = false }) {
                     </div>
 
                     {/* Right Side Promo */}
-                    <div className="bg-gray-50 shrink-0  rounded-xl flex flex-col justify-between !w-[320px] ">
+                    <div className=" flex flex-col justify-between  ">
                       <Image
-                        src="/images/assets/sbg.jpg"
+                        src="/images/assets/fleet-and-infra.jpg"
                         alt="Promo"
                         width={300}
-                        height={180}
-                        className="rounded-lg object-cover w-full "
+                        height={291}
+                        className="rounded-[24px] object-cover w-full "
                       />
                       <div className="mt-3 flex items-center justify-between ">
                         <div>
@@ -175,20 +175,20 @@ export default function Header({ isScrolled = false }) {
 
             {/* Contact Button */}
 
-            <Link href="/sustainability" className="sm:block hidden nav-link">
+            <Link href="/sustainability" className="lg:block hidden nav-link">
               Sustainability
             </Link>
             <Link href="/industries" className="lg:block hidden nav-link">
               Industries
             </Link>
-            <Link href="/get-a-qoute" className="sm:block hidden nav-link">
+            <Link href="/get-a-qoute" className="lg:block hidden nav-link">
               Get a quote
             </Link>
             <Link href="/careers" className="sm:block hidden nav-link">
               Careers
             </Link>
 
-            <div className="sm:flex sm:gap-8 hidden macbook-navlink">
+            <div className="lg:flex lg:gap-8 hidden macbook-navlink">
               <div className="hidden md:flex hero-button !items-center ">
                 <DropdownMenu>
                   <DropdownMenuTrigger className="flex items-center gap-2 cursor-pointer focus:outline-0">

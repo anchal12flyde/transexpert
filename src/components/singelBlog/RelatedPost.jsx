@@ -4,7 +4,7 @@ const RelatedPost = ({ calcValue }) => {
   console.log(calcValue);
   return (
     <section className="blog-section global-container" style={{marginTop : `${calcValue - 50  }px` }} >
-      <h2 className="heading ju">Related posts</h2>
+      <h2 className="related_heading ju">Related posts</h2>
 
       <div className="blog-grid-blog">
         <div className="blog-box">

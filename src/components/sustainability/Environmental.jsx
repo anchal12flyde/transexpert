@@ -1,10 +1,17 @@
 import React from 'react'
 import Image from 'next/image';
+import { motion } from "framer-motion";
 
 export default function Environmental() {
   return (
     <>
-      <section className="careers-banner global-container mb-[42px] sm:mb-[78px]">
+      <motion.section
+        className="careers-banner global-container mb-[42px] sm:mb-[78px]"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="careers-content-wrapper-sustain">
           {/* Left Image */}
           <div className="careers-image-container">
@@ -49,7 +56,7 @@ export default function Environmental() {
         <div className="drive-image">
           <img src="/images/assets/drive-x.png" alt="Decoration" />
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }

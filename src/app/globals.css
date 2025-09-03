@@ -113,7 +113,7 @@ body::-webkit-scrollbar {
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .global-container {
     padding-left: 30px;
     padding-right: 30px;
@@ -134,7 +134,7 @@ body::-webkit-scrollbar {
   margin-bottom: 26px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .heading {
     font-size: 22px;
     margin-bottom: 16px;
@@ -149,7 +149,7 @@ body::-webkit-scrollbar {
   letter-spacing: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .subheading {
     font-size: 16px;
     font-weight: 300;
@@ -466,7 +466,7 @@ body.loaded .square-videon {
   object-position: top right;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 868px) {
   .square-videon img {
     display: none;
   }
@@ -698,7 +698,7 @@ span:has(img) {
   z-index: 2;
   justify-content: flex-end;
 }
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .hero-testimonial,
   .hero-diagonal-overlay {
     display: none;
@@ -724,6 +724,18 @@ span:has(img) {
   font-weight: 500;
   font-style: normal;
   line-height: 28.023px;
+}
+.core_heading{
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+  line-break: normal;
+}
+@media (max-width:768px){
+  .core_heading{
+    font-size: 24px;
+    font-weight: 600;
+  }
 }
 .testimonial-cards {
   display: flex;
@@ -778,7 +790,7 @@ span:has(img) {
   transform-origin: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .testimonial-cards {
     justify-content: center;
     flex-wrap: wrap;
@@ -1030,7 +1042,7 @@ span:has(img) {
   height: 5cm;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .testimonial-cards .card:first-child,
   .testimonial-cards {
     display: none;
@@ -1342,8 +1354,8 @@ span:has(img) {
 @media (max-width: 768px) {
   .careers-content-wrapper-sustain {
     flex-direction: column;
-    margin: 28px 0;
-    gap: 2rem;
+    margin: 30px 0;
+    gap: 16px;
   }
 }
 
@@ -1971,7 +1983,7 @@ span:has(img) {
 }
 @media (max-width: 768px) {
   .drive_div {
-    padding: 0 16px;
+    padding: 0 19px;
   }
 }
 .careers-banner_border {
@@ -2100,12 +2112,12 @@ span:has(img) {
   }
 
   .card-text {
-    top: -45px;
+    top: -65px;
     border-radius: 10px;
   }
   .card-image {
     width: 100%;
-    height: auto;
+    height: 300px;
     object-fit: cover;
     display: block;
   }
@@ -2288,6 +2300,20 @@ span:has(img) {
 @media (min-width: 1600px) {
   .single-blog-hero {
     margin-bottom: 20%;
+  }
+}
+.related_heading{
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+  line-break: normal;
+  margin-bottom: 26px;
+}
+@media (max-width:768px){
+  .related_heading{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
   }
 }
 
@@ -2538,16 +2564,16 @@ span:has(img) {
 
 /* Section container */
 .downtime-container {
-  margin-top: 26px;
   display: flex;
   flex-direction: column;
   gap: 100px;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .downtime-container {
     flex-direction: row;
-    margin-top: 78px;
+   
   }
 
   .downtime-left {
@@ -2565,16 +2591,18 @@ span:has(img) {
   }
 }
 .downtime-left img {
-  border-radius: 0.5rem;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 270px;
+  height: 100%;
 }
 
 .downtime-right {
   display: flex;
+ 
+
   flex-direction: column;
   gap: 26px;
-  justify-content: flex-end;
+  
 }
 
 .downtime-card {
@@ -2582,19 +2610,19 @@ span:has(img) {
   color: var(--thm-white);
   text-align: left;
   padding: 30px 62px;
-  border-radius: 8px;
+  border-radius: 9px;
   box-shadow: 2.27px 1.13px 1.93px 0px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
   .downtime-container {
-    gap: 26px;
+    gap: 29px;
   }
   .downtime-right {
     gap: 16px;
   }
   .downtime-left img {
-    height: 200px;
+    height: auto;
   }
 }
 
@@ -3293,6 +3321,9 @@ textarea {
 }
 
 .contact-para {
+   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   font-family: Onest;
   font-size: 20px;
   font-style: normal;
@@ -3397,7 +3428,7 @@ textarea {
   .text_on_image1 {
     bottom: 16px;
     left: 16px;
-    right: 0;
+    right: 2px;
   }
   .content_subhead1 {
     font-size: 16px;

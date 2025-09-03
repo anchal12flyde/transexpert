@@ -184,7 +184,7 @@ export default function Header({ isScrolled = false }) {
             <Link href="/get-a-qoute" className="lg:block hidden nav-link">
               Get a quote
             </Link>
-            <Link href="/careers" className="sm:block hidden nav-link">
+            <Link href="/careers" className="lg:block hidden nav-link">
               Careers
             </Link>
 

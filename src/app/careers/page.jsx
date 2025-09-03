@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -21,9 +21,38 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useLoader } from "@/components/GlobalLoader";
+import Header from "@/components/home/Header";
+import HeroSection from "@/components/careers/HeroSection";
+import Footer from "@/components/footer/page";
 
 export default function Careers() {
   const [selectedCareerType, setSelectedCareerType] = useState("all");
+  const { PageContentReady, setRequired, markReady } = useLoader();
+
+  const [isScrolled, setIsScrolled] = useState(false);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const handleScroll = () => {
+      setIsScrolled(container.scrollTop > 50);
+    };
+
+    container.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    // loader ko bata rahe ki content aur jobs dono load hone chahiye
+    setRequired(["content", "jobs"]);
+  }, [setRequired]);
 
   const careerTypes = [
     { value: "all", label: "All Positions", icon: Users },
@@ -129,39 +158,43 @@ export default function Careers() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div ref={containerRef} className="mainCon min-h-screen bg-background">
+      {/* ✅ Loader ke liye content mark */}
+      <PageContentReady />
+
+      {isScrolled && <Header isScrolled={isScrolled} />}
+      <HeroSection isScrolled={isScrolled} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-hero py-20">
+      {/* <section className="bg-gradient-hero py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Join Our <span className="text-accent">Growing Team</span>
           </h1>
-          <p className="text-2xl text-primary-foreground/90 max-w-3xl mx-auto mb-8">
+          <p className="text-2xl text-white/90 max-w-3xl mx-auto mb-8">
             Build your career with a company that values safety, integrity, and
             excellence. Discover opportunities that drive your success forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lgCTA" variant="freight">
+            <Button asChild className="hero-button">
               <Link href="/">View Open Positions</Link>
             </Button>
             <Button
               asChild
-              size="lgCTA"
-              variant="freight-outline"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              className="hero-button !bg-transparent border border-white "
             >
               <Link href="/">Learn About Benefits</Link>
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Benefits Section */}
-      <section className="py-16 bg-[#2A407A1F]">
+      <section className="pb-16 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary mb-4">
-              Why Choose Prestige Freight?
+              Why Choose Transexpert?
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               We're committed to providing our team members with the support,
@@ -169,18 +202,18 @@ export default function Careers() {
             </p>
           </div>
 
-          <div className="flex gap-6 sm:gap-8 overflow-x-auto sm:overflow-visible snap-x snap-mandatory scrollbar-hide sm:justify-center sm:flex-wrap">
+          <div className="flex gap-6 sm:gap-8 overflow-x-auto sm:overflow-visible snap-x snap-mandatory scrollbar-hide sm:justify-center sm:flex-wrap  ">
             {benefits.map((benefit) => {
               const Icon = benefit.icon;
               return (
                 <div
                   key={benefit.title}
-                  className="snap-center shrink-0 w-[85%] sm:w-[236px] text-center bg-white px-6 py-8 rounded-[8px]"
+                  className="snap-center shrink-0 w-[85%] sm:w-[236px] text-center bg-[#2A407A1F] px-6 py-8 rounded-[8px]"
                 >
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon className="h-8 w-8 text-accent" />
+                  <div className="w-16 h-16 bg-secondary-color rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Icon className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold text-primary mb-2">
+                  <h3 className="text-lg font-semibold text-primary-color mb-2">
                     {benefit.title}
                   </h3>
                   <p className="text-muted-foreground">{benefit.description}</p>
@@ -241,11 +274,20 @@ export default function Careers() {
 
             <div className="grid gap-6">
               {getFilteredJobs().map((job, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card
+                  key={index}
+                  className="hover:shadow-lg transition-shadow border border-gray-100 "
+                  // ✅ last job ke render hone pe markReady call karega
+                  ref={
+                    index === getFilteredJobs().length - 1
+                      ? () => markReady("jobs")
+                      : null
+                  }
+                >
                   <CardHeader>
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between text-left ">
                       <div>
-                        <CardTitle className="text-xl mb-2">
+                        <CardTitle className="text-xl text-left mb-2">
                           {job.title}
                         </CardTitle>
                         <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
@@ -263,18 +305,13 @@ export default function Careers() {
                           </div>
                         </div>
                       </div>
-                      <Button
-                        size="lgCTA"
-                        variant="freight"
-                        className="mt-4 md:mt-0"
-                        asChild
-                      >
+                      <Button className="hero-button" asChild>
                         <Link href="/apply">Apply Now</Link>
                       </Button>
                     </div>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
+                  <CardContent className="text-left">
+                    <p className="text-muted-foreground mb-4 text-left ">
                       {job.description}
                     </p>
                     <div className="grid md:grid-cols-2 gap-6">
@@ -306,6 +343,8 @@ export default function Careers() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

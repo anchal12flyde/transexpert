@@ -370,7 +370,7 @@ export default function HeroSection({ isScrolled }) {
         </motion.div>
       </section>
 
-      <div className=" lg:hidden flex gap-[37px] flex-col mb-[0px] mt-[0px] global-container bgMob pb-[110px] pt-[42px] ">
+      <div className=" lg:hidden flex gap-[37px] flex-col mb-[0px] mt-[-7px] global-container bgMob pb-[110px] pt-[42px] ">
         <p className="lg:hidden text-center text-[24px] text-white font-bold  ">
           Services
         </p>

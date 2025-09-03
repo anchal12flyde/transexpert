@@ -8,7 +8,7 @@ export default function HeroSection({ isScrolled }) {
         imageSrc="/images/fleet hero section.png"
         title={
           <>
-            Engineered for Reliability <br /> Scaled for Growth
+            Engineered for Reliability  Scaled for Growth
           </>
         }
         subtitle="Fleet Power Behind Every Mile"

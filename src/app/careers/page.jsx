@@ -190,9 +190,9 @@ export default function Careers() {
       </section> */}
 
       {/* Benefits Section */}
-      <section className="pb-16 ">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+      <section className="mb-[42px] sm:mb-[78px] global-container">
+        <div className="  mt-[42px] sm:mt-[78px]">
+          {/* <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary mb-4">
               Why Choose Transexpert?
             </h2>
@@ -200,7 +200,7 @@ export default function Careers() {
               We're committed to providing our team members with the support,
               benefits, and opportunities they need to succeed.
             </p>
-          </div>
+          </div> */}
 
           <div className="flex gap-6 sm:gap-8 overflow-x-auto sm:overflow-visible snap-x snap-mandatory scrollbar-hide sm:justify-center sm:flex-wrap  ">
             {benefits.map((benefit) => {
@@ -225,13 +225,13 @@ export default function Careers() {
       </section>
 
       {/* Job Listings Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">
+      <section className="global-container">
+        <div className=" ">
+          <div className="text-center mb-[42px] sm:mb-[78px]">
+            <h2 className="core_heading mb-[12px]">
               Open Positions
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="subheading mb-8">
               Find the perfect opportunity to advance your career with us.
             </p>
 
@@ -272,12 +272,12 @@ export default function Careers() {
               </DropdownMenu>
             </div>
 
-            <div className="grid gap-6">
+            <div className="grid gap-[42px] sm:gap-[78px]">
               {getFilteredJobs().map((job, index) => (
                 <Card
                   key={index}
                   className="hover:shadow-lg transition-shadow border border-gray-100 "
-                  // ✅ last job ke render hone pe markReady call karega
+                  
                   ref={
                     index === getFilteredJobs().length - 1
                       ? () => markReady("jobs")

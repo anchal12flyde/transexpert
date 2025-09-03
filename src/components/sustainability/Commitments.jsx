@@ -97,7 +97,7 @@ export default function Commitments() {
 
   return (
     <div className="mb-[42px] sm:mb-[78px]">
-      <div className="global-container mt-[78px]">
+      <div className="global-container mt-[42px] sm:mt-[78px]">
         {/* Desktop */}
         <div className="hidden sm:grid grid-cols-4 gap-[81px] macbook">
           {certificationsData.map((c, index) => (

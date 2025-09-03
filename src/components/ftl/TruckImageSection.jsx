@@ -40,7 +40,7 @@ export default function TruckImageSection({
           {/* Blue overlay */}
           <div
             ref={overlayRef}
-            className="overlay-blue rounded-2xl relative z-10 p-6 hidden  sm:block "
+            className="overlay-blue rounded-2xl relative z-10 p-6 hidden  sm:block  "
           >
             <p className="heading text-white text-2xl font-semibold mb-4 text-center">
               {overlay.title}

@@ -328,7 +328,8 @@ export default function HeroSection({ isScrolled }) {
           variants={container}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
+          
         >
           <motion.div className="flex justify-end" variants={fadeLeftToRight}>
             <p

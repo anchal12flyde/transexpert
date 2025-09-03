@@ -69,7 +69,7 @@ export default function page() {
     };
   }, []);
 
-  return (
+  return ( 
     <>
       <PageContentReady />
       <div className="mainCon" ref={containerRef}>

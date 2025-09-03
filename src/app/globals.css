@@ -36,6 +36,13 @@
   }
 } */
 
+.bg-gradient-hero {
+  background: linear-gradient(
+    102deg,
+    var(--color-azure-11, #0f1629) 0%,
+    var(--color-azure-32, #2a407a) 100%
+  );
+}
 /* Hide Google Translate top bar iframe */
 .goog-te-banner-frame.skiptranslate,
 .goog-te-banner-frame {
@@ -338,13 +345,10 @@ body::-webkit-scrollbar {
   /* height: auto; */
 }
 
-
-.hero-button:hover{
-  background-color: #A60400;
-  transition: .3s all ease;
+.hero-button:hover {
+  background-color: #a60400;
+  transition: 0.3s all ease;
 }
-
-
 
 @media (max-width: 768px) {
   .hero-button {
@@ -386,30 +390,80 @@ body::-webkit-scrollbar {
   inset: 0;
   background: var(--company-blue, #27397acb);
   mix-blend-mode: multiply;
-  transform: skewY(-42deg); /* angle locked */
-  transform-origin: top right;
-  overflow-y: hidden;
+  transform: skewY(-42deg) scaleY(0);
+  transform-origin: top right; /* it will “grow” from the top edge */
+  overflow: hidden;
+  opacity: 0;
+  /* animation: triangleForm 1.2s ease-out forwards; */
 }
 
+/* Keyframes for triangle "forming" */
+@keyframes triangleForm {
+  0% {
+    transform: skewY(-42deg) scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: skewY(-42deg) scaleX(1);
+    opacity: 1;
+  }
+}
+
+
+/* X Image container */
 .square-videon {
   position: absolute;
   top: 0;
   right: 0;
   height: 100vh;
-  aspect-ratio: 1/1; /* keeps square */
+  aspect-ratio: 1/1;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
   overflow: hidden;
   z-index: 1000;
+  opacity: 0; /* Start hidden */
+  /* animation: fadeUpX 1s ease-out forwards; */
+  animation-delay: 1s; /* Wait until triangle is done */
 }
+
+/* Keyframes for X fade-up */
+@keyframes fadeUpX {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(0.9);
+  }
+}
+
 .square-videon img {
   height: 100%;
   margin-top: 55px;
-  width: auto; /* preserve ratio */
-  object-fit: contain; /* no distortion */
-  object-position: top right; /* snug in corner */
-  transform: scale(0.9);
+  width: auto;
+  object-fit: contain;
+  object-position: top right;
+}
+
+/* When page is "loaded", play animations */
+body.loaded .hero-diagonal-overlay {
+  animation: triangleForm 1.2s ease-out forwards;
+}
+
+body.loaded .square-videon {
+  animation: fadeUpX 1s ease-out forwards;
+  animation-delay: 1.2s; /* starts after triangle */
+}
+
+
+.square-videon img {
+  height: 100%;
+  margin-top: 55px;
+  width: auto;
+  object-fit: contain;
+  object-position: top right;
 }
 
 @media (max-width: 868px) {

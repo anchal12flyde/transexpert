@@ -6,11 +6,6 @@ import { useRouter } from "next/navigation";
 import Slider from "react-slick";
 import { motion, MotionConfig } from "framer-motion";
 
-
-
-
-
-
 const container = {
   hidden: {},
   visible: {
@@ -182,6 +177,8 @@ export default function HeroSection({ isScrolled }) {
     window.addEventListener("resize", calcGreenBoxHeight);
     return () => window.removeEventListener("resize", calcGreenBoxHeight);
   }, []);
+
+  
 
   useEffect(() => {
     const calcValues = () => {

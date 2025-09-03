@@ -184,6 +184,9 @@ export default function Header({ isScrolled = false }) {
             <Link href="/get-a-qoute" className="lg:block hidden nav-link">
               Get a quote
             </Link>
+            <Link href="/careers" className="sm:block hidden nav-link">
+              Careers
+            </Link>
 
             <div className="lg:flex lg:gap-8 hidden macbook-navlink">
               <div className="hidden md:flex hero-button !items-center ">
@@ -313,6 +316,10 @@ export default function Header({ isScrolled = false }) {
           </Link>
           <Link href="/get-a-qoute" onClick={() => setMenuOpen(false)}>
             Get a quote
+          </Link>
+
+          <Link href="/careers" onClick={() => setMenuOpen(false)}>
+            Careers
           </Link>
 
           <Link href="/contact-us">

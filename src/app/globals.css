@@ -671,6 +671,18 @@ span:has(img) {
   font-style: normal;
   line-height: 28.023px;
 }
+.core_heading{
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+  line-break: normal;
+}
+@media (max-width:768px){
+  .core_heading{
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
 .testimonial-cards {
   display: flex;
   justify-content: flex-end;
@@ -1288,8 +1300,8 @@ span:has(img) {
 @media (max-width: 768px) {
   .careers-content-wrapper-sustain {
     flex-direction: column;
-    margin: 28px 0;
-    gap: 2rem;
+    margin: 30px 0;
+    gap: 16px;
   }
 }
 
@@ -1917,7 +1929,7 @@ span:has(img) {
 }
 @media (max-width: 768px) {
   .drive_div {
-    padding: 0 16px;
+    padding: 0 19px;
   }
 }
 .careers-banner_border {
@@ -2046,12 +2058,12 @@ span:has(img) {
   }
 
   .card-text {
-    top: -45px;
+    top: -65px;
     border-radius: 10px;
   }
   .card-image {
     width: 100%;
-    height: auto;
+    height: 300px;
     object-fit: cover;
     display: block;
   }

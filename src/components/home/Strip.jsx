@@ -51,7 +51,7 @@ function RollingDigit({ target, duration = 2 }) {
 export default function Strip() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-  const [start, setStart] = useState(false);
+  const [start, setStart] = useState(true);
 
   useEffect(() => {
     if (isInView) setStart(true);
@@ -77,7 +77,7 @@ export default function Strip() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           A Fleet of{" "}
           <span className="number number-anime">

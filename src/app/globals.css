@@ -803,14 +803,14 @@ span:has(img) {
 }
 .card {
   position: relative;
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
 .testimonial-cards .card {
   position: relative;
   width: 180px;
+  
   margin: 0;
 }
 
@@ -842,29 +842,30 @@ span:has(img) {
 
 .arrow-img {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   right: 10px;
   z-index: 2;
   width: 40px;
   height: 40px;
   transition: transform 0.5s ease, bottom 0.5s ease, width 0.5s ease,
     height 0.5s ease;
+    
 }
 
 .arrow-img img {
   width: 26px;
   height: 26px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .card:hover .arrow-img {
-  transform: rotate(-47deg) scale(0.7);
-  bottom: 100px;
+  transform: rotate(-47deg) scale(1.7) ;
+  
 }
 
 .card.active .arrow-img {
   transform: rotate(-47deg);
-  bottom: 100px;
+  bottom: 94px;
   width: 28px !important;
   height: 28px !important;
 }
@@ -890,6 +891,7 @@ span:has(img) {
   justify-content: flex-start;
   align-items: center; 
   padding-left: 16px;
+  padding-bottom: 0;
 }
 .card-overlay .card-content {
   color: #000;
@@ -913,7 +915,7 @@ span:has(img) {
 
 .card-overlay .x-icon {
   position: absolute;
-  bottom: -18px;
+  bottom: -20px;
   right: 0;
 
   width: 70px !important;
@@ -2776,7 +2778,7 @@ height: 250px;
 
 .fleet-hero__overlay {
   position: absolute;
-  bottom: 78px; /* instead of transform */
+  bottom: 78px; 
   text-align: center;
   z-index: 20;
   width: 80%;
@@ -2845,7 +2847,7 @@ height: 250px;
 @media (max-width: 968px) {
   .fleet-hero__overlay {
     bottom: 24px;
-    width: 100%;
+    width: 90%;
   }
   .fleet-hero__overlay h1 {
     font-size: 24px;

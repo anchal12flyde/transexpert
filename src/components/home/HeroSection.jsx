@@ -362,7 +362,7 @@ export default function HeroSection({ isScrolled }) {
               </div>
               <div className="card-overlay">
                 <div className="card-content w-[70%]">
-                  <h3>{card.title}</h3>
+                  <h3 >{card.title}</h3>
                   <p>{card.desc}</p>
                 </div>
                 <img

@@ -111,7 +111,7 @@ export default function Commitments() {
                 delay: index * 0.1,
                 ease: "easeOut",
               }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
             >
               <Image alt={c.title} src={c.logo} width={36} height={36} />
               <div className="flex flex-col gap-5">

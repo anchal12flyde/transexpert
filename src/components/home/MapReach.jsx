@@ -16,7 +16,7 @@ export default function GeographicalCoverage() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="sm:hidden heading"
+          className="lg:hidden heading"
         >
           Geographical Coverage & Infrastructure
         </motion.h2>
@@ -26,21 +26,21 @@ export default function GeographicalCoverage() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="sm:hidden map_subheading-phone"
+          className="lg:hidden map_subheading-phone"
         >
           We move freight across Canada, the USA, and Mexico with speed and
           reliability.
         </motion.p>
       </div>
 
-      <div className="grid sm:grid-cols-11 ">
+      <div className="grid lg:grid-cols-11 ">
         {/* Left side - Video */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="sm:col-span-7"
+          className="lg:col-span-7"
         >
           <motion.video
             src="/images/videos/map.mp4"
@@ -58,7 +58,7 @@ export default function GeographicalCoverage() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="hidden md:flex md:col-span-4 map-text flex-col justify-end  macbook-map-padding"
+          className="hidden lg:flex lg:col-span-4 map-text flex-col justify-end  macbook-map-padding"
         >
           <h2 className="heading ">Geographical Coverage & Infrastructure</h2>
           <p className="map_subheading macbook-subheading">
@@ -93,9 +93,9 @@ export default function GeographicalCoverage() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="global-container mb-[42px] sm:mb-[0]"
+          className="global-container mb-[42px] lg:mb-[0]"
         >
-          <div className="block md:hidden text-gray-800 mobile-map-text">
+          <div className="block lg:hidden text-gray-800 mobile-map-text">
             <p className="map_subheading mt-5">Operational Reach</p>
 
             <p className="subheading para">
@@ -111,7 +111,7 @@ export default function GeographicalCoverage() {
               partnerships.
             </p>
             <p className="subheading para">
-              <span className="bold-text">Terminal Locations</span>
+              <span className="terminal">Terminal Locations</span>
               <br />
               Taylor (MI), Toledo (OH), Laredo (TX), Milton (ON), Cambridge
               (ON), Indianapolis (IN), Pointe-Claire (QC)

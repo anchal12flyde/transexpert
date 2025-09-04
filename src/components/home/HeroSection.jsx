@@ -5,6 +5,7 @@ import Header from "./Header";
 import { useRouter } from "next/navigation";
 import Slider from "react-slick";
 import { motion, MotionConfig } from "framer-motion";
+import Image from "next/image";
 
 const container = {
   hidden: {},
@@ -26,7 +27,12 @@ const fadeLeftToRight = {
     transition: { duration: 0.5, ease: "easeOut" },
   },
 };
-
+const services = [
+  { img: "/images/assets/Full Truck Load.png", title: "Full Truck Load" },
+  { img: "/images/assets/Refigereted.png", title: "Temperature Controlled" },
+  { img: "/images/assets/Cross Border.png", title: "Cross Border" },
+  { img: "/images/assets/Cross Docking.png", title: "Cross Docking" },
+];
 export default function HeroSection({ isScrolled }) {
   const overlayRef = useRef(null);
   const squareRef = useRef(null); // 🔴 Red Box reference
@@ -370,129 +376,37 @@ export default function HeroSection({ isScrolled }) {
         </motion.div>
       </section>
 
-      <div className=" lg:hidden flex gap-[37px] flex-col mb-[0px] mt-[-7px] global-container bgMob pb-[110px] pt-[42px] ">
-        <p className="lg:hidden text-center text-[24px] text-white font-bold  ">
+      <div className=" lg:hidden flex gap-[32px] flex-col mb-[0px] mt-[-7px] global-container bgMob pb-[110px] pt-[42px] ">
+        <p className="lg:hidden text-center services-head ">
           Services
         </p>
-        <div className=" lg:hidden grid grid-cols-2 gap-[33px] ">
-          <div className="card1 " onClick={() => router.push("/ftl")}>
-            <div className="img-wrapper1">
-              <img
-                src="/images/assets/Full Truck Load.png"
-                alt="Full Truck Load"
+        <div className="services-grid">
+          {services.map((service, index) => (
+            <div key={index} className="service-card">
+              <Image
+                src={service.img}
+                alt={service.title}
+                width={300}
+                height={200}
+                className="service-image"
               />
-            </div>
-            <div className="card-overlay1 ">
-              <div className="card-content flex flex-col justify-between  ">
-                <h3>Full Truck Load</h3>
-                <div className=" flex items-center justify-between    ">
-                  <div className="!w-[40px]  pb-[10px] ">
-                    <img
-                      src="/images/assets/redarrow.png"
-                      alt="Arrow"
-                      className=" !w-[30px] aspect-square rotate-[-47deg] "
-                    />
-                  </div>
-                  <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
-                    <img
-                      src="/images/assets/vector2.png"
-                      alt="Arrow"
-                      className="w-full aspect-square scale-120 !ml-[.5cm] "
-                    />
-                  </div>
+              <div className="service-content">
+                <h3>{service.title}</h3>
+                <div className="service-icons">
+                  <img
+                    src="/images/assets/Frame 8.png"
+                    alt="Arrow Icon"
+                    className="arrow-icon-mobile "
+                  />
+                  <img
+                    src="/images/assets/vector2.png"
+                    alt="X Icon"
+                    className="x-icon-mobile"
+                  />
                 </div>
               </div>
             </div>
-          </div>
-
-          <div
-            className="card1"
-            onClick={() => router.push("/temperature-controlled")}
-          >
-            <div className="img-wrapper1">
-              <img src="/images/assets/Refigereted.png" alt="Full Truck Load" />
-            </div>
-            <div className="card-overlay1 ">
-              <div className="card-content flex flex-col justify-between  ">
-                <h3>Temperature Controlled</h3>
-                <div className=" flex items-center justify-between    ">
-                  <div className="!w-[40px]  pb-[10px] ">
-                    <img
-                      src="/images/assets/redarrow.png"
-                      alt="Arrow"
-                      className=" !w-[30px] aspect-square rotate-[-47deg] "
-                    />
-                  </div>
-                  <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
-                    <img
-                      src="/images/assets/vector2.png"
-                      alt="Arrow"
-                      className="w-full aspect-square scale-120 !ml-[.5cm] "
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="card1" onClick={() => router.push("/cross-border")}>
-            <div className="img-wrapper1">
-              <img
-                src="/images/assets/Cross Border.png"
-                alt="Full Truck Load"
-              />
-            </div>
-            <div className="card-overlay1 ">
-              <div className="card-content flex flex-col justify-between  ">
-                <h3>Cross Border</h3>
-                <div className=" flex items-center justify-between    ">
-                  <div className="!w-[40px]  pb-[10px] ">
-                    <img
-                      src="/images/assets/redarrow.png"
-                      alt="Arrow"
-                      className=" !w-[30px] aspect-square rotate-[-47deg] "
-                    />
-                  </div>
-                  <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
-                    <img
-                      src="/images/assets/vector2.png"
-                      alt="Arrow"
-                      className="w-full aspect-square scale-120 !ml-[.5cm] "
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="card1" onClick={() => router.push("/cross-docking")}>
-            <div className="img-wrapper1">
-              <img
-                src="/images/assets/Cross Docking.png"
-                alt="Full Truck Load"
-              />
-            </div>
-            <div className="card-overlay1 ">
-              <div className="card-content flex flex-col justify-between  ">
-                <h3>Cross Docking</h3>
-                <div className=" flex items-center justify-between    ">
-                  <div className="!w-[40px]  pb-[10px] ">
-                    <img
-                      src="/images/assets/redarrow.png"
-                      alt="Arrow"
-                      className=" !w-[30px] aspect-square rotate-[-47deg] "
-                    />
-                  </div>
-                  <div className="w-[80px] aspect-square flex items-center  overflow-hidden mt-[-.9cm] mr-[0cm] ">
-                    <img
-                      src="/images/assets/vector2.png"
-                      alt="Arrow"
-                      className="w-full aspect-square scale-120 !ml-[.5cm] "
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </>

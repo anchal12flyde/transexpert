@@ -26,7 +26,7 @@ export default function TruckImageSection({
   }, [setM]);
 
   return (
-    <div className="global-container sm:mt-[78px] mt-[42px]">
+    <div className="global-container lg:mt-[78px] mt-[42px]">
       <div className="relative overflow-visible">
         <div className="mainImagDivTruck relative w-[900px] !overflow-visible rounded-2xl">
           {/* Truck Image */}
@@ -40,7 +40,7 @@ export default function TruckImageSection({
           {/* Blue overlay */}
           <div
             ref={overlayRef}
-            className="overlay-blue rounded-2xl relative z-10 p-6 hidden sm:block "
+            className="overlay-blue rounded-2xl relative z-10 p-6 hidden lg:block "
           >
             <p className="heading text-white text-2xl font-semibold mb-4 text-center">
               {overlay.title}
@@ -65,7 +65,7 @@ export default function TruckImageSection({
             )}
           </div>
 
-          <div className="section-blue rounded-2xl relative z-10 px-[30px] py-[30px] sm:hidden block mb-[47px]">
+          <div className="section-blue rounded-2xl relative z-10 px-[30px] py-[30px] lg:hidden block mb-[47px]">
             <p className="ftl-heading text-white mb-4 text-center">
               {overlay.title}
             </p>
@@ -95,7 +95,7 @@ export default function TruckImageSection({
           <img
             src={cornerIcon}
             alt="corner-icon"
-            className="absolute bottom-0 right-0 w-[500px] h-[335px] z-[11] hidden sm:block "
+            className="absolute bottom-0 right-0 w-[500px] h-[335px] z-[11] hidden lg:block "
           />
         </div>
       </div>

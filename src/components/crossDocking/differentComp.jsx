@@ -1,8 +1,8 @@
 export default function DifferentComp({ title, imageSrc, points }) {
   return (
-    <section className="global-container mb-[42px] sm:mb-[78px] mt-[42px] sm:mt-[78px]">
+    <section className="global-container mb-[42px] lg:mb-[78px] mt-[42px] lg:mt-[78px]">
       <h2
-        className="hero-section-heading hero-section-heading-macbook w-[250px] sm:w-[500px] text-center sm:text-left"
+        className="hero-section-heading hero-section-heading-macbook w-full lg:w-[500px] text-center lg:text-left"
         dangerouslySetInnerHTML={{ __html: title }}
       />
       <div className="downtime-container1">

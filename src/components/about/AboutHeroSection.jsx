@@ -39,7 +39,7 @@ export default function AboutHero({ isScrolled }) {
           <h1 className="hero-heading mb-[24px]">
             North America's Elite Fleet
           </h1>
-          <p className="hero-description w-full sm:w-[800px]">
+          <p className="hero-description w-full lg:w-[800px]">
             Trans Expert Inc. is a premier cross-border, asset-based
             transportation provider, committed to delivering seamless freight
             solutions across Canada, the United States, and Mexico. Backed by a
@@ -53,7 +53,7 @@ export default function AboutHero({ isScrolled }) {
       </motion.div>
 
       {/* Floating Box - Desktop Version */}
-      <div className="outer-float-box hidden md:block">
+      <div className="outer-float-box hidden lg:block">
         <div className="white-wrapper">
           <div className="about-floating-box ">
             <div className="">
@@ -82,7 +82,7 @@ export default function AboutHero({ isScrolled }) {
       </div>
 
       {/* Floating Box - Mobile Version */}
-      <div className="mobile-float-box md:hidden ">
+      <div className="mobile-float-box lg:hidden ">
         <div className="white-wrapper2 global-container">
           <div className="about-floating-box-mobile">
             <h3 className="heading">Our Core Values</h3>

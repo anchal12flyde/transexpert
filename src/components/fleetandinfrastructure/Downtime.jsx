@@ -2,8 +2,8 @@
 
 export default function DowntimeSection() {
   return (
-    <section className="global-container mb-[78px] mt-[42px] sm:mt-[78px]">
-      <h2 className="downtime-heading  mb-[12px] sm:mb-[16px]">
+    <section className="global-container mb-[42px] lg:mb-[78px] mt-[42px] lg:mt-[78px]">
+      <h2 className="downtime-heading  mb-[12px] lg:mb-[16px]">
         Downtime is not an option
       </h2>
       <div className="downtime-container">

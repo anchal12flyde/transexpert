@@ -4,13 +4,12 @@ export default function FleetPower() {
   return (
     <>
       <div className="global-container mt-[42px] lg:mt-[100px]">
-
         {/* For Desktop */}
-        <section className="hidden sm:block fleet-section">
+        <section className="hidden lg:block fleet-section">
           <div className="fleet-stats-section ">
             <div className="fleet-stats-numbers-row ">
-              <div className="fleet-stats-number-item">50</div>
               <div className="fleet-stats-number-item">500+</div>
+              <div className="fleet-stats-number-item">50</div>
               <div className="fleet-stats-number-item">20</div>
             </div>
 
@@ -18,11 +17,11 @@ export default function FleetPower() {
 
             <div className="fleet-stats-descriptions-row">
               <div className="fleet-stats-description-item">
-                Dry Vans – For general freight and high-volume distribution
-              </div>
-              <div className="fleet-stats-description-item">
                 Refrigerated Reefers – Temperature controlled delivery for food,
                 pharma, and perishables
+              </div>
+              <div className="fleet-stats-description-item">
+                Dry Vans – For general freight and high-volume distribution
               </div>
               <div className="fleet-stats-description-item">
                 Flatbeds – For industrial, oversized, and non-containerized
@@ -62,11 +61,9 @@ export default function FleetPower() {
           </div>
         </section>
 
-
-
         {/* For MObile */}
 
-        <section className="fleet-section sm:hidden block">
+        <section className="fleet-section lg:hidden block">
           <div className="fleet-stats">
             <div className="stat">
               <h2 className="stat-number">500+</h2>

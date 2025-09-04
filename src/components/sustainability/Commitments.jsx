@@ -96,10 +96,10 @@ export default function Commitments() {
   };
 
   return (
-    <div className="mb-[42px] sm:mb-[78px]">
-      <div className="global-container mt-[42px] sm:mt-[78px]">
+    <div className="mb-[42px] lg:mb-[78px]">
+      <div className="global-container mt-[42px] lg:mt-[78px]">
         {/* Desktop */}
-        <div className="hidden sm:grid grid-cols-4 gap-[81px] macbook">
+        <div className="hidden lg:grid grid-cols-4 gap-[81px] macbook">
           {certificationsData.map((c, index) => (
             <motion.div
               key={index}
@@ -125,7 +125,7 @@ export default function Commitments() {
         </div>
 
         {/* Mobile */}
-        <div className="block sm:hidden relative">
+        <div className="block lg:hidden relative">
           <Slider {...mobileSettings}>
             {certificationsData.map((c, index) => (
               <div key={index} className="px-2 pb-1 pt-1 ">

@@ -51,7 +51,7 @@ export default function EthicsSection() {
   };
 
   return (
-    <section className="mb-[42px] sm:mb-[78px]">
+    <section className="mb-[42px] lg:mb-[78px]">
       <div className="global-container">
         {/* Desktop Tabs */}
         <div className="tab-desktop">

@@ -56,7 +56,7 @@ export default function Header({ isScrolled = false }) {
 
   return (
     <header
-      className={`main-header !sticky !top-0 !z-50 ${
+      className={`main-header !sticky top-0 !z-50 ${
         isScrolled ? "headerScrolled" : ""
       }`}
     >

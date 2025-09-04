@@ -57,7 +57,7 @@ export default function RecognizedCertifications() {
     },
     {
       title: "ACE ",
-      subtitle: "Integration",
+      subtitle: "(Integration)",
       description:
         "Real-time electronic documentation for customs authorities across North America.",
       logo: "/images/assets/image8.png",
@@ -71,7 +71,7 @@ export default function RecognizedCertifications() {
     },
     {
       title: "ACI",
-      subtitle: "Integration",
+      subtitle: "(Integration)",
       description:
         "Real-time electronic documentation for customs authorities across North America.",
       logo: "/images/assets/image3.png",
@@ -104,13 +104,13 @@ export default function RecognizedCertifications() {
 
   return (
     <div className="mt-16 ">
-      <div className="global-container mt-[42px] sm:mt-[78px] relative">
+      <div className="global-container mt-[42px] lg:mt-[78px] relative">
         {/* Desktop */}
-        <div className="hidden sm:grid grid-cols-2 gap-[81px] macbook">
+        <div className="hidden lg:grid grid-cols-2 gap-[81px] macbook">
           {certificationsData.map((c, index) => (
             <div
               key={index}
-              className="flex items-start rounded-[16px] p-[78px] gap-4 bshadow "
+              className="flex items-start rounded-[16px] p-[78px] gap-[24px] bshadow "
             >
               <Image alt={c.title} src={c.logo} width={150} height={200} />
               <div className="flex flex-col gap-[16px]">
@@ -125,11 +125,11 @@ export default function RecognizedCertifications() {
         </div>
 
         {/* Mobile */}
-        <div className="block sm:hidden relative mb-[80px]">
+        <div className="block lg:hidden relative mb-[80px]">
           <Slider {...mobileSettings}>
             {certificationsData.map((c, index) => (
               <div key={index} className="px-2 pb-1 pt-1">
-                <div className="flex flex-col items-center justify-center text-center rounded-[16px] px-[22px] py-[34px] gap-6 bshadow bg-white h-[340px]">
+                <div className="flex flex-col items-center justify-center text-center rounded-[16px] px-[22px] py-[34px] gap-[16px] bshadow bg-white h-[340px]">
                   <Image alt={c.title} src={c.logo} width={120} height={120} />
                   <div className="flex flex-col gap-3 mt-4">
                     <p className="heading">{c.title}</p>

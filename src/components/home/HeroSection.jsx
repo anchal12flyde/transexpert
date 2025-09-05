@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import Header from "./Header";
 import { useRouter } from "next/navigation";
 import Slider from "react-slick";
@@ -11,9 +12,9 @@ const container = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.15, // gap between cards
-      delayChildren: 0.2, // SERVICES ke baad cards start
-      staggerDirection: 1, // left to right
+      staggerChildren: 0.15, 
+      delayChildren: 0.2, 
+      staggerDirection: 1, 
     },
   },
 };
@@ -28,11 +29,28 @@ const fadeLeftToRight = {
   },
 };
 const services = [
-  { img: "/images/assets/Full Truck Load.png", title: "Full Truck Load" },
-  { img: "/images/assets/Refigereted.png", title: "Temperature Controlled" },
-  { img: "/images/assets/Cross Border.png", title: "Cross Border" },
-  { img: "/images/assets/Cross Docking.png", title: "Cross Docking" },
+  {
+    img: "/images/assets/Full Truck Load.png",
+    title: "Full Truck Load",
+    slug: "ftl",
+  },
+  {
+    img: "/images/assets/Refigereted.png",
+    title: "Temperature Controlled",
+    slug: "temperature-controlled",
+  },
+  {
+    img: "/images/assets/Cross Border.png",
+    title: "Cross Border",
+    slug: "cross-border",
+  },
+  {
+    img: "/images/assets/Cross Docking.png",
+    title: "Cross Docking",
+    slug: "cross-docking",
+  },
 ];
+
 export default function HeroSection({ isScrolled }) {
   const overlayRef = useRef(null);
   const squareRef = useRef(null); // 🔴 Red Box reference
@@ -362,7 +380,7 @@ export default function HeroSection({ isScrolled }) {
               </div>
               <div className="card-overlay">
                 <div className="card-content w-[70%]">
-                  <h3 >{card.title}</h3>
+                  <h3>{card.title}</h3>
                   <p>{card.desc}</p>
                 </div>
                 <img
@@ -377,35 +395,35 @@ export default function HeroSection({ isScrolled }) {
       </section>
 
       <div className=" lg:hidden flex gap-[32px] flex-col mb-[0px] mt-[-7px] global-container bgMob pb-[110px] pt-[42px] ">
-        <p className="lg:hidden text-center services-head ">
-          Services
-        </p>
+        <p className="lg:hidden text-center services-head ">Services</p>
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-card">
-              <Image
-                src={service.img}
-                alt={service.title}
-                width={300}
-                height={200}
-                className="service-image"
-              />
-              <div className="service-content">
-                <h3>{service.title}</h3>
-                <div className="service-icons">
-                  <img
-                    src="/images/assets/Frame 8.png"
-                    alt="Arrow Icon"
-                    className="arrow-icon-mobile "
-                  />
-                  <img
-                    src="/images/assets/vector2.png"
-                    alt="X Icon"
-                    className="x-icon-mobile"
-                  />
+            <Link key={index} href={`/${service.slug}`}>
+              <div className="service-card">
+                <Image
+                  src={service.img}
+                  alt={service.title}
+                  width={300}
+                  height={200}
+                  className="service-image"
+                />
+                <div className="service-content">
+                  <h3>{service.title}</h3>
+                  <div className="service-icons">
+                    <img
+                      src="/images/assets/Frame 8.png"
+                      alt="Arrow Icon"
+                      className="arrow-icon-mobile"
+                    />
+                    <img
+                      src="/images/assets/vector2.png"
+                      alt="X Icon"
+                      className="x-icon-mobile"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

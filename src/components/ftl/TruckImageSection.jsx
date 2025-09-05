@@ -35,31 +35,7 @@ export default function TruckImageSection({
     };
   }, [setM]);
 
-  // useEffect(() => {
-  //   const calculateValue = () => {
-  //     if (truckRef.current && overlayRef.current) {
-  //       const truckHeight = truckRef.current.offsetHeight;
-  //       const overlayHeight = overlayRef.current.offsetHeight;
 
-  //       const value = (overlayHeight + 78 - truckHeight) / 2;
-  //       console.log("Calculated Value:", value);
-  //       setCalcValue(value);
-  //       setM(value);
-  //     }
-  //   };
-
-  //   calculateValue(); // initial call
-
-  //   const observer = new ResizeObserver(calculateValue);
-
-  //   if (truckRef.current) observer.observe(truckRef.current);
-  //   if (overlayRef.current) observer.observe(overlayRef.current);
-
-  //   return () => {
-  //     if (truckRef.current) observer.unobserve(truckRef.current);
-  //     if (overlayRef.current) observer.unobserve(overlayRef.current);
-  //   };
-  // }, [setM]);
 
   return (
     <div className="global-container lg:mt-[78px] mt-[42px]">

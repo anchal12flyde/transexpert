@@ -13,18 +13,31 @@ export default function TruckImageSection({
   const [calcValue, setCalcValue] = useState(0);
 
   useEffect(() => {
-    if (truckRef.current && overlayRef.current) {
-      const truckHeight = truckRef.current.offsetHeight;
-      const overlayHeight = overlayRef.current.offsetHeight;
+    const calculateValue = () => {
+      if (truckRef.current && overlayRef.current) {
+        const truckHeight = truckRef.current.offsetHeight;
+        const overlayHeight = overlayRef.current.offsetHeight;
 
-      // Formula: (overlay height + 78 - truck height) / 2
-      const value = overlayHeight + 78 - truckHeight / 2;
-      console.log("Calculated Value:", value);
-      setCalcValue(value);
-      setM(value);
-    }
+        // Formula: (overlay height + 78 - truck height) / 2
+        const value = overlayHeight + 78 - truckHeight / 2;
+        console.log("Calculated Value:", value);
+        setCalcValue(value);
+        setM(value);
+      }
+    };
+
+    calculateValue();
+
+    const observer = new ResizeObserver(calculateValue);
+
+    if (truckRef.current) observer.observe(truckRef.current);
+    if (overlayRef.current) observer.observe(overlayRef.current);
+
+    return () => {
+      if (truckRef.current) observer.unobserve(truckRef.current);
+      if (overlayRef.current) observer.unobserve(overlayRef.current);
+    };
   }, [setM]);
-
   return (
     <div className="global-container lg:mt-[78px] mt-[42px]">
       <div className="relative overflow-visible">

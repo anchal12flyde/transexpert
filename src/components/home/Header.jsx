@@ -101,66 +101,57 @@ export default function Header({ isScrolled = false }) {
 
               {servicesOpen && (
                 <div
-                  onMouseLeave={() => {
-                    setServicesOpen(false);
-                  }}
-                  className="absolute left-[-12.5cm] px-[32px] py-[34px] top-full mt-2 w-[1254px] macbookAit bg-white shadow-xl rounded-xl  z-50"
+                  // onMouseLeave={() => {
+                  //   setServicesOpen(false);
+                  // }}
+                  className="srv-dropdown"
                 >
-                  <div className="flex  gap-[51px] ">
+                  <div className="srv-inner">
                     {/* Services list */}
-                    <div className="grid grid-cols-2 w-[934px]  gap-6  ">
+                    <div className="srv-grid">
                       {services.map((s) => (
-                        <Link
-                          key={s.name}
-                          href={s.path}
-                          className="flex gap-3  items-start hover:bg-gray-50 h-fit  rounded-lg transition p-4  "
-                        >
-                          <div className="!w-[111px] aspect-[16/12]   shrink-0 ">
+                        <Link key={s.name} href={s.path} className="srv-link">
+                          <div className="srv-img">
                             <Image
                               src={s.img}
                               alt={s.name}
                               width={111}
                               height={81}
-                              className="rounded-[8px] object-cover w-full h-full   "
                             />
                           </div>
                           <div>
-                            <p className="font-[400] text-black text-[20px] ">
-                              {s.name}
-                            </p>
-                            <p className="text-[16px] text-[#4F4F4F] font-[300] leading-tight ">
-                              {s.desc}
-                            </p>
+                            <p className="srv-title">{s.name}</p>
+                            <p className="srv-desc">{s.desc}</p>
                           </div>
                         </Link>
                       ))}
                     </div>
 
                     {/* Right Side Promo */}
-                    <div className=" flex flex-col justify-between  ">
+                    <div className="srv-promo srv-link">
                       <Image
                         src="/images/assets/fleet-and-infra.jpg"
                         alt="Promo"
                         width={300}
                         height={291}
-                        className="rounded-[24px] object-cover w-full "
+                       
                       />
-                      <div className="mt-3 flex items-center justify-between ">
+                      <div className="srv-promo-bottom">
                         <div>
-                          <Link href="/fleet-and-infrastructure" className=" ">
-                            <p className="font-[400] text-[16px] text-[#27397A] ">
+                          <Link href="/fleet-and-infrastructure">
+                            <p className="srv-promo-title">
                               Fleet & Infrastructure
                             </p>
                           </Link>
-                          <p className="text-[12px] text-[#4F4F4F] font-[400] ">
+                          <p className="srv-promo-sub">
                             Take a free tour of our platform features
                           </p>
                         </div>
-                        <div className="w-[36px] flex items-center justify-center aspect-square ">
+                        <div className="srv-promo-icon">
                           <Image
-                            src="/images/assets/aicon.png"
-                            width={18}
-                            height={9}
+                            src="/images/assets/Icon.png"
+                            width={12}
+                            height={6}
                             alt="icon"
                           />
                         </div>

@@ -64,7 +64,7 @@ export default function HeroSection({ isScrolled }) {
       link: "/ftl",
     },
     {
-      img: "/images/assets/Refigereted.png",
+      img: "/images/assets/temp2.jpg",
       title: "Temperature  Controlled",
       desc: "Temperature-sensitive logistics just refrigeration.",
       link: "/temperature-controlled",

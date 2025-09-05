@@ -43,7 +43,7 @@
   },
   "temperatureControlled": {
     "hero": {
-      "imageSrc": "/images/assets/Refigerated Cover.png",
+      "imageSrc": "/images/assets/temp3.jpg",
       "title": "Temperature-Controlled Transport",
       "subtitle": "Precision Cooling.<br/> Reliable Delivery.",
       "description": "At Trans Expert Inc., we understand that temperature-sensitive cargo requires more than just refrigeration — it requires consistency, vigilance, and compliance at every mile. Our temperature-controlled transport services are purpose-built to protect your products from origin to destination."
@@ -57,7 +57,7 @@
       }
     },
     "truckImageSection": {
-      "imageSrc": "/images/tcimg.png",
+      "imageSrc": "/images/assets/temp3.jpg",
       "overlay": {
         "title": "Why you need Temperature-Controlled Transport?",
         "description": "Whether you're shipping pharmaceuticals, perishable foods, or other climate-sensitive materials, our solutions offer:",

@@ -34,7 +34,7 @@ export default function Header({ isScrolled = false }) {
     {
       name: "Temp-Controlled Freight",
       desc: "We specialize in temperature-controlled freight that safeguards.",
-      img: "/images/assets/Refigereted.png",
+      img: "/images/assets/temp3.jpg",
       path: "/temperature-controlled",
     },
     {

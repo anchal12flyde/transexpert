@@ -36,7 +36,7 @@ export default function TruckImageSection({
     return () => {
       if (truckRef.current) observer.unobserve(truckRef.current);
       if (overlayRef.current) observer.unobserve(overlayRef.current);
-    };
+    };x
   }, [setM]);
 
   return (

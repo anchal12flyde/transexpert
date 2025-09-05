@@ -597,12 +597,12 @@ body::-webkit-scrollbar {
 
 /* When page is "loaded", play animations */
 body.loaded .hero-diagonal-overlay {
-  animation: triangleForm 1.2s ease-out forwards;
+  animation: triangleForm 0.3s ease-out forwards;
 }
 
 body.loaded .square-videon {
   animation: fadeUpX 1s ease-out forwards;
-  animation-delay: 1.2s; /* starts after triangle */
+  animation-delay: 0.3s; /* starts after triangle */
 }
 
 

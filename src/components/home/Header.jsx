@@ -101,9 +101,9 @@ export default function Header({ isScrolled = false }) {
 
               {servicesOpen && (
                 <div
-                  // onMouseLeave={() => {
-                  //   setServicesOpen(false);
-                  // }}
+                  onMouseLeave={() => {
+                    setServicesOpen(false);
+                  }}
                   className="srv-dropdown"
                 >
                   <div className="srv-inner">

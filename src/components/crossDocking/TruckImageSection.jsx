@@ -30,13 +30,20 @@ export default function TruckImageSection({
       <div className="relative overflow-visible">
         <div className="mainImagDivTruck relative w-[900px] !overflow-visible rounded-2xl">
           {/* Truck Image */}
-          <img
-            ref={truckRef}
-            src={imageSrc}
-            alt="truckImage"
-            className="w-full h-full object-cover rounded-2xl"
-          />
-
+          <div className="relative overflow-visible">
+            <img
+              ref={truckRef}
+              src={imageSrc}
+              alt="truckImage"
+              className="w-full h-full object-cover rounded-2xl"
+            />
+            {/* X image */}
+            <img
+              src="/images/assets/X-icon-ftl.png"
+              alt="close"
+              className="absolute bottom-0 right-0 translate-x-2/11 translate-y-0 w-[40%] h-auto z-[11] block lg:hidden"
+            />
+          </div>
           {/* Blue overlay */}
           <div
             ref={overlayRef}

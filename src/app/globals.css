@@ -269,7 +269,7 @@ body::-webkit-scrollbar {
 }
 
 .srv-link:hover {
-  background: #efeeee; /* hover:bg-gray-50 */
+  background: #f2f2f2; /* hover:bg-gray-50 */
 }
 
 /* Service image wrapper */

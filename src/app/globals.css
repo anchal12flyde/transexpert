@@ -967,6 +967,8 @@ span:has(img) {
 } */
 .img-wrapper {
   position: relative;
+  height: 240px;
+  object-fit: cover;
 }
 
 .arrow-img {
@@ -988,13 +990,13 @@ span:has(img) {
 }
 
 .card:hover .arrow-img {
-  transform: rotate(-47deg) scale(1.7) ;
+  transform: rotate(-47deg) scale(1) ;
   
 }
 
 .card.active .arrow-img {
   transform: rotate(-47deg);
-  bottom: 94px;
+  bottom: 100px;
   width: 28px !important;
   height: 28px !important;
 }

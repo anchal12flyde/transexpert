@@ -45,10 +45,10 @@ const CareersBanner = () => {
           variants={imageVariants}
         >
           <Image
-            src="/images/assets/Frame.png"
+            src="/images/assets/drive-with-us.jpeg"
             alt="Driver"
             width={800}
-            height={0}
+            height={400}
             className="careers-image object-cover"
           />
         </motion.div>

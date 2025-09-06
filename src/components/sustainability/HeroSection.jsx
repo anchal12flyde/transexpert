@@ -6,7 +6,7 @@ export default function HeroSection({ isScrolled }) {
   return (
     <>
       <HeroSectionComponent
-        imageSrc="/images/sustainability hero image.png"
+        imageSrc="/images/sustainability.jpg"
         title={`Driven by Purpose, Powered by People,  
           Committed to the Planet`}
         subtitle="Our Commitment to Corporate 

@@ -373,7 +373,7 @@ export default function HeroSection({ isScrolled }) {
               onClick={() => router.push(card.link)}
             >
               <div className="img-wrapper">
-                <img src={card.img} alt={card.title} lassName="object-cover" />
+                <img src={card.img} alt={card.title} className="object-cover" />
                 <div className="arrow-img">
                   <img
                     src="/images/assets/redarrow.png"

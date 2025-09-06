@@ -78,10 +78,9 @@ export default function Footer() {
                     alt="call"
                     className="mt-1 "
                   />
-                  <p>
+                  <p className="flex flex-col gap-2">
                     <span className="address-details">+1 905-864-6443</span>
-                    <br />
-                    <span>Available 24 X 7</span>
+                    <span>Available 24 × 7</span>
                   </p>
                 </div>
 
@@ -96,8 +95,6 @@ export default function Footer() {
                 </div>
                 <div className="flex items-start gap-2 pb-[25px]">
                   <Image
-
-
                     src="/images/assets/mail.png"
                     width={16}
                     height={16}
@@ -105,7 +102,8 @@ export default function Footer() {
                     className="mt-1 "
                   />
                   <p>
-                    <span>admin@transexpert.ca</span><br/>
+                    <span>admin@transexpert.ca</span>
+                    <br />
                     <span>We reply within 24 hours</span>
                   </p>
                 </div>

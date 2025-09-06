@@ -48,7 +48,7 @@ const CareersBanner = () => {
             src="/images/assets/drive-with-us.jpeg"
             alt="Driver"
             width={800}
-            height={400}
+            height={430}
             className="careers-image object-cover"
           />
         </motion.div>

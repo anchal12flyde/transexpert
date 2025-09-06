@@ -2741,6 +2741,7 @@ height: 250px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    
   }
 }
 /* Fleet Power */
@@ -2751,6 +2752,7 @@ height: 250px;
 
 .fleet-stats-numbers-row {
   display: flex;
+ 
   justify-content: space-between;
   font-size: 96px;
   font-weight: 700;

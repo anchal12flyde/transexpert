@@ -371,7 +371,7 @@ export default function HeroSection({ isScrolled }) {
                 variants={fadeLeftToRight}
                 onMouseEnter={() => setActiveIndex(index)}
                 onMouseLeave={() => setActiveIndex(null)}
-               
+                onClick={() => router.push(card.link)}
               >
                 <div className="img-wrapper">
                   <img

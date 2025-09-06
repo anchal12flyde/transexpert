@@ -158,7 +158,10 @@ cursor: pointer;
 // }
 
 
-
+.contact-btn:hover {
+  background-color: #a60400;
+  transition: 0.3s all ease;
+}
 
 // Mobile Footer
 .footer-mobile {

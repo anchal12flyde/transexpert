@@ -128,35 +128,36 @@ export default function Header({ isScrolled = false }) {
                     </div>
 
                     {/* Right Side Promo */}
-                    <div className="srv-promo srv-link">
-                      <Image
-                        src="/images/assets/fleet-and-infra.jpg"
-                        alt="Promo"
-                        width={300}
-                        height={291}
-                       
-                      />
-                      <div className="srv-promo-bottom">
-                        <div>
-                          <Link href="/fleet-and-infrastructure">
+                    <Link href="/fleet-and-infrastructure">
+                      <div className="srv-promo srv-link">
+                        <Image
+                          src="/images/assets/fleet-and-infra.jpg"
+                          alt="Promo"
+                          width={300}
+                          height={291}
+                        />
+
+                        <div className="srv-promo-bottom">
+                          <div>
                             <p className="srv-promo-title">
                               Fleet & Infrastructure
                             </p>
-                          </Link>
-                          <p className="srv-promo-sub">
-                            Take a free tour of our platform features
-                          </p>
-                        </div>
-                        <div className="srv-promo-icon">
-                          <Image
-                            src="/images/assets/Icon.png"
-                            width={12}
-                            height={6}
-                            alt="icon"
-                          />
+
+                            <p className="srv-promo-sub">
+                              Take a free tour of our platform features
+                            </p>
+                          </div>
+                          <div className="srv-promo-icon">
+                            <Image
+                              src="/images/assets/Icon.png"
+                              width={12}
+                              height={6}
+                              alt="icon"
+                            />
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               )}

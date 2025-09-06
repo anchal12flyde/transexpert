@@ -13,8 +13,8 @@ export default function StripFtl({ text, button, m }) {
           <p className="text-thm-strip-red font-semibold">{button.label}</p>
           {button.icon === "MoveRightIcon" && (
             <Link href="/fleet-and-infrastructure">
-                         <MoveRightIcon color={button.color} />
-                       </Link>
+              <MoveRightIcon color={button.color} />
+            </Link>
           )}
         </div>
       </div>

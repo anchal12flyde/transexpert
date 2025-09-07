@@ -220,7 +220,7 @@ export default function Header({ isScrolled = false }) {
                     isScrolled ? "text-black" : "text-white"
                   }`}
                 >
-                  Contact us
+                  Contact Us
                 </button>
               </Link>
             </div>

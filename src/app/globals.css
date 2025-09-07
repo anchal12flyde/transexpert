@@ -474,6 +474,10 @@ body::-webkit-scrollbar {
     gap: 8.05px;
   }
 }
+.text-button:hover {
+  background-color: #a60400;
+  transition: 0.3s all ease;
+}
 .hero-button {
   background-color: var(--thm-button-color);
   text-align: center;
@@ -1026,7 +1030,6 @@ span:has(img) {
 }
 .card-overlay .card-content {
   color: #000;
-
   width: 70%;
 }
 
@@ -1078,85 +1081,7 @@ span:has(img) {
   justify-content: center;
   height: auto;
 }
-/* 
-.arrow-img1 {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  z-index: 2;
-  width: 26px !important;
-  height: 26px !important;
-  transition: transform 0.5s ease, bottom 0.5s ease;
-}
 
-.card1 {
-  position: relative;
-  border-radius: 16px 16px 8px 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  height: 210px;
-  width: 100%;
-}
-
-.card1 img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 59px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-  display: block;
-}
-@media (max-width: 320px) {
-  .card1 img {
-    margin-bottom: 69px;
-    object-fit: cover;
-  }
-}
-.card-overlay1 {
-  position: relative;
-  top: -72px;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.8);
-
-  z-index: 10;
-
-}
-
-.card-overlay1 .card-content {
-  position: relative;
-  background: rgba(255, 255, 255, 0.8);
-
-  left: 0;
-  color: #000;
-  width: 100%;
-}
-
-.card-overlay1 .card-content h3 {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  margin: 0;
-  padding-left: 10px;
-  padding-right: 15px;
-}
-
-.card-overlay1 .card-content p {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.card-overlay1 .x-icon {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-
-  width: 50px !important;
-  height: 50px !important;
-} */
 
 .blended-top::before {
   content: "";

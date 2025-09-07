@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Industries() {
   const router = useRouter();
@@ -40,12 +41,9 @@ export default function Industries() {
             commitment to on-time delivery, TransExpert keeps your business
             moving without disruption.
           </p>
-          <button
-            className="hero-button"
-            onClick={() => router.push("/industries")}
-          >
-            Know more
-          </button>
+          <Link href="/contact-us">
+            <button className="hero-button">Know more</button>
+          </Link>
         </motion.div>
 
         {/* Right Side */}

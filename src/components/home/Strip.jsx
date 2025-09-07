@@ -1,5 +1,4 @@
 "use client";
-
 import { motion, animate, useMotionValue, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
@@ -8,37 +7,47 @@ function RollingDigit({ target, duration = 2 }) {
   const [height, setHeight] = useState(0);
   const y = useMotionValue(0);
 
+  // measure once mounted
   useEffect(() => {
-    if (ref.current) {
-      setHeight(ref.current.clientHeight);
-    }
+    if (ref.current) setHeight(ref.current.clientHeight);
   }, []);
 
   useEffect(() => {
-    if (height > 0) {
+    if (!height && ref.current) setHeight(ref.current.clientHeight);
+  }, [height]);
+
+  useEffect(() => {
+    if (height > 0 && Number.isFinite(target)) {
+      // reset to start before each run
+      y.set(0);
       const controls = animate(y, -target * height, {
         duration,
         ease: "easeOut",
       });
-      return controls.stop;
+      return () => controls.stop();
     }
-  }, [height, target]);
+  }, [height, target]); // re-run when digit or height changes
 
   return (
     <div
       style={{
         overflow: "hidden",
         height: "1em",
-        display: "flex",
+        display: "inline-block",
         verticalAlign: "bottom",
       }}
     >
       <motion.div style={{ y }}>
-        {[...Array(10).keys()].map((digit) => (
+        {Array.from({ length: 10 }, (_, digit) => (
           <div
             key={digit}
             ref={digit === 0 ? ref : null}
-            style={{ height: "1em", textAlign: "center" }}
+            style={{
+              height: "1em",
+              lineHeight: 1,
+              display: "block",
+              textAlign: "center",
+            }}
           >
             {digit}
           </div>
@@ -51,7 +60,9 @@ function RollingDigit({ target, duration = 2 }) {
 export default function Strip() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-  const [start, setStart] = useState(true);
+
+  // start should be false, then true when in view
+  const [start, setStart] = useState(false);
 
   useEffect(() => {
     if (isInView) setStart(true);
@@ -59,7 +70,6 @@ export default function Strip() {
 
   const number = start ? "250" : "000";
 
-  // fade-in-up variant
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -80,11 +90,14 @@ export default function Strip() {
           viewport={{ once: true, amount: 0.3 }}
         >
           A Fleet of{" "}
-          <span className="number number-anime">
-            {number.split("").map((digit, i) => (
-              <RollingDigit key={i} target={parseInt(digit)} duration={2} />
+          <span
+            className="number number-anime"
+            style={{ fontVariantNumeric: "tabular-nums" }}
+          >
+            {number.split("").map((d, i) => (
+              <RollingDigit key={i} target={parseInt(d, 10)} duration={2} />
             ))}
-          </span>
+          </span>{" "}
           + Vehicles Ready to Move Your Business Forward
         </motion.h2>
       </div>

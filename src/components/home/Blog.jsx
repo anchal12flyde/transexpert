@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Link from "next/link";
 
 import { useRouter } from "next/navigation";
 
@@ -81,11 +82,7 @@ const Blog = () => {
       ) : (
         <div className="blog-grid">
           {blogData.map((item, idx) => (
-            <div
-              className="blog-box"
-              key={idx}
-              onClick={() => router.push("/blogs")}
-            >
+            <Link href="/blogs" key={idx} className="blog-box">
               <img src={item.img} alt="Truck" className="blog-image" />
               <div className="blog-content">
                 <div className="title-with-icon">
@@ -98,7 +95,7 @@ const Blog = () => {
                 </div>
                 <p className="card_subheading text-[#1B1F26B8]">{item.desc}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       )}

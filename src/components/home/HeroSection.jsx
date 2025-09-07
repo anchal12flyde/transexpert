@@ -251,12 +251,12 @@ export default function HeroSection({ isScrolled }) {
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: false,
-    speed: 5000,
+    autoplay: true,
+    speed: 4000,
     autoplaySpeed: 3000,
     cssEase: "linear",
   };
@@ -305,7 +305,7 @@ export default function HeroSection({ isScrolled }) {
 
         <div className="hero-testimonial">
           <Slider {...settings}>
-            <div className=" px-2">
+            <div className=" pl-2">
               <div className="star-rating">
                 <img src="/images/assets/star.png" alt="star" />
                 <img src="/images/assets/star.png" alt="star" />
@@ -325,7 +325,7 @@ export default function HeroSection({ isScrolled }) {
               <br />
               <p className="testimonial-source">Paper Manufacturing Industry</p>
             </div>
-            <div className=" px-2 ">
+            <div className=" pl-2 ">
               <div className="star-rating">
                 <img src="/images/assets/star.png" alt="star" />
                 <img src="/images/assets/star.png" alt="star" />

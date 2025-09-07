@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const CareersBanner = () => {
   
@@ -73,10 +74,11 @@ const CareersBanner = () => {
             Be part of a supportive team that’s growing across North America and
             shaping the future of logistics together.
           </motion.p>
-
-          <motion.button className="hero-button" variants={textVariants}>
-            Apply Now
-          </motion.button>
+          <Link href="/contact-us">
+            <button className="hero-button" >
+              Apply Now
+            </button>
+          </Link>
         </motion.div>
       </motion.div>
       <div className="drive-image">

@@ -78,7 +78,7 @@ export default function Footer() {
                     alt="call"
                     className="mt-1 "
                   />
-                  <p className="flex flex-col gap-2">
+                  <p className="flex flex-col gap-0.5">
                     <span className="address-details">+1 905-864-6443</span>
                     <span>Available 24 × 7</span>
                   </p>

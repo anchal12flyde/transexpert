@@ -98,7 +98,7 @@ export default function Strip() {
               <RollingDigit key={i} target={parseInt(d, 10)} duration={2} />
             ))}
           </span>{" "}
-          + Vehicles Ready to Move Your Business Forward
+          + Trucks Ready to Move Your Business Forward
         </motion.h2>
       </div>
     </section>

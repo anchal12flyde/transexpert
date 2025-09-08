@@ -46,7 +46,7 @@ const CareersBanner = () => {
           variants={imageVariants}
         >
           <Image
-            src="/images/assets/drive-with-us.jpeg"
+            src="/images/Drive with us phot.png"
             alt="Driver"
             width={800}
             height={430}
@@ -75,9 +75,7 @@ const CareersBanner = () => {
             shaping the future of logistics together.
           </motion.p>
           <Link href="/contact-us">
-            <button className="hero-button" >
-              Apply Now
-            </button>
+            <button className="hero-button">Apply Now</button>
           </Link>
         </motion.div>
       </motion.div>

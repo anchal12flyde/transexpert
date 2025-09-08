@@ -8,9 +8,11 @@ export default function FleetPower() {
         <section className="hidden lg:block fleet-section">
           <div className="fleet-stats-section ">
             <div className="fleet-stats-numbers-row ">
-              <div className="fleet-stats-number-item">500+</div>
-              <div className="fleet-stats-number-item">50</div>
-              <div className="fleet-stats-number-item">20</div>
+              <p className="fleet-stats-number-item">500k</p>
+
+              <p className="fleet-stats-number-item">50</p>
+              <p className="fleet-stats-number-item">20</p>
+            
             </div>
 
             <div className="fleet-stats-divider"></div>

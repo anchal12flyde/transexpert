@@ -9,14 +9,16 @@ export default function StripFtl({ text, button, m }) {
           className="red-strip-text"
           dangerouslySetInnerHTML={{ __html: text }}
         />
-        <div className="flex items-center hero-button !bg-white gap-2 w-fit">
-          <p className="text-thm-strip-red font-semibold">{button.label}</p>
-          {button.icon === "MoveRightIcon" && (
-            <Link href="/fleet-and-infrastructure">
-              <MoveRightIcon color={button.color} />
-            </Link>
-          )}
-        </div>
+        <Link href="/fleet-and-infrastructure">
+          <div className="flex items-center hero-button !bg-white gap-2 w-fit">
+            <p className="text-thm-strip-red font-semibold">{button.label}</p>
+            {button.icon === "MoveRightIcon" && (
+             
+                <MoveRightIcon color={button.color} />
+             
+            )}
+          </div>
+        </Link>
       </div>
     </div>
   );

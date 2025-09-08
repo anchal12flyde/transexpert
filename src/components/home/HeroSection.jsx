@@ -256,7 +256,7 @@ export default function HeroSection({ isScrolled }) {
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    speed: 4000,
+    speed: 5000,
     autoplaySpeed: 3000,
     cssEase: "linear",
   };

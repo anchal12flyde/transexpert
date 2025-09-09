@@ -46,7 +46,7 @@ const CareersBanner = () => {
           variants={imageVariants}
         >
           <Image
-            src="/images/Drive with us phot.png"
+            src="https://ik.imagekit.io/a9uxeuyhx/Drive%20with%20us%20phot.png?updatedAt=1757403105119"
             alt="Driver"
             width={800}
             height={430}

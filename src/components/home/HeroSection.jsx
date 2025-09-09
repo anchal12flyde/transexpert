@@ -30,22 +30,22 @@ const fadeLeftToRight = {
 };
 const services = [
   {
-    img: "/images/assets/Full Truck Load.png",
+    img: "https://ik.imagekit.io/a9uxeuyhx/Full%20Truck%20Load.png?updatedAt=1757408398527",
     title: "Full Truck Load",
     slug: "ftl",
   },
   {
-    img: "/images/assets/Refigereted.png",
+    img: "https://ik.imagekit.io/a9uxeuyhx/Refigereted.png?updatedAt=1757408498662",
     title: "Temperature Controlled",
     slug: "temperature-controlled",
   },
   {
-    img: "/images/assets/Cross Border.png",
+    img: "https://ik.imagekit.io/a9uxeuyhx/Cross%20Border.png?updatedAt=1757408576763",
     title: "Cross Border",
     slug: "cross-border",
   },
   {
-    img: "/images/assets/Cross Docking.png",
+    img: "https://ik.imagekit.io/a9uxeuyhx/Cross%20Docking.png?updatedAt=1757408640442",
     title: "Cross Docking",
     slug: "cross-docking",
   },
@@ -58,25 +58,25 @@ export default function HeroSection({ isScrolled }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const cards = [
     {
-      img: "/images/assets/Full Truck Load.png",
+      img: "https://ik.imagekit.io/a9uxeuyhx/Full%20Truck%20Load.png?updatedAt=1757408398527",
       title: "Full Truck Load",
       desc: "Dedicated capacity for your larger shipments",
       link: "/ftl",
     },
     {
-      img: "/images/assets/temp2.jpg",
+      img: "https://ik.imagekit.io/a9uxeuyhx/Refigereted.png?updatedAt=1757408498662",
       title: "Temperature  Controlled",
       desc: "Temperature-sensitive logistics just refrigeration.",
       link: "/temperature-controlled",
     },
     {
-      img: "/images/assets/Cross Border.png",
+      img: "https://ik.imagekit.io/a9uxeuyhx/Cross%20Border.png?updatedAt=1757408576763",
       title: "Cross Border",
       desc: "Seamless Borders. Limitless Reach.",
       link: "/cross-border",
     },
     {
-      img: "/images/assets/Cross Docking.png",
+      img: "https://ik.imagekit.io/a9uxeuyhx/Cross%20Docking.png?updatedAt=1757408640442",
       title: "Cross Docking",
       desc: "Build for urgent freight that can not afford to wait",
       link: "/cross-docking",

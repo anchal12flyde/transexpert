@@ -17,7 +17,7 @@ const SustainabilityBanner = () => {
     <div className="content">
       <div className="heroSection">
         <img
-          src="/images/assets/frame-41.jpg"
+          src="https://ik.imagekit.io/a9uxeuyhx/frame-41.jpg?updatedAt=1757408725106"
           alt="background"
           className="backgroundVideo"
         />

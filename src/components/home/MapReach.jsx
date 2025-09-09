@@ -43,7 +43,7 @@ export default function GeographicalCoverage() {
           className="lg:col-span-7"
         >
           <motion.video
-            src="/images/videos/map.mp4"
+            src="https://ik.imagekit.io/a9uxeuyhx/map.mp4?updatedAt=1757409435181"
             autoPlay
             loop
             muted

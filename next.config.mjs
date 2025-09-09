@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    domains: ["ik.imagekit.io"], // ✅ yaha apna domain add karo
+  },
+};
 
 export default nextConfig;

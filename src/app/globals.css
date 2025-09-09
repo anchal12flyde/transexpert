@@ -385,7 +385,7 @@ body::-webkit-scrollbar {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/himg1.png");
+  background-image: url("https://ik.imagekit.io/a9uxeuyhx/himg1.png?updatedAt=1757404002874");
   background-size: cover;
   background-position: center;
   opacity: 0.9;
@@ -1892,7 +1892,7 @@ height: 250px;
 .about-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("/images/About_hero.jpg");
+  background-image: url("https://ik.imagekit.io/a9uxeuyhx/About_hero.jpg?updatedAt=1757409610739");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

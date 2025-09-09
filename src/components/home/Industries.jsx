@@ -50,9 +50,18 @@ export default function Industries() {
 
         <div className="industries-cards">
           {[
-            { img: "/images/assets/Wholesale.jpg", label: "Wholesale" },
-            { img: "/images/assets/Retail.jpg", label: "Retail" },
-            { img: "/images/assets/Manufacture.jpg", label: "Manufacturers" },
+            {
+              img: "https://ik.imagekit.io/a9uxeuyhx/Wholesale.jpg?updatedAt=1757409176961",
+              label: "Wholesale",
+            },
+            {
+              img: "https://ik.imagekit.io/a9uxeuyhx/Retail.jpg?updatedAt=1757409248921/images/assets/Retail.jpg",
+              label: "Retail",
+            },
+            {
+              img: "https://ik.imagekit.io/a9uxeuyhx/Manufacture.jpg?updatedAt=1757409325876",
+              label: "Manufacturers",
+            },
           ].map((card, index) => (
             <div
               key={index}

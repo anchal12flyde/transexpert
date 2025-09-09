@@ -61,7 +61,7 @@ export default function TruckImageSection({
           {/* Blue overlay */}
           <div
             ref={overlayRef}
-            className="overlay-blue rounded-2xl relative z-10 p-6 hidden lg:block mb-[47px]"
+            className="overlay-blue rounded-2xl relative z-0 p-6 hidden lg:block mb-[47px]"
           >
             <p className="heading text-white text-2xl font-semibold mb-4 text-center">
               {overlay.title}
@@ -116,7 +116,7 @@ export default function TruckImageSection({
           <img
             src={cornerIcon}
             alt="corner-icon"
-            className="absolute bottom-0 right-0 w-[455px] h-[335px] z-[11] hidden lg:block "
+            className="absolute bottom-0 right-0 w-[455px] h-[335px] z-10 hidden lg:block "
           />
         </div>
       </div>

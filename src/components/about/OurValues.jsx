@@ -24,17 +24,17 @@ export default function CardsSection() {
 
   const cards = [
     {
-      img: "/images/assets/IMG1.png",
+      img: "https://ik.imagekit.io/a9uxeuyhx/IMG1.png?updatedAt=1757409696161",
       heading: "Cohesion",
       text: "We operate as one synchronized unit, between teams, with clients, and across borders.",
     },
     {
-      img: "/images/assets/IMG4.png",
+      img: "https://ik.imagekit.io/a9uxeuyhx/IMG4.png?updatedAt=1757409824788",
       heading: "Reliability",
       text: "With a 98.7% on-time delivery rate, we prove consistency is not a goal, it’s a standard.",
     },
     {
-      img: "/images/assets/IMG3.png",
+      img: "https://ik.imagekit.io/a9uxeuyhx/IMG3.png?updatedAt=1757409913018",
       heading: "Modernization",
       text: "We invest in advanced  technologies, and sustainable practices that move the industry forward.",
     },

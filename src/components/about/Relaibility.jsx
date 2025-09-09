@@ -17,7 +17,7 @@ const Relaibility = () => {
             {/* Left Image */}
             <div className="careers-image-container">
               <Image
-                src="/images/assets/IMG2.png"
+                src="https://ik.imagekit.io/a9uxeuyhx/IMG2.png?updatedAt=1757410012291"
                 alt="Driver"
                 width={800}
                 height={0}

@@ -70,7 +70,7 @@ export default function Footer() {
 
               {/* Right Section */}
               <div className="footer-contact ">
-                <div className="flex items-start gap-2 pb-[25px]">
+                <div className="flex items-start gap-2 pb-[15px]">
                   <Image
                     src="/images/assets/call.png"
                     width={16}
@@ -84,7 +84,7 @@ export default function Footer() {
                   </p>
                 </div>
 
-                <div className="flex items-start gap-2 pb-[25px]">
+                <div className="flex items-start gap-2 pb-[15px]">
                   <Image
                     src="/images/assets/location.png"
                     width={16}
@@ -107,11 +107,12 @@ export default function Footer() {
                     <span>We reply within 24 hours</span>
                   </p>
                 </div>
-
-                <Link href="/contact-us">
-                  {" "}
-                  <button className="contact-btn">Contact us</button>
-                </Link>
+                <div className="">
+                  <Link href="/contact-us">
+                    {" "}
+                    <button className="contact-btn">Contact us</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

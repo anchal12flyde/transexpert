@@ -80,7 +80,10 @@ const CareersBanner = () => {
         </motion.div>
       </motion.div>
       <div className="drive-image">
-        <img src="/images/assets/drive-x.png" alt="Decoration" />
+        <img
+          src="https://ik.imagekit.io/a9uxeuyhx/drive-x.png?updatedAt=1757421038391"
+          alt="Decoration"
+        />
       </div>
     </section>
   );

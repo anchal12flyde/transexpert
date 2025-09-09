@@ -67,7 +67,7 @@ export default function GlobalLoaderProvider({ children, minMs = 2500 }) {
       {visible && (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white">
           <img
-            src="/images/videos/loader-x.gif"
+            src="https://ik.imagekit.io/a9uxeuyhx/loader-x.gif?updatedAt=1757420630993"
             alt="Loading..."
             className="w-40 h-40"
           />

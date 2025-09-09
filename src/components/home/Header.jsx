@@ -67,8 +67,8 @@ export default function Header({ isScrolled = false }) {
             <Image
               src={
                 isScrolled
-                  ? "/images/assets/logo1.png"
-                  : "/images/assets/logo2.png"
+                  ? "https://ik.imagekit.io/a9uxeuyhx/logo1.png?updatedAt=1757420716070"
+                  : "https://ik.imagekit.io/a9uxeuyhx/logo2.png?updatedAt=1757420743761"
               }
               alt="TransExpert Logo"
               width={176}

@@ -93,7 +93,7 @@ export default function Footer() {
                   />
                   <p>100 Market Drive, Milton ON L9T 3H5 CANADA</p>
                 </div>
-                <div className="flex items-start gap-2 pb-[25px]">
+                <div className="flex items-start gap-2 ">
                   <Image
                     src="/images/assets/mail.png"
                     width={16}

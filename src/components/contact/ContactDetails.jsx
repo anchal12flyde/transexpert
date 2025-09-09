@@ -301,7 +301,7 @@ export default function ContactDetails() {
 
           <div className="flex justify-center mt-[42px] sm:mt-[78px]">
             <button onClick={handleSubmit} type="submit" className="hero-button">
-              Apply Now
+             Send Message
             </button>
           </div>
         </form>

@@ -364,38 +364,32 @@ export default function HeroSection({ isScrolled }) {
           </motion.div>
 
           {cards.map((card, index) => (
-            
-              <motion.div
-                key={index}
-                className={`card ${activeIndex === index ? "active" : ""}`}
-                variants={fadeLeftToRight}
-                onMouseEnter={() => setActiveIndex(index)}
-                onMouseLeave={() => setActiveIndex(null)}
-                onClick={() => router.push(card.link)}
-              >
-                <div className="img-wrapper">
-                  <img
-                    src={card.img}
-                    alt={card.title}
-                    className="object-cover"
-                  />
-                  <div className="arrow-img">
-                    <img src="/images/assets/redarrow.png" alt="arrow" />
-                  </div>
+            <motion.div
+              key={index}
+              className={`card ${activeIndex === index ? "active" : ""}`}
+              variants={fadeLeftToRight}
+              onMouseEnter={() => setActiveIndex(index)}
+              onMouseLeave={() => setActiveIndex(null)}
+              onClick={() => router.push(card.link)}
+            >
+              <div className="img-wrapper">
+                <img src={card.img} alt={card.title} className="object-cover" />
+                <div className="arrow-img">
+                  <img src="/images/assets/redarrow.png" alt="arrow" />
                 </div>
-                <div className="card-overlay">
-                  <div className="card-content w-[70%]">
-                    <h3>{card.title}</h3>
-                    <p>{card.desc}</p>
-                  </div>
-                  <img
-                    src="/images/assets/vector2.png"
-                    alt="X"
-                    className="x-icon"
-                  />
+              </div>
+              <div className="card-overlay">
+                <div className="card-content w-[70%]">
+                  <h3>{card.title}</h3>
+                  <p>{card.desc}</p>
                 </div>
-              </motion.div>
-       
+                <img
+                  src="https://ik.imagekit.io/a9uxeuyhx/vector2.png?updatedAt=1757420940807"
+                  alt="X"
+                  className="x-icon"
+                />
+              </div>
+            </motion.div>
           ))}
         </motion.div>
       </section>

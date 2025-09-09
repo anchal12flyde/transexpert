@@ -115,9 +115,10 @@ export default function TruckImageSection({
           <img
             src={cornerIcon}
             alt="corner-icon"
-            className="absolute bottom-0 right-0 w-[500px] h-[335px] z-[11] hidden lg:block "
+            className="absolute bottom-0 right-0 w-[455px] h-[335px] z-[11] hidden lg:block "
           />
         </div>
+        
       </div>
     </div>
   );

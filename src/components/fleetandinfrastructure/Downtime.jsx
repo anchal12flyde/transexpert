@@ -3,22 +3,24 @@
 export default function DowntimeSection() {
   return (
     <section className="global-container mb-[42px] lg:mb-[78px] mt-[42px] lg:mt-[78px]">
-      <h2 className="downtime-heading  mb-[12px] lg:mb-[16px]">
-        Downtime is not an option
-      </h2>
       <div className="downtime-container">
         {/* Left side */}
 
         <div className="downtime-left">
+          <h2 className="downtime-heading  mb-[12px] lg:mb-[16px]">
+            Downtime is not an option
+          </h2>
           <p className="map_subheading">
             Our in-house licensed mechanics and proactive diagnostics ensure
             top-tier fleet availability.
           </p>
-          <img
-            src="/images/assets/f&i.png"
-            alt="Fleet"
-            className="downtime-image"
-          />
+          <div>
+            <img
+              src="/images/assets/f&i.png"
+              alt="Fleet"
+              className="downtime-image"
+            />
+          </div>
         </div>
 
         {/* Right side */}

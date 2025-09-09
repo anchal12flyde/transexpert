@@ -637,7 +637,7 @@ body.loaded .square-videon {
 
 .overlay-blue {
   position: absolute;
-  top: 50%;
+  top: 44.5%;
   left: 70%;
 
   background-color: var(--primary-color);
@@ -650,7 +650,7 @@ body.loaded .square-videon {
 @media (min-width: 1000px) and (max-width: 1300px) {
   .overlay-blue {
     width: 582px;
-    padding: 70px 52px;
+    padding: 70px 82px;
   }
 }
 .section-blue {
@@ -2769,7 +2769,7 @@ height: 250px;
  
 
   flex-direction: column;
-  gap: 26px;
+  gap: 42px;
   
 
 
@@ -3698,7 +3698,7 @@ textarea {
   font-size: 24px;
 }
 
-@media (min-width: 1000px) and (max-width: 1300px) {
+@media (min-width: 1000px) and (max-width: 1400px) {
   .macbookDev {
     flex-direction: column;
     gap: 10px;
@@ -3748,7 +3748,7 @@ textarea {
    
   }
   .downtime-image {
-    margin-top: 50px;
+    margin-top: 24px;
     border-radius: 8px;
     height: auto;
     width: 100%;

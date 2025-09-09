@@ -14,6 +14,8 @@ import UseGoogleTranslate from "../customGoogleTranslator";
 export default function Header({ isScrolled = false }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [clicked, setClicked] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const { ready, currentLang, setLanguage } = UseGoogleTranslate();
   if (!ready) return null;
@@ -182,36 +184,53 @@ export default function Header({ isScrolled = false }) {
 
             <div className="lg:flex lg:gap-8 hidden macbook-navlink">
               <div className="hidden md:flex hero-button !items-center ">
-                <DropdownMenu>
-                  <DropdownMenuTrigger className="flex items-center gap-2 cursor-pointer focus:outline-0">
-                    <Image
-                      src={selectedCountry.flag}
-                      width={25}
-                      height={18}
-                      alt={selectedCountry.name}
-                    />
-                    <ChevronRight size={16} />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-44 bg-white !border-none mt-[.5cm] ">
-                    {countries.map((country) => (
-                      <DropdownMenuItem
-                        key={country.code}
-                        className="hover:bg-blue-100 cursor-pointer"
-                        onClick={() => setLanguage(country.code)}
-                      >
-                        <div className="flex items-center gap-2">
-                          <Image
-                            src={country.flag}
-                            width={20}
-                            height={15}
-                            alt={country.name}
-                          />
-                          <span>{country.name}</span>
-                        </div>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
+            <DropdownMenu open={open} onOpenChange={(o) => {
+      setOpen(o);
+      if (!o) setClicked(false); 
+    }}>
+     
+      <DropdownMenuTrigger asChild>
+        <button
+          type="button"
+          className="flex items-center gap-2 cursor-pointer focus:outline-0"
+          onClick={() => setClicked(true)} 
+        >
+          <Image
+            src={selectedCountry.flag}
+            width={25}
+            height={18}
+            alt={selectedCountry.name}
+          />
+          <ChevronRight
+            size={16}
+            className={`transition-transform duration-200 ${clicked || open ? "rotate-90" : ""}`}
+          />
+        </button>
+      </DropdownMenuTrigger>
+
+      <DropdownMenuContent className="w-44 bg-white !border-none mt-[.5cm] ">
+        {countries.map((country) => (
+          <DropdownMenuItem
+            key={country.code}
+            className="hover:bg-blue-100 cursor-pointer"
+            onClick={() => {
+              setLanguage(country.code);
+              setOpen(false); // ensure menu closes and chevron resets
+            }}
+          >
+            <div className="flex items-center gap-2">
+              <Image
+                src={country.flag}
+                width={20}
+                height={15}
+                alt={country.name}
+              />
+              <span>{country.name}</span>
+            </div>
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+             </DropdownMenu>
               </div>
 
               <Link href="/contact-us">

@@ -217,7 +217,7 @@ body::-webkit-scrollbar {
     gap: 16px;
   }
 }
-@media (min-width: 1000px) and (max-width: 1540px) {
+@media (min-width: 1000px) and (max-width: 1440px) {
   .macbook {
     gap: 54px;
   }
@@ -231,7 +231,7 @@ body::-webkit-scrollbar {
 /* Dropdown container */
 .srv-dropdown {
   position: fixed;
-  top: 86px;                 /* jitna chaho utna fixed gap */
+  top: 86px;               
   left: 50%;
   transform: translateX(-50%);
   padding: 34px 32px;
@@ -1491,7 +1491,7 @@ height: 250px;
   
     margin: 42px 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 32px;
   }
 }

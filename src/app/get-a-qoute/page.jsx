@@ -33,7 +33,7 @@ export default function page() {
     // Cleanup
     return () => {
       container.removeEventListener("scroll", handleScroll);
-    };
+    }; 
   }, []);
   return (
     <>

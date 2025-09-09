@@ -20,7 +20,8 @@ export const metadata = {
     siteName: "TransExpert",
     images: [
       {
-        url: "/images/og-image.jpg", // 👉 put image in public/images/
+        url: "/images/previewLink.png",
+
         width: 1200,
         height: 630,
         alt: "TransExpert Freight & Logistics",
@@ -36,7 +37,7 @@ export const metadata = {
     title: "TransExpert – Trusted North American Logistics",
     description:
       "Your source for efficient cross-border freight services between Canada and the U.S.",
-    images: ["/images/og-image.jpg"], // same OG image
+    images: ["/images/previewLink.png"], // same OG image
   },
 };
 

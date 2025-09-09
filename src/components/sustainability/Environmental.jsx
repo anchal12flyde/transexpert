@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Environmental() {
   return (
@@ -50,7 +51,9 @@ export default function Environmental() {
               </li>
             </ul>
 
-            <button className="hero-button">Apply Now</button>
+            <Link href="/contact-us">
+              <button className="hero-button">Apply Now</button>
+            </Link>
           </div>
         </div>
         <div className="drive-image">

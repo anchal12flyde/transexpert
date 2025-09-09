@@ -165,29 +165,7 @@ export default function Careers() {
       {isScrolled && <Header isScrolled={isScrolled} />}
       <HeroSection isScrolled={isScrolled} />
 
-      {/* Hero Section */}
-      {/* <section className="bg-gradient-hero py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Join Our <span className="text-accent">Growing Team</span>
-          </h1>
-          <p className="text-2xl text-white/90 max-w-3xl mx-auto mb-8">
-            Build your career with a company that values safety, integrity, and
-            excellence. Discover opportunities that drive your success forward.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild className="hero-button">
-              <Link href="/">View Open Positions</Link>
-            </Button>
-            <Button
-              asChild
-              className="hero-button !bg-transparent border border-white "
-            >
-              <Link href="/">Learn About Benefits</Link>
-            </Button>
-          </div>
-        </div>
-      </section> */}
+      
 
       {/* Benefits Section */}
       <section className="mb-[42px] sm:mb-[78px] global-container">
@@ -306,7 +284,7 @@ export default function Careers() {
                         </div>
                       </div>
                       <Button className="hero-button" asChild>
-                        <Link href="/apply">Apply Now</Link>
+                        <Link href="/contact-us">Apply Now</Link>
                       </Button>
                     </div>
                   </CardHeader>

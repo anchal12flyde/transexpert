@@ -1648,7 +1648,7 @@ height: 250px;
   font-size: 24.316px;
   font-weight: 400;
   line-height: normal;
-  flex: 1;
+
 }
 @media (min-width: 1000px) and (max-width: 1300px) {
   .macbook-card_heading {
@@ -3730,15 +3730,16 @@ textarea {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: bottom;
+  
 }
 
 .downtime-image {
+  display: block;
   border-radius: 8px;
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  margin-top: 16px;
+ object-fit: cover;
+ object-position: center;
 }
 @media (min-width: 968px) {
   .downtime-left1 {
@@ -3748,11 +3749,12 @@ textarea {
    
   }
   .downtime-image {
-    margin-top: 24px;
+  
     border-radius: 8px;
     height: auto;
     width: 100%;
     object-fit: cover;
+  
   }
 }
 

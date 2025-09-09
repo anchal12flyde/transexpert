@@ -15,7 +15,7 @@
       }
     },
     "truckImageSection": {
-      "imageSrc": "/images/ftlimg.png",
+      "imageSrc": "https://ik.imagekit.io/a9uxeuyhx/ftlimg.png?updatedAt=1757410998123",
       "overlay": {
         "title": "Why you need FTL?",
         "description": "Whether it’s recurring production shipments, large-scale retail fulfillment, or high-value cargo requiring minimal touchpoints, our FTL model is engineered for:",
@@ -28,11 +28,11 @@
           "label": "Get a quote"
         }
       },
-      "cornerIcon": "/images/assets/X-icon-ftl.png"
+      "cornerIcon": "https://ik.imagekit.io/a9uxeuyhx/X-icon-ftl.png?updatedAt=1757411043544"
     },
     "weAreDifferent": {
       "title": "WE ARE <span class='text-thm-heading-text'>DIFFERENT</span> IN EVERY WAY",
-      "imageSrc": "/images/assets/f&i.png",
+      "imageSrc": "https://ik.imagekit.io/a9uxeuyhx/f&i.png?updatedAt=1757412482732",
       "points": [
         "Load-specific documentation handling",
         "Integrated cross-border compliance support",
@@ -43,7 +43,7 @@
   },
   "temperatureControlled": {
     "hero": {
-      "imageSrc": "/images/assets/temp3.jpg",
+      "imageSrc": "https://ik.imagekit.io/a9uxeuyhx/temp3.jpg?updatedAt=1757412593253",
       "title": "Temperature-Controlled Transport",
       "subtitle": "Precision Cooling.<br/> Reliable Delivery.",
       "description": "At Trans Expert Inc., we understand that temperature-sensitive cargo requires more than just refrigeration — it requires consistency, vigilance, and compliance at every mile. Our temperature-controlled transport services are purpose-built to protect your products from origin to destination."
@@ -57,7 +57,7 @@
       }
     },
     "truckImageSection": {
-      "imageSrc": "/images/assets/temp3.jpg",
+      "imageSrc": "https://ik.imagekit.io/a9uxeuyhx/temp3.jpg?updatedAt=1757412593253",
       "overlay": {
         "title": "Why you need Temperature-Controlled Transport?",
         "description": "Whether you're shipping pharmaceuticals, perishable foods, or other climate-sensitive materials, our solutions offer:",
@@ -71,11 +71,11 @@
           "label": "Get a quote"
         }
       },
-      "cornerIcon": "/images/assets/X-icon-ftl.png"
+      "cornerIcon": "https://ik.imagekit.io/a9uxeuyhx/X-icon-ftl.png?updatedAt=1757411043544"
     },
     "weAreDifferent": {
       "title": "WE ARE <span class='text-thm-heading-text'>DIFFERENT</span> IN EVERY WAY",
-      "imageSrc": "/images/assets/f&i.png",
+      "imageSrc": "https://ik.imagekit.io/a9uxeuyhx/f&i.png?updatedAt=1757412482732",
       "points": [
         "Load-specific documentation handling",
         "Integrated cross-border compliance support",
@@ -114,11 +114,11 @@
           "label": "Get a quote"
         }
       },
-      "cornerIcon": "/images/assets/X-icon-ftl.png"
+      "cornerIcon": "https://ik.imagekit.io/a9uxeuyhx/X-icon-ftl.png?updatedAt=1757411043544"
     },
     "weAreDifferent": {
       "title": "WE ARE <span class='text-thm-heading-text'>DIFFERENT</span> IN EVERY WAY",
-      "imageSrc": "/images/assets/f&i.png",
+      "imageSrc": "https://ik.imagekit.io/a9uxeuyhx/f&i.png?updatedAt=1757412482732",
       "points": [
         "Load-specific documentation handling",
         "Integrated cross-border compliance support",
@@ -156,11 +156,11 @@
           "label": "Get a quote"
         }
       },
-      "cornerIcon": "/images/assets/X-icon-ftl.png"
+      "cornerIcon": "https://ik.imagekit.io/a9uxeuyhx/X-icon-ftl.png?updatedAt=1757411043544"
     },
     "weAreDifferent": {
       "title": "WE ARE <span class='text-thm-heading-text'>DIFFERENT</span> IN EVERY WAY",
-      "imageSrc": "/images/assets/f&i.png",
+      "imageSrc": "https://ik.imagekit.io/a9uxeuyhx/f&i.png?updatedAt=1757412482732",
       "points": [
         "Load-specific documentation handling",
         "Integrated cross-border compliance support",

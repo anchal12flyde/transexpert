@@ -28,25 +28,25 @@ export default function Header({ isScrolled = false }) {
     {
       name: "Full Truckload",
       desc: "They’re about full control, full visibility, and full confidence.",
-      img: "https://ik.imagekit.io/a9uxeuyhx/mmenu1.jpg?updatedAt=1757410158382",
+      img: "https://ik.imagekit.io/a9uxeuyhx/Full%20Truck%20Load.png?updatedAt=1757408398527",
       path: "/ftl",
     },
     {
       name: "Temp-Controlled Freight",
       desc: "We specialize in temperature-controlled freight that safeguards.",
-      img: "https://ik.imagekit.io/a9uxeuyhx/temp3.jpg?updatedAt=1757410211350",
+      img: "https://ik.imagekit.io/a9uxeuyhx/temp3.jpg?updatedAt=1757412593253",
       path: "/temperature-controlled",
     },
     {
       name: "Cross Border",
       desc: "Our cross-docking solutions are designed to keep freight moving swiftly.",
-      img: "https://ik.imagekit.io/a9uxeuyhx/temp3.jpg?updatedAt=1757410211350",
+      img: "https://ik.imagekit.io/a9uxeuyhx/Cross%20Border.png?updatedAt=1757410266625",
       path: "/cross-border",
     },
     {
       name: "Cross Docking",
       desc: "Our express delivery service is built for urgent freight that can’t afford to wait.",
-      img: "https://ik.imagekit.io/a9uxeuyhx/temp3.jpg?updatedAt=1757410211350",
+      img: "https://ik.imagekit.io/a9uxeuyhx/Cross%20Docking.png?updatedAt=1757410475215",
       path: "/cross-docking",
     },
   ];

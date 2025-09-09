@@ -16,7 +16,7 @@ export default function Environmental() {
           {/* Left Image */}
           <div className="careers-image-container">
             <Image
-              src="/images/sustain.jpg"
+              src="https://ik.imagekit.io/a9uxeuyhx/sustain.jpg?updatedAt=1757413830314"
               alt="Driver"
               width={800}
               height={0}

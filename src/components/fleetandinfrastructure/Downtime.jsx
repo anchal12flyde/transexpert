@@ -16,7 +16,7 @@ export default function DowntimeSection() {
           </p>
           <div className="h-auto mt-[16px] lg:mt-[24px] aspect-[16/8] lg:aspect-[16/9]">
             <img
-              src="/images/assets/f&i.png"
+              src="https://ik.imagekit.io/a9uxeuyhx/f&i.png?updatedAt=1757412482732"
               alt="Fleet"
               className="downtime-image"
             />

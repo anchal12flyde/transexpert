@@ -3,12 +3,19 @@
 const RelatedPost = ({ calcValue }) => {
   console.log(calcValue);
   return (
-    <section className="blog-section global-container" style={{marginTop : `${calcValue - 50  }px` }} >
+    <section
+      className="blog-section global-container"
+      style={{ marginTop: `${calcValue - 50}px` }}
+    >
       <h2 className="related_heading ju">Related posts</h2>
 
       <div className="blog-grid-blog">
         <div className="blog-box">
-          <img src="/images/Image1.png" alt="Truck" className="blog-image" />
+          <img
+            src="https://ik.imagekit.io/a9uxeuyhx/Image1.png?updatedAt=1757408874966"
+            alt="Truck"
+            className="blog-image"
+          />
           <div className="blog-content">
             <div className="title-with-icon">
               <h3 className="related-post-heading">
@@ -26,7 +33,11 @@ const RelatedPost = ({ calcValue }) => {
         </div>
 
         <div className="blog-box">
-          <img src="/images/Image2.png" alt="Truck" className="blog-image" />
+          <img
+            src="https://ik.imagekit.io/a9uxeuyhx/Image2.png?updatedAt=1757408919424"
+            alt="Truck"
+            className="blog-image"
+          />
           <div className="blog-content">
             <div className="title-with-icon">
               <h3 className="related-post-heading">
@@ -44,7 +55,11 @@ const RelatedPost = ({ calcValue }) => {
         </div>
 
         <div className="blog-box">
-          <img src="/images/Image3.png" alt="Truck" className="blog-image" />
+          <img
+            src="https://ik.imagekit.io/a9uxeuyhx/Image3.png?updatedAt=1757408951098"
+            alt="Truck"
+            className="blog-image"
+          />
           <div className="blog-content">
             <div className="title-with-icon">
               <h3 className="related-post-heading ">

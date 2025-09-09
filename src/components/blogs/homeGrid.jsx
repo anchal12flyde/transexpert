@@ -7,7 +7,7 @@ export default function HomeGrid() {
       <div className="grid grid-cols-1 lg:grid-cols-2  gap-[14px] lg:gap-[19px]">
         <div className=" bgOverlay  rounded-[13px] lg:rounded-[24px] overflow-hidden ">
           <Image
-            src="/images/blogs/one.jpg"
+            src="https://ik.imagekit.io/a9uxeuyhx/one.jpg?updatedAt=1757414809712"
             width={200}
             height={200}
             alt="one-img"
@@ -21,7 +21,7 @@ export default function HomeGrid() {
         <div className="grid grid-cols-2 gap-[12px] lg:gap-[19px]  ">
           <div className="  aspect-square bgOverlay  rounded-[9px] lg:rounded-[24px] overflow-hidden">
             <Image
-              src="/images/blogs/two.jpg"
+              src="https://ik.imagekit.io/a9uxeuyhx/two.jpg?updatedAt=1757414850259"
               width={200}
               height={200}
               alt="two-img"
@@ -33,7 +33,7 @@ export default function HomeGrid() {
           </div>
           <div className="aspect-square bgOverlay  rounded-[9px] lg:rounded-[24px] overflow-hidden ">
             <Image
-              src="/images/blogs/three.jpg"
+              src="https://ik.imagekit.io/a9uxeuyhx/three.jpg?updatedAt=1757414911226"
               width={200}
               height={200}
               alt="three-img"
@@ -45,7 +45,7 @@ export default function HomeGrid() {
           </div>
           <div className="  aspect-square bgOverlay  rounded-[9px] lg:rounded-[24px] overflow-hidden">
             <Image
-              src="/images/blogs/four.jpg"
+              src="https://ik.imagekit.io/a9uxeuyhx/four.jpg?updatedAt=1757414942978"
               width={200}
               height={200}
               alt="four-img"
@@ -59,7 +59,7 @@ export default function HomeGrid() {
           </div>
           <div className="  aspect-square bgOverlay  rounded-[9px] lg:rounded-[24px] overflow-hidden">
             <Image
-              src="/images/blogs/five.jpg"
+              src="https://ik.imagekit.io/a9uxeuyhx/five.jpg?updatedAt=1757415001609"
               width={200}
               height={200}
               alt="five-img"

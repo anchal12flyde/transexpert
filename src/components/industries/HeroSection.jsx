@@ -15,7 +15,7 @@ export default function HeroSectionComponent({ isScrolled }) {
       <section className="fleet-hero">
         <div className="fleet-hero__image-wrap">
           <img
-            src="/images/industries hero.png"
+            src="https://ik.imagekit.io/a9uxeuyhx/industries%20hero.png?updatedAt=1757414189856"
             alt="Fleet background"
             className="fleet-hero__image"
           />

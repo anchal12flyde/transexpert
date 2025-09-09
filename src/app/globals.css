@@ -207,17 +207,17 @@ body::-webkit-scrollbar {
   text-decoration: none;
   color: inherit;
 }
-@media (min-width: 1000px) and (max-width: 1400px) {
+@media (min-width: 1000px) and (max-width: 1440px) {
   .nav-links {
-    gap: 24px;
+    gap: 16px;
   }
 }
-@media (min-width: 1000px) and (max-width: 1400px) {
+@media (min-width: 1000px) and (max-width: 1440px) {
   .macbook-navlink {
-    gap: 22px;
+    gap: 14px;
   }
 }
-@media (min-width: 1000px) and (max-width: 1400px) {
+@media (min-width: 1000px) and (max-width: 1440px) {
   .macbook {
     gap: 54px;
   }

@@ -11,7 +11,7 @@ export const metadata = {
     "Reliable cross-border logistics from Canada to the U.S. with temperature-controlled, expedited, and same-day delivery.",
   metadataBase: new URL("https://transexpert.ca"),
 
-  // ✅ Open Graph (Facebook, LinkedIn, WhatsApp, etc.)
+  
   openGraph: {
     title: "TransExpert – Logistics Across North America",
     description:

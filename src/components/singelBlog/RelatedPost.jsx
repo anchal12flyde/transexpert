@@ -22,7 +22,7 @@ const RelatedPost = ({ calcValue }) => {
                 5 Things to Know About Cross-Border Freight Compliance
               </h3>
               <div className="arrow-icon">
-                <img src="/images/assets/arrowUp.png" alt="Arrow" />
+                <img src="/images/assets/redarrow.png" alt="Arrow" />
               </div>
             </div>
             <p className="related-post-subheading">
@@ -44,7 +44,7 @@ const RelatedPost = ({ calcValue }) => {
                 5 Things to Know About Cross-Border Freight Compliance
               </h3>
               <div className="arrow-icon">
-                <img src="/images/assets/arrowUp.png" alt="Arrow" />
+                <img src="/images/assets/redarrow.png" alt="Arrow" />
               </div>
             </div>
             <p className="related-post-subheading">
@@ -66,7 +66,7 @@ const RelatedPost = ({ calcValue }) => {
                 5 Things to Know About Cross-Border Freight Compliance
               </h3>
               <div className="arrow-icon">
-                <img src="/images/assets/arrowUp.png" alt="Arrow" />
+                <img src="/images/assets/redarrow.png" alt="Arrow" />
               </div>
             </div>
             <p className="related-post-subheading">

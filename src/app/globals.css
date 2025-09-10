@@ -2716,7 +2716,7 @@ height: 250px;
   flex-direction: row;
   gap: 62px;
   position: relative;
-}
+} 
 @media (max-width: 968px) {
   .downtime-container1 {
     flex-direction: column;
@@ -2729,14 +2729,15 @@ height: 250px;
 .downtime-container {
   display: flex;
   flex-direction: column;
-  gap: 100px;
-  overflow: hidden;
+  gap: 29px;
+ 
 }
 
 @media (min-width: 968px) {
   .downtime-container {
     flex-direction: row;
-   
+    align-items: stretch;
+    gap: 100px;
   }
 
   .downtime-left {
@@ -2744,7 +2745,7 @@ height: 250px;
   }
 
   .downtime-right {
-    flex: 1.2;
+    flex: 1;
   }
 }
 
@@ -2780,9 +2781,7 @@ height: 250px;
 }
 
 @media (max-width: 968px) {
-  .downtime-container {
-    gap: 29px;
-  }
+  
   .downtime-right {
     gap: 16px;
     display: flex;

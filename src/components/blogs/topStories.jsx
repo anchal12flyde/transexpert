@@ -130,9 +130,7 @@ export default function TopStories() {
                   <p className="blog-subheading line-clamp-3 ">
                     {stripTags(post?.yoast_head_json?.description)}
                   </p>
-                  <span className="blog-author ">
-                    Author : {post?._embedded?.author[0]?.name}
-                  </span>
+                  <span className="blog-author ">Author : {post?._embedded?.author[0]?.name}</span>
                 </Link>
               );
             })

@@ -2666,15 +2666,13 @@ height: 250px;
 /* Fleet Power */
 .fleet-stats-section {
   margin: auto auto 118px auto;
-  justify-content: center;
+
 }
 
 .fleet-stats-numbers-row {
   display: flex;
- 
   justify-content: space-between;
-  font-size: 96px;
-  font-weight: 700;
+  align-items: flex-end; /* ✅ content bottom me aayega */
   text-align: left;
   gap: 50px;
   padding: 0 50px;
@@ -2682,7 +2680,10 @@ height: 250px;
 
 .fleet-stats-number-item {
   flex: 1;
-  
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .fleet-stats-divider {

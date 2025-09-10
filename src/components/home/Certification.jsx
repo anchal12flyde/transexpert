@@ -13,7 +13,7 @@ export default function Certification() {
   };
   return (
     <>
-      <div className="certification-container global-container !z-100 " >
+      <div className="certification-container global-container !z-100 ">
         <motion.h2
           className="heading"
           variants={fadeInUp}
@@ -44,17 +44,17 @@ export default function Certification() {
           transition={{ delay: 0.3 }}
         >
           {[
-            "image1.png",
-            "image2.png",
-            "image3.png",
-            "image4.png",
-            "image5.png",
-            "image6.png",
-            "image7.png",
-            "image8.png",
+            "https://ik.imagekit.io/a9uxeuyhx/image1.png?updatedAt=1757501958562",
+            "https://ik.imagekit.io/a9uxeuyhx/image2.png?updatedAt=1757502019467",
+            "https://ik.imagekit.io/a9uxeuyhx/image3.png?updatedAt=1757502045305",
+            "https://ik.imagekit.io/a9uxeuyhx/image4.png?updatedAt=1757502069678",
+            "https://ik.imagekit.io/a9uxeuyhx/image5.png?updatedAt=1757502095796",
+            "https://ik.imagekit.io/a9uxeuyhx/image6.png?updatedAt=1757502135012",
+            "https://ik.imagekit.io/a9uxeuyhx/image7.png?updatedAt=1757502188381",
+            "https://ik.imagekit.io/a9uxeuyhx/image8.png?updatedAt=1757502230973",
           ].map((img, idx) => (
             <Link key={idx} href="/certifications">
-              <img src={`/images/assets/${img}`} alt={`Company ${idx + 1}`} />
+              <img src={`${img}`} alt={`Company ${idx + 1}`} />
             </Link>
           ))}
         </motion.div>

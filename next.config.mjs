@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["ik.imagekit.io"], // ✅ yaha apna domain add karo
+    domains: [
+      "ik.imagekit.io",
+      "flyde.in",
+      "brown-magpie-914710.hostingersite.com",
+    ],
   },
 };
 

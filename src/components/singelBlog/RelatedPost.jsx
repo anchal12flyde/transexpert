@@ -21,6 +21,8 @@ const RelatedPost = ({ calcValue }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // console.log(calcValue)
+
   const blogData = [
     {
       img: "https://ik.imagekit.io/a9uxeuyhx/Image1.png?updatedAt=1757408874966",

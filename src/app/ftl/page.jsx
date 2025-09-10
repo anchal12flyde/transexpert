@@ -32,7 +32,7 @@ export default function FTL() {
       return;
     }
 
-    const handleLoad = () => {
+    const handleLoad = () => { 
       loadedCount++;
       if (loadedCount === images.length) {
         PageContentReady();

@@ -91,7 +91,10 @@ export default function Footer() {
                     height={16}
                     alt="call"
                   />
-                  <p>100 Market Drive,<br/> Milton ON L9T 3H5 CANADA</p>
+                  <p>
+                    100 Market Drive,
+                    <br /> Milton ON L9T 3H5 CANADA
+                  </p>
                 </div>
                 <div className="flex items-start gap-2 ">
                   <Image
@@ -131,7 +134,7 @@ export default function Footer() {
           {/* Logo */}
           <div className="justify-items-center mb-[24px]">
             <Image
-              src="/images/assets/logo2.png"
+              src="https://ik.imagekit.io/a9uxeuyhx/logo2.png?updatedAt=1757420743761"
               alt="TransExpert Logo"
               width={172}
               height={47}

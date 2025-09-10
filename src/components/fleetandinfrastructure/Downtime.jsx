@@ -10,7 +10,7 @@ export default function DowntimeSection() {
           <h2 className="downtime-heading  mb-[12px] lg:mb-[16px]">
             Downtime is not an option
           </h2>
-          <p className="map_subheading">
+          <p className="subheading">
             Our in-house licensed mechanics and proactive diagnostics ensure
             top-tier fleet availability.
           </p>
@@ -18,7 +18,7 @@ export default function DowntimeSection() {
             <img
               src="https://ik.imagekit.io/a9uxeuyhx/f&i.png?updatedAt=1757412482732"
               alt="Fleet"
-              className="downtime-image"
+              className="downtime-image "
             />
           </div>
         </div>

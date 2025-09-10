@@ -500,7 +500,7 @@ body::-webkit-scrollbar {
   transition: 0.3s all ease;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .hero-button {
     padding: 8px 19.321px;
     font-size: 14px;
@@ -864,7 +864,7 @@ span:has(img) {
   }
 }
 
-@media (min-width: 1600) {
+@media (min-width: 1800) {
   .hero-testimonial {
     padding-right: 252px;
     width: 850px;
@@ -914,7 +914,7 @@ span:has(img) {
   align-items: center;
   padding-right: 126px;
 }
-@media (min-width: 1600) {
+@media (min-width: 1800) {
   .testimonial-cards {
     padding-right: 252px;
   }
@@ -1804,7 +1804,7 @@ height: 250px;
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1800px) {
   .industries-text {
     padding-left: 252px;
   }
@@ -2006,7 +2006,7 @@ height: 250px;
 /* Mobile Floating Box */
 .mobile-float-box {
   position: absolute;
-  bottom: -40%;
+  bottom: -30%;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -2411,7 +2411,7 @@ height: 250px;
 }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1800px) {
   .map-text {
     padding-right: 252px;
   }

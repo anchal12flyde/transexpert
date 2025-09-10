@@ -80,20 +80,9 @@ const Blog = () => {
           ))}
         </Slider>
       ) : (
-        <div
-          className="
-          flex gap-6 
-          overflow-x-auto scrollbar-hide   // 👈 important
-          snap-x snap-mandatory            // 👈 smooth snap scroll
-          md:px-4
-        "
-        >
+        <div className="blog-grid">
           {blogData.map((item, idx) => (
-            <Link
-              href="/blogs"
-              key={idx}
-              className="blog-box min-w-[320px] snap-start" // 👈 fixed width per card
-            >
+            <Link href="/blogs" key={idx} className="blog-box">
               <img src={item.img} alt="Truck" className="blog-image" />
               <div className="blog-content">
                 <div className="title-with-icon">

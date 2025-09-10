@@ -297,7 +297,10 @@ export default function HeroSection({ isScrolled }) {
           <p className="hero-description w-full lg:w-[550px] block lg:hidden">
             Trans Expert is the logistics backbone trusted by industry leaders
           </p>
-          <Link href="/about" className="hero-button mt-[24px] lg:mt-[36px]">
+          <Link
+            href="/about"
+            className="hero-button mt-[24px] lg:mt-[36px] block"
+          >
             About Us
           </Link>
         </div>

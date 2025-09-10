@@ -15,6 +15,8 @@ export default function page() {
   const [calcValue, setCalcValue] = useState(0);
   const { slug } = useParams();
   const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
+
 
   useEffect(() => skip("hero"), [skip]);
 
@@ -64,8 +66,6 @@ export default function page() {
     };
     fetchPost();
   }, [slug]);
-
-
 
   useEffect(() => {
     const container = containerRef.current;

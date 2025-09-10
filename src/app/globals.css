@@ -179,15 +179,6 @@ body::-webkit-scrollbar {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-<<<<<<< HEAD
-
-=======
-@media (max-width: 968px) {
-  .main-header {
-    padding: 35px 0;
-  }
-}
->>>>>>> 6852c4cd894d77f7ad72a18d45c8b299371a7064
 /* Container layout */
 .header-container {
   display: flex;
@@ -2665,10 +2656,6 @@ span:has(img) {
 
 .fleet-stats-numbers-row {
   display: flex;
-<<<<<<< HEAD
-=======
-
->>>>>>> 6852c4cd894d77f7ad72a18d45c8b299371a7064
   justify-content: space-between;
   align-items: flex-end; /* ✅ content bottom me aayega */
   text-align: left;
@@ -2678,13 +2665,10 @@ span:has(img) {
 
 .fleet-stats-number-item {
   flex: 1;
-<<<<<<< HEAD
   font-size: 96px;
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 0%;
-=======
->>>>>>> 6852c4cd894d77f7ad72a18d45c8b299371a7064
 }
 
 .fleet-stats-divider {
@@ -2739,11 +2723,8 @@ span:has(img) {
   .downtime-container {
     display: flex;
     flex-direction: row;
-<<<<<<< HEAD
     align-items: stretch;
     gap: 100px;
-=======
->>>>>>> 6852c4cd894d77f7ad72a18d45c8b299371a7064
   }
   .downtime-left {
     flex: 1;
@@ -3781,16 +3762,7 @@ textarea {
   .downtime-left1 {
     flex: 1;
   }
-<<<<<<< HEAD
   
-=======
-  .downtime-image {
-    border-radius: 8px;
-    height: auto;
-    width: 100%;
-    object-fit: cover;
-  }
->>>>>>> 6852c4cd894d77f7ad72a18d45c8b299371a7064
 }
 
 .downtime-left1 img {

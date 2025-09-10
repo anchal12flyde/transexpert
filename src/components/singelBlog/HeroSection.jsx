@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import Header from "../home/Header";
+import parse from "html-react-parser";
+import Image from "next/image";
 
 export default function SingleBlogHero({
   isScrolled,
@@ -13,20 +15,12 @@ export default function SingleBlogHero({
 
   useEffect(() => {
     if (!overlayRef.current) return;
-
     const overlayEl = overlayRef.current;
 
-    // helper function to calculate height
     const calculateHeight = () => {
       const overlayHeight = overlayEl.offsetHeight;
-
-      // viewport se distance
       const offsetFromTopViewport = overlayEl.getBoundingClientRect().top;
-
-      // document ke top se distance
       const offsetFromTopDocument = offsetFromTopViewport + window.scrollY;
-
-      // center point calculation
       const calculatedValue = offsetFromTopDocument + (overlayHeight + 78) / 2;
 
       setCalcValue(overlayHeight);
@@ -35,17 +29,12 @@ export default function SingleBlogHero({
       console.log("Calculated Center Value:", calculatedValue);
     };
 
-    // 1. run on mount
     calculateHeight();
-
-    // 2. recalc on resize
     window.addEventListener("resize", calculateHeight);
 
-    // 3. recalc when overlay itself changes (dynamic content)
     const resizeObserver = new ResizeObserver(() => calculateHeight());
     resizeObserver.observe(overlayEl);
 
-    // cleanup
     return () => {
       window.removeEventListener("resize", calculateHeight);
       resizeObserver.disconnect();
@@ -79,10 +68,24 @@ export default function SingleBlogHero({
                 })}
               </span>
             </p>
-            <div
-              className="blogs-details"
-              dangerouslySetInnerHTML={{ __html: post?.content?.rendered }}
-            />
+            <div className="blogs-details">
+              {parse(post?.content?.rendered || "", {
+                replace: (domNode) => {
+                  if (domNode.name === "img") {
+                    const { src, alt } = domNode.attribs;
+                    return (
+                      <Image
+                        src={src}
+                        alt={alt || "blog-image"}
+                        width={800}
+                        height={500}
+                        className="rounded-md w-full h-auto my-6"
+                      />
+                    );
+                  }
+                },
+              })}
+            </div>
           </div>
         </div>
       </div>

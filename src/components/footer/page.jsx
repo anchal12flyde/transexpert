@@ -91,7 +91,7 @@ export default function Footer() {
                     height={16}
                     alt="call"
                   />
-                  <p>100 Market Drive, Milton ON L9T 3H5 CANADA</p>
+                  <p>100 Market Drive,<br/> Milton ON L9T 3H5 CANADA</p>
                 </div>
                 <div className="flex items-start gap-2 ">
                   <Image

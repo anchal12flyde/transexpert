@@ -42,7 +42,7 @@ const RelatedPost = ({ calcValue }) => {
   return (
     <section
       className="blog-section global-container"
-      style={{ marginTop: `${calcValue - 50}px` }}
+      style={{ marginTop: `${calcValue - 40}px` }}
     >
       <h2 className="related_heading ju">Related posts</h2>
 

@@ -855,7 +855,8 @@ span:has(img) {
 @media (min-width: 1800) {
   .hero-testimonial {
     padding-right: 252px;
-    width: 850px;
+    width: 800px;
+    top: 750px;
   }
 }
 @media (min-width: 1000px) and (max-width: 1300px) {

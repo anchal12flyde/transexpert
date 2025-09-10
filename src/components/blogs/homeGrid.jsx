@@ -33,21 +33,20 @@ export default function HomeGrid() {
 
   return (
     <div className="global-container mt-[42px] lg:mt-[78px]">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[14px] lg:gap-[19px]">
-        {/* Left big blog */}
+      <div className="grid grid-cols-1 lg:grid-cols-4 auto-rows-[200px] lg:auto-rows-[250px] gap-[14px] lg:gap-[19px]">
         {loading ? (
           <p>Loading...</p>
         ) : posts.length > 0 ? (
           <>
-            <div className="bgOverlay rounded-[13px] lg:rounded-[24px] overflow-hidden">
+            {/* First Big Blog */}
+            <div className="bgOverlay row-span-2 col-span-2 rounded-[13px] lg:rounded-[24px] overflow-hidden relative">
               <Link href={`/blogs/${posts[0].slug}`}>
                 {posts[0]._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
                   <Image
                     src={posts[0]._embedded["wp:featuredmedia"][0].source_url}
-                    width={200}
-                    height={200}
+                    fill
                     alt={posts[0]?.title?.rendered}
-                    className="w-full h-[406px] lg:h-full object-cover image-bright"
+                    className="object-cover image-bright"
                   />
                 )}
                 <div className="text_on_image">
@@ -57,36 +56,33 @@ export default function HomeGrid() {
               </Link>
             </div>
 
-            {/* Right 4 smaller blogs */}
-            <div className="grid grid-cols-2 gap-[12px] lg:gap-[19px]">
-              {posts.slice(1, 5).map((post) => {
-                const featuredImage =
-                  post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
-                return (
-                  <div
-                    key={post.id}
-                    className="aspect-square bgOverlay rounded-[9px] lg:rounded-[24px] overflow-hidden"
-                  >
-                    <Link href={`/blogs/${post.slug}`}>
-                      {featuredImage && (
-                        <Image
-                          src={featuredImage}
-                          width={200}
-                          height={200}
-                          alt={post?.title?.rendered}
-                          className="w-full h-full object-cover image-bright"
-                        />
-                      )}
-                      <div className="text_on_image1">
-                        <p className="content_subhead1">
-                          {stripTags(post?.title?.rendered)}
-                        </p>
-                      </div>
-                    </Link>
-                  </div>
-                );
-              })}
-            </div>
+            {/* Next 4 Smaller Blogs */}
+            {posts.slice(1, 5).map((post) => {
+              const featuredImage =
+                post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
+              return (
+                <div
+                  key={post.id}
+                  className="bgOverlay rounded-[9px] lg:rounded-[24px] overflow-hidden relative"
+                >
+                  <Link href={`/blogs/${post.slug}`}>
+                    {featuredImage && (
+                      <Image
+                        src={featuredImage}
+                        fill
+                        alt={post?.title?.rendered}
+                        className="object-cover image-bright"
+                      />
+                    )}
+                    <div className="text_on_image1">
+                      <p className="content_subhead1">
+                        {stripTags(post?.title?.rendered)}
+                      </p>
+                    </div>
+                  </Link>
+                </div>
+              );
+            })}
           </>
         ) : (
           <p>No posts found.</p>

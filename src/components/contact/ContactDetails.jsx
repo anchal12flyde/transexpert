@@ -55,13 +55,12 @@ export default function ContactDetails() {
               height={16}
               style={{
                 display: "inline-block",
-                marginRight: "8px",
+                marginRight: "11px",
                 verticalAlign: "middle",
               }}
             />
-            Trans Expert Inc.
-            <br />
-            <span style={{ paddingLeft: "27px" }}>100 Market Drive,</span>
+          
+            <span>100 Market Drive,</span>
             <br />
             <span className="block ml-[27px]">
               Milton, Ontario, L9T 3H5, Canada

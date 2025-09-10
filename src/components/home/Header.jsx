@@ -249,12 +249,9 @@ export default function Header({ isScrolled = false }) {
               className="flex items-center gap-5 lg:hidden cursor-pointer"
               onClick={() => setMenuOpen(true)}
             >
-              <Image
-                src="/images/assets/Frame.svg"
-                width={25}
-                height={52}
-                alt="flag"
-              />
+            
+            
+            
               <Image
                 src={
                   isScrolled ? "/images/menuBlue.png" : "/images/hamburger.png"

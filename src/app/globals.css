@@ -217,7 +217,7 @@ body::-webkit-scrollbar {
     gap: 16px;
   }
 }
-@media (min-width: 1000px) and (max-width: 1440px) {
+@media (min-width: 1000px) and (max-width: 1480px) {
   .macbook {
     gap: 54px;
   }
@@ -2623,7 +2623,7 @@ height: 250px;
 }
 
 .fleet-two {
-  flex: 1.8;
+  flex: 1.4;
 }
 
 .fleet-one h3 {

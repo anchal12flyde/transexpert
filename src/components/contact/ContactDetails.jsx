@@ -59,7 +59,7 @@ export default function ContactDetails() {
                 verticalAlign: "middle",
               }}
             />
-          
+
             <span>100 Market Drive,</span>
             <br />
             <span className="block ml-[27px]">
@@ -297,13 +297,12 @@ export default function ContactDetails() {
               placeholder="Write your message.."
             />
           </div>
-
-          <div className="flex justify-center mt-[42px] sm:mt-[78px]">
-            <button onClick={handleSubmit} type="submit" className="hero-button">
-             Send Message
-            </button>
-          </div>
         </form>
+        <div className="flex justify-center mt-[42px] sm:mt-[78px]">
+          <button onClick={handleSubmit} type="submit" className="hero-button">
+            Send Message
+          </button>
+        </div>
       </div>
     </section>
   );

@@ -219,7 +219,7 @@ export default function Careers() {
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="outline"
-                    className="flex items-center space-x-2"
+                    className="flex items-center space-x-2 "
                   >
                     <User className="h-4 w-4" />
                     <span>
@@ -232,7 +232,7 @@ export default function Careers() {
                     <ChevronDown className="h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56">
+                <DropdownMenuContent className="w-56 bg-white">
                   {careerTypes.map((type) => {
                     const Icon = type.icon;
                     return (
@@ -264,7 +264,7 @@ export default function Careers() {
                 >
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between text-left ">
-                      <div>
+                      <div className="mb-[12px]">
                         <CardTitle className="text-xl text-left mb-2">
                           {job.title}
                         </CardTitle>

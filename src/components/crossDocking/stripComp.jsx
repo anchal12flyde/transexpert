@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function StripFtl({ text, button, m }) {
   return (
     <div className="counterSection1" style={{ marginTop: `${m}px` }}>
-      <div className="global-container flex items-center gap-[26px]">
+      <div className="global-container flex items-center gap-[20px]">
         <h2
           className="red-strip-text"
           dangerouslySetInnerHTML={{ __html: text }}

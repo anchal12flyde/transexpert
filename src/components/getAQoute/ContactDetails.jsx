@@ -58,7 +58,7 @@ export default function ContactDetails() {
   console.log(form);
 
   return (
-    <section className="flex flex-col mb-[42px] sm:mb-[78px] w-full items-center justify-center global-container mt-[78px] ">
+    <section className="flex flex-col mb-[42px] lg:mb-[78px] w-full items-center justify-center global-container mt-[42px] lg:mt-[78px] ">
       <div className="contact-form bshadow">
         <form
           className="contact-form-layout !max-w-7xl"
@@ -227,17 +227,12 @@ export default function ContactDetails() {
               placeholder="Any special instructions..."
             />
           </div>
-
-          <div className="flex justify-center mt-[78px]">
-            <button
-              onClick={handleSubmit}
-              type="submit"
-              className="hero-button"
-            >
-              Get My Quote
-            </button>
-          </div>
         </form>
+        <div className="flex justify-center  mt-[42px] sm:mt-[78px]">
+          <button onClick={handleSubmit} type="submit" className="hero-button">
+            Get My Quote
+          </button>
+        </div>
       </div>
     </section>
   );

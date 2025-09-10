@@ -284,7 +284,7 @@ export default function HeroSection({ isScrolled }) {
 
         <div className="overlay-X-Mob lg:hidden"></div>
 
-        <div className="hero-content">
+        <div className="hero-content relative z-20">
           <h1 className="hero-heading hero-heading-macbook mb-[24px] lg:mb-[36px]">
             We Don’t Just Move Freight. <br />
             We Power North American <br /> Enterprise.

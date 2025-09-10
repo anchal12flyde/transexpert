@@ -393,6 +393,7 @@ body::-webkit-scrollbar {
   }
 }
 .hero-content {
+  
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1117,6 +1118,7 @@ height: 250px;
   background-repeat: no-repeat;
   background-size: 110% auto;
   /* background: linear-gradient(180deg, rgba(39, 57, 122, 0.00) 0%, #27397A 91.67%); */
+  pointer-events: none;
 }
 @media (min-width:450px) and (max-width:1000px){
   .overlay-X-Mob {
@@ -1132,6 +1134,7 @@ height: 250px;
     background-position:12.4cm center;
     background-repeat: no-repeat;
     background-size: 60% auto;
+    
   }
 }
 .overlay-X-Mob::after {
@@ -1144,6 +1147,7 @@ height: 250px;
   z-index: 1000;
   /* border: 2px solid red; */
   height: 5cm;
+  pointer-events: none;
 }
 
 @media (max-width: 868px) {

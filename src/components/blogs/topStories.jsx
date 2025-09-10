@@ -8,6 +8,7 @@ export default function TopStories() {
   const [loading, setLoading] = useState(true);
   const [visibleCount, setVisibleCount] = useState(3);
   const [isMobile, setIsMobile] = useState(true);
+  const [categories, setCategories] = useState([]);
 
   const related = [
     {
@@ -42,6 +43,16 @@ export default function TopStories() {
             cache: "no-store",
           }
         );
+
+        const catRes = await fetch(
+          "https://brown-magpie-914710.hostingersite.com/wp-json/wp/v2/categories",
+          { cache: "no-store" }
+        );
+
+        const catData = await catRes.json();
+
+        setCategories(catData);
+
         const data = await res.json();
         setPosts(data);
       } catch (error) {
@@ -79,6 +90,8 @@ export default function TopStories() {
 
   const stripTags = (html) => html?.replace(/<[^>]+>/g, "");
 
+  console.log(categories);
+
   return (
     <section className="global-container lg:mt-[78px] mt-[84px] lg:mb-[78px] mb-[42px]">
       {/* Heading */}
@@ -108,7 +121,7 @@ export default function TopStories() {
                       alt={post?.title?.rendered}
                       width={400}
                       height={250}
-                      className="rounded-md object-cover w-full h-auto"
+                      className="rounded-md object-cover w-full h-[200px]"
                     />
                   )}
                   <h3 className="blog-heading text-thm-heading-text line-clamp-2 ">
@@ -117,7 +130,9 @@ export default function TopStories() {
                   <p className="blog-subheading line-clamp-3 ">
                     {stripTags(post?.yoast_head_json?.description)}
                   </p>
-                  <span className="blog-author ">Author: Flyde</span>
+                  <span className="blog-author ">
+                    Author : {post?._embedded?.author[0]?.name}
+                  </span>
                 </Link>
               );
             })
@@ -135,29 +150,37 @@ export default function TopStories() {
 
         {/* Right - Related */}
         <aside className="flex flex-col gap-[24px] lg:gap-[30px] w-full">
-          <h3 className="heading !mb-0">Related</h3>
+          <h3 className="heading !mb-0">Categories</h3>
 
           <div className="flex gap-[16px] lg:gap-[24px] flex-col">
-            {related.map((item, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col items-start gap-[8px] macbookDev"
-              >
-                <Image
-                  src={item.img}
-                  alt={item.title}
-                  width={141}
-                  height={0}
-                  className="rounded-md object-cover h-[2cm] w-full"
-                />
-                <div>
-                  <h4 className="side-heading text-[#E22A26] mb-[8px] lg:mb-[0px]">
-                    {item.title}
-                  </h4>
-                  <p className="side-subheading  ">{item.subtitle}</p>
+            {categories &&
+              categories.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="flex flex-col items-start gap-[8px] macbookDev"
+                >
+                  <Image
+                    src="https://ik.imagekit.io/a9uxeuyhx/img1.png?updatedAt=1757415332223"
+                    alt={item.title}
+                    width={141}
+                    height={0}
+                    className="rounded-md object-cover h-[2cm] w-full"
+                  />
+                  <div>
+                    <h4
+                      className="side-heading text-[#E22A26] mb-[8px] lg:mb-[0px]"
+                      dangerouslySetInnerHTML={{ __html: item.name }}
+                    ></h4>
+
+                    <p
+                      className="side-subheading"
+                      dangerouslySetInnerHTML={{
+                        __html: stripTags(item.description),
+                      }}
+                    ></p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </aside>
       </div>

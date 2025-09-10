@@ -5,6 +5,7 @@ const nextConfig = {
       "ik.imagekit.io",
       "flyde.in",
       "brown-magpie-914710.hostingersite.com",
+      "via.placeholder.com",
     ],
   },
 };

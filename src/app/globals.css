@@ -500,7 +500,7 @@ body::-webkit-scrollbar {
   transition: 0.3s all ease;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 767px) {
   .hero-button {
     padding: 8px 19.321px;
     font-size: 14px;

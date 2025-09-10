@@ -9,7 +9,7 @@ export default function BlogList() {
   const [posts, setPosts] = useState([]);
   const { PageContentReady, skip } = useLoader();
   useEffect(() => {
-    skip("hero");
+    skip("hero"); 
   }, [skip]);
 
   useEffect(() => {

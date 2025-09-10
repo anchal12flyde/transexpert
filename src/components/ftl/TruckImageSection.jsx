@@ -36,22 +36,21 @@ export default function TruckImageSection({
     return () => {
       if (truckRef.current) observer.unobserve(truckRef.current);
       if (overlayRef.current) observer.unobserve(overlayRef.current);
-    };x
+    };
   }, [setM]);
 
   return (
     <div className="global-container lg:mt-[78px] mt-[42px]">
       <div className="relative overflow-visible">
-        <div className="mainImagDivTruck relative max-w-[900px] w-full !overflow-visible rounded-2xl">
+        <div className="mainImagDivTruck relative w-[900px] !overflow-visible rounded-2xl">
           {/* Truck Image */}
           <div className="relative overflow-visible">
             <img
               ref={truckRef}
               src={imageSrc}
               alt="truckImage"
-              className="w-full h-full object-cover rounded-2xl"
+              className="w-full h-auto object-cover rounded-2xl"
             />
-
             {/* X image */}
             <img
               src="/images/assets/X-icon-ftl.png"
@@ -59,20 +58,19 @@ export default function TruckImageSection({
               className="absolute bottom-0 right-0 translate-x-2/11 translate-y-0 w-[40%] h-auto z-[11] block lg:hidden"
             />
           </div>
-
           {/* Blue overlay */}
           <div
             ref={overlayRef}
-            className="overlay-blue rounded-2xl relative z-0 p-6 hidden  lg:block  "
+            className="overlay-blue rounded-2xl relative z-0 p-6 hidden lg:block"
           >
             <p className="heading text-white text-2xl font-semibold mb-4 text-center">
               {overlay.title}
             </p>
             <p className="text-white text-[20px] mb-6">{overlay.description}</p>
 
-            <ul className="space-y-3 text-white ml-[-20px]">
+            <ul className="space-y-3 text-white ml-[-34px]">
               {overlay.points.map((point, i) => (
-                <li key={i} className="flex items-center gap-[16]">
+                <li key={i} className="flex items-center gap-[26px]">
                   <span className="bg-red-500 w-[8px] h-[46px] rounded-full"></span>
                   <span className="text-[20px]">{point}</span>
                 </li>
@@ -88,7 +86,7 @@ export default function TruckImageSection({
             )}
           </div>
 
-          <div className="section-blue rounded-2xl relative z-10 mb-[47px] px-[30px] py-[30px] lg:hidden block">
+          <div className="section-blue rounded-2xl relative z-10 px-[30px] py-[30px] lg:hidden block mb-[47px]">
             <p className="ftl-heading text-white mb-4 text-center">
               {overlay.title}
             </p>
@@ -118,7 +116,7 @@ export default function TruckImageSection({
           <img
             src={cornerIcon}
             alt="corner-icon"
-            className="absolute bottom-0 right-0 w-[455px] h-[335px] z-10 hidden lg:block "
+            className="absolute bottom-0 right-0 w-[455px] h-[335px] z-10 hidden lg:block"
           />
         </div>
       </div>

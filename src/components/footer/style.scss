@@ -107,6 +107,13 @@ letter-spacing: 0.64px;
 .footer-links li:hover {
   color: #e5202b;
 }
+.custom-link {
+ 
+  transition: color 0.3s ease;
+}
+.custom-link:hover {
+  color: #e5202b;
+}
 
 .footer-contact {
   display: flex;

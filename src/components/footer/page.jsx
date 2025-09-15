@@ -81,7 +81,13 @@ export default function Footer() {
                     className="mt-1 "
                   />
                   <p className="flex flex-col gap-0.5">
-                    <span className="address-details">+1 905-864-6443</span>
+                    <a
+                      href="tel:+19058646443"
+                      className="address-details cursor-pointer custom-link"
+                    >
+                      +1 905-864-6443
+                    </a>
+
                     <span>Available 24 × 7</span>
                   </p>
                 </div>
@@ -91,13 +97,21 @@ export default function Footer() {
                     src="/images/assets/location.png"
                     width={16}
                     height={16}
-                    alt="call"
+                    alt="location"
                   />
                   <p>
-                    100 Market Drive,
-                    <br /> Milton ON L9T 3H5 CANADA
+                    <a
+                      href="https://www.google.com/maps?q=100+Market+Drive,+Milton+ON+L9T+3H5+CANADA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cursor-pointer custom-link"
+                    >
+                      100 Market Drive,
+                      <br /> Milton ON L9T 3H5 CANADA
+                    </a>
                   </p>
                 </div>
+
                 <div className="flex items-start gap-2 ">
                   <Image
                     src="/images/assets/mail.png"
@@ -107,7 +121,14 @@ export default function Footer() {
                     className="mt-1 "
                   />
                   <p>
-                    <span>admin@transexpert.ca</span>
+                    <span>
+                      <a
+                        href="mailto:admin@transexpert.ca"
+                        className="cursor-pointer custom-link"
+                      >
+                        admin@transexpert.ca
+                      </a>
+                    </span>
                     <br />
                     <span>We reply within 24 hours</span>
                   </p>
@@ -198,24 +219,40 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="footer-icons">
-            <Image
-              src="/images/assets/location3.png"
-              alt="Phone"
-              width={20}
-              height={20}
-            />
-            <Image
-              src="/images/assets/call1.png"
-              alt="Location"
-              width={20}
-              height={10}
-            />
-            <Image
-              src="/images/assets/email2.png"
-              alt="Email"
-              width={20}
-              height={20}
-            />
+            <a
+              href="https://www.google.com/maps?q=100+Market+Drive,+Milton+ON+L9T+3H5+CANADA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/assets/location3.png"
+                alt="Location"
+                width={20}
+                height={20}
+                className="cursor-pointer  transition"
+              />
+            </a>
+
+            <a href="tel:+19058646443">
+              <Image
+                src="/images/assets/call1.png"
+                alt="Call"
+                width={20}
+                height={10}
+                className="cursor-pointer  transition"
+              />
+            </a>
+
+            <a href="mailto:admin@transexpert.ca">
+              
+              <Image
+                src="/images/assets/email2.png"
+                alt="Email"
+                width={20}
+                height={20}
+                className="cursor-pointer  transition"
+              />
+            </a>
           </div>
 
           {/* Copyright */}

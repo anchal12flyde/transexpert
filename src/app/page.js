@@ -15,7 +15,6 @@ import Strip from "@/components/home/Strip";
 import SustainabilityBanner from "@/components/home/SustainabilityBanner";
 import Footer from "@/components/footer/page";
 
-
 export default function HomePage() {
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef(null);
@@ -40,7 +39,6 @@ export default function HomePage() {
 
   return (
     <>
-    
       <PageContentReady />
       <div className="mainCon" ref={containerRef}>
         {isScrolled && <Header isScrolled={isScrolled} />}

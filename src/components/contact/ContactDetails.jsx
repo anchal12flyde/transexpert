@@ -229,7 +229,7 @@ export default function ContactDetails() {
 
         <div className="section">
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/transexpertsinc"
             target="_blank"
             rel="noopener noreferrer"
             className="cursor-pointer"

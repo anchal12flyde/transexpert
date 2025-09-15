@@ -155,6 +155,10 @@ export default function ContactDetails() {
           <p className="contact-para mb-[16px]">
             Looking to discuss enterprise logistics or request a proposal?
           </p>
+          <a
+            href="mailto:partnerships@transexpert.ca"
+            className="cursor-pointer hover:underline"
+          >
           <p className="contact-para mb-[16px]">
             <img
               src="/images/assets/mail.png"
@@ -169,6 +173,7 @@ export default function ContactDetails() {
             />{" "}
             sales@transexpert.ca
           </p>
+          </a>
           <p className="contact-para">
             All inquiries remain confidential and under NDA.
           </p>

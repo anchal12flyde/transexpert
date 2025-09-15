@@ -47,39 +47,49 @@ export default function ContactDetails() {
       <div className="contact-info">
         <div className="section">
           <h3 className="contact-heading">Head Office</h3>
-          <p className="contact-para mb-[16px]">
-            <img
-              src="/images/assets/location.png"
-              alt="Location Icon"
-              width={16}
-              height={16}
-              style={{
-                display: "inline-block",
-                marginRight: "11px",
-                verticalAlign: "middle",
-              }}
-            />
+          <a
+            href="https://www.google.com/maps?q=100+Market+Drive,+Milton+ON+L9T+3H5+CANADA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer"
+          >
+            <p className="contact-para mb-[16px]">
+              <img
+                src="/images/assets/location.png"
+                alt="Location Icon"
+                width={16}
+                height={16}
+                style={{
+                  display: "inline-block",
+                  marginRight: "11px",
+                  verticalAlign: "middle",
+                }}
+              />
+              <span>100 Market Drive,</span>
+              <br />
+              <span className="block ml-[27px]">
+                Milton, Ontario, L9T 3H5, Canada
+              </span>
+            </p>
+          </a>
 
-            <span>100 Market Drive,</span>
-            <br />
-            <span className="block ml-[27px]">
-              Milton, Ontario, L9T 3H5, Canada
-            </span>
-          </p>
-          <p className="contact-para mb-[16px]">
-            <img
-              src="/images/assets/phone-call.png"
-              alt="Phone Icon"
-              width={19}
-              height={19}
-              style={{
-                display: "inline-block",
-                marginRight: "8px",
-                verticalAlign: "middle",
-              }}
-            />{" "}
-            Phone: 905-864-6443
-          </p>
+          <a href="tel:+19058646443" className="cursor-pointer hover:underline">
+            <p className="contact-para mb-[16px]">
+              <img
+                src="/images/assets/phone-call.png"
+                alt="Phone Icon"
+                width={19}
+                height={19}
+                style={{
+                  display: "inline-block",
+                  marginRight: "8px",
+                  verticalAlign: "middle",
+                }}
+              />{" "}
+              Phone: 905-864-6443
+            </p>
+          </a>
+
           <p className="contact-para">
             <img
               src="/images/assets/mdi_fax.png"
@@ -98,34 +108,43 @@ export default function ContactDetails() {
 
         <div className="section">
           <h3 className="contact-heading">General Inquiries</h3>
-          <p className="contact-para mb-[16px]">
-            <img
-              src="/images/assets/mail.png"
-              alt="Mail Icon"
-              width={16}
-              height={16}
-              style={{
-                display: "inline-block",
-                marginRight: "8px",
-                verticalAlign: "middle",
-              }}
-            />{" "}
-            info@transexpert.ca
-          </p>
-          <p className="contact-para mb-[16px]">
-            <img
-              src="/images/assets/phone-call.png"
-              alt="Phone Icon"
-              width={19}
-              height={19}
-              style={{
-                display: "inline-block",
-                marginRight: "8px",
-                verticalAlign: "middle",
-              }}
-            />{" "}
-            +1-905-864-6443
-          </p>
+          <a
+            href="mailto:info@transexpert.ca"
+            className="cursor-pointer hover:underline"
+          >
+            <p className="contact-para mb-[16px]">
+              <img
+                src="/images/assets/mail.png"
+                alt="Mail Icon"
+                width={16}
+                height={16}
+                style={{
+                  display: "inline-block",
+                  marginRight: "8px",
+                  verticalAlign: "middle",
+                }}
+              />{" "}
+              info@transexpert.ca
+            </p>
+          </a>
+
+          <a href="tel:+19058646443" className="cursor-pointer hover:underline">
+            <p className="contact-para mb-[16px]">
+              <img
+                src="/images/assets/phone-call.png"
+                alt="Phone Icon"
+                width={19}
+                height={19}
+                style={{
+                  display: "inline-block",
+                  marginRight: "8px",
+                  verticalAlign: "middle",
+                }}
+              />{" "}
+              +1-905-864-6443
+            </p>
+          </a>
+
           <p className="contact-para">
             We typically respond within 1 business day
           </p>
@@ -160,20 +179,25 @@ export default function ContactDetails() {
           <p className="contact-para mb-[16px]">
             Interested in becoming an approved vendor?
           </p>
-          <p className="contact-para">
-            <img
-              src="/images/assets/mail.png"
-              alt="Mail Icon"
-              width={16}
-              height={16}
-              style={{
-                display: "inline-block",
-                marginRight: "8px",
-                verticalAlign: "middle",
-              }}
-            />{" "}
-            partnerships@transexpert.ca
-          </p>
+          <a
+            href="mailto:partnerships@transexpert.ca"
+            className="cursor-pointer hover:underline"
+          >
+            <p className="contact-para">
+              <img
+                src="/images/assets/mail.png"
+                alt="Mail Icon"
+                width={16}
+                height={16}
+                style={{
+                  display: "inline-block",
+                  marginRight: "8px",
+                  verticalAlign: "middle",
+                }}
+              />{" "}
+              partnerships@transexpert.ca
+            </p>
+          </a>
         </div>
 
         <div className="section">
@@ -182,38 +206,66 @@ export default function ContactDetails() {
             We’re always on the lookout for drivers, dispatchers, and logistics
             pros
           </p>
-          <p className="contact-para">
-            <img
-              src="/images/assets/mail.png"
-              alt="Mail Icon"
-              width={16}
-              height={16}
-              style={{
-                display: "inline-block",
-                marginRight: "8px",
-                verticalAlign: "middle",
-              }}
-            />{" "}
-            careers@transexpert.ca
-          </p>
+          <a
+            href="mailto:careers@transexpert.ca"
+            className="cursor-pointer hover:underline"
+          >
+            <p className="contact-para">
+              <img
+                src="/images/assets/mail.png"
+                alt="Mail Icon"
+                width={16}
+                height={16}
+                style={{
+                  display: "inline-block",
+                  marginRight: "8px",
+                  verticalAlign: "middle",
+                }}
+              />{" "}
+              careers@transexpert.ca
+            </p>
+          </a>
         </div>
 
         <div className="section">
-          <img
-            src="/images/assets/facebook.png"
-            alt="Facebook"
-            className="social-icon"
-          />
-          <img
-            src="/images/assets/insta.png"
-            alt="Instagram"
-            className="social-icon"
-          />
-          <img
-            src="/images/assets/twiitter.png"
-            alt="Twitter"
-            className="social-icon"
-          />
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer"
+          >
+            <img
+              src="/images/assets/facebook.png"
+              alt="Facebook"
+              className="social-icon"
+            />
+          </a>
+
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer"
+          >
+            <img
+              src="/images/assets/insta.png"
+              alt="Instagram"
+              className="social-icon"
+            />
+          </a>
+
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer"
+          >
+            <img
+              src="/images/assets/twiitter.png"
+              alt="Twitter"
+              className="social-icon"
+            />
+          </a>
         </div>
 
         {/* Ribbon Decoration */}

@@ -1,6 +1,6 @@
 "use client";
 import { useLoader } from "@/components/GlobalLoader";
-
+import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -39,6 +39,50 @@ export default function HomePage() {
 
   return (
     <>
+      <Head>
+        <title>
+          TransExpert — Reliable Cross-Border & Temperature-Controlled Freight
+          Solutions
+        </title>
+        <meta
+          name="description"
+          content="TransExpert is your trusted logistics backbone in North America offering full truckload, temperature-controlled, cross-border & cross-docking services. On-time. Safe. Compliant."
+        />
+        <link rel="canonical" href="https://www.transexpert.ca/" />
+
+        {/* Open Graph Tags */}
+        <meta
+          property="og:title"
+          content=" TransExpert — Reliable Cross-Border & Temperature-Controlled Freight
+          Solutions"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.transexpert.ca/" />
+        <meta
+          property="og:image"
+          content="https://www.transexpert.ca/og-image.jpg"
+        />
+        <meta
+          property="og:description"
+          content="Reliable cross-border logistics from Canada to the U.S. with temperature-controlled, expedited, and same-day freight solutions."
+        />
+
+        {/* Twitter Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content=" TransExpert — Reliable Cross-Border & Temperature-Controlled Freight
+          Solutions"
+        />
+        <meta
+          name="twitter:description"
+          content="Reliable cross-border logistics from Canada to the U.S. with temperature-controlled, expedited, and same-day freight solutions."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.transexpert.ca/og-image.jpg"
+        />
+      </Head>
       <PageContentReady />
       <div className="mainCon" ref={containerRef}>
         {isScrolled && <Header isScrolled={isScrolled} />}

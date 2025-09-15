@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import Footer from "@/components/footer/page";
 
 
+
 export default function AboutPage() {
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef(null);

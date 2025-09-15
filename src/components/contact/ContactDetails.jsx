@@ -156,23 +156,23 @@ export default function ContactDetails() {
             Looking to discuss enterprise logistics or request a proposal?
           </p>
           <a
-            href="mailto:partnerships@transexpert.ca"
+            href="mailto:sales@transexpert.ca"
             className="cursor-pointer hover:underline"
           >
-          <p className="contact-para mb-[16px]">
-            <img
-              src="/images/assets/mail.png"
-              alt="Mail Icon"
-              width={16}
-              height={16}
-              style={{
-                display: "inline-block",
-                marginRight: "8px",
-                verticalAlign: "middle",
-              }}
-            />{" "}
-            sales@transexpert.ca
-          </p>
+            <p className="contact-para mb-[16px]">
+              <img
+                src="/images/assets/mail.png"
+                alt="Mail Icon"
+                width={16}
+                height={16}
+                style={{
+                  display: "inline-block",
+                  marginRight: "8px",
+                  verticalAlign: "middle",
+                }}
+              />{" "}
+              sales@transexpert.ca
+            </p>
           </a>
           <p className="contact-para">
             All inquiries remain confidential and under NDA.

@@ -6,10 +6,7 @@ import { Onest } from "next/font/google";
 const onest = Onest({ subsets: ["latin"], display: "swap" });
 
 export const metadata = {
-  title: "TransExpert – North American Logistics & Cross-Border Freight",
-  description:
-    "Reliable cross-border logistics from Canada to the U.S. with temperature-controlled, expedited, and same-day delivery.",
-  metadataBase: new URL("https://transexpert.ca"),
+ 
 
   
   openGraph: {

@@ -39,6 +39,7 @@ export default function AboutPage() {
 
   return (
     <>
+    
       <PageContentReady />
       <div className="mainCon" ref={containerRef}>
         {isScrolled && <Header isScrolled={isScrolled} />}

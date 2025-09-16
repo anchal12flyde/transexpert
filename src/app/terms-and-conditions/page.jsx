@@ -1,52 +1,40 @@
-"use client";
+import TermsClient from "./TermsClient";
 
-import { useLoader } from "@/components/GlobalLoader";
+// Metadata for SEO and Open Graph
+export const metadata = {
+  title: "Terms & Conditions — TransExpert",
+  description:
+    "The Terms and Conditions governing services, liability, and usage for TransExpert’s logistics offerings.",
+  openGraph: {
+    title: "Terms & Conditions — TransExpert",
+    description:
+      "The Terms and Conditions governing services, liability, and usage for TransExpert’s logistics offerings.",
+    url: "https://transexpert.ca/terms-and-conditions",
+    siteName: "TransExpert",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "TransExpert Terms & Conditions",
+      },
+    ],
+    locale: "en_CA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms & Conditions — TransExpert",
+    description:
+      "The Terms and Conditions governing services, liability, and usage for TransExpert’s logistics offerings.",
+    images: ["/opengraph-image.png"],
+  },
+  alternates: {
+    canonical: "https://transexpert.ca/ftl",
+  },
+};
 
-import Header from "@/components/home/Header";
-import Footer from "@/components/footer/page";
-import { useEffect, useRef, useState } from "react";
-import TermsCondition from "@/components/Terms&Condition";
-
-export default function page() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const containerRef = useRef(null);
-
-  const { PageContentReady, skip } = useLoader();
-  useEffect(() => {
-    skip("hero");
-  }, [skip]);
-
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const handleScroll = () => {
-      setIsScrolled(container.scrollTop > 50);
-    };
-
-    // Attach listener to the container
-    container.addEventListener("scroll", handleScroll, { passive: true });
-
-    // Call once for initial state
-    handleScroll();
-
-    // Cleanup
-    return () => {
-      container.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  return (
-    <>
-      <PageContentReady />
-      <div className="mainCon" ref={containerRef}>
-        {/* <Header /> */}
-       <Header isScrolled={true} />
-      <TermsCondition isScrolled={isScrolled}/>
-    
-
-        <Footer />
-      </div>
-    </>
-  );
+// Server component renders the client component
+export default function TermsPageWrapper() {
+  return <TermsClient />;
 }

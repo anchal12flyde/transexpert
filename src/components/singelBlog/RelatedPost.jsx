@@ -1,4 +1,5 @@
 "use client";
+import { useState,useEffect } from "react";
 
 const RelatedPost = ({ calcValue }) => {
   const [device, setDevice] = useState("desktop");

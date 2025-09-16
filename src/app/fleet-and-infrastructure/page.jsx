@@ -1,87 +1,40 @@
-"use client";
+import FleetClient from "./FleetClient";
 
-import { useLoader } from "@/components/GlobalLoader";
+// Metadata for SEO and Open Graph
+export const metadata = {
+  title: "Fleet & Infrastructure at TransExpert",
+  description:
+    "Explore our modern fleet and terminal infrastructure supporting seamless freight movement across Canada, U.S., and Mexico.",
+  openGraph: {
+    title: "Fleet & Infrastructure at TransExpert",
+    description:
+      "Explore our modern fleet and terminal infrastructure supporting seamless freight movement across Canada, U.S., and Mexico.",
+    url: "https://transexpert.ca/fleet-and-infrastructure",
+    siteName: "TransExpert",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "TransExpert Fleet & Infrastructure",
+      },
+    ],
+    locale: "en_CA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fleet & Infrastructure at TransExpert",
+    description:
+      "Explore our modern fleet and terminal infrastructure supporting seamless freight movement across Canada, U.S., and Mexico.",
+    images: ["/opengraph-image.png"],
+  },
+  alternates: {
+    canonical: "https://transexpert.ca/fleet-and-infrastructure",
+  },
+};
 
-import Header from "@/components/home/Header";
-import HeroSection from "@/components/fleetandinfrastructure/HeroSection";
-import Strength from "@/components/fleetandinfrastructure/Strength";
-import FleetPower from "@/components/fleetandinfrastructure/FleetPower";
-import DowntimeSection from "@/components/fleetandinfrastructure/Downtime";
-import Footer from "@/components/footer/page";
-import { useEffect, useRef, useState } from "react";
-
-export default function page() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const containerRef = useRef(null);
-  const { PageContentReady, skip } = useLoader();
-
-  // Skip hero for loader
-  useEffect(() => {
-    skip("hero");
-  }, [skip]);
-
-  // Wait for all images to load before hiding loader
-  useEffect(() => {
-    const images = Array.from(document.querySelectorAll("img"));
-    let loadedCount = 0;
-
-    if (images.length === 0) {
-      PageContentReady();
-      return;
-    }
-
-    const handleLoad = () => {
-      loadedCount++;
-      if (loadedCount === images.length) {
-        PageContentReady();
-      }
-    };
-
-    images.forEach((img) => {
-      if (img.complete) handleLoad();
-      else {
-        img.addEventListener("load", handleLoad);
-        img.addEventListener("error", handleLoad);
-      }
-    });
-
-    return () => {
-      images.forEach((img) => {
-        img.removeEventListener("load", handleLoad);
-        img.removeEventListener("error", handleLoad);
-      });
-    };
-  }, [PageContentReady]);
-
-  // Scroll detection for sticky header
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const handleScroll = () => {
-      setIsScrolled(container.scrollTop > 50);
-    };
-
-    container.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-
-    return () => {
-      container.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  return (
-    <>
-      <PageContentReady />
-      <div className="mainCon" ref={containerRef}>
-        {isScrolled && <Header isScrolled={isScrolled} />}
-
-        <HeroSection isScrolled={isScrolled} />
-        <FleetPower />
-        <Strength />
-        <DowntimeSection />
-        <Footer />
-      </div>
-    </>
-  );
+// Server component renders the client component
+export default function FleetPageWrapper() {
+  return <FleetClient />;
 }

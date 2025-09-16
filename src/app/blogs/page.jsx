@@ -1,79 +1,41 @@
-"use client";
+import AllBlogsClient from "./AllBlogsClient";
 
-import { useLoader } from "@/components/GlobalLoader";
-import HomeGrid from "@/components/blogs/homeGrid";
-import TopStories from "@/components/blogs/topStories";
-import Header from "@/components/home/Header";
-import Footer from "@/components/footer/page";
-import { useEffect, useRef, useState } from "react";
+// Metadata for SEO and Open Graph
+export const metadata = {
+  title: "TransExpert Blog — Insights & Logistics Trends",
+  description:
+    "Expert articles on cross-border freight, temperature-controlled shipping, industry compliance, sustainability & more.",
+  openGraph: {
+    title: "TransExpert Blog — Insights & Logistics Trends",
+    description:
+      "Expert articles on cross-border freight, temperature-controlled shipping, industry compliance, sustainability & more.",
+    url: "https://transexpert.ca/blogs",
+    siteName: "TransExpert",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "TransExpert Blogs",
+      },
+    ],
+    locale: "en_CA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TransExpert Blog — Insights & Logistics Trends",
+    description:
+      "Expert articles on cross-border freight, temperature-controlled shipping, industry compliance, sustainability & more.",
+    images: ["/opengraph-image.png"],
+  },
 
-export default function AllBlogs() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const containerRef = useRef(null);
+  alternates: {
+    canonical: "https://transexpert.ca/blogs",
+  },
+};
 
-  const { PageContentReady, skip } = useLoader();
-
-  useEffect(() => {
-    skip("hero");
-
-    // wait until all images are loaded
-    const images = Array.from(document.querySelectorAll("img"));
-    let loadedCount = 0;
-
-    if (images.length === 0) {
-      PageContentReady();
-      return;
-    }
-
-    const handleImageLoad = () => {
-      loadedCount++;
-      if (loadedCount === images.length) {
-        PageContentReady();
-      }
-    };
-
-    images.forEach((img) => {
-      if (img.complete) {
-        handleImageLoad();
-      } else {
-        img.addEventListener("load", handleImageLoad);
-        img.addEventListener("error", handleImageLoad);
-      }
-    });
-
-    return () => {
-      images.forEach((img) => {
-        img.removeEventListener("load", handleImageLoad);
-        img.removeEventListener("error", handleImageLoad);
-      });
-    };
-  }, [skip, PageContentReady]);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const handleScroll = () => {
-      setIsScrolled(container.scrollTop > 50);
-    };
-
-    container.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-
-    return () => {
-      container.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  return (
-    <>
-      <PageContentReady />
-      <div ref={containerRef}>
-        <Header isScrolled={true} />
-        <HomeGrid />
-        <TopStories />
-        <Footer />
-      </div>
-    </>
-  );
+// Server component renders the client component
+export default function AllBlogsPageWrapper() {
+  return <AllBlogsClient />;
 }

@@ -1,52 +1,40 @@
-"use client";
+import PrivacyPolicyClient from "./PrivacyPolicyClient";
 
-import { useLoader } from "@/components/GlobalLoader";
+// Metadata for SEO and Open Graph
+export const metadata = {
+  title: "Privacy Policy — TransExpert",
+  description:
+    "Read TransExpert’s Privacy Policy to understand how we collect, protect, and use personal data.",
+  openGraph: {
+    title: "Privacy Policy — TransExpert",
+    description:
+      "Read TransExpert’s Privacy Policy to understand how we collect, protect, and use personal data.",
+    url: "https://transexpert.ca/privacy-policy",
+    siteName: "TransExpert",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "TransExpert Privacy Policy",
+      },
+    ],
+    locale: "en_CA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy — TransExpert",
+    description:
+      "Read TransExpert’s Privacy Policy to understand how we collect, protect, and use personal data.",
+    images: ["/opengraph-image.png"],
+  },
+  alternates: {
+    canonical: "https://transexpert.ca/privacy-policy",
+  },
+};
 
-import Header from "@/components/home/Header";
-import Footer from "@/components/footer/page";
-import PrivacyPolicy from "@/components/PrivacyPolicy";
-import { useEffect, useRef, useState } from "react";
-
-export default function page() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const containerRef = useRef(null);
-
-  const { PageContentReady, skip } = useLoader();
-  useEffect(() => {
-    skip("hero");
-  }, [skip]);
-
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const handleScroll = () => {
-      setIsScrolled(container.scrollTop > 50);
-    };
-
-    // Attach listener to the container
-    container.addEventListener("scroll", handleScroll, { passive: true });
-
-    // Call once for initial state
-    handleScroll();
-
-    // Cleanup
-    return () => {
-      container.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  return (
-    <>
-      <PageContentReady />
-      <div className="mainCon" ref={containerRef}>
-        {/* <Header /> */}
-       <Header isScrolled={true} />
-      
-        <PrivacyPolicy isScrolled={isScrolled} />
-
-        <Footer />
-      </div>
-    </>
-  );
+// Server component renders the client component
+export default function PrivacyPolicyPageWrapper() {
+  return <PrivacyPolicyClient />;
 }

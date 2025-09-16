@@ -31,7 +31,7 @@ export const metadata = {
     title: "TransExpert – Trusted North American Logistics",
     description:
       "Your source for efficient cross-border freight services between Canada and the U.S.",
-    images: ["src/app/opengraph-image.png.png"],
+    images: ["/images/previewLink.png"],
   },
 };
 

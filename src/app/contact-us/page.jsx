@@ -1,53 +1,41 @@
-"use client";
+import ContactClient from "./ContactClient";
 
-import { useLoader } from "@/components/GlobalLoader";
-import Header from "@/components/home/Header";
-import HeroSection from "@/components/contact/HeroSection";
-import ContactDetails from "@/components/contact/ContactDetails";
-import Footer from "@/components/footer/page";
-import { useEffect, useRef, useState } from "react";
+// Metadata for SEO and Open Graph
+export const metadata = {
+  title: "Contact TransExpert — Logistics Inquiries & Support",
+  description:
+    "Contact TransExpert for logistics service questions, customer support or partnership opportunities. We reply within 24 hours.",
+  openGraph: {
+    title: "Contact TransExpert — Logistics Inquiries & Support",
+    description:
+      "Contact TransExpert for logistics service questions, customer support or partnership opportunities. We reply within 24 hours.",
+    url: "https://transexpert.ca/contact",
+    siteName: "TransExpert",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact TransExpert",
+      },
+    ],
+    locale: "en_CA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact TransExpert — Logistics Inquiries & Support",
+    description:
+      "Contact TransExpert for logistics service questions, customer support or partnership opportunities. We reply within 24 hours.",
+    images: ["/opengraph-image.png"],
+  },
 
-export default function page() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const containerRef = useRef(null);
+  alternates: {
+    canonical: "https://transexpert.ca/ftl",
+  },
+};
 
-  const { PageContentReady, skip } = useLoader();
-  useEffect(() => {
-    skip("hero");
-  }, [skip]);
-
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const handleScroll = () => {
-      setIsScrolled(container.scrollTop > 50);
-    };
-
-    // Attach listener to the container
-    container.addEventListener("scroll", handleScroll, { passive: true });
-
-    // Call once for initial state
-    handleScroll();
-
-    // Cleanup
-    return () => {
-      container.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  return (
-<>
-
-    <PageContentReady />
-    <div className="mainCon" ref={containerRef}>
-      {/* <Header /> */}
-       <Header isScrolled={true} />
-
-      <HeroSection isScrolled={isScrolled} />
-      <ContactDetails/>
-      <Footer />
-    </div>
-  </>
-  );
+// Server component renders the client component
+export default function ContactPageWrapper() {
+  return <ContactClient />;
 }

@@ -1,56 +1,44 @@
-"use client";
-import { useLoader } from "@/components/GlobalLoader";
-import Header from "@/components/home/Header";
-import AboutHero from "@/components/about/AboutHeroSection";
-import LeadershipSection from "@/components/about/Leadership";
-import Relaibility from "@/components/about/Relaibility";
-import CardsSection from "@/components/about/OurValues";
-import { useEffect, useRef, useState } from "react";
-import Footer from "@/components/footer/page";
+// src/app/about/page.js
+import AboutPageClient from "./AboutPageClient";
 
+// Metadata export allowed here (server component)
+export const metadata = {
+  title: "About TransExpert — Who We Are & Our Mission",
+  description:
+    "Learn about TransExpert: our commitment to precision, reliability, and sustainable logistics across Canada, the U.S., and Mexico.",
 
+  // Canonical URL
+  alternates: {
+    canonical: "https://transexpert.ca/about",
+  },
 
-export default function AboutPage() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const containerRef = useRef(null);
+  openGraph: {
+    title: "About TransExpert – North American Freight & Logistics",
+    description: "Cross-border logistics expertise from Canada to the U.S.",
+    url: "https://transexpert.ca/about",
+    siteName: "TransExpert",
+    images: [
+      {
+        url: "/opengraph-about.png",
+        width: 1200,
+        height: 630,
+        alt: "About TransExpert",
+      },
+    ],
+    locale: "en_CA",
+    type: "website",
+  },
 
-  const { PageContentReady, skip } = useLoader();
+  twitter: {
+    card: "summary_large_image",
+    title: "About TransExpert — Who We Are & Our Mission",
+    description:
+      "Learn about TransExpert: our commitment to precision, reliability, and sustainable logistics across Canada, the U.S., and Mexico.",
+    images: ["/opengraph-image.png"],
+  },
+};
 
-  // Loader ko hero section ke liye skip kara
-  useEffect(() => {
-    skip("hero");
-  }, [skip]);
-
-  // Scroll listener
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const handleScroll = () => {
-      setIsScrolled(container.scrollTop > 50);
-    };
-
-    container.addEventListener("scroll", handleScroll, { passive: true });
-
-    handleScroll(); // initial check
-
-    return () => {
-      container.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  return (
-    <>
-      <PageContentReady />
-      <div className="mainCon" ref={containerRef}>
-        {isScrolled && <Header isScrolled={isScrolled} />}
-        <AboutHero isScrolled={isScrolled} />
-        <CardsSection />
-        
-        {/* <LeadershipSection /> */}
-        <Relaibility />
-        <Footer />
-      </div>
-    </>
-  );
+// This file is still a server component
+export default function AboutPageWrapper() {
+  return <AboutPageClient />; // Client component renders fine
 }

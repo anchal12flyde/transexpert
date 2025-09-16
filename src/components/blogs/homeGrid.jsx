@@ -33,6 +33,7 @@ export default function HomeGrid() {
 
   return (
     <div className="global-container mt-[42px] lg:mt-[78px]">
+      
       <div className="grid grid-cols-1 lg:grid-cols-4 auto-rows-[200px] lg:auto-rows-[250px] gap-[14px] lg:gap-[19px]">
         {loading ? (
           <p>Loading...</p>

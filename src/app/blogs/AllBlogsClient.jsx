@@ -68,7 +68,7 @@ export default function AllBlogsClient() {
     <>
       <PageContentReady />
       <div className="mainCon" ref={containerRef}>
-        {isScrolled && <Header isScrolled={isScrolled} />}
+       <Header isScrolled={true} />
         <HomeGrid />
         <TopStories />
         <Footer />

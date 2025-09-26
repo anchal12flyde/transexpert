@@ -1,11 +1,11 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://transexpert.ca", // apna live domain
-  generateRobotsTxt: false, // robots.txt bhi generate karega
+  siteUrl: "https://transexpert.ca", 
+  generateRobotsTxt: false,
   sitemapSize: 7000,
   changefreq: "daily",
   priority: 0.7,
-  exclude: ["/api/*"], // API routes exclude kar do
+  exclude: ["/api/*"], 
   robotsTxtOptions: {
     policies: [{ userAgent: "*", allow: "/" }],
   },

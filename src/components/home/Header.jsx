@@ -175,7 +175,7 @@ export default function Header({ isScrolled = false }) {
             <Link href="/industries" className="lg:block hidden nav-link">
               Industries
             </Link>
-            <Link href="/get-a-qoute" className="lg:block hidden nav-link">
+            <Link href="/get-a-quote" className="lg:block hidden nav-link">
               Get a quote
             </Link>
             <Link href="/careers" className="lg:block hidden nav-link">
@@ -322,7 +322,7 @@ export default function Header({ isScrolled = false }) {
           <Link href="/industries" onClick={() => setMenuOpen(false)}>
             Industries
           </Link>
-          <Link href="/get-a-qoute" onClick={() => setMenuOpen(false)}>
+          <Link href="/get-a-quote" onClick={() => setMenuOpen(false)}>
             Get a quote
           </Link>
 

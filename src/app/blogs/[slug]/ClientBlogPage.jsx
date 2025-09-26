@@ -63,6 +63,7 @@ export default function ClientBlogPage({ post }) {
           setCalcValue={setCalcValue}
           post={post}
         />
+        
         <RelatedPost calcValue={calcValue} setCalcValue={setCalcValue} />
         <Footer />
       </div>

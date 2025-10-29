@@ -9,18 +9,19 @@ export default function GlobalLoaderProvider({ children, minMs = 2500 }) {
   const [visible, setVisible] = useState(true);
   const marks = useRef(new Set());
   const startTs = useRef(Date.now());
-  const requiredKeys = useRef(["content"]); // default requirement
+  const requiredKeys = useRef(["content"]);
   const [animationDone, setAnimationDone] = useState(false);
 
-  console.log(animationDone);
-
+  // Reset loader on route change
   useEffect(() => {
     setVisible(true);
     marks.current = new Set();
     startTs.current = Date.now();
-    requiredKeys.current = ["content"]; // reset default on route change
+    requiredKeys.current = ["content"];
+    setAnimationDone(false);
   }, [pathname]);
 
+  // --- Core functions ---
   const setRequired = (keys) => {
     requiredKeys.current = keys;
   };
@@ -31,7 +32,11 @@ export default function GlobalLoaderProvider({ children, minMs = 2500 }) {
 
     const elapsed = Date.now() - startTs.current;
     const wait = Math.max(minMs - elapsed, 0);
-    const t = setTimeout(() => setVisible(false), wait);
+    const t = setTimeout(() => {
+      setVisible(false);
+      document.body.classList.add("loaded"); // 👈 add smooth class once closed
+      setAnimationDone(true);
+    }, wait);
     return () => clearTimeout(t);
   };
 
@@ -45,27 +50,15 @@ export default function GlobalLoaderProvider({ children, minMs = 2500 }) {
     tryClose();
   };
 
+  // ✅ FIXED: make it a direct function (no hooks)
   const PageContentReady = () => {
-    useEffect(() => {
-      markReady("content");
-
-      if (!visible) {
-        if (!animationDone) {
-          document.body.classList.add("loaded");
-          setAnimationDone(true);
-        } else {
-         
-        }
-      } else {
-      }
-    }, [visible, animationDone]);
-    return null;
+    markReady("content");
   };
 
   return (
     <>
       {visible && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-opacity duration-500">
           <img
             src="https://ik.imagekit.io/a9uxeuyhx/loader-x.gif?updatedAt=1757420630993"
             alt="Loading..."

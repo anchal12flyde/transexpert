@@ -10,8 +10,10 @@ export default function SingleBlogHero({
   setCalcValue,
   calcValue,
   post,
+  setIsLoading, // 👈 pass from parent/global loader context
 }) {
   const overlayRef = useRef(null);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   useEffect(() => {
     if (!overlayRef.current) return;
@@ -24,9 +26,6 @@ export default function SingleBlogHero({
       const calculatedValue = offsetFromTopDocument + (overlayHeight + 78) / 2;
 
       setCalcValue(overlayHeight);
-
-      console.log("Overlay Height:", overlayHeight);
-      console.log("Calculated Center Value:", calculatedValue);
     };
 
     calculateHeight();
@@ -40,6 +39,13 @@ export default function SingleBlogHero({
       resizeObserver.disconnect();
     };
   }, [setCalcValue]);
+
+  // 🔄 Control global loader based on image loading
+  useEffect(() => {
+    if (setIsLoading) {
+      setIsLoading(!imagesLoaded);
+    }
+  }, [imagesLoaded, setIsLoading]);
 
   return (
     <section className="single-blog-hero">
@@ -68,6 +74,7 @@ export default function SingleBlogHero({
                 })}
               </span>
             </p>
+
             <div className="blogs-details">
               {parse(post?.content?.rendered || "", {
                 replace: (domNode) => {
@@ -80,6 +87,8 @@ export default function SingleBlogHero({
                         width={800}
                         height={500}
                         className="rounded-md w-full h-auto my-6"
+                        onLoad={() => setImagesLoaded(true)} // ✅ hide loader when image finishes
+                        onError={() => setImagesLoaded(true)} // ✅ also hide if fails
                       />
                     );
                   }

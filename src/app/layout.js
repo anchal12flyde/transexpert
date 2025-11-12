@@ -2,8 +2,10 @@ import "./globals.css";
 import GlobalLoaderProvider from "@/components/GlobalLoader";
 import GoogleTranslator from "@/components/googleTranslator";
 import { Onest } from "next/font/google";
+import Script from "next/script";
 
 const onest = Onest({ subsets: ["latin"], display: "swap" });
+
 export const metadata = {
   title: "TransExpert – North American Logistics & Cross-Border Freight",
   description:
@@ -35,10 +37,25 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Analytics */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-KP3SJT1WH4"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-KP3SJT1WH4');
+          `}
+        </Script>
+      </head>
+
       <body className={onest.className}>
         <GlobalLoaderProvider minMs={2500}>{children}</GlobalLoaderProvider>
         <GoogleTranslator />

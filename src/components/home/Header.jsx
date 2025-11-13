@@ -89,9 +89,7 @@ export default function Header({ isScrolled = false }) {
             <Link href="/about" className="lg:block hidden nav-link">
               About Us
             </Link>
-            {/* <Link href="/ftl" className="lg:block hidden">
-              Services
-            </Link> */}
+           
 
             <div
               className="relative hidden lg:block"
@@ -129,7 +127,7 @@ export default function Header({ isScrolled = false }) {
                       ))}
                     </div>
 
-                    {/* Right Side Promo */}
+                   
                     <Link href="/fleet-and-infrastructure">
                       <div className="srv-promo srv-link">
                         <Image

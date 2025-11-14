@@ -1,18 +1,18 @@
 "use client";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const RelatedPost = ({ calcValue }) => {
   const [device, setDevice] = useState("desktop");
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
+  // Device check
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setDevice("mobile");
-      } else if (window.innerWidth < 1024) {
-        setDevice("tablet");
-      } else {
-        setDevice("desktop");
-      }
+      if (window.innerWidth < 768) setDevice("mobile");
+      else if (window.innerWidth < 1024) setDevice("tablet");
+      else setDevice("desktop");
     };
 
     handleResize();
@@ -20,25 +20,31 @@ const RelatedPost = ({ calcValue }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // console.log(calcValue)
+  const stripTags = (html) => html?.replace(/<[^>]+>/g, "");
 
-  const blogData = [
-    {
-      img: "https://ik.imagekit.io/a9uxeuyhx/Image1.png?updatedAt=1757408874966",
-      title: "5 Things to Know About Cross-Border Freight Compliance",
-      desc: "Your guide to smoother, faster shipments between Canada, the U.S., and Mexico.",
-    },
-    {
-      img: "https://ik.imagekit.io/a9uxeuyhx/Image2.png?updatedAt=1757408919424",
-      title: "TransExpert’s SmartWay Certification",
-      desc: "Our commitment to sustainable, efficient freight",
-    },
-    {
-      img: "https://ik.imagekit.io/a9uxeuyhx/Image3.png?updatedAt=1757408951098",
-      title: "Why Same-Day Delivery is the Future of Retail Logistics",
-      desc: "Meeting the expectations of today’s instant delivery economy.",
-    },
-  ];
+  // Fetch 3 blogs
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const res = await fetch(
+          "https://brown-magpie-914710.hostingersite.com/wp-json/wp/v2/posts?_embed&per_page=3",
+          { cache: "no-store" }
+        );
+        const data = await res.json();
+        setPosts(data);
+      } catch (error) {
+        console.error("Failed to fetch related posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
+  if (loading) return <p className="text-center">Loading...</p>;
+  if (!posts.length)
+    return <p className="text-center">No related posts found.</p>;
 
   return (
     <section
@@ -48,71 +54,42 @@ const RelatedPost = ({ calcValue }) => {
       <h2 className="related_heading ju">Related posts</h2>
 
       <div className="blog-grid-blog">
-        <div className="blog-box">
-          <img
-            src="https://ik.imagekit.io/a9uxeuyhx/Image1.png?updatedAt=1757408874966"
-            alt="Truck"
-            className="blog-image"
-          />
-          <div className="blog-content">
-            <div className="title-with-icon">
-              <h3 className="related-post-heading">
-                5 Things to Know About Cross-Border Freight Compliance
-              </h3>
-              <div className="arrow-icon">
-                <img src="/images/assets/redarrow.png" alt="Arrow" />
-              </div>
-            </div>
-            <p className="related-post-subheading">
-              Your guide to smoother, faster shipments between Canada, the U.S.,
-              and Mexico.
-            </p>
-          </div>
-        </div>
+        {posts.map((post) => {
+          const featuredImage =
+            post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
 
-        <div className="blog-box">
-          <img
-            src="https://ik.imagekit.io/a9uxeuyhx/Image2.png?updatedAt=1757408919424"
-            alt="Truck"
-            className="blog-image"
-          />
-          <div className="blog-content">
-            <div className="title-with-icon">
-              <h3 className="related-post-heading">
-                5 Things to Know About Cross-Border Freight Compliance
-              </h3>
-              <div className="arrow-icon">
-                <img src="/images/assets/redarrow.png" alt="Arrow" />
-              </div>
-            </div>
-            <p className="related-post-subheading">
-              Your guide to smoother, faster shipments between Canada, the U.S.,
-              and Mexico.
-            </p>
-          </div>
-        </div>
+          return (
+            <Link
+              href={`/blogs/${post.slug}`}
+              key={post.id}
+              className="blog-box"
+            >
+              {featuredImage && (
+                <img
+                  src={featuredImage}
+                  alt={post.title.rendered}
+                  className="blog-image"
+                />
+              )}
 
-        <div className="blog-box">
-          <img
-            src="https://ik.imagekit.io/a9uxeuyhx/Image3.png?updatedAt=1757408951098"
-            alt="Truck"
-            className="blog-image"
-          />
-          <div className="blog-content">
-            <div className="title-with-icon">
-              <h3 className="related-post-heading ">
-                5 Things to Know About Cross-Border Freight Compliance
-              </h3>
-              <div className="arrow-icon">
-                <img src="/images/assets/redarrow.png" alt="Arrow" />
+              <div className="blog-content">
+                <div className="title-with-icon">
+                  <h3 className="related-post-heading">
+                    {stripTags(post.title.rendered)}
+                  </h3>
+
+                  <div className="arrow-icon">
+                    <img src="/images/assets/redarrow.png" alt="Arrow" />
+                  </div>
+                </div>
+
+                <p className="related-post-subheading">
+                  {stripTags(post.excerpt.rendered).slice(0, 120)}...
+                </p>
               </div>
-            </div>
-            <p className="related-post-subheading">
-              Your guide to smoother, faster shipments between Canada, the U.S.,
-              and Mexico.
-            </p>
-          </div>
-        </div>
+            </Link>
+          );
+        })}
       </div>
     </section>
   );

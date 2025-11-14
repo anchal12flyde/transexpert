@@ -21,7 +21,7 @@ export default function HomeGrid() {
         const data = await res.json();
         setPosts(data);
       } catch (error) {
-        console.error("❌ Failed to fetch posts:", error);
+        console.error(" Failed to fetch posts:", error);
       } finally {
         setLoading(false);
       }

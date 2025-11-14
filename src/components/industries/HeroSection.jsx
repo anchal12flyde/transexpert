@@ -1,6 +1,7 @@
 "use client";
 
 import Header from "../home/Header";
+import Image from "next/image";
 
 export default function HeroSectionComponent({ isScrolled }) {
   return (
@@ -14,10 +15,12 @@ export default function HeroSectionComponent({ isScrolled }) {
       )}
       <section className="fleet-hero">
         <div className="fleet-hero__image-wrap">
-          <img
+          <Image
             src="https://ik.imagekit.io/a9uxeuyhx/industries%20hero.png?updatedAt=1757414189856"
             alt="Fleet background"
             className="fleet-hero__image"
+            fill
+            priority={false}
           />
 
           <div className="fleet-hero__overlay">

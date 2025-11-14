@@ -299,7 +299,7 @@ export default function HeroSection({ isScrolled }) {
           </p>
           <Link
             href="/about"
-            className="hero-button mt-[24px] lg:mt-[36px] block"
+            className="hero-button mt-[24px] lg:mt-[36px] "
           >
             About Us
           </Link>

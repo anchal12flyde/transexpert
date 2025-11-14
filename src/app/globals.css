@@ -534,10 +534,10 @@ body::-webkit-scrollbar {
   background: var(--company-blue, #27397acb);
   mix-blend-mode: multiply;
   transform: skewY(-42deg) scaleY(0);
-  transform-origin: top right; /* it will “grow” from the top edge */
+  transform-origin: top right; 
   overflow: hidden;
   opacity: 0;
-  /* animation: triangleForm 1.2s ease-out forwards; */
+
 }
 
 /* Keyframes for triangle "forming" */
@@ -851,7 +851,13 @@ span:has(img) {
     display: none;
   }
 }
-
+@media (max-width: 1024px) {
+  .hero-diagonal-overlay,
+  .square-videon,
+  .overlay-X-Mob {
+    pointer-events: none !important;
+  }
+}
 @media (min-width: 1800) {
   .hero-testimonial {
     padding-right: 252px;

@@ -48,12 +48,22 @@ export default function AboutHero({ isScrolled }) {
             five decades of combined logistics expertise and a relentless
             pursuit of operational excellence.
           </p>
-          <button className="hero-button">Know More</button>
+          <button
+            className="hero-button"
+            onClick={() => {
+              document.getElementById("services-section")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }}
+          >
+            Know More
+          </button>
         </div>
       </motion.div>
 
       {/* Floating Box - Desktop Version */}
-      <div className="outer-float-box hidden lg:block">
+      <div  className="outer-float-box hidden lg:block">
         <div className="white-wrapper">
           <div className="about-floating-box ">
             <div className="">

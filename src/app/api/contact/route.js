@@ -32,7 +32,7 @@ export async function POST(req) {
 
     const data = await resend.emails.send({
       from: "Resend <onboarding@resend.dev>",
-      to: "abhishek@flyde.in",
+      to: email,
       subject: "New Form Submission",
       html: htmlTemplate,
     });

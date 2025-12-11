@@ -9,6 +9,7 @@ export default function HomeGrid() {
   const [loading, setLoading] = useState(true);
 
   // fetch live blogs
+  
   useEffect(() => {
     const fetchPosts = async () => {
       try {

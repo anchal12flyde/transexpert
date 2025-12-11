@@ -2,13 +2,13 @@ import { Resend } from "resend";
 import fs from "fs";
 import path from "path";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const safe = (v) => (v ? v : "");
 
 export async function POST(req) {
   try {
     console.log("RESEND KEY:", process.env.RESEND_API_KEY ? "Loaded ✔" : "NOT LOADED ❌");
-
+    
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const body = await req.json();
     const { email } = body;
 
@@ -32,7 +32,7 @@ export async function POST(req) {
 
     const data = await resend.emails.send({
       from: "Resend <onboarding@resend.dev>",
-      to: "abhishek@flyde.in",
+      to: email,
       subject: "New Form Submission",
       html: htmlTemplate,
     });

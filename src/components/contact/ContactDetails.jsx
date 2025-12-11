@@ -3,12 +3,12 @@ import { useState } from "react";
 
 export default function ContactDetails() {
   const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
     email: "",
-    // name: "",
-    // company: "",
-    // phone: "",
-    // inquiryType: "",
-    // message: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -30,12 +30,12 @@ export default function ContactDetails() {
     if (data.success) {
       alert("✅ Contact form submitted!");
       setForm({
+        firstName: "",
+        lastName: "",
         email: "",
-        // name: "",
-        // company: "",            // or form.company
-        // phone: "",
-        // inquiryType: "",
-        // message: "",
+        phone: "",
+        subject: "",
+        message: "",
       });
     } else {
       alert("❌ Error: " + data.error);
@@ -355,11 +355,11 @@ export default function ContactDetails() {
               placeholder="Write your message.."
             />
           </div>
-        <div className="flex justify-center mt-[42px] sm:mt-[78px]">
-          <button type="submit" className="hero-button">
-            Send Message
-          </button>
-        </div>
+          <div className="flex justify-center mt-[42px] sm:mt-[78px]">
+            <button type="submit" className="hero-button">
+              Send Message
+            </button>
+          </div>
         </form>
       </div>
     </section>

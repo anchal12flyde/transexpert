@@ -25,7 +25,7 @@ export default function HeroSectionComponent({
           src={imageSrc}
           alt="Fleet background"
           fill
-          priority // 👈 HERO IMAGE SHOULD NOT BE LAZY
+          priority
           className="fleet-hero__image object-cover"
         />
 
